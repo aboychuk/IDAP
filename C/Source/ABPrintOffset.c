@@ -7,21 +7,26 @@
 //
 
 #include "ABPrintOffset.h"
-
+#include "ABMacro.h"
 
 void ABPrintOffset() {
-    ABPrintOffsetMacro(differentTypes, doubleValue)
-    ABPrintOffsetMacro(differentTypes, longlongValue)
-    ABPrintOffsetMacro(differentTypes, shortValue0)
-    ABPrintOffsetMacro(differentTypes, boolValue0)
-    ABPrintOffsetMacro(differentTypes, floatValue)
-    ABPrintOffsetMacro(differentTypes, intValue)
-    ABPrintOffsetMacro(differentTypes, shortValue1)
-    ABPrintOffsetMacro(differentTypes, boolValue1)
-    ABPrintOffsetMacro(differentTypes, charValue)
-    ABPrintOffsetMacro(differentTypes, boolValue2)
-    ABPrintOffsetMacro(differentTypes, shortValue2)
-    ABPrintOffsetMacro(differentTypes, boolValue3)
-    ABPrintOffsetMacro(differentTypes, boolValue4)
-    ABPrintOffsetMacro(differentTypes, boolValue5)
+    ABMacroPrintOffset(differentTypes, doubleValue)
+    ABMacroPrintOffset(differentTypes, longlongValue)
+    ABMacroPrintOffset(differentTypes, floatValue)
+    ABMacroPrintOffset(differentTypes, intValue)
+    ABMacroPrintOffset(differentTypes, shortValue0)
+    ABMacroPrintOffset(differentTypes, shortValue1)
+    ABMacroPrintOffset(differentTypes, shortValue2)
+    ABMacroPrintOffset(differentTypes, boolValue0)
+    ABMacroPrintOffset(differentTypes, boolValue1)
+    ABMacroPrintOffset(differentTypes, boolValue2)
+    ABMacroPrintOffset(differentTypes, boolValue3)
+    ABMacroPrintOffset(differentTypes, boolValue4)
+    ABMacroPrintOffset(differentTypes, boolValue5)
+    ABMacroPrintOffset(differentTypes, boolValue5)
+    ABMacroPrintOffset(differentTypes, charValue)
+    ABMacroPrintOffset(typesWithBitField, bit.Field)
+
+
 }
+

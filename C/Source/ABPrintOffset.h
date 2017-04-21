@@ -16,7 +16,4 @@
 
 void ABPrintOffset();
 
-#define ABPrintOffsetMacro(structName, structMember)\
-    printf("position of "#structMember" = %lu\n",offsetof(structName, structMember));
-
 #endif /* ABPrintOffset_h */

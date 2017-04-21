@@ -9,5 +9,5 @@
 #include "ABPrintSizeOfStructure.h"
 
 void ABPrintSizeOfStructure() {
-    printf("Size of structure= %lu\n", sizeof(differentTypes));
+    printf("Size of structure= %lu\n", sizeof(typesWithBitField));
 }

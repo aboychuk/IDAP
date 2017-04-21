@@ -37,6 +37,14 @@ typedef struct {
 } differentTypes;
 
 typedef struct {
+    double doubleValue;
+    long long longlongValue;
+    float floatValue;
+    int intValue;
+    short shortValue0;
+    short shortValue1;
+    short shortValue2;
+    char *charValue;
     union {
         struct {
             bool boolValue0 : 1;
@@ -46,16 +54,8 @@ typedef struct {
             bool boolValue4 : 1;
             bool boolValue5 : 1;
         };
-        unsigned char flag;
-    } boolField;
-    double doubleValue;
-    long long longlongValue;
-    float floatValue;
-    int intValue;
-    short shortValue0;
-    short shortValue1;
-    short shortValue2;
-    char *charValue;
+        unsigned char Field;
+    } bit;
 } typesWithBitField;
 
 #endif /* ABStructure_h */

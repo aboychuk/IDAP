@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		6F302B0E1EA7D17B000D7A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B0D1EA7D17B000D7A95 /* main.m */; };
 		6F302B461EA7D288000D7A95 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B351EA7D288000D7A95 /* main.c */; };
-		6F302B471EA7D288000D7A95 /* ABDynamicArray.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B371EA7D288000D7A95 /* ABDynamicArray.c */; };
 		6F302B481EA7D288000D7A95 /* ABMamaPapa.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B391EA7D288000D7A95 /* ABMamaPapa.c */; };
 		6F302B491EA7D288000D7A95 /* ABPrintBits.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B3B1EA7D288000D7A95 /* ABPrintBits.c */; };
-		6F302B4A1EA7D288000D7A95 /* ABPrintMacroValue.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B3D1EA7D288000D7A95 /* ABPrintMacroValue.c */; };
 		6F302B4B1EA7D288000D7A95 /* ABPrintOffset.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B3F1EA7D288000D7A95 /* ABPrintOffset.c */; };
 		6F302B4C1EA7D288000D7A95 /* ABPrintSizeOfStructure.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B411EA7D288000D7A95 /* ABPrintSizeOfStructure.c */; };
 		6F302B4D1EA7D288000D7A95 /* ABPrintSizeOfTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B431EA7D288000D7A95 /* ABPrintSizeOfTypes.c */; };
+		6F3E1D451EAA89F800063775 /* ABArrayStruct.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E1D431EAA89F800063775 /* ABArrayStruct.c */; };
+		6F9D15A71EA8FC1100282F12 /* ABCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D15A61EA8FC1100282F12 /* ABCreature.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,18 +40,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6F1056171EAA20A6005F748A /* ABMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMacro.h; sourceTree = "<group>"; };
 		6F302B0B1EA7D17B000D7A95 /* Objective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F302B0D1EA7D17B000D7A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6F302B2D1EA7D268000D7A95 /* C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F302B351EA7D288000D7A95 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		6F302B371EA7D288000D7A95 /* ABDynamicArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABDynamicArray.c; sourceTree = "<group>"; };
-		6F302B381EA7D288000D7A95 /* ABDynamicArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDynamicArray.h; sourceTree = "<group>"; };
 		6F302B391EA7D288000D7A95 /* ABMamaPapa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABMamaPapa.c; sourceTree = "<group>"; };
 		6F302B3A1EA7D288000D7A95 /* ABMamaPapa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMamaPapa.h; sourceTree = "<group>"; };
 		6F302B3B1EA7D288000D7A95 /* ABPrintBits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABPrintBits.c; sourceTree = "<group>"; };
 		6F302B3C1EA7D288000D7A95 /* ABPrintBits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPrintBits.h; sourceTree = "<group>"; };
-		6F302B3D1EA7D288000D7A95 /* ABPrintMacroValue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABPrintMacroValue.c; sourceTree = "<group>"; };
-		6F302B3E1EA7D288000D7A95 /* ABPrintMacroValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPrintMacroValue.h; sourceTree = "<group>"; };
 		6F302B3F1EA7D288000D7A95 /* ABPrintOffset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABPrintOffset.c; sourceTree = "<group>"; };
 		6F302B401EA7D288000D7A95 /* ABPrintOffset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPrintOffset.h; sourceTree = "<group>"; };
 		6F302B411EA7D288000D7A95 /* ABPrintSizeOfStructure.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABPrintSizeOfStructure.c; sourceTree = "<group>"; };
@@ -59,6 +56,10 @@
 		6F302B431EA7D288000D7A95 /* ABPrintSizeOfTypes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABPrintSizeOfTypes.c; sourceTree = "<group>"; };
 		6F302B441EA7D288000D7A95 /* ABPrintSizeOfTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPrintSizeOfTypes.h; sourceTree = "<group>"; };
 		6F302B451EA7D288000D7A95 /* ABStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABStructure.h; sourceTree = "<group>"; };
+		6F3E1D431EAA89F800063775 /* ABArrayStruct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABArrayStruct.c; sourceTree = "<group>"; };
+		6F3E1D441EAA89F800063775 /* ABArrayStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABArrayStruct.h; sourceTree = "<group>"; };
+		6F9D15A51EA8FC1100282F12 /* ABCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreature.h; sourceTree = "<group>"; };
+		6F9D15A61EA8FC1100282F12 /* ABCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 		6F302B0C1EA7D17B000D7A95 /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				6F9D15A41EA8FBD400282F12 /* Source */,
 				6F302B0D1EA7D17B000D7A95 /* main.m */,
 			);
 			path = "Objective-C";
@@ -99,14 +101,13 @@
 		6F302B361EA7D288000D7A95 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				6F302B371EA7D288000D7A95 /* ABDynamicArray.c */,
-				6F302B381EA7D288000D7A95 /* ABDynamicArray.h */,
+				6F3E1D431EAA89F800063775 /* ABArrayStruct.c */,
+				6F3E1D441EAA89F800063775 /* ABArrayStruct.h */,
+				6F1056171EAA20A6005F748A /* ABMacro.h */,
 				6F302B391EA7D288000D7A95 /* ABMamaPapa.c */,
 				6F302B3A1EA7D288000D7A95 /* ABMamaPapa.h */,
 				6F302B3B1EA7D288000D7A95 /* ABPrintBits.c */,
 				6F302B3C1EA7D288000D7A95 /* ABPrintBits.h */,
-				6F302B3D1EA7D288000D7A95 /* ABPrintMacroValue.c */,
-				6F302B3E1EA7D288000D7A95 /* ABPrintMacroValue.h */,
 				6F302B3F1EA7D288000D7A95 /* ABPrintOffset.c */,
 				6F302B401EA7D288000D7A95 /* ABPrintOffset.h */,
 				6F302B411EA7D288000D7A95 /* ABPrintSizeOfStructure.c */,
@@ -134,6 +135,15 @@
 				6F302B2D1EA7D268000D7A95 /* C */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6F9D15A41EA8FBD400282F12 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6F9D15A51EA8FC1100282F12 /* ABCreature.h */,
+				6F9D15A61EA8FC1100282F12 /* ABCreature.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F302B0E1EA7D17B000D7A95 /* main.m in Sources */,
+				6F9D15A71EA8FC1100282F12 /* ABCreature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,11 +235,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F302B491EA7D288000D7A95 /* ABPrintBits.c in Sources */,
-				6F302B471EA7D288000D7A95 /* ABDynamicArray.c in Sources */,
 				6F302B4D1EA7D288000D7A95 /* ABPrintSizeOfTypes.c in Sources */,
+				6F3E1D451EAA89F800063775 /* ABArrayStruct.c in Sources */,
 				6F302B461EA7D288000D7A95 /* main.c in Sources */,
 				6F302B4C1EA7D288000D7A95 /* ABPrintSizeOfStructure.c in Sources */,
-				6F302B4A1EA7D288000D7A95 /* ABPrintMacroValue.c in Sources */,
 				6F302B481EA7D288000D7A95 /* ABMamaPapa.c in Sources */,
 				6F302B4B1EA7D288000D7A95 /* ABPrintOffset.c in Sources */,
 			);
@@ -240,6 +250,7 @@
 		6F302B101EA7D17B000D7A95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +258,7 @@
 		6F302B111EA7D17B000D7A95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -373,6 +385,7 @@
 				6F302B331EA7D268000D7A95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F3A20ED1EA61390000D6620 /* Build configuration list for PBXProject "IDAPCourse" */ = {
 			isa = XCConfigurationList;
