@@ -20,17 +20,15 @@ ABMacroPrintType(short, %d);
 const short value = 5;
 
 int main(int argc, const char * argv[]) {
-    //mamapapa
-    for (int i = 0; i < 1000; ++i) {
-        ABMamaPapa(i);
-    }
-    
     ABCallMacroPrintType(short, value);
     ABPrintSizeOfTypes();
     ABPrintOffset();
     ABPrintSizeOfStructure();
     ABPrintBits(150);
     ABArrayStructTest();
+    for (int i = 0; i < 1000; ++i) {
+        ABMamaPapa(i);
+    }
     
     return 0;
 }

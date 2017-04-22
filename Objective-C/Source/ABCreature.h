@@ -24,11 +24,11 @@ typedef enum {Male, Female, Undefined}              gender;
 @property (nonatomic, assign) NSString              *name;
 @property (nonatomic, assign) double                weight;
 @property (nonatomic, assign) NSUInteger            age;
-@property (nonatomic, assign) NSArray               *children;
+@property (nonatomic, assign) NSMutableArray        *children;
 
 -(void)fight;
--(void)addChildren;
-//-(void)deleteChildren;
+-(void)addChild:(ABCreature*)child;
+-(void)deleteChild:(ABCreature*)child;
 -(void)sayHello;
 
 @end

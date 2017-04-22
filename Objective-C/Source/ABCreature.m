@@ -11,14 +11,18 @@
 @implementation ABCreature
 
 -(void)sayHello {
-    NSLog(@"Hello from ABCreature!");
+    NSLog(@"Hello from %@ !", self.name);
 }
 
 -(void)fight {
-    NSLog(@"I can fight!");
+    NSLog(@"%@ can fight!", self.name);
 }
--(void)addChildren {
-    [self.children arrayByAddingObject:_children];
+-(void)addChild:(ABCreature*)child {
+    [self.children addObject:child];
+}
+
+-(void)deleteChild:(ABCreature*)child {
+    [self.children removeObject:child];
 }
 
 @end
