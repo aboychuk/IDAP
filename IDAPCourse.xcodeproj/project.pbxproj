@@ -17,6 +17,9 @@
 		6F3E1D451EAA89F800063775 /* ABArrayStruct.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E1D431EAA89F800063775 /* ABArrayStruct.c */; };
 		6F9D15A71EA8FC1100282F12 /* ABCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D15A61EA8FC1100282F12 /* ABCreature.m */; };
 		6FAE02131EAD430A00C6504A /* ABObjCSyntax.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE02121EAD430A00C6504A /* ABObjCSyntax.m */; };
+		6FBCF9DF1EAE230100D69ADE /* ABSyntax.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9DE1EAE230100D69ADE /* ABSyntax.m */; };
+		6FBCF9E21EAE37E500D69ADE /* ABSyntax+ABCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9E11EAE37E500D69ADE /* ABSyntax+ABCategory.m */; };
+		6FBCF9E61EAE50AF00D69ADE /* ABSyntaxSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9E51EAE50AF00D69ADE /* ABSyntaxSubclass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +66,13 @@
 		6F9D15A61EA8FC1100282F12 /* ABCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreature.m; sourceTree = "<group>"; };
 		6FAE02121EAD430A00C6504A /* ABObjCSyntax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABObjCSyntax.m; sourceTree = "<group>"; };
 		6FAE02141EAD433E00C6504A /* ABObjCSyntax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABObjCSyntax.h; sourceTree = "<group>"; };
+		6FBCF9DD1EAE230100D69ADE /* ABSyntax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntax.h; sourceTree = "<group>"; };
+		6FBCF9DE1EAE230100D69ADE /* ABSyntax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntax.m; sourceTree = "<group>"; };
+		6FBCF9E01EAE37E500D69ADE /* ABSyntax+ABCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ABSyntax+ABCategory.h"; sourceTree = "<group>"; };
+		6FBCF9E11EAE37E500D69ADE /* ABSyntax+ABCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ABSyntax+ABCategory.m"; sourceTree = "<group>"; };
+		6FBCF9E31EAE389000D69ADE /* ABSyntaxProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxProtocol.h; sourceTree = "<group>"; };
+		6FBCF9E41EAE50AF00D69ADE /* ABSyntaxSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxSubclass.h; sourceTree = "<group>"; };
+		6FBCF9E51EAE50AF00D69ADE /* ABSyntaxSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntaxSubclass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +163,15 @@
 		6FAE02111EAD428F00C6504A /* Syntax */ = {
 			isa = PBXGroup;
 			children = (
-				6FAE02121EAD430A00C6504A /* ABObjCSyntax.m */,
 				6FAE02141EAD433E00C6504A /* ABObjCSyntax.h */,
+				6FAE02121EAD430A00C6504A /* ABObjCSyntax.m */,
+				6FBCF9DD1EAE230100D69ADE /* ABSyntax.h */,
+				6FBCF9DE1EAE230100D69ADE /* ABSyntax.m */,
+				6FBCF9E41EAE50AF00D69ADE /* ABSyntaxSubclass.h */,
+				6FBCF9E51EAE50AF00D69ADE /* ABSyntaxSubclass.m */,
+				6FBCF9E01EAE37E500D69ADE /* ABSyntax+ABCategory.h */,
+				6FBCF9E11EAE37E500D69ADE /* ABSyntax+ABCategory.m */,
+				6FBCF9E31EAE389000D69ADE /* ABSyntaxProtocol.h */,
 			);
 			path = Syntax;
 			sourceTree = "<group>";
@@ -238,9 +255,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FBCF9E21EAE37E500D69ADE /* ABSyntax+ABCategory.m in Sources */,
+				6FBCF9E61EAE50AF00D69ADE /* ABSyntaxSubclass.m in Sources */,
 				6F302B0E1EA7D17B000D7A95 /* main.m in Sources */,
 				6FAE02131EAD430A00C6504A /* ABObjCSyntax.m in Sources */,
 				6F9D15A71EA8FC1100282F12 /* ABCreature.m in Sources */,
+				6FBCF9DF1EAE230100D69ADE /* ABSyntax.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -273,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -280,6 +302,7 @@
 		6F302B321EA7D268000D7A95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -287,6 +310,7 @@
 		6F302B331EA7D268000D7A95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
