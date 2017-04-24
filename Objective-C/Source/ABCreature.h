@@ -19,16 +19,17 @@
 #import <Foundation/Foundation.h>
 
 @interface ABCreature : NSObject
+typedef enum {Male, Female} ABCreatureGender;
 
-typedef enum {Male, Female, Undefined}              gender;
-@property (nonatomic, assign) NSString              *name;
-@property (nonatomic, assign) double                weight;
-@property (nonatomic, assign) NSUInteger            age;
-@property (nonatomic, assign) NSMutableArray        *children;
+@property(nonatomic, assign)    ABCreatureGender      gender;
+@property(nonatomic, retain)    NSString              *name;
+@property(nonatomic, assign)    double                weight;
+@property(nonatomic, assign)    NSUInteger            age;
+@property(nonatomic, readonly)  NSArray               *children;
 
--(void)fight;
--(void)addChild:(ABCreature*)child;
--(void)deleteChild:(ABCreature*)child;
--(void)sayHello;
+- (void)goToWar;
+- (void)addChild:(ABCreature*)child;
+- (void)deleteChild:(ABCreature*)child;
+- (void)sayHello;
 
 @end
