@@ -8,21 +8,28 @@
 
 #import "ABCreature.h"
 
+@interface ABCreature()
+
+@property (nonatomic,copy) NSMutableArray *mutableChildren;
+
+@end
+
 @implementation ABCreature
+@dynamic children;
 
 -(void)sayHello {
     NSLog(@"Hello from %@ !", self.name);
 }
 
--(void)fight {
-    NSLog(@"%@ can fight!", self.name);
+-(void)goToWar {
+    NSLog(@"%@ went to war!", self.name);
 }
 -(void)addChild:(ABCreature*)child {
-    [self.children addObject:child];
+    [self.mutableChildren addObject:child];
 }
 
 -(void)deleteChild:(ABCreature*)child {
-    [self.children removeObject:child];
+    [self.mutableChildren removeObject:child];
 }
 
 @end
