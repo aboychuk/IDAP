@@ -93,6 +93,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F1191D81EAF95C6006938E9 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		6F302B0C1EA7D17B000D7A95 /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +160,7 @@
 		6F9D15A41EA8FBD400282F12 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6F1191D81EAF95C6006938E9 /* Test */,
 				6FAE02111EAD428F00C6504A /* Syntax */,
 				6F9D15A51EA8FC1100282F12 /* ABCreature.h */,
 				6F9D15A61EA8FC1100282F12 /* ABCreature.m */,
