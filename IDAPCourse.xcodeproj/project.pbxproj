@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F17A57A1EB0E87700586C58 /* ABCreatureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F17A5791EB0E87700586C58 /* ABCreatureTest.m */; };
+		6F17A57D1EB10B2100586C58 /* ABSyntaxTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F17A57C1EB10B2100586C58 /* ABSyntaxTest.m */; };
 		6F302B0E1EA7D17B000D7A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B0D1EA7D17B000D7A95 /* main.m */; };
 		6F302B461EA7D288000D7A95 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B351EA7D288000D7A95 /* main.c */; };
 		6F302B481EA7D288000D7A95 /* ABMamaPapa.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B391EA7D288000D7A95 /* ABMamaPapa.c */; };
@@ -45,6 +47,10 @@
 
 /* Begin PBXFileReference section */
 		6F1056171EAA20A6005F748A /* ABMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMacro.h; sourceTree = "<group>"; };
+		6F17A5781EB0E87700586C58 /* ABCreatureTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreatureTest.h; sourceTree = "<group>"; };
+		6F17A5791EB0E87700586C58 /* ABCreatureTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureTest.m; sourceTree = "<group>"; };
+		6F17A57B1EB10B2100586C58 /* ABSyntaxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxTest.h; sourceTree = "<group>"; };
+		6F17A57C1EB10B2100586C58 /* ABSyntaxTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntaxTest.m; sourceTree = "<group>"; };
 		6F302B0B1EA7D17B000D7A95 /* Objective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F302B0D1EA7D17B000D7A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6F302B2D1EA7D268000D7A95 /* C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +102,10 @@
 		6F1191D81EAF95C6006938E9 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				6F17A5781EB0E87700586C58 /* ABCreatureTest.h */,
+				6F17A5791EB0E87700586C58 /* ABCreatureTest.m */,
+				6F17A57B1EB10B2100586C58 /* ABSyntaxTest.h */,
+				6F17A57C1EB10B2100586C58 /* ABSyntaxTest.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -266,6 +276,8 @@
 				6FBCF9E21EAE37E500D69ADE /* ABSyntax+ABCategory.m in Sources */,
 				6FBCF9E61EAE50AF00D69ADE /* ABSyntaxSubclass.m in Sources */,
 				6F302B0E1EA7D17B000D7A95 /* main.m in Sources */,
+				6F17A57D1EB10B2100586C58 /* ABSyntaxTest.m in Sources */,
+				6F17A57A1EB0E87700586C58 /* ABCreatureTest.m in Sources */,
 				6FAE02131EAD430A00C6504A /* ABObjCSyntax.m in Sources */,
 				6F9D15A71EA8FC1100282F12 /* ABCreature.m in Sources */,
 				6FBCF9DF1EAE230100D69ADE /* ABSyntax.m in Sources */,
