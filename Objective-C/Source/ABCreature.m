@@ -31,7 +31,6 @@
 - (instancetype)init {
     [super init];
     if (self) {
-        self.gender = arc4random_uniform(2);
         self.name = [NSString stringWithFormat:@"%c", arc4random_uniform(26) + 'A'];
         self.weight = arc4random_uniform(120);
         self.age = arc4random_uniform(80);
@@ -41,7 +40,7 @@
 }
 
 #pragma mark
-#pragma mark Public Methods
+#pragma mark Class Methods
 
 - (NSArray *)childrens {
     return [[self.mutableChildrens copy] autorelease];
@@ -54,10 +53,6 @@
     }
 }
 
-- (void)goToWar {
-    NSLog(@"%@ went to war!", self.name);
-}
-
 - (void)addChild:(ABCreature *)child {
     [self.mutableChildrens addObject:child];
 }
@@ -66,9 +61,8 @@
     [self.mutableChildrens removeObject:child];
 }
 
-- (ABCreature *)childBirth {
-    NSLog(@"A %@ was born.", self.name);
-    return [[[ABCreature alloc] init] autorelease];
+- (void)performGenderSpecificOperation {
+    
 }
 
 @end

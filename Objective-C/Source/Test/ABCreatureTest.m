@@ -25,7 +25,7 @@ void CreatureTest() {
         NSLog(@"%@", creature.childrens);
     }
     
-    for (ABCreature *creature in creaturesArray) {
+    /*for (ABCreature *creature in creaturesArray) {
         [creature sayHello];
         if (creature.gender == Male) {
             [creature goToWar];
@@ -33,6 +33,7 @@ void CreatureTest() {
             [creature childBirth];
         }
     }
+     */
 }
 
 @end
