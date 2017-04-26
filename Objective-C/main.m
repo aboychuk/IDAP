@@ -10,6 +10,7 @@
 #import "ABCreatureTest.h"
 #import "ABCreatureMale.h"
 #import "ABCreatureFemale.h"
+#import "NSObject+ABCreatureCategory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool{
@@ -18,8 +19,8 @@ int main(int argc, const char * argv[]) {
         NSMutableArray *creatures = [[NSMutableArray new] autorelease];
         
         for (int i = 0; i < count; i++) {
-            ABCreatureMale *creatureMale = [[[ABCreatureMale alloc] init]autorelease];
-            ABCreatureFemale *creatureFemale = [[[ABCreatureFemale alloc] init]autorelease];
+            ABCreatureMale *creatureMale = [ABCreatureMale objectCreate];
+            ABCreatureFemale *creatureFemale = [ABCreatureFemale objectCreate];
             [creatures addObject:creatureMale];
             [creatures addObject:creatureFemale];
         }

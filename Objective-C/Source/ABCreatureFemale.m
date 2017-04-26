@@ -11,7 +11,7 @@
 @implementation ABCreatureFemale
 
 - (void)childBirth {
-    NSLog(@"A %@ went to the maternity hospital", self.name);
+    NSLog(@"%@ went to the maternity hospital", self.name);
 }
 - (void)performGenderSpecificOperation {
     [self childBirth];
