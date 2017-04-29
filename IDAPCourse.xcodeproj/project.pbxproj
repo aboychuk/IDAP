@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F1EA90E1EB3907A00EAAEE6 /* ABCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA90D1EB3907A00EAAEE6 /* ABCar.m */; };
+		6F1EA9111EB3938400EAAEE6 /* ABCarWashRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA9101EB3938400EAAEE6 /* ABCarWashRoom.m */; };
+		6F1EA9171EB3A33400EAAEE6 /* ABHuman.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA9161EB3A33400EAAEE6 /* ABHuman.m */; };
+		6F1EA91A1EB3A3CE00EAAEE6 /* ABCarWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA9191EB3A3CE00EAAEE6 /* ABCarWasher.m */; };
+		6F1EA91D1EB3A3E100EAAEE6 /* ABAcountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA91C1EB3A3E100EAAEE6 /* ABAcountant.m */; };
+		6F1EA9201EB3A3FE00EAAEE6 /* ABDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA91F1EB3A3FE00EAAEE6 /* ABDirector.m */; };
 		6F302B0E1EA7D17B000D7A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B0D1EA7D17B000D7A95 /* main.m */; };
 		6F302B461EA7D288000D7A95 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B351EA7D288000D7A95 /* main.c */; };
 		6F302B481EA7D288000D7A95 /* ABMamaPapa.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B391EA7D288000D7A95 /* ABMamaPapa.c */; };
@@ -23,9 +29,12 @@
 		6FBC7F9D1EB337E800FD7D6D /* ABCreatureFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F971EB337E800FD7D6D /* ABCreatureFemale.m */; };
 		6FBC7F9E1EB337E800FD7D6D /* ABCreatureMale.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F991EB337E800FD7D6D /* ABCreatureMale.m */; };
 		6FBC7F9F1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */; };
+		6FBC7FB41EB34F0B00FD7D6D /* ABBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7FB31EB34F0B00FD7D6D /* ABBuilding.m */; };
+		6FBC7FB71EB3504800FD7D6D /* ABBuildingAdministrative.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7FB61EB3504800FD7D6D /* ABBuildingAdministrative.m */; };
 		6FBCF9DF1EAE230100D69ADE /* ABSyntax.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9DE1EAE230100D69ADE /* ABSyntax.m */; };
 		6FBCF9E21EAE37E500D69ADE /* ABSyntax+ABCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9E11EAE37E500D69ADE /* ABSyntax+ABCategory.m */; };
 		6FBCF9E61EAE50AF00D69ADE /* ABSyntaxSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9E51EAE50AF00D69ADE /* ABSyntaxSubclass.m */; };
+		6FC6012F1EB37BDA0001DAC7 /* ABRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC6012E1EB37BDA0001DAC7 /* ABRoom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +60,18 @@
 
 /* Begin PBXFileReference section */
 		6F1056171EAA20A6005F748A /* ABMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMacro.h; sourceTree = "<group>"; };
+		6F1EA90C1EB3907A00EAAEE6 /* ABCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCar.h; sourceTree = "<group>"; };
+		6F1EA90D1EB3907A00EAAEE6 /* ABCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCar.m; sourceTree = "<group>"; };
+		6F1EA90F1EB3938400EAAEE6 /* ABCarWashRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashRoom.h; sourceTree = "<group>"; };
+		6F1EA9101EB3938400EAAEE6 /* ABCarWashRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashRoom.m; sourceTree = "<group>"; };
+		6F1EA9151EB3A33400EAAEE6 /* ABHuman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABHuman.h; sourceTree = "<group>"; };
+		6F1EA9161EB3A33400EAAEE6 /* ABHuman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABHuman.m; sourceTree = "<group>"; };
+		6F1EA9181EB3A3CE00EAAEE6 /* ABCarWasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWasher.h; sourceTree = "<group>"; };
+		6F1EA9191EB3A3CE00EAAEE6 /* ABCarWasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWasher.m; sourceTree = "<group>"; };
+		6F1EA91B1EB3A3E100EAAEE6 /* ABAcountant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAcountant.h; sourceTree = "<group>"; };
+		6F1EA91C1EB3A3E100EAAEE6 /* ABAcountant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAcountant.m; sourceTree = "<group>"; };
+		6F1EA91E1EB3A3FE00EAAEE6 /* ABDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDirector.h; sourceTree = "<group>"; };
+		6F1EA91F1EB3A3FE00EAAEE6 /* ABDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDirector.m; sourceTree = "<group>"; };
 		6F302B0B1EA7D17B000D7A95 /* Objective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F302B0D1EA7D17B000D7A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6F302B2D1EA7D268000D7A95 /* C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +105,10 @@
 		6FBC7F991EB337E800FD7D6D /* ABCreatureMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureMale.m; sourceTree = "<group>"; };
 		6FBC7F9A1EB337E800FD7D6D /* NSObject+ABCreatureCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ABCreatureCategory.h"; sourceTree = "<group>"; };
 		6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ABCreatureCategory.m"; sourceTree = "<group>"; };
+		6FBC7FB21EB34F0B00FD7D6D /* ABBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBuilding.h; sourceTree = "<group>"; };
+		6FBC7FB31EB34F0B00FD7D6D /* ABBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABBuilding.m; sourceTree = "<group>"; };
+		6FBC7FB51EB3504800FD7D6D /* ABBuildingAdministrative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBuildingAdministrative.h; sourceTree = "<group>"; };
+		6FBC7FB61EB3504800FD7D6D /* ABBuildingAdministrative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABBuildingAdministrative.m; sourceTree = "<group>"; };
 		6FBCF9DD1EAE230100D69ADE /* ABSyntax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntax.h; sourceTree = "<group>"; };
 		6FBCF9DE1EAE230100D69ADE /* ABSyntax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntax.m; sourceTree = "<group>"; };
 		6FBCF9E01EAE37E500D69ADE /* ABSyntax+ABCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ABSyntax+ABCategory.h"; sourceTree = "<group>"; };
@@ -91,6 +116,8 @@
 		6FBCF9E31EAE389000D69ADE /* ABSyntaxProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxProtocol.h; sourceTree = "<group>"; };
 		6FBCF9E41EAE50AF00D69ADE /* ABSyntaxSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxSubclass.h; sourceTree = "<group>"; };
 		6FBCF9E51EAE50AF00D69ADE /* ABSyntaxSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntaxSubclass.m; sourceTree = "<group>"; };
+		6FC6012D1EB37BDA0001DAC7 /* ABRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRoom.h; sourceTree = "<group>"; };
+		6FC6012E1EB37BDA0001DAC7 /* ABRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRoom.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +253,24 @@
 		6FBC7FA01EB337F100FD7D6D /* ABCarWash */ = {
 			isa = PBXGroup;
 			children = (
+				6FBC7FB21EB34F0B00FD7D6D /* ABBuilding.h */,
+				6FBC7FB31EB34F0B00FD7D6D /* ABBuilding.m */,
+				6FBC7FB51EB3504800FD7D6D /* ABBuildingAdministrative.h */,
+				6FBC7FB61EB3504800FD7D6D /* ABBuildingAdministrative.m */,
+				6FC6012D1EB37BDA0001DAC7 /* ABRoom.h */,
+				6FC6012E1EB37BDA0001DAC7 /* ABRoom.m */,
+				6F1EA90C1EB3907A00EAAEE6 /* ABCar.h */,
+				6F1EA90D1EB3907A00EAAEE6 /* ABCar.m */,
+				6F1EA90F1EB3938400EAAEE6 /* ABCarWashRoom.h */,
+				6F1EA9101EB3938400EAAEE6 /* ABCarWashRoom.m */,
+				6F1EA9151EB3A33400EAAEE6 /* ABHuman.h */,
+				6F1EA9161EB3A33400EAAEE6 /* ABHuman.m */,
+				6F1EA9181EB3A3CE00EAAEE6 /* ABCarWasher.h */,
+				6F1EA9191EB3A3CE00EAAEE6 /* ABCarWasher.m */,
+				6F1EA91B1EB3A3E100EAAEE6 /* ABAcountant.h */,
+				6F1EA91C1EB3A3E100EAAEE6 /* ABAcountant.m */,
+				6F1EA91E1EB3A3FE00EAAEE6 /* ABDirector.h */,
+				6F1EA91F1EB3A3FE00EAAEE6 /* ABDirector.m */,
 			);
 			path = ABCarWash;
 			sourceTree = "<group>";
@@ -310,8 +355,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FBC7F901EB337C100FD7D6D /* ABCreatureGenderTest.m in Sources */,
+				6F1EA9171EB3A33400EAAEE6 /* ABHuman.m in Sources */,
+				6F1EA9111EB3938400EAAEE6 /* ABCarWashRoom.m in Sources */,
+				6F1EA91A1EB3A3CE00EAAEE6 /* ABCarWasher.m in Sources */,
+				6F1EA90E1EB3907A00EAAEE6 /* ABCar.m in Sources */,
 				6FBCF9E21EAE37E500D69ADE /* ABSyntax+ABCategory.m in Sources */,
+				6F1EA9201EB3A3FE00EAAEE6 /* ABDirector.m in Sources */,
+				6F1EA91D1EB3A3E100EAAEE6 /* ABAcountant.m in Sources */,
 				6FBCF9E61EAE50AF00D69ADE /* ABSyntaxSubclass.m in Sources */,
+				6FC6012F1EB37BDA0001DAC7 /* ABRoom.m in Sources */,
+				6FBC7FB41EB34F0B00FD7D6D /* ABBuilding.m in Sources */,
+				6FBC7FB71EB3504800FD7D6D /* ABBuildingAdministrative.m in Sources */,
 				6FBC7F9F1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m in Sources */,
 				6FBC7F921EB337C100FD7D6D /* ABSyntaxTest.m in Sources */,
 				6FBC7F911EB337C100FD7D6D /* ABCreatureTest.m in Sources */,
