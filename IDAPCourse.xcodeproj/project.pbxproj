@@ -103,8 +103,8 @@
 		6FBC7F971EB337E800FD7D6D /* ABCreatureFemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureFemale.m; sourceTree = "<group>"; };
 		6FBC7F981EB337E800FD7D6D /* ABCreatureMale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreatureMale.h; sourceTree = "<group>"; };
 		6FBC7F991EB337E800FD7D6D /* ABCreatureMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureMale.m; sourceTree = "<group>"; };
-		6FBC7F9A1EB337E800FD7D6D /* NSObject+ABCreatureCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ABCreatureCategory.h"; sourceTree = "<group>"; };
-		6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ABCreatureCategory.m"; sourceTree = "<group>"; };
+		6FBC7F9A1EB337E800FD7D6D /* NSObject+ABCreatureCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ABCreatureCategory.h"; path = "../ABCreature/NSObject+ABCreatureCategory.h"; sourceTree = "<group>"; };
+		6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ABCreatureCategory.m"; path = "../ABCreature/NSObject+ABCreatureCategory.m"; sourceTree = "<group>"; };
 		6FBC7FB21EB34F0B00FD7D6D /* ABBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBuilding.h; sourceTree = "<group>"; };
 		6FBC7FB31EB34F0B00FD7D6D /* ABBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABBuilding.m; sourceTree = "<group>"; };
 		6FBC7FB51EB3504800FD7D6D /* ABBuildingAdministrative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBuildingAdministrative.h; sourceTree = "<group>"; };
@@ -196,9 +196,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6F93399C1EB8FA7E00AC9F3F /* ABCategory */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC7F9A1EB337E800FD7D6D /* NSObject+ABCreatureCategory.h */,
+				6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */,
+			);
+			path = ABCategory;
+			sourceTree = "<group>";
+		};
 		6F9D15A41EA8FBD400282F12 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6F93399C1EB8FA7E00AC9F3F /* ABCategory */,
 				6FBC7FA01EB337F100FD7D6D /* ABCarWash */,
 				6FBC7F931EB337E800FD7D6D /* ABCreature */,
 				6FAE02111EAD428F00C6504A /* Syntax */,
@@ -244,8 +254,6 @@
 				6FBC7F971EB337E800FD7D6D /* ABCreatureFemale.m */,
 				6FBC7F981EB337E800FD7D6D /* ABCreatureMale.h */,
 				6FBC7F991EB337E800FD7D6D /* ABCreatureMale.m */,
-				6FBC7F9A1EB337E800FD7D6D /* NSObject+ABCreatureCategory.h */,
-				6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */,
 			);
 			path = ABCreature;
 			sourceTree = "<group>";

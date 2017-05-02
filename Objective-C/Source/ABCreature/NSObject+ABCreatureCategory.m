@@ -10,7 +10,7 @@
 
 @implementation NSObject (ABCreatureCategory)
 
-+ (id)objectCreate {
++ (instancetype)objectCreate {
     return [[[self alloc] init] autorelease];
 }
 

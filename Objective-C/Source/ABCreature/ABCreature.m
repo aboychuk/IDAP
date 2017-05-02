@@ -40,7 +40,7 @@
 }
 
 #pragma mark
-#pragma mark Class Methods
+#pragma mark Accesors
 
 - (NSArray *)childrens {
     return [[self.mutableChildrens copy] autorelease];
