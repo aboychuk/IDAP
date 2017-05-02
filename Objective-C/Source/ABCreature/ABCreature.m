@@ -8,6 +8,8 @@
 
 #import "ABCreature.h"
 
+#import "NSString+ABRandomString.h"
+
 @interface ABCreature()
 
 @property (nonatomic, retain) NSMutableArray *mutableChildrens;
@@ -31,7 +33,7 @@
 - (instancetype)init {
     [super init];
     if (self) {
-        self.name = [NSString stringWithFormat:@"%c", arc4random_uniform(26) + 'A'];
+        self.name = [NSString randomStringWithLength:10];
         self.weight = arc4random_uniform(120);
         self.age = arc4random_uniform(80);
         self.mutableChildrens = [NSMutableArray array];

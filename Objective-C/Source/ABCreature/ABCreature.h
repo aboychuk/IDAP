@@ -9,6 +9,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "NSString+ABRandomString.h"
+
 @interface ABCreature : NSObject
 
 @property(nonatomic, retain)            NSString              *name;
