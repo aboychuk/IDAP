@@ -10,4 +10,8 @@
 
 @implementation NSNumber (ABRandomNumber)
 
++ (NSUInteger)randomNumberBetweenMinMax:(NSUInteger)min max:(NSUInteger)max {
+    return  (arc4random() % (max - min + 1)) + min;
+}
+
 @end

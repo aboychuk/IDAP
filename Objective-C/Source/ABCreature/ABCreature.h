@@ -10,14 +10,14 @@
 #import <Foundation/Foundation.h>
 
 #import "NSString+ABRandomString.h"
+#import "NSNumber+ABRandomNumber.h"
 
 @interface ABCreature : NSObject
 
 @property(nonatomic, retain)            NSString              *name;
 @property(nonatomic, assign)            double                weight;
 @property(nonatomic, assign)            NSUInteger            age;
-@property(nonatomic, copy, readonly)    NSArray               *childrens;
-
+@property(nonatomic, copy, readonly)    NSArray               *children;
 
 - (void)addChild:(ABCreature *)child;
 - (void)deleteChild:(ABCreature *)child;

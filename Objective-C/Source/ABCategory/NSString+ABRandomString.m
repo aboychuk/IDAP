@@ -9,7 +9,7 @@
 #import "NSString+ABRandomString.h"
 
 @implementation NSString (ABRandomString)
-+ (NSString *)randomStringWithLength:(NSUInteger) length {
++ (NSString *)randomStringWithLength:(NSUInteger)length {
     
     NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     NSMutableString *randomString = [NSMutableString stringWithCapacity:length];

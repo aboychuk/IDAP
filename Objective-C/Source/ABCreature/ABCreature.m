@@ -8,23 +8,21 @@
 
 #import "ABCreature.h"
 
-#import "NSString+ABRandomString.h"
-
 @interface ABCreature()
 
-@property (nonatomic, retain) NSMutableArray *mutableChildrens;
+@property (nonatomic, retain) NSMutableArray *mutableChildren;
 
 @end
 
 @implementation ABCreature
 
-@dynamic childrens;
+@dynamic children;
 
 #pragma mark
 #pragma mark Initializations and Dealocations
 
 - (void)dealloc {
-    self.mutableChildrens = nil;
+    self.mutableChildren = nil;
     self.name = nil;
     
     [super dealloc];
@@ -34,9 +32,9 @@
     [super init];
     if (self) {
         self.name = [NSString randomStringWithLength:10];
-        self.weight = arc4random_uniform(120);
-        self.age = arc4random_uniform(80);
-        self.mutableChildrens = [NSMutableArray array];
+        self.weight = [NSNumber randomNumberBetweenMinMax:40 max:120];
+        self.age = [NSNumber randomNumberBetweenMinMax:18 max:100];
+        self.mutableChildren = [NSMutableArray array];
     }
     return self;
 }
@@ -44,23 +42,26 @@
 #pragma mark
 #pragma mark Accesors
 
-- (NSArray *)childrens {
-    return [[self.mutableChildrens copy] autorelease];
+- (NSArray *)children {
+    return [[self.mutableChildren copy] autorelease];
 }
+
+#pragma mark
+#pragma mark Public Methods
 
 - (void)sayHello {
     NSLog(@"Hello from %@!", self.name);
-    for (ABCreature* child in self.childrens) {
+    for (ABCreature* child in self.children) {
         [child sayHello];
     }
 }
 
 - (void)addChild:(ABCreature *)child {
-    [self.mutableChildrens addObject:child];
+    [self.mutableChildren addObject:child];
 }
 
 - (void)deleteChild:(ABCreature *)child {
-    [self.mutableChildrens removeObject:child];
+    [self.mutableChildren removeObject:child];
 }
 
 - (void)performGenderSpecificOperation {

@@ -10,4 +10,6 @@
 
 @interface NSString (ABRandomString)
 
++ (NSString *)randomStringWithLength:(NSUInteger) length;
+
 @end
