@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
         
         NSMutableArray *creatures = [[NSMutableArray new] autorelease];
         
-        for (int i = 0; i < count; i++) {
+        for (int index = 0; index < count; index++) {
             ABCreatureMale *creatureMale = [ABCreatureMale objectCreate];
             ABCreatureFemale *creatureFemale = [ABCreatureFemale objectCreate];
             [creatures addObject:creatureMale];

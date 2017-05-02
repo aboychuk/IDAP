@@ -32,8 +32,8 @@
     [super init];
     if (self) {
         self.name = [NSString randomStringWithLength:10];
-        self.weight = [NSNumber randomNumberBetweenMinMax:40 max:120];
-        self.age = [NSNumber randomNumberBetweenMinMax:18 max:100];
+        self.weight = [NSNumber randomNumberBetweenMin:40 max:120];
+        self.age = [NSNumber randomNumberBetweenMin:18 max:100];
         self.mutableChildren = [NSMutableArray array];
     }
     return self;
