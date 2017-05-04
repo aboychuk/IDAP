@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface ABCar : NSObject
-
 typedef enum {dirty, clean} carPurity;
 
 @property(nonatomic, assign)carPurity cleaness;

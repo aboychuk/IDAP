@@ -36,18 +36,20 @@
 }
 
 #pragma mark
-#pragma mark Public Methods
+#pragma mark Accesors
 
 - (NSArray *)rooms {
     return [[self.mutableRooms copy] autorelease];
 }
 
+#pragma mark
+#pragma mark Public Methods
 
 - (void)addRoom:(ABRoom *)room {
     [self.mutableRooms addObject:room];
 }
 
-- (void)deleteRoom:(ABRoom *)room {
+- (void)removeRoom:(ABRoom *)room {
     [self.mutableRooms removeObject:room];
 }
 

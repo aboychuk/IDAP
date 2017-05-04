@@ -23,6 +23,7 @@
 		6F37AA1D1EBBAF1900510458 /* ABCarWashRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA141EBBAF1900510458 /* ABCarWashRoom.m */; };
 		6F37AA1E1EBBAF1900510458 /* ABRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA161EBBAF1900510458 /* ABRoom.m */; };
 		6F37AA211EBBAF5C00510458 /* ABCarWash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA201EBBAF5C00510458 /* ABCarWash.m */; };
+		6F37AA241EBBB36500510458 /* ABCarWashBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA231EBBB36500510458 /* ABCarWashBuilding.m */; };
 		6F3E1D451EAA89F800063775 /* ABArrayStruct.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E1D431EAA89F800063775 /* ABArrayStruct.c */; };
 		6F93399F1EB8FB2100AC9F3F /* NSString+ABRandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93399E1EB8FB2100AC9F3F /* NSString+ABRandomString.m */; };
 		6F9339A21EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9339A11EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m */; };
@@ -95,6 +96,8 @@
 		6F37AA161EBBAF1900510458 /* ABRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRoom.m; sourceTree = "<group>"; };
 		6F37AA1F1EBBAF5C00510458 /* ABCarWash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWash.h; sourceTree = "<group>"; };
 		6F37AA201EBBAF5C00510458 /* ABCarWash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWash.m; sourceTree = "<group>"; };
+		6F37AA221EBBB36500510458 /* ABCarWashBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashBuilding.h; sourceTree = "<group>"; };
+		6F37AA231EBBB36500510458 /* ABCarWashBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashBuilding.m; sourceTree = "<group>"; };
 		6F3E1D431EAA89F800063775 /* ABArrayStruct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABArrayStruct.c; sourceTree = "<group>"; };
 		6F3E1D441EAA89F800063775 /* ABArrayStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABArrayStruct.h; sourceTree = "<group>"; };
 		6F93399D1EB8FB2100AC9F3F /* NSString+ABRandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ABRandomString.h"; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 			children = (
 				6F37AA051EBBAF1900510458 /* ABBuilding.h */,
 				6F37AA061EBBAF1900510458 /* ABBuilding.m */,
+				6F37AA221EBBB36500510458 /* ABCarWashBuilding.h */,
+				6F37AA231EBBB36500510458 /* ABCarWashBuilding.m */,
 			);
 			path = ABBuilding;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				6F37AA171EBBAF1900510458 /* ABBuilding.m in Sources */,
 				6F37AA1D1EBBAF1900510458 /* ABCarWashRoom.m in Sources */,
 				6FBC7F9E1EB337E800FD7D6D /* ABCreatureMale.m in Sources */,
+				6F37AA241EBBB36500510458 /* ABCarWashBuilding.m in Sources */,
 				6F37AA181EBBAF1900510458 /* ABCar.m in Sources */,
 				6FBC7F9D1EB337E800FD7D6D /* ABCreatureFemale.m in Sources */,
 				6F37AA1C1EBBAF1900510458 /* ABHuman.m in Sources */,

@@ -11,11 +11,10 @@
 #import "ABRoom.h"
 
 @interface ABBuilding : NSObject
-
 @property(nonatomic, copy, readonly)NSArray *rooms;
 
-- (void)addRoom:(ABRoom *) room;
-- (void)deleteRoom:(ABRoom *) room;
+- (void)addRoom:(ABRoom *)room;
+- (void)removeRoom:(ABRoom *)room;
 
 @end
 
