@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F1EA90E1EB3907A00EAAEE6 /* ABCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA90D1EB3907A00EAAEE6 /* ABCar.m */; };
+		6F1EA9111EB3938400EAAEE6 /* ABCarWashRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA9101EB3938400EAAEE6 /* ABCarWashRoom.m */; };
+		6F1EA9171EB3A33400EAAEE6 /* ABHuman.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA9161EB3A33400EAAEE6 /* ABHuman.m */; };
+		6F1EA91A1EB3A3CE00EAAEE6 /* ABCarWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA9191EB3A3CE00EAAEE6 /* ABCarWasher.m */; };
+		6F1EA91D1EB3A3E100EAAEE6 /* ABAcountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA91C1EB3A3E100EAAEE6 /* ABAcountant.m */; };
+		6F1EA9201EB3A3FE00EAAEE6 /* ABDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EA91F1EB3A3FE00EAAEE6 /* ABDirector.m */; };
 		6F302B0E1EA7D17B000D7A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B0D1EA7D17B000D7A95 /* main.m */; };
 		6F302B461EA7D288000D7A95 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B351EA7D288000D7A95 /* main.c */; };
 		6F302B481EA7D288000D7A95 /* ABMamaPapa.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B391EA7D288000D7A95 /* ABMamaPapa.c */; };
@@ -15,7 +21,22 @@
 		6F302B4C1EA7D288000D7A95 /* ABPrintSizeOfStructure.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B411EA7D288000D7A95 /* ABPrintSizeOfStructure.c */; };
 		6F302B4D1EA7D288000D7A95 /* ABPrintSizeOfTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B431EA7D288000D7A95 /* ABPrintSizeOfTypes.c */; };
 		6F3E1D451EAA89F800063775 /* ABArrayStruct.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E1D431EAA89F800063775 /* ABArrayStruct.c */; };
-		6F9D15A71EA8FC1100282F12 /* ABCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D15A61EA8FC1100282F12 /* ABCreature.m */; };
+		6F93399F1EB8FB2100AC9F3F /* NSString+ABRandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93399E1EB8FB2100AC9F3F /* NSString+ABRandomString.m */; };
+		6F9339A21EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9339A11EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m */; };
+		6FAE02131EAD430A00C6504A /* ABObjCSyntax.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE02121EAD430A00C6504A /* ABObjCSyntax.m */; };
+		6FBC7F901EB337C100FD7D6D /* ABCreatureGenderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F8B1EB337C100FD7D6D /* ABCreatureGenderTest.m */; };
+		6FBC7F911EB337C100FD7D6D /* ABCreatureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F8D1EB337C100FD7D6D /* ABCreatureTest.m */; };
+		6FBC7F921EB337C100FD7D6D /* ABSyntaxTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F8F1EB337C100FD7D6D /* ABSyntaxTest.m */; };
+		6FBC7F9C1EB337E800FD7D6D /* ABCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F951EB337E800FD7D6D /* ABCreature.m */; };
+		6FBC7F9D1EB337E800FD7D6D /* ABCreatureFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F971EB337E800FD7D6D /* ABCreatureFemale.m */; };
+		6FBC7F9E1EB337E800FD7D6D /* ABCreatureMale.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F991EB337E800FD7D6D /* ABCreatureMale.m */; };
+		6FBC7F9F1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */; };
+		6FBC7FB41EB34F0B00FD7D6D /* ABBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7FB31EB34F0B00FD7D6D /* ABBuilding.m */; };
+		6FBC7FB71EB3504800FD7D6D /* ABBuildingAdministrative.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7FB61EB3504800FD7D6D /* ABBuildingAdministrative.m */; };
+		6FBCF9DF1EAE230100D69ADE /* ABSyntax.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9DE1EAE230100D69ADE /* ABSyntax.m */; };
+		6FBCF9E21EAE37E500D69ADE /* ABSyntax+ABCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9E11EAE37E500D69ADE /* ABSyntax+ABCategory.m */; };
+		6FBCF9E61EAE50AF00D69ADE /* ABSyntaxSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9E51EAE50AF00D69ADE /* ABSyntaxSubclass.m */; };
+		6FC6012F1EB37BDA0001DAC7 /* ABRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC6012E1EB37BDA0001DAC7 /* ABRoom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +62,18 @@
 
 /* Begin PBXFileReference section */
 		6F1056171EAA20A6005F748A /* ABMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMacro.h; sourceTree = "<group>"; };
+		6F1EA90C1EB3907A00EAAEE6 /* ABCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCar.h; sourceTree = "<group>"; };
+		6F1EA90D1EB3907A00EAAEE6 /* ABCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCar.m; sourceTree = "<group>"; };
+		6F1EA90F1EB3938400EAAEE6 /* ABCarWashRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashRoom.h; sourceTree = "<group>"; };
+		6F1EA9101EB3938400EAAEE6 /* ABCarWashRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashRoom.m; sourceTree = "<group>"; };
+		6F1EA9151EB3A33400EAAEE6 /* ABHuman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABHuman.h; sourceTree = "<group>"; };
+		6F1EA9161EB3A33400EAAEE6 /* ABHuman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABHuman.m; sourceTree = "<group>"; };
+		6F1EA9181EB3A3CE00EAAEE6 /* ABCarWasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWasher.h; sourceTree = "<group>"; };
+		6F1EA9191EB3A3CE00EAAEE6 /* ABCarWasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWasher.m; sourceTree = "<group>"; };
+		6F1EA91B1EB3A3E100EAAEE6 /* ABAcountant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAcountant.h; sourceTree = "<group>"; };
+		6F1EA91C1EB3A3E100EAAEE6 /* ABAcountant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAcountant.m; sourceTree = "<group>"; };
+		6F1EA91E1EB3A3FE00EAAEE6 /* ABDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDirector.h; sourceTree = "<group>"; };
+		6F1EA91F1EB3A3FE00EAAEE6 /* ABDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDirector.m; sourceTree = "<group>"; };
 		6F302B0B1EA7D17B000D7A95 /* Objective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F302B0D1EA7D17B000D7A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6F302B2D1EA7D268000D7A95 /* C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,8 +91,39 @@
 		6F302B451EA7D288000D7A95 /* ABStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABStructure.h; sourceTree = "<group>"; };
 		6F3E1D431EAA89F800063775 /* ABArrayStruct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABArrayStruct.c; sourceTree = "<group>"; };
 		6F3E1D441EAA89F800063775 /* ABArrayStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABArrayStruct.h; sourceTree = "<group>"; };
-		6F9D15A51EA8FC1100282F12 /* ABCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreature.h; sourceTree = "<group>"; };
-		6F9D15A61EA8FC1100282F12 /* ABCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreature.m; sourceTree = "<group>"; };
+		6F93399D1EB8FB2100AC9F3F /* NSString+ABRandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ABRandomString.h"; sourceTree = "<group>"; };
+		6F93399E1EB8FB2100AC9F3F /* NSString+ABRandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ABRandomString.m"; sourceTree = "<group>"; };
+		6F9339A01EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+ABRandomNumber.h"; sourceTree = "<group>"; };
+		6F9339A11EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+ABRandomNumber.m"; sourceTree = "<group>"; };
+		6FAE02121EAD430A00C6504A /* ABObjCSyntax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABObjCSyntax.m; sourceTree = "<group>"; };
+		6FAE02141EAD433E00C6504A /* ABObjCSyntax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABObjCSyntax.h; sourceTree = "<group>"; };
+		6FBC7F8A1EB337C100FD7D6D /* ABCreatureGenderTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreatureGenderTest.h; sourceTree = "<group>"; };
+		6FBC7F8B1EB337C100FD7D6D /* ABCreatureGenderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureGenderTest.m; sourceTree = "<group>"; };
+		6FBC7F8C1EB337C100FD7D6D /* ABCreatureTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreatureTest.h; sourceTree = "<group>"; };
+		6FBC7F8D1EB337C100FD7D6D /* ABCreatureTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureTest.m; sourceTree = "<group>"; };
+		6FBC7F8E1EB337C100FD7D6D /* ABSyntaxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxTest.h; sourceTree = "<group>"; };
+		6FBC7F8F1EB337C100FD7D6D /* ABSyntaxTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntaxTest.m; sourceTree = "<group>"; };
+		6FBC7F941EB337E800FD7D6D /* ABCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreature.h; sourceTree = "<group>"; };
+		6FBC7F951EB337E800FD7D6D /* ABCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreature.m; sourceTree = "<group>"; };
+		6FBC7F961EB337E800FD7D6D /* ABCreatureFemale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreatureFemale.h; sourceTree = "<group>"; };
+		6FBC7F971EB337E800FD7D6D /* ABCreatureFemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureFemale.m; sourceTree = "<group>"; };
+		6FBC7F981EB337E800FD7D6D /* ABCreatureMale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreatureMale.h; sourceTree = "<group>"; };
+		6FBC7F991EB337E800FD7D6D /* ABCreatureMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureMale.m; sourceTree = "<group>"; };
+		6FBC7F9A1EB337E800FD7D6D /* NSObject+ABCreatureCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ABCreatureCategory.h"; path = "../ABCreature/NSObject+ABCreatureCategory.h"; sourceTree = "<group>"; };
+		6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ABCreatureCategory.m"; path = "../ABCreature/NSObject+ABCreatureCategory.m"; sourceTree = "<group>"; };
+		6FBC7FB21EB34F0B00FD7D6D /* ABBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBuilding.h; sourceTree = "<group>"; };
+		6FBC7FB31EB34F0B00FD7D6D /* ABBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABBuilding.m; sourceTree = "<group>"; };
+		6FBC7FB51EB3504800FD7D6D /* ABBuildingAdministrative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBuildingAdministrative.h; sourceTree = "<group>"; };
+		6FBC7FB61EB3504800FD7D6D /* ABBuildingAdministrative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABBuildingAdministrative.m; sourceTree = "<group>"; };
+		6FBCF9DD1EAE230100D69ADE /* ABSyntax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntax.h; sourceTree = "<group>"; };
+		6FBCF9DE1EAE230100D69ADE /* ABSyntax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntax.m; sourceTree = "<group>"; };
+		6FBCF9E01EAE37E500D69ADE /* ABSyntax+ABCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ABSyntax+ABCategory.h"; sourceTree = "<group>"; };
+		6FBCF9E11EAE37E500D69ADE /* ABSyntax+ABCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ABSyntax+ABCategory.m"; sourceTree = "<group>"; };
+		6FBCF9E31EAE389000D69ADE /* ABSyntaxProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxProtocol.h; sourceTree = "<group>"; };
+		6FBCF9E41EAE50AF00D69ADE /* ABSyntaxSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxSubclass.h; sourceTree = "<group>"; };
+		6FBCF9E51EAE50AF00D69ADE /* ABSyntaxSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntaxSubclass.m; sourceTree = "<group>"; };
+		6FC6012D1EB37BDA0001DAC7 /* ABRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRoom.h; sourceTree = "<group>"; };
+		6FC6012E1EB37BDA0001DAC7 /* ABRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRoom.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +147,9 @@
 		6F302B0C1EA7D17B000D7A95 /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				6F9D15A41EA8FBD400282F12 /* Source */,
 				6F302B0D1EA7D17B000D7A95 /* main.m */,
+				6F9D15A41EA8FBD400282F12 /* Source */,
+				6FBC7F891EB337C100FD7D6D /* Test */,
 			);
 			path = "Objective-C";
 			sourceTree = "<group>";
@@ -137,13 +202,95 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6F93399C1EB8FA7E00AC9F3F /* ABCategory */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC7F9A1EB337E800FD7D6D /* NSObject+ABCreatureCategory.h */,
+				6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */,
+				6F93399D1EB8FB2100AC9F3F /* NSString+ABRandomString.h */,
+				6F93399E1EB8FB2100AC9F3F /* NSString+ABRandomString.m */,
+				6F9339A01EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.h */,
+				6F9339A11EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m */,
+			);
+			path = ABCategory;
+			sourceTree = "<group>";
+		};
 		6F9D15A41EA8FBD400282F12 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				6F9D15A51EA8FC1100282F12 /* ABCreature.h */,
-				6F9D15A61EA8FC1100282F12 /* ABCreature.m */,
+				6F93399C1EB8FA7E00AC9F3F /* ABCategory */,
+				6FBC7FA01EB337F100FD7D6D /* ABCarWash */,
+				6FBC7F931EB337E800FD7D6D /* ABCreature */,
+				6FAE02111EAD428F00C6504A /* Syntax */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		6FAE02111EAD428F00C6504A /* Syntax */ = {
+			isa = PBXGroup;
+			children = (
+				6FAE02141EAD433E00C6504A /* ABObjCSyntax.h */,
+				6FAE02121EAD430A00C6504A /* ABObjCSyntax.m */,
+				6FBCF9DD1EAE230100D69ADE /* ABSyntax.h */,
+				6FBCF9DE1EAE230100D69ADE /* ABSyntax.m */,
+				6FBCF9E41EAE50AF00D69ADE /* ABSyntaxSubclass.h */,
+				6FBCF9E51EAE50AF00D69ADE /* ABSyntaxSubclass.m */,
+				6FBCF9E01EAE37E500D69ADE /* ABSyntax+ABCategory.h */,
+				6FBCF9E11EAE37E500D69ADE /* ABSyntax+ABCategory.m */,
+				6FBCF9E31EAE389000D69ADE /* ABSyntaxProtocol.h */,
+			);
+			path = Syntax;
+			sourceTree = "<group>";
+		};
+		6FBC7F891EB337C100FD7D6D /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC7F8A1EB337C100FD7D6D /* ABCreatureGenderTest.h */,
+				6FBC7F8B1EB337C100FD7D6D /* ABCreatureGenderTest.m */,
+				6FBC7F8C1EB337C100FD7D6D /* ABCreatureTest.h */,
+				6FBC7F8D1EB337C100FD7D6D /* ABCreatureTest.m */,
+				6FBC7F8E1EB337C100FD7D6D /* ABSyntaxTest.h */,
+				6FBC7F8F1EB337C100FD7D6D /* ABSyntaxTest.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		6FBC7F931EB337E800FD7D6D /* ABCreature */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC7F941EB337E800FD7D6D /* ABCreature.h */,
+				6FBC7F951EB337E800FD7D6D /* ABCreature.m */,
+				6FBC7F961EB337E800FD7D6D /* ABCreatureFemale.h */,
+				6FBC7F971EB337E800FD7D6D /* ABCreatureFemale.m */,
+				6FBC7F981EB337E800FD7D6D /* ABCreatureMale.h */,
+				6FBC7F991EB337E800FD7D6D /* ABCreatureMale.m */,
+			);
+			path = ABCreature;
+			sourceTree = "<group>";
+		};
+		6FBC7FA01EB337F100FD7D6D /* ABCarWash */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC7FB21EB34F0B00FD7D6D /* ABBuilding.h */,
+				6FBC7FB31EB34F0B00FD7D6D /* ABBuilding.m */,
+				6FBC7FB51EB3504800FD7D6D /* ABBuildingAdministrative.h */,
+				6FBC7FB61EB3504800FD7D6D /* ABBuildingAdministrative.m */,
+				6FC6012D1EB37BDA0001DAC7 /* ABRoom.h */,
+				6FC6012E1EB37BDA0001DAC7 /* ABRoom.m */,
+				6F1EA90C1EB3907A00EAAEE6 /* ABCar.h */,
+				6F1EA90D1EB3907A00EAAEE6 /* ABCar.m */,
+				6F1EA90F1EB3938400EAAEE6 /* ABCarWashRoom.h */,
+				6F1EA9101EB3938400EAAEE6 /* ABCarWashRoom.m */,
+				6F1EA9151EB3A33400EAAEE6 /* ABHuman.h */,
+				6F1EA9161EB3A33400EAAEE6 /* ABHuman.m */,
+				6F1EA9181EB3A3CE00EAAEE6 /* ABCarWasher.h */,
+				6F1EA9191EB3A3CE00EAAEE6 /* ABCarWasher.m */,
+				6F1EA91B1EB3A3E100EAAEE6 /* ABAcountant.h */,
+				6F1EA91C1EB3A3E100EAAEE6 /* ABAcountant.m */,
+				6F1EA91E1EB3A3FE00EAAEE6 /* ABDirector.h */,
+				6F1EA91F1EB3A3FE00EAAEE6 /* ABDirector.m */,
+			);
+			path = ABCarWash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,8 +372,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FBC7F901EB337C100FD7D6D /* ABCreatureGenderTest.m in Sources */,
+				6F1EA9171EB3A33400EAAEE6 /* ABHuman.m in Sources */,
+				6F1EA9111EB3938400EAAEE6 /* ABCarWashRoom.m in Sources */,
+				6F1EA91A1EB3A3CE00EAAEE6 /* ABCarWasher.m in Sources */,
+				6F1EA90E1EB3907A00EAAEE6 /* ABCar.m in Sources */,
+				6FBCF9E21EAE37E500D69ADE /* ABSyntax+ABCategory.m in Sources */,
+				6F1EA9201EB3A3FE00EAAEE6 /* ABDirector.m in Sources */,
+				6F1EA91D1EB3A3E100EAAEE6 /* ABAcountant.m in Sources */,
+				6FBCF9E61EAE50AF00D69ADE /* ABSyntaxSubclass.m in Sources */,
+				6FC6012F1EB37BDA0001DAC7 /* ABRoom.m in Sources */,
+				6FBC7FB41EB34F0B00FD7D6D /* ABBuilding.m in Sources */,
+				6FBC7FB71EB3504800FD7D6D /* ABBuildingAdministrative.m in Sources */,
+				6F93399F1EB8FB2100AC9F3F /* NSString+ABRandomString.m in Sources */,
+				6FBC7F9F1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m in Sources */,
+				6FBC7F921EB337C100FD7D6D /* ABSyntaxTest.m in Sources */,
+				6FBC7F911EB337C100FD7D6D /* ABCreatureTest.m in Sources */,
 				6F302B0E1EA7D17B000D7A95 /* main.m in Sources */,
-				6F9D15A71EA8FC1100282F12 /* ABCreature.m in Sources */,
+				6FAE02131EAD430A00C6504A /* ABObjCSyntax.m in Sources */,
+				6FBC7F9E1EB337E800FD7D6D /* ABCreatureMale.m in Sources */,
+				6FBC7F9D1EB337E800FD7D6D /* ABCreatureFemale.m in Sources */,
+				6FBCF9DF1EAE230100D69ADE /* ABSyntax.m in Sources */,
+				6F9339A21EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m in Sources */,
+				6FBC7F9C1EB337E800FD7D6D /* ABCreature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -259,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -266,6 +436,7 @@
 		6F302B321EA7D268000D7A95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -273,6 +444,7 @@
 		6F302B331EA7D268000D7A95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

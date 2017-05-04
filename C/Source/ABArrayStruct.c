@@ -28,7 +28,7 @@ void deleteStruct(ABArrayStruct* structure) {
 
 void addElement(ABArrayStruct* structure, int element) {
     if (structure -> length >= structure -> capacity) {
-        structure -> array = realloc(structure -> array, sizeof(int) * (structure -> capacity + 1));
+        structure -> array = realloc(structure -> array, sizeof(int) *(structure -> capacity + 1));
         ++structure -> capacity;
     }
     structure -> array[structure -> length] = element;
@@ -39,7 +39,7 @@ void deleteElement(ABArrayStruct* structure, unsigned int index) {
     if(index < structure -> length) {
         printf("Element [ %d ] = %d was deleted\n", index, structure -> array[index]);
         for(int iVar = index; iVar < structure -> length - 1; iVar++) {
-            structure -> array[iVar] = structure -> array[iVar+1];
+            structure -> array[iVar] = structure -> array[iVar +1];
         }
         --structure -> length;
     }
@@ -64,5 +64,4 @@ void ABArrayStructTest() {
     addElement(&array, 9);
     printStruct(&array);
     deleteStruct(&array);
-    printStruct(&array);
 }

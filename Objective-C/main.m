@@ -6,16 +6,31 @@
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "ABCreature.h"
+#import "ABCreatureTest.h"
+#import "ABCreatureMale.h"
+#import "ABCreatureFemale.h"
+#import "NSObject+ABCreatureCategory.h"
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        ABCreature *creature1 = [[ABCreature new] autorelease];
-        ABCreature *creature2 = [[ABCreature new] autorelease];
-        ABCreature *creature3 = [[ABCreature new] autorelease];
-        ABCreature *creature4 = [[ABCreature new] autorelease];
-    
+    @autoreleasepool{
+        const int count = 10;
+        
+        NSMutableArray *creatures = [[NSMutableArray new] autorelease];
+        
+        for (int index = 0; index < count; index++) {
+            ABCreatureMale *creatureMale = [ABCreatureMale objectCreate];
+            ABCreatureFemale *creatureFemale = [ABCreatureFemale objectCreate];
+            [creatures addObject:creatureMale];
+            [creatures addObject:creatureFemale];
+        }
+        NSLog(@"array = %@", creatures);
+        
+        for (ABCreature *creature in creatures) {
+            [creature performGenderSpecificOperation];
+        }
     }
+    
     return 0;
 }
+
