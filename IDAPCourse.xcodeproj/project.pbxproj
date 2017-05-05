@@ -80,8 +80,8 @@
 		6F302B451EA7D288000D7A95 /* ABStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABStructure.h; sourceTree = "<group>"; };
 		6F37AA051EBBAF1900510458 /* ABBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBuilding.h; sourceTree = "<group>"; };
 		6F37AA061EBBAF1900510458 /* ABBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABBuilding.m; sourceTree = "<group>"; };
-		6F37AA071EBBAF1900510458 /* ABCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCar.h; sourceTree = "<group>"; };
-		6F37AA081EBBAF1900510458 /* ABCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCar.m; sourceTree = "<group>"; };
+		6F37AA071EBBAF1900510458 /* ABCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABCar.h; path = ABCarWash/ABCar.h; sourceTree = "<group>"; };
+		6F37AA081EBBAF1900510458 /* ABCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABCar.m; path = ABCarWash/ABCar.m; sourceTree = "<group>"; };
 		6F37AA0A1EBBAF1900510458 /* ABAcountant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAcountant.h; sourceTree = "<group>"; };
 		6F37AA0B1EBBAF1900510458 /* ABAcountant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAcountant.m; sourceTree = "<group>"; };
 		6F37AA0C1EBBAF1900510458 /* ABCarWasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWasher.h; sourceTree = "<group>"; };
@@ -190,8 +190,6 @@
 		6F37AA031EBBAF1900510458 /* ABCarWash */ = {
 			isa = PBXGroup;
 			children = (
-				6F37AA071EBBAF1900510458 /* ABCar.h */,
-				6F37AA081EBBAF1900510458 /* ABCar.m */,
 				6F37AA1F1EBBAF5C00510458 /* ABCarWash.h */,
 				6F37AA201EBBAF5C00510458 /* ABCarWash.m */,
 				6F37AA041EBBAF1900510458 /* ABBuilding */,
@@ -273,6 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				6F37AA031EBBAF1900510458 /* ABCarWash */,
+				6F37AA071EBBAF1900510458 /* ABCar.h */,
+				6F37AA081EBBAF1900510458 /* ABCar.m */,
 				6F93399C1EB8FA7E00AC9F3F /* ABCategory */,
 				6FBC7F931EB337E800FD7D6D /* ABCreature */,
 				6FAE02111EAD428F00C6504A /* Syntax */,
