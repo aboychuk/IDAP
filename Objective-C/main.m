@@ -11,24 +11,11 @@
 #import "ABCreatureMale.h"
 #import "ABCreatureFemale.h"
 #import "NSObject+ABCreatureCategory.h"
+#import "ABCarWashTest.h"
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool{
-        const int count = 10;
-        
-        NSMutableArray *creatures = [[NSMutableArray new] autorelease];
-        
-        for (int index = 0; index < count; index++) {
-            ABCreatureMale *creatureMale = [ABCreatureMale objectCreate];
-            ABCreatureFemale *creatureFemale = [ABCreatureFemale objectCreate];
-            [creatures addObject:creatureMale];
-            [creatures addObject:creatureFemale];
-        }
-        NSLog(@"array = %@", creatures);
-        
-        for (ABCreature *creature in creatures) {
-            [creature performGenderSpecificOperation];
-        }
+    @autoreleasepool {
+        [ABCarWashTest ABWashTest];
     }
     
     return 0;

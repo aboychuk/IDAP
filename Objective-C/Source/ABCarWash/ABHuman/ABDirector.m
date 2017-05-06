@@ -10,4 +10,21 @@
 
 @implementation ABDirector
 
+#pragma mark
+#pragma mark Initialization
+
+- (instancetype)init {
+    [super init];
+    self.profit = 0;
+    return self;
+}
+
+#pragma mark
+#pragma mark Public Methods
+
+- (void)takeMoneyFromAccountant:(NSUInteger)moneyFromAccountant {
+    self.profit = moneyFromAccountant;
+    NSLog(@"Director got money from Accountant");
+}
+
 @end

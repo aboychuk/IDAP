@@ -9,5 +9,8 @@
 #import "ABHuman.h"
 
 @interface ABDirector : ABHuman
+@property(nonatomic, assign)NSUInteger profit;
+
+- (void)takeMoneyFromAccountant:(NSUInteger)moneyFromAccountant;
 
 @end

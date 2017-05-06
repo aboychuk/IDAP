@@ -22,8 +22,8 @@ void CreatureGenderTest() {
     NSMutableArray *creatures = [[NSMutableArray new] autorelease];
     
     for (int i = 0; i < count; i++) {
-        ABCreatureMale *creatureMale = [ABCreatureMale objectCreate];
-        ABCreatureFemale *creatureFemale = [ABCreatureFemale objectCreate];
+        ABCreatureMale *creatureMale = [ABCreatureMale object];
+        ABCreatureFemale *creatureFemale = [ABCreatureFemale object];
         [creatures addObject:creatureMale];
         [creatures addObject:creatureFemale];
     }

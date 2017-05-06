@@ -53,4 +53,12 @@
     [self.mutableRooms removeObject:room];
 }
 
+- (void)addCarWashRoom:(ABCarWashRoom *)carWashRoom {
+    [self.mutableRooms addObject:carWashRoom];
+}
+
+- (void)removeCarWashRoom:(ABCarWashRoom *)carWashRoom {
+    [self.mutableRooms removeObject:carWashRoom];
+}
+
 @end

@@ -22,7 +22,7 @@ void CreatureTest() {
         [creaturesArray addObject:creature];
         [creature sayHello];
         [creature addChild:child];
-        NSLog(@"%@", creature.childrens);
+        NSLog(@"%@", creature.children);
     }
     
     /*for (ABCreature *creature in creaturesArray) {

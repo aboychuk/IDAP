@@ -15,7 +15,6 @@ typedef enum {dirty, clean} carPurity;
 @property(nonatomic, assign)NSUInteger money;
 
 - (instancetype)init;
-
 - (NSUInteger)payForWash;
 
 @end

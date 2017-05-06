@@ -7,7 +7,13 @@
 //
 
 #import "ABHuman.h"
+#import "ABCar.h"
 
 @interface ABCarWasher : ABHuman
+@property(nonatomic, assign)NSUInteger paymentForWash;
+
+- (void)washCar:(ABCar *)car;
+- (void)takeMoneyFromCar:(NSUInteger)moneyFromCar;
+- (NSUInteger)giveMoneyToAccountant;
 
 @end

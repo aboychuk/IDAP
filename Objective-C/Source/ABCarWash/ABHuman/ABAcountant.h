@@ -9,5 +9,9 @@
 #import "ABHuman.h"
 
 @interface ABAcountant : ABHuman
+@property(nonatomic, assign)NSUInteger moneyForCount;
+
+- (void)takeMoneyFromWasher:(NSUInteger)moneyFromWasher;
+- (NSUInteger)giveMoneyToDirector;
 
 @end

@@ -10,4 +10,22 @@
 
 @implementation ABHuman
 
+#pragma mark
+#pragma mark Initializations and Dealocations
+
+- (void)dealloc {
+    [self.name release];
+    self.name = nil;
+    [super dealloc];
+}
+
+- (instancetype)init{
+    [super init];
+    self.name = @"ALex";
+    self.salary = 4000;
+    self.experience = 5;
+
+    return self;
+}
+
 @end
