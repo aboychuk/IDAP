@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {dirty, clean} carPurity;
+typedef NS_ENUM(NSUInteger, ABCleanOrDirty) {
+    ABClean,
+    ABDirty,
+};
 
 @interface ABCar : NSObject
-@property (nonatomic, assign)   carPurity   cleaness;
+@property (nonatomic, assign)   BOOL    cleaness;
 @property (nonatomic, assign)   NSUInteger  money;
 
 - (instancetype)init;
