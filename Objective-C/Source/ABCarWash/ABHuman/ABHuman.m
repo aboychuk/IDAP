@@ -16,11 +16,12 @@
 - (void)dealloc {
     [self.name release];
     self.name = nil;
+    
     [super dealloc];
 }
 
 - (instancetype)init{
-    [super init];
+    self = [super init];
     self.name = @"ALex";
     self.salary = 4000;
     self.experience = 5;

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "ABCarWasher.h"
 #import "ABAcountant.h"
 #import "ABDirector.h"
@@ -14,7 +15,7 @@
 #import "ABCar.h"
 
 @interface ABCarWash : NSObject
-@property (nonatomic, copy, readonly)NSArray  *buildings;
+@property (nonatomic, copy, readonly)   NSArray *buildings;
 
 - (void)addBuilding:(ABBuilding *)building;
 - (void)removeBuilding:(ABBuilding *)building;

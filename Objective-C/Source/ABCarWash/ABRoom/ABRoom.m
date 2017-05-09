@@ -9,8 +9,7 @@
 #import "ABRoom.h"
 
 @interface ABRoom ()
-
-@property(nonatomic, retain)NSMutableArray  *mutableHumans;
+@property (nonatomic, retain)   NSMutableArray  *mutableHumans;
 
 @end
 
@@ -28,7 +27,7 @@
 }
 
 - (instancetype)init {
-    [super init];
+    self = [super init];
     if (self) {
         self.mutableHumans = [NSMutableArray array];
     }
@@ -45,7 +44,9 @@
 #pragma mark Public Methods
 
 - (void)addHuman:(ABHuman *)human {
+    if (human) {
     [self.mutableHumans addObject:human];
+    }
 }
 
 - (void)removeHuman:(ABHuman *)human {

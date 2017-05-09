@@ -13,7 +13,7 @@
 #import "ABCarWash.h"
 
 @interface ABBuilding : NSObject
-@property(nonatomic, copy, readonly)NSArray *rooms;
+@property (nonatomic, copy, readonly)   NSArray *rooms;
 
 - (void)addRoom:(ABRoom *)room;
 - (void)removeRoom:(ABRoom *)room;

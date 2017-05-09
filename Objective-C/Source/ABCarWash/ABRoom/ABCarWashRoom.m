@@ -9,8 +9,7 @@
 #import "ABCarWashRoom.h"
 
 @interface ABCarWashRoom ()
-
-@property(nonatomic, retain)NSMutableArray *mutableCars;
+@property (nonatomic, retain)   NSMutableArray  *mutableCars;
 
 @end
 
@@ -28,7 +27,7 @@
 }
 
 - (instancetype)init {
-    [super init];
+    self = [super init];
     if (self) {
         self.mutableCars = [NSMutableArray array];
     }
@@ -45,7 +44,9 @@
 #pragma mark Public Methods
 
 - (void)addCar:(ABCar *)car {
+    if (car) {
     [self.mutableCars addObject:car];
+    }
 }
 
 - (void)removeCar:(ABCar *)car {

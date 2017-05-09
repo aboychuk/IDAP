@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface ABHuman : NSObject
-
-@property(nonatomic, retain)NSString *name;
-@property(nonatomic, assign)NSUInteger salary;
-@property(nonatomic, assign)NSUInteger experience;
+@property (nonatomic, retain)   NSString    *name;
+@property (nonatomic, assign)   NSUInteger  salary;
+@property (nonatomic, assign)   NSUInteger  experience;
 
 @end

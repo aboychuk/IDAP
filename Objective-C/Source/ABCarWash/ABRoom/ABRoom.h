@@ -11,11 +11,10 @@
 #import "ABHuman.h"
 
 @interface ABRoom : NSObject
-@property(nonatomic, assign)NSUInteger capacity;
-@property(nonatomic, copy, readonly)NSArray *humans;
+@property (nonatomic, assign)   NSUInteger  capacity;
+@property (nonatomic, copy, readonly)   NSArray *humans;
 
 - (void)addHuman:(ABHuman *)human;
 - (void)removeHuman:(ABHuman *)human;
-
 
 @end

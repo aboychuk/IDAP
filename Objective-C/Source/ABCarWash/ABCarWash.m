@@ -10,8 +10,7 @@
 
 @interface ABCarWash ()
 
-@property(nonatomic, retain)NSMutableArray *mutableBuildings;
-
+@property (nonatomic, retain)   NSMutableArray  *mutableBuildings;
 
 @end
 
@@ -46,7 +45,9 @@
 #pragma mark Public Methods
 
 - (void)addBuilding:(ABBuilding *)building {
+    if (building) {
     [self.mutableBuildings addObject:building];
+    }
 }
 
 - (void)removeBuilding:(ABBuilding *)building {

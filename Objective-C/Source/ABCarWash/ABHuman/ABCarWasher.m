@@ -14,8 +14,9 @@
 #pragma mark Initialization
 
 - (instancetype)init {
-    [super init];
+    self = [super init];
     self.paymentForWash = 0;
+    
     return self;
 }
 

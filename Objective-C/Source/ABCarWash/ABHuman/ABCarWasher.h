@@ -10,7 +10,7 @@
 #import "ABCar.h"
 
 @interface ABCarWasher : ABHuman
-@property(nonatomic, assign)NSUInteger paymentForWash;
+@property (nonatomic, assign)   NSUInteger  paymentForWash;
 
 - (void)washCar:(ABCar *)car;
 - (void)takeMoneyFromCar:(NSUInteger)moneyFromCar;

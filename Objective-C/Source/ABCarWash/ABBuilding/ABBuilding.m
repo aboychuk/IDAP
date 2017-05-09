@@ -10,7 +10,7 @@
 
 @interface ABBuilding ()
 
-@property(nonatomic, retain)NSMutableArray *mutableRooms;
+@property (nonatomic, retain)   NSMutableArray  *mutableRooms;
 
 @end
 
@@ -28,7 +28,7 @@
 }
 
 - (instancetype)init {
-    [super init];
+    self = [super init];
     if (self) {
         self.mutableRooms = [NSMutableArray array];
     }
@@ -46,7 +46,9 @@
 #pragma mark Public Methods
 
 - (void)addRoom:(ABRoom *)room {
+    if (room) {
     [self.mutableRooms addObject:room];
+    }
 }
 
 - (void)removeRoom:(ABRoom *)room {
@@ -54,7 +56,9 @@
 }
 
 - (void)addCarWashRoom:(ABCarWashRoom *)carWashRoom {
+    if (carWashRoom) {
     [self.mutableRooms addObject:carWashRoom];
+    }
 }
 
 - (void)removeCarWashRoom:(ABCarWashRoom *)carWashRoom {

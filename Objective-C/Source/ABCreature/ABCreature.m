@@ -10,7 +10,7 @@
 
 @interface ABCreature()
 
-@property (nonatomic, retain) NSMutableArray *mutableChildren;
+@property (nonatomic, retain)   NSMutableArray  *mutableChildren;
 
 @end
 
@@ -29,7 +29,7 @@
 }
 
 - (instancetype)init {
-    [super init];
+    self = [super init];
     if (self) {
         self.name = [NSString randomStringWithLength:10];
         self.weight = [NSNumber randomNumberBetweenMin:40 max:120];
@@ -57,7 +57,9 @@
 }
 
 - (void)addChild:(ABCreature *)child {
-    [self.mutableChildren addObject:child];
+    if (child) {
+        [self.mutableChildren addObject:child];
+    }
 }
 
 - (void)deleteChild:(ABCreature *)child {
