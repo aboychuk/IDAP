@@ -6,10 +6,10 @@
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
-#import "ABHuman.h"
+#import "ABWorker.h"
 #import "ABCar.h"
 
-@interface ABCarWasher : ABHuman
+@interface ABCarWasher : ABWorker
 @property (nonatomic, assign)   NSUInteger  paymentForWash;
 
 - (void)washCar:(ABCar *)car;

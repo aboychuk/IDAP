@@ -9,19 +9,19 @@
 #import "ABRoom.h"
 
 @interface ABRoom ()
-@property (nonatomic, retain)   NSMutableArray  *mutableHumans;
+@property (nonatomic, retain)   NSMutableArray  *mutableWorkers;
 
 @end
 
 @implementation ABRoom
 
-@dynamic humans;
+@dynamic workers;
 
 #pragma mark
 #pragma mark Initializations and Dealocations
 
 - (void)dealloc {
-    self.mutableHumans = nil;
+    self.mutableWorkers = nil;
     
     [super dealloc];
 }
@@ -29,7 +29,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.mutableHumans = [NSMutableArray array];
+        self.mutableWorkers = [NSMutableArray array];
     }
     return self;
 }
@@ -37,20 +37,20 @@
 #pragma mark Accesors
 
 - (NSArray *)rooms {
-    return [[self.mutableHumans copy] autorelease];
+    return [[self.mutableWorkers copy] autorelease];
 }
 
 #pragma mark
 #pragma mark Public Methods
 
-- (void)addHuman:(ABHuman *)human {
-    if (human) {
-    [self.mutableHumans addObject:human];
+- (void)addWorker:(ABWorker *)worker {
+    if (worker) {
+    [self.mutableWorkers addObject:worker];
     }
 }
 
-- (void)removeHuman:(ABHuman *)human {
-    [self.mutableHumans removeObject:human];
+- (void)removeWorker:(ABWorker *)worker {
+    [self.mutableWorkers removeObject:worker];
 }
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
-#import "ABHuman.h"
+#import "ABWorker.h"
 
-@interface ABAcountant : ABHuman
+@interface ABAcountant : ABWorker
 @property (nonatomic, assign)   NSUInteger  moneyForCount;
 
 - (void)takeMoneyFromWasher:(NSUInteger)moneyFromWasher;

@@ -24,7 +24,7 @@
 #pragma mark Public Methods
 
 - (void)washCar:(ABCar *)car {
-    car.cleaness = clean;
+    car.cleaness = ABClean;
     NSLog(@"Car is clean.");
 }
 

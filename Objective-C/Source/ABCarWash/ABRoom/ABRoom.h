@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ABHuman.h"
+#import "ABWorker.h"
 
 @interface ABRoom : NSObject
 @property (nonatomic, assign)   NSUInteger  capacity;
-@property (nonatomic, copy, readonly)   NSArray *humans;
+@property (nonatomic, copy, readonly)   NSArray *workers;
 
-- (void)addHuman:(ABHuman *)human;
-- (void)removeHuman:(ABHuman *)human;
+- (void)addWorker:(ABWorker *)worker;
+- (void)removeWorker:(ABWorker *)worker;
 
 @end

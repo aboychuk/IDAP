@@ -18,11 +18,11 @@
 		6F3160451EC1F5FB0087DEF4 /* ABCarWashRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3160421EC1F5FB0087DEF4 /* ABCarWashRoom.m */; };
 		6F3160461EC1F5FB0087DEF4 /* ABRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3160441EC1F5FB0087DEF4 /* ABRoom.m */; };
 		6F31604A1EC1F6F20087DEF4 /* ABCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3160491EC1F6F20087DEF4 /* ABCar.m */; };
+		6F31604D1EC201860087DEF4 /* ABWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F31604C1EC201860087DEF4 /* ABWorker.m */; };
 		6F37AA171EBBAF1900510458 /* ABBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA061EBBAF1900510458 /* ABBuilding.m */; };
 		6F37AA191EBBAF1900510458 /* ABAcountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA0B1EBBAF1900510458 /* ABAcountant.m */; };
 		6F37AA1A1EBBAF1900510458 /* ABCarWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA0D1EBBAF1900510458 /* ABCarWasher.m */; };
 		6F37AA1B1EBBAF1900510458 /* ABDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA0F1EBBAF1900510458 /* ABDirector.m */; };
-		6F37AA1C1EBBAF1900510458 /* ABHuman.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA111EBBAF1900510458 /* ABHuman.m */; };
 		6F37AA211EBBAF5C00510458 /* ABCarWash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA201EBBAF5C00510458 /* ABCarWash.m */; };
 		6F3E1D451EAA89F800063775 /* ABArrayStruct.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E1D431EAA89F800063775 /* ABArrayStruct.c */; };
 		6F93399F1EB8FB2100AC9F3F /* NSString+ABRandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93399E1EB8FB2100AC9F3F /* NSString+ABRandomString.m */; };
@@ -86,6 +86,8 @@
 		6F3160441EC1F5FB0087DEF4 /* ABRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRoom.m; sourceTree = "<group>"; };
 		6F3160481EC1F6F20087DEF4 /* ABCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCar.h; sourceTree = "<group>"; };
 		6F3160491EC1F6F20087DEF4 /* ABCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCar.m; sourceTree = "<group>"; };
+		6F31604B1EC201860087DEF4 /* ABWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABWorker.h; sourceTree = "<group>"; };
+		6F31604C1EC201860087DEF4 /* ABWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABWorker.m; sourceTree = "<group>"; };
 		6F37AA051EBBAF1900510458 /* ABBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBuilding.h; sourceTree = "<group>"; };
 		6F37AA061EBBAF1900510458 /* ABBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABBuilding.m; sourceTree = "<group>"; };
 		6F37AA0A1EBBAF1900510458 /* ABAcountant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAcountant.h; sourceTree = "<group>"; };
@@ -94,8 +96,6 @@
 		6F37AA0D1EBBAF1900510458 /* ABCarWasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWasher.m; sourceTree = "<group>"; };
 		6F37AA0E1EBBAF1900510458 /* ABDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDirector.h; sourceTree = "<group>"; };
 		6F37AA0F1EBBAF1900510458 /* ABDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDirector.m; sourceTree = "<group>"; };
-		6F37AA101EBBAF1900510458 /* ABHuman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABHuman.h; sourceTree = "<group>"; };
-		6F37AA111EBBAF1900510458 /* ABHuman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABHuman.m; sourceTree = "<group>"; };
 		6F37AA1F1EBBAF5C00510458 /* ABCarWash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWash.h; sourceTree = "<group>"; };
 		6F37AA201EBBAF5C00510458 /* ABCarWash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWash.m; sourceTree = "<group>"; };
 		6F3E1D431EAA89F800063775 /* ABArrayStruct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABArrayStruct.c; sourceTree = "<group>"; };
@@ -238,8 +238,8 @@
 				6F37AA0D1EBBAF1900510458 /* ABCarWasher.m */,
 				6F37AA0E1EBBAF1900510458 /* ABDirector.h */,
 				6F37AA0F1EBBAF1900510458 /* ABDirector.m */,
-				6F37AA101EBBAF1900510458 /* ABHuman.h */,
-				6F37AA111EBBAF1900510458 /* ABHuman.m */,
+				6F31604B1EC201860087DEF4 /* ABWorker.h */,
+				6F31604C1EC201860087DEF4 /* ABWorker.m */,
 			);
 			path = ABHuman;
 			sourceTree = "<group>";
@@ -415,6 +415,7 @@
 				6F31604A1EC1F6F20087DEF4 /* ABCar.m in Sources */,
 				6FBCF9E61EAE50AF00D69ADE /* ABSyntaxSubclass.m in Sources */,
 				6F93399F1EB8FB2100AC9F3F /* NSString+ABRandomString.m in Sources */,
+				6F31604D1EC201860087DEF4 /* ABWorker.m in Sources */,
 				6FBC7F9F1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m in Sources */,
 				6FBC7F921EB337C100FD7D6D /* ABSyntaxTest.m in Sources */,
 				6FBC7F911EB337C100FD7D6D /* ABCreatureTest.m in Sources */,
@@ -426,7 +427,6 @@
 				6F3160461EC1F5FB0087DEF4 /* ABRoom.m in Sources */,
 				6FBC7F9E1EB337E800FD7D6D /* ABCreatureMale.m in Sources */,
 				6FBC7F9D1EB337E800FD7D6D /* ABCreatureFemale.m in Sources */,
-				6F37AA1C1EBBAF1900510458 /* ABHuman.m in Sources */,
 				6FBCF9DF1EAE230100D69ADE /* ABSyntax.m in Sources */,
 				6F3160451EC1F5FB0087DEF4 /* ABCarWashRoom.m in Sources */,
 				6F9339A21EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m in Sources */,

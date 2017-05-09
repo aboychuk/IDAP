@@ -1,14 +1,14 @@
 //
-//  ABHuman.m
+//  ABWorker.m
 //  IDAPCourse
 //
-//  Created by Andrew Boychuk on 28.04.17.
+//  Created by Andrew Boychuk on 5/9/17.
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
-#import "ABHuman.h"
+#import "ABWorker.h"
 
-@implementation ABHuman
+@implementation ABWorker
 
 #pragma mark
 #pragma mark Initializations and Dealocations
@@ -25,7 +25,7 @@
     self.name = @"ALex";
     self.salary = 4000;
     self.experience = 5;
-
+    
     return self;
 }
 

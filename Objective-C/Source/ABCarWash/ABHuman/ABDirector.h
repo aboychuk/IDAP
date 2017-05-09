@@ -6,9 +6,9 @@
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
-#import "ABHuman.h"
+#import "ABWorker.h"
 
-@interface ABDirector : ABHuman
+@interface ABDirector : ABWorker
 @property (nonatomic, assign)   NSUInteger  profit;
 
 - (void)takeMoneyFromAccountant:(NSUInteger)moneyFromAccountant;
