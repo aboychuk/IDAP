@@ -8,16 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, ABCleanOrDirty) {
-    ABClean,
-    ABDirty,
+#import "ABMoneyFlow.h"
+
+typedef NS_ENUM(NSUInteger, ABCarState) {
+    ABCarStateClean,
+    ABCarStateDirty,
 };
 
-@interface ABCar : NSObject
-@property (nonatomic, assign)   BOOL    cleaness;
+@interface ABCar : NSObject <ABMoneyFlow>
+@property (nonatomic, assign)   BOOL    ABCarState;
 @property (nonatomic, assign)   NSUInteger  money;
 
+
 - (instancetype)init;
-- (NSUInteger)payForWash;
+- (NSUInteger)giveMoney;
 
 @end

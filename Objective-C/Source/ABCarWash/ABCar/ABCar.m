@@ -14,17 +14,18 @@ static NSUInteger ABCarMoney = 100;
 
 - (instancetype)init {
     self = [super init];
-    self.cleaness = ABDirty;
+    self.ABCarState = ABCarStateDirty;
     self.money = ABCarMoney;
     
     return self;
 }
 
-- (NSUInteger)payForWash {
-    NSUInteger moneyFromCar = self.money;
-    NSLog(@"Car payed for wash %lu USD.", self.money);
+- (NSUInteger)giveMoney {
+    NSUInteger money = self.money;
+    NSLog(@"%@ payed for wash %lu USD.",self.className, self.money);
     self.money = 0;
-    return moneyFromCar;
+    
+    return money;
 }
 
 @end
