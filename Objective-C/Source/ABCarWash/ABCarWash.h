@@ -15,9 +15,10 @@
 #import "ABCar.h"
 
 @interface ABCarWash : NSObject
+@property (nonatomic, copy, readonly)   NSArray *cars;
 @property (nonatomic, copy, readonly)   NSArray *buildings;
 
-- (void)addBuilding:(ABBuilding *)building;
-- (void)removeBuilding:(ABBuilding *)building;
+- (void)addCar:(ABCar *)car;
+- (void)removeCar:(ABCar *)car;
 
 @end

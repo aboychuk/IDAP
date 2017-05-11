@@ -10,6 +10,6 @@
 
 @interface NSObject (ABCreatureCategory)
 
-+ (id)object;
++ (instancetype)object;
 
 @end

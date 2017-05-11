@@ -8,11 +8,6 @@
 
 #import "ABWorker.h"
 
-@interface ABWorker ()
-@property (nonatomic, assign)   NSUInteger  money;
-
-@end
-
 @implementation ABWorker
 
 #pragma mark

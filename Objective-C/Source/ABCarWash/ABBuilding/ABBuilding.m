@@ -9,7 +9,6 @@
 #import "ABBuilding.h"
 
 @interface ABBuilding ()
-
 @property (nonatomic, retain)   NSMutableArray  *mutableRooms;
 
 @end
@@ -53,16 +52,6 @@
 
 - (void)removeRoom:(ABRoom *)room {
     [self.mutableRooms removeObject:room];
-}
-
-- (void)addCarWashRoom:(ABCarWashRoom *)carWashRoom {
-    if (carWashRoom) {
-    [self.mutableRooms addObject:carWashRoom];
-    }
-}
-
-- (void)removeCarWashRoom:(ABCarWashRoom *)carWashRoom {
-    [self.mutableRooms removeObject:carWashRoom];
 }
 
 @end

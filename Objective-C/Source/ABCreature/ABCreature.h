@@ -16,7 +16,7 @@
 @property (nonatomic, copy)     NSString    *name;
 @property (nonatomic, assign)   double      weight;
 @property (nonatomic, assign)   NSUInteger  age;
-@property (nonatomic, copy, readonly)   NSArray *children;
+@property (nonatomic, copy)     NSArray     *children;
 
 - (void)addChild:(ABCreature *)child;
 - (void)deleteChild:(ABCreature *)child;

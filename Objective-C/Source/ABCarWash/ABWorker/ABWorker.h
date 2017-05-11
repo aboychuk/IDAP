@@ -10,6 +10,7 @@
 #import "ABMoneyFlow.h"
 
 @interface ABWorker : ABCreature <ABMoneyFlow>
+@property (nonatomic, assign)   NSUInteger  money;
 @property (nonatomic, assign)   NSUInteger  salary;
 @property (nonatomic, assign)   NSUInteger  experience;
 
