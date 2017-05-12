@@ -30,7 +30,7 @@
 }
 
 - (void)takeMoney:(ABWorker *)worker {
-    self.money = [worker giveMoney];
+    self.money += [worker giveMoney];
 }
 
 - (NSUInteger)giveMoney {

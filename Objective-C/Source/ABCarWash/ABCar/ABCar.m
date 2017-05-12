@@ -22,7 +22,6 @@ static NSUInteger ABCarMoney = 100;
 
 - (NSUInteger)giveMoney {
     NSUInteger money = self.money;
-    NSLog(@"%@ payed for wash %lu USD.",self.className, self.money);
     self.money = 0;
     
     return money;

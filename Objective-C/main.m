@@ -15,7 +15,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-
+        [ABCarWashTest carWashTest];
     }
     
     return 0;

@@ -11,4 +11,6 @@
 
 @interface ABCarWashTest : NSObject
 
++ (void)carWashTest;
+
 @end

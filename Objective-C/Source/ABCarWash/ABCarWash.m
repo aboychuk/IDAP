@@ -72,5 +72,28 @@
     [self.mutableCars removeObject:car];
 }
 
+- (void)washing {
+    ABWorker *washer = [self findWorkerOfClass:[ABCarWasher class]];
+    ABWorker *accountant = [self findWorkerOfClass:[ABAcountant class]];
+    ABWorker *director = [self findWorkerOfClass:[ABDirector class]];
+    
+    for (ABCar *car in self.mutableCars) {
+        [washer takeMoneyFromObject:car];
+        [accountant takeMoneyFromObject:washer];
+        [director takeMoneyFromObject:accountant];
+    }
+}
 
+- (ABWorker *)findWorkerOfClass:(Class)class {
+    for (ABBuilding *building in self.mutableBuildings) {
+        for (ABRoom *room in building.rooms) {
+            for (ABWorker *worker in room.workers) {
+                if ([worker isKindOfClass:class]) {
+                    return worker;
+                }
+            }
+        }
+    }
+    return nil;
+}
 @end
