@@ -1,16 +1,16 @@
 //
-//  NSString+ABRandomString.m
+//  NSString+ABExtensions.m
 //  IDAPCourse
 //
-//  Created by Andrew Boychuk on 5/2/17.
+//  Created by Andrew Boychuk on 5/12/17.
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
-#import "NSString+ABRandomString.h"
+#import "NSString+ABExtensions.h"
 
 static const NSUInteger ABNSStringDefaultRandomStringLength = 30;
 
-@implementation NSString (ABRandomString)
+@implementation NSString (ABExtensions)
 
 + (id)numericAlphabet {
     NSMutableString *result = [NSMutableString stringWithString:[self letterAlphabet]];
@@ -20,15 +20,15 @@ static const NSUInteger ABNSStringDefaultRandomStringLength = 30;
 }
 
 + (id)alphanumericAlphabet {
-    return [self alphabetWithUnicodeRange:NSMakeRange('0', '9')];
+    return [self alphabetWithUnicodeRange:NSMakeRange('0', '1' - '0' + 1)];
 }
 
 + (id)lowercaseLetterAlphabet {
-    return [self alphabetWithUnicodeRange:NSMakeRange('a', 'z')];
+    return [self alphabetWithUnicodeRange:NSMakeRange('a', 'z' - 'a' + 1)];
 }
 
 + (id)uppercaseLetterAlphabet {
-    return [self alphabetWithUnicodeRange:NSMakeRange('A', 'Z')];
+    return [self alphabetWithUnicodeRange:NSMakeRange('A', 'Z' - 'A' + 1)];
 }
 
 + (id)letterAlphabet {

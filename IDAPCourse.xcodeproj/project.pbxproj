@@ -21,6 +21,8 @@
 		6F36C79F1EC2361E00D7B1EF /* ABCarWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C7991EC2361E00D7B1EF /* ABCarWasher.m */; };
 		6F36C7A01EC2361E00D7B1EF /* ABDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C79B1EC2361E00D7B1EF /* ABDirector.m */; };
 		6F36C7A11EC2361E00D7B1EF /* ABWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C79D1EC2361E00D7B1EF /* ABWorker.m */; };
+		6F36C7A51EC5EC7100D7B1EF /* ABEqualityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C7A41EC5EC7100D7B1EF /* ABEqualityObject.m */; };
+		6F36C7A81EC6223B00D7B1EF /* NSString+ABExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C7A71EC6223B00D7B1EF /* NSString+ABExtensions.m */; };
 		6F37AA171EBBAF1900510458 /* ABBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA061EBBAF1900510458 /* ABBuilding.m */; };
 		6F37AA211EBBAF5C00510458 /* ABCarWash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA201EBBAF5C00510458 /* ABCarWash.m */; };
 		6F3E1D451EAA89F800063775 /* ABArrayStruct.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E1D431EAA89F800063775 /* ABArrayStruct.c */; };
@@ -92,6 +94,10 @@
 		6F36C79C1EC2361E00D7B1EF /* ABWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABWorker.h; sourceTree = "<group>"; };
 		6F36C79D1EC2361E00D7B1EF /* ABWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABWorker.m; sourceTree = "<group>"; };
 		6F36C7A21EC246EC00D7B1EF /* ABMoneyFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMoneyFlow.h; sourceTree = "<group>"; };
+		6F36C7A31EC5EC7100D7B1EF /* ABEqualityObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABEqualityObject.h; sourceTree = "<group>"; };
+		6F36C7A41EC5EC7100D7B1EF /* ABEqualityObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABEqualityObject.m; sourceTree = "<group>"; };
+		6F36C7A61EC6223B00D7B1EF /* NSString+ABExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ABExtensions.h"; sourceTree = "<group>"; };
+		6F36C7A71EC6223B00D7B1EF /* NSString+ABExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ABExtensions.m"; sourceTree = "<group>"; };
 		6F37AA051EBBAF1900510458 /* ABBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBuilding.h; sourceTree = "<group>"; };
 		6F37AA061EBBAF1900510458 /* ABBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABBuilding.m; sourceTree = "<group>"; };
 		6F37AA1F1EBBAF5C00510458 /* ABCarWash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWash.h; sourceTree = "<group>"; };
@@ -295,6 +301,10 @@
 				6FBCF9E01EAE37E500D69ADE /* ABSyntax+ABCategory.h */,
 				6FBCF9E11EAE37E500D69ADE /* ABSyntax+ABCategory.m */,
 				6FBCF9E31EAE389000D69ADE /* ABSyntaxProtocol.h */,
+				6F36C7A31EC5EC7100D7B1EF /* ABEqualityObject.h */,
+				6F36C7A41EC5EC7100D7B1EF /* ABEqualityObject.m */,
+				6F36C7A61EC6223B00D7B1EF /* NSString+ABExtensions.h */,
+				6F36C7A71EC6223B00D7B1EF /* NSString+ABExtensions.m */,
 			);
 			path = Syntax;
 			sourceTree = "<group>";
@@ -409,6 +419,7 @@
 				6FBC7F901EB337C100FD7D6D /* ABCreatureGenderTest.m in Sources */,
 				6FBCF9E21EAE37E500D69ADE /* ABSyntax+ABCategory.m in Sources */,
 				6F31604A1EC1F6F20087DEF4 /* ABCar.m in Sources */,
+				6F36C7A81EC6223B00D7B1EF /* NSString+ABExtensions.m in Sources */,
 				6FBCF9E61EAE50AF00D69ADE /* ABSyntaxSubclass.m in Sources */,
 				6F93399F1EB8FB2100AC9F3F /* NSString+ABRandomString.m in Sources */,
 				6FBC7F9F1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m in Sources */,
@@ -419,6 +430,7 @@
 				6F36C7A11EC2361E00D7B1EF /* ABWorker.m in Sources */,
 				6FAE02131EAD430A00C6504A /* ABObjCSyntax.m in Sources */,
 				6F37AA171EBBAF1900510458 /* ABBuilding.m in Sources */,
+				6F36C7A51EC5EC7100D7B1EF /* ABEqualityObject.m in Sources */,
 				6F3160461EC1F5FB0087DEF4 /* ABRoom.m in Sources */,
 				6FBC7F9E1EB337E800FD7D6D /* ABCreatureMale.m in Sources */,
 				6FBC7F9D1EB337E800FD7D6D /* ABCreatureFemale.m in Sources */,

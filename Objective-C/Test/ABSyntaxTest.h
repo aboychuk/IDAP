@@ -10,6 +10,8 @@
 #import "ABSyntax.h"
 #import "ABSyntax+ABCategory.h"
 #import "ABSyntaxSubclass.h"
+#import "ABEqualityObject.h"
+#import "NSString+ABExtensions.h"
 
 @interface ABSyntaxTest : NSObject
 

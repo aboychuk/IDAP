@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <objc/message.h>
 
+#import "ABObjCSyntax.h"
+#import "ABSyntax.h"
+#import "ABSyntax+ABCategory.h"
+#import "ABSyntaxSubclass.h"
+#import "ABEqualityObject.h"
+#import "NSString+ABExtensions.h"
+
 #pragma mark
 #pragma mark - Private Declarations
 
@@ -30,6 +37,12 @@ void ABObjCTollFreeBridging();
 static
 void ABObjCMessaging();
 
+static
+void ABObjCEqualityClass();
+
+static
+void ABObjCRandomString();
+
 #pragma mark
 #pragma mark - Public Implementations
 
@@ -40,6 +53,9 @@ void ABObjCSyntax() {
     ABObjCLiterals();
     ABObjCTollFreeBridging();
     ABObjCMessaging();
+    ABObjCEqualityClass();
+    ABObjCRandomString();
+
 
 }
 
@@ -137,3 +153,44 @@ void ABObjCMessaging() {
     NSLog(@"NSMutableDictionary result = %@", result);
 
 }
+
+void ABObjCEqualityClass() {
+    NSString *name = @"Ivan";
+    NSString *surname = @"Ivanov";
+    
+    ABEqualityObject *object = [ABEqualityObject objectWithValue:1];
+    object.name = name;
+    object.surname = surname;
+    
+    ABEqualityObject *reverseObject = [ABEqualityObject objectWithValue:1];
+    reverseObject.surname = surname;
+    reverseObject.name = name;
+ 
+     NSUInteger hash = [object hash];
+     NSUInteger reverseHash = [reverseObject hash];
+     
+     NSArray *array = @[object, [[object copy] autorelease], reverseObject];
+     
+     BOOL containsObject = [array containsObject:reverseObject];
+}
+
+void ABObjCRandomString() {
+    NSLog(@"%@", [NSString randomString]);
+    NSLog(@"%@", [NSString randomStringWithLength:3]);
+    NSLog(@"%@", [NSString randomStringWithLength:3 alphabet:[NSString numericAlphabet]]);
+    
+    SEL selectors[] = { @selector(alphanumericAlphabet),
+        @selector(numericAlphabet),
+        @selector(lowercaseLetterAlphabet),
+        @selector(uppercaseLetterAlphabet),
+        @selector(letterAlphabet)};
+    
+    NSUInteger count = sizeof(selectors) / sizeof(selectors);
+    id class = [NSString class];
+    
+    for (NSUInteger index = 0; index < count; index++) {
+        NSLog(@"%@", [class performSelector:selectors[index]]);
+    }
+}
+
+

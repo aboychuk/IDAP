@@ -12,7 +12,7 @@
 
 - (void)takeMoneyFromObject:(ABWorker *)washer {
     [super takeMoneyFromObject:washer];
-    NSLog(@"Accountant got money from washer");
+    NSLog(@"Accountant got %lu from washer", self.money);
 }
 
 @end

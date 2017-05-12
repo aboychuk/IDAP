@@ -14,7 +14,6 @@
 - (NSUInteger)giveMoney;
 
 @optional
-- (void)takeMoney:(id)money;
 - (void)takeMoneyFromObject:(id<ABMoneyFlow>)object;
 
 @end

@@ -16,6 +16,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         [ABCarWashTest carWashTest];
+        //SyntaxTest();
     }
     
     return 0;

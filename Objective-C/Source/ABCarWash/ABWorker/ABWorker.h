@@ -9,6 +9,9 @@
 #import "ABCreature.h"
 #import "ABMoneyFlow.h"
 
+#import "NSString+ABRandomString.h"
+#import "NSNumber+ABRandomNumber.h"
+
 @interface ABWorker : ABCreature <ABMoneyFlow>
 @property (nonatomic, assign)   NSUInteger  money;
 @property (nonatomic, assign)   NSUInteger  salary;

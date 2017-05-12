@@ -22,15 +22,11 @@
 
 - (instancetype)init{
     self = [super init];
-    self.name = @"ALex";
+    self.name = @"Alex";
     self.salary = 4000;
     self.experience = 5;
     
     return self;
-}
-
-- (void)takeMoney:(ABWorker *)worker {
-    self.money += [worker giveMoney];
 }
 
 - (NSUInteger)giveMoney {

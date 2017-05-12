@@ -34,11 +34,11 @@
     [officeRoom addWorker:director];
     [carWashRoom addWorker:washer];
     
-    for (NSUInteger i = 0; i < 10; i++) {
+    for (NSUInteger i = 0; i < 9; i++) {
         ABCar *car = [[ABCar new] autorelease];
         [carWashCompany addCar:car];
-        [carWashCompany washing];
     }
+    [carWashCompany washing];
 }
 
 @end
