@@ -10,6 +10,11 @@
 
 static NSUInteger ABCarMoney = 100;
 
+@interface ABCar ()
+@property (nonatomic, assign)   NSUInteger  money;
+
+@end
+
 @implementation ABCar
 
 - (instancetype)init {

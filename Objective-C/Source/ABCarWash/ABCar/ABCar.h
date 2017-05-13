@@ -17,7 +17,6 @@ typedef NS_ENUM(NSUInteger, ABCarState) {
 
 @interface ABCar : NSObject <ABMoneyFlow>
 @property (nonatomic, assign)   BOOL    ABCarState;
-@property (nonatomic, assign)   NSUInteger  money;
 
 
 - (instancetype)init;
