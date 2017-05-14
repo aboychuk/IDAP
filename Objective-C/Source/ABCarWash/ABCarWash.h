@@ -24,6 +24,6 @@
 - (void)addBuilding:(ABBuilding *)building;
 - (void)removeBuilding:(ABBuilding *)building;
 
-- (void)washing;
+- (void)startWashing;
 
 @end

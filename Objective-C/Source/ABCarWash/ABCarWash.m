@@ -72,7 +72,7 @@
     [self.mutableCars removeObject:car];
 }
 
-- (void)washing {
+- (void)startWashing {
     ABWorker *washer = [self findWorkerOfClass:[ABCarWasher class]];
     ABWorker *accountant = [self findWorkerOfClass:[ABAcountant class]];
     ABWorker *director = [self findWorkerOfClass:[ABDirector class]];
@@ -83,6 +83,9 @@
         [director takeMoneyFromObject:accountant];
     }
 }
+
+#pragma mark
+#pragma mark Private Methods
 
 - (ABWorker *)findWorkerOfClass:(Class)class {
     for (ABBuilding *building in self.mutableBuildings) {
@@ -95,6 +98,31 @@
         }
     }
     return nil;
+}
+
+- (void)setCarWashHierarchy {
+    ABCarWash *carWashCompany = [[[ABCarWash alloc] init] autorelease];
+    
+    ABBuilding *administrativeBuilding = [[[ABBuilding alloc] init] autorelease];
+    ABBuilding *carWashBuilding = [[[ABBuilding alloc] init] autorelease];
+    
+    ABRoom *officeRoom = [[[ABRoom alloc] init] autorelease];
+    ABRoom *carWashRoom = [[[ABRoom alloc] init] autorelease];
+    
+    ABCarWasher *washer = [[[ABCarWasher alloc] init] autorelease];
+    ABAcountant *accountant = [[[ABAcountant alloc] init] autorelease];
+    ABDirector *director = [[[ABDirector alloc] init] autorelease];
+    
+    [carWashCompany addBuilding:administrativeBuilding];
+    [carWashCompany addBuilding:carWashBuilding];
+    
+    [administrativeBuilding addRoom:officeRoom];
+    [carWashBuilding addRoom:carWashRoom];
+    
+    [officeRoom addWorker:accountant];
+    [officeRoom addWorker:director];
+    [carWashRoom addWorker:washer];
+
 }
 
 @end

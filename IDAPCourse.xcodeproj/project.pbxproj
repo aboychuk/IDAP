@@ -26,6 +26,7 @@
 		6F37AA171EBBAF1900510458 /* ABBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA061EBBAF1900510458 /* ABBuilding.m */; };
 		6F37AA211EBBAF5C00510458 /* ABCarWash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA201EBBAF5C00510458 /* ABCarWash.m */; };
 		6F3E1D451EAA89F800063775 /* ABArrayStruct.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E1D431EAA89F800063775 /* ABArrayStruct.c */; };
+		6F56D35C1EC8DE70006222BA /* ABCarWashRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F56D35B1EC8DE70006222BA /* ABCarWashRoom.m */; };
 		6F93399F1EB8FB2100AC9F3F /* NSString+ABRandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93399E1EB8FB2100AC9F3F /* NSString+ABRandomString.m */; };
 		6F9339A21EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9339A11EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m */; };
 		6FAE02131EAD430A00C6504A /* ABObjCSyntax.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE02121EAD430A00C6504A /* ABObjCSyntax.m */; };
@@ -104,6 +105,8 @@
 		6F37AA201EBBAF5C00510458 /* ABCarWash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWash.m; sourceTree = "<group>"; };
 		6F3E1D431EAA89F800063775 /* ABArrayStruct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABArrayStruct.c; sourceTree = "<group>"; };
 		6F3E1D441EAA89F800063775 /* ABArrayStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABArrayStruct.h; sourceTree = "<group>"; };
+		6F56D35A1EC8DE70006222BA /* ABCarWashRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashRoom.h; sourceTree = "<group>"; };
+		6F56D35B1EC8DE70006222BA /* ABCarWashRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashRoom.m; sourceTree = "<group>"; };
 		6F93399D1EB8FB2100AC9F3F /* NSString+ABRandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ABRandomString.h"; sourceTree = "<group>"; };
 		6F93399E1EB8FB2100AC9F3F /* NSString+ABRandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ABRandomString.m"; sourceTree = "<group>"; };
 		6F9339A01EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+ABRandomNumber.h"; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 		6F3160401EC1F5FB0087DEF4 /* ABRoom */ = {
 			isa = PBXGroup;
 			children = (
+				6F56D35A1EC8DE70006222BA /* ABCarWashRoom.h */,
+				6F56D35B1EC8DE70006222BA /* ABCarWashRoom.m */,
 				6F3160431EC1F5FB0087DEF4 /* ABRoom.h */,
 				6F3160441EC1F5FB0087DEF4 /* ABRoom.m */,
 			);
@@ -417,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FBC7F901EB337C100FD7D6D /* ABCreatureGenderTest.m in Sources */,
+				6F56D35C1EC8DE70006222BA /* ABCarWashRoom.m in Sources */,
 				6FBCF9E21EAE37E500D69ADE /* ABSyntax+ABCategory.m in Sources */,
 				6F31604A1EC1F6F20087DEF4 /* ABCar.m in Sources */,
 				6F36C7A81EC6223B00D7B1EF /* NSString+ABExtensions.m in Sources */,
