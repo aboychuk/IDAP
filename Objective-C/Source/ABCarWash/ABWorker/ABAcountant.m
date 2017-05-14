@@ -10,9 +10,12 @@
 
 @implementation ABAcountant
 
-- (void)takeMoneyFromObject:(ABWorker *)washer {
+- (void)processObject:(ABWorker *)washer {
     [super takeMoneyFromObject:washer];
-    NSLog(@"Accountant got %lu from washer", self.money);
+    [self calculateMoney];
 }
 
+- (void)calculateMoney {
+    NSLog(@"ACCountan calculated money.");
+}
 @end

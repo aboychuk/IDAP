@@ -11,11 +11,17 @@
 @implementation ABCarWasher
 
 - (void)takeMoneyFromObject:(ABCar *)car {
-    NSLog(@"Washer %@ start washing car", self.name);
-    car.ABCarState = ABCarStateClean;
-    
     [super takeMoneyFromObject:car];
-    NSLog(@"Car payed %lu to the washer", self.money);
+}
+
+- (void)processObject:(ABCar *)car {
+    [self washCar:car];
+    [super takeMoneyFromObject:car];
+}
+
+- (void)washCar:(ABCar *)car {
+    NSLog(@"Washer %@ start washing car", self.name);
+    car.state = ABCarStateClean;
 }
 
 @end

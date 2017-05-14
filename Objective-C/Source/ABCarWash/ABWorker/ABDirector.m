@@ -10,9 +10,12 @@
 
 @implementation ABDirector
 
-- (void)takeMoneyFromObject:(id<ABMoneyFlow>)Accountant {
+- (void)processObject:(ABWorker *)Accountant {
     [super takeMoneyFromObject:Accountant];
-    NSLog(@"Director got profit: %lu", self.money);
+    [self gotProfit];
+}
+- (void)gotProfit {
+    NSLog(@"Director got %lu", self.money);
 }
 
 @end

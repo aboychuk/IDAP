@@ -16,6 +16,6 @@
 @property (nonatomic, assign)   NSUInteger  salary;
 @property (nonatomic, assign)   NSUInteger  experience;
 
-- (void)takeMoneyFromObject:(id<ABMoneyFlow>)object;
+- (void)processObject:(id<ABMoneyFlow>)object;
 
 @end

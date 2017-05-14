@@ -34,6 +34,10 @@
     return self;
 }
 
+- (void)processObject:(id<ABMoneyFlow>)object {
+    [self takeMoneyFromObject:object];
+}
+
 - (NSUInteger)giveMoney {
     NSUInteger money = self.money;
     self.money = 0;
@@ -43,6 +47,11 @@
 
 - (void)takeMoneyFromObject:(id<ABMoneyFlow>)object {
     self.money += [object giveMoney];
+    NSLog(@"%@ got %lu USD from the %@",
+          NSStringFromClass([self class]),
+          self.money,
+          NSStringFromClass([object class]));
+
 }
 
 @end
