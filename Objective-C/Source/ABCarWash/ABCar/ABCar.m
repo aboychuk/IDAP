@@ -19,7 +19,7 @@ static NSUInteger ABCarMoney = 100;
 
 - (instancetype)init {
     self = [super init];
-    self.ABCarState = ABCarStateDirty;
+    self.state = ABCarStateDirty;
     self.money = ABCarMoney;
     
     return self;
