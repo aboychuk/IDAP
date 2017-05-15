@@ -34,6 +34,7 @@
     self = [super init];
     self.mutableBuildings = [NSMutableArray array];
     self.mutableCars = [NSMutableArray array];
+    [self setCarWashHierarchy];
     
     return self;
 }
@@ -101,8 +102,6 @@
 }
 
 - (void)setCarWashHierarchy {
-    ABCarWash *carWashCompany = [[[ABCarWash alloc] init] autorelease];
-    
     ABBuilding *administrativeBuilding = [[[ABBuilding alloc] init] autorelease];
     ABBuilding *carWashBuilding = [[[ABBuilding alloc] init] autorelease];
     
@@ -113,8 +112,8 @@
     ABAcountant *accountant = [[[ABAcountant alloc] init] autorelease];
     ABDirector *director = [[[ABDirector alloc] init] autorelease];
     
-    [carWashCompany addBuilding:administrativeBuilding];
-    [carWashCompany addBuilding:carWashBuilding];
+    [self addBuilding:administrativeBuilding];
+    [self addBuilding:carWashBuilding];
     
     [administrativeBuilding addRoom:officeRoom];
     [carWashBuilding addRoom:carWashRoom];
@@ -122,6 +121,11 @@
     [officeRoom addWorker:accountant];
     [officeRoom addWorker:director];
     [carWashRoom addWorker:washer];
+   
+    for (NSUInteger i = 0; i < 9; i++) {
+        ABCar *car = [[ABCar new] autorelease];
+        [self addCar:car];
+    }
 
 }
 
