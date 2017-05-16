@@ -9,12 +9,17 @@
 #import <Foundation/Foundation.h>
 
 #import "ABRoom.h"
+#import "ABCarWashRoom.h"
 
 @interface ABBuilding : NSObject
 @property (nonatomic, copy, readonly)   NSArray *rooms;
 
 - (void)addRoom:(ABRoom *)room;
 - (void)removeRoom:(ABRoom *)room;
+
+- (ABWorker *)objectOfClassWorker:(Class)class;
+- (ABCar *)objectOfClassCar:(Class)class;
+
 
 @end
 

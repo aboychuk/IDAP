@@ -54,4 +54,29 @@
     [self.mutableRooms removeObject:room];
 }
 
+- (ABWorker *)objectOfClassWorker:(Class)class {
+    for (ABRoom *room in self.rooms) {
+        for (ABWorker *worker in room.workers) {
+            if ([worker isKindOfClass:class]) {
+                return worker;
+            }
+        }
+    }
+    
+    return nil;
+}
+
+- (ABCar *)objectOfClassCar:(Class)class {
+    for (ABCarWashRoom *room in self.rooms) {
+        for (ABCar *car in room.cars) {
+            if ([car isKindOfClass:class]) {
+                return car;
+            }
+        }
+    }
+    
+    return nil;
+}
+
+
 @end
