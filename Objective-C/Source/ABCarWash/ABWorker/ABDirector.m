@@ -14,7 +14,7 @@
 #pragma mark Private Methods
 
 - (void)processObject:(ABWorker *)Accountant {
-    [super takeMoneyFromObject:Accountant];
+    [self takeMoneyFromObject:Accountant];
     [self gotProfit];
 }
 

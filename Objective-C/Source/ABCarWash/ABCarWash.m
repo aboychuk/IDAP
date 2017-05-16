@@ -77,11 +77,12 @@
     ABWorker *washer = [self findWorkerOfClass:[ABCarWasher class]];
     ABWorker *accountant = [self findWorkerOfClass:[ABAcountant class]];
     ABWorker *director = [self findWorkerOfClass:[ABDirector class]];
+    //ABCar *car = [self findWorkerOfClass:[ABCar class]];
     
     for (ABCar *car in self.mutableCars) {
-        [washer takeMoneyFromObject:car];
-        [accountant takeMoneyFromObject:washer];
-        [director takeMoneyFromObject:accountant];
+        [washer processObject:car];
+        [accountant processObject:washer];
+        [director processObject:accountant];
     }
 }
 
@@ -90,12 +91,9 @@
 
 - (ABWorker *)findWorkerOfClass:(Class)class {
     for (ABBuilding *building in self.mutableBuildings) {
-        for (ABRoom *room in building.rooms) {
-            for (ABWorker *worker in room.workers) {
-                if ([worker isKindOfClass:class]) {
-                    return worker;
-                }
-            }
+        ABWorker *workerOfClass = [building objectOfClassWorker:class];
+        if (workerOfClass) {
+            return workerOfClass;
         }
     }
     return nil;
@@ -106,11 +104,18 @@
     ABBuilding *carWashBuilding = [[[ABBuilding alloc] init] autorelease];
     
     ABRoom *officeRoom = [[[ABRoom alloc] init] autorelease];
-    ABRoom *carWashRoom = [[[ABRoom alloc] init] autorelease];
+    ABCarWashRoom *carWashRoom = [[[ABCarWashRoom alloc] init] autorelease];
     
     ABCarWasher *washer = [[[ABCarWasher alloc] init] autorelease];
     ABAcountant *accountant = [[[ABAcountant alloc] init] autorelease];
     ABDirector *director = [[[ABDirector alloc] init] autorelease];
+    ABCar *car = [[ABCar new] autorelease];
+
+    
+    for (NSUInteger i = 0; i < 9; i++) {
+        ABCar *car = [[ABCar new] autorelease];
+        [self addCar:car];
+    }
     
     [self addBuilding:administrativeBuilding];
     [self addBuilding:carWashBuilding];
@@ -121,12 +126,16 @@
     [officeRoom addWorker:accountant];
     [officeRoom addWorker:director];
     [carWashRoom addWorker:washer];
-   
-    for (NSUInteger i = 0; i < 9; i++) {
-        ABCar *car = [[ABCar new] autorelease];
-        [self addCar:car];
-    }
+    [carWashRoom addCar:car];
+}
 
+- (NSArray *)arrayOfObjects:(id)object arrayWithCount:(NSUInteger)count {
+    NSMutableArray *arrayOfObjects = [NSMutableArray array];
+    for (NSUInteger index = 0; index < count; index++) {
+        object = [[object new] autorelease];
+        [arrayOfObjects addObject:object];
+    }
+    return arrayOfObjects;
 }
 
 @end
