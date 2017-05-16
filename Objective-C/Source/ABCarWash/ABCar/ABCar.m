@@ -17,6 +17,9 @@ static NSUInteger ABCarMoney = 100;
 
 @implementation ABCar
 
+#pragma mark -
+#pragma mark - Initialization
+
 - (instancetype)init {
     self = [super init];
     self.state = ABCarStateDirty;
@@ -24,6 +27,9 @@ static NSUInteger ABCarMoney = 100;
     
     return self;
 }
+
+#pragma mark
+#pragma mark Public Methods
 
 - (NSUInteger)giveMoney {
     NSUInteger money = self.money;

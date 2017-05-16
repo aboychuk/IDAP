@@ -10,6 +10,9 @@
 
 @implementation ABAcountant
 
+#pragma mark
+#pragma mark Private Methods
+
 - (void)processObject:(ABWorker *)washer {
     [super takeMoneyFromObject:washer];
     [self calculateMoney];

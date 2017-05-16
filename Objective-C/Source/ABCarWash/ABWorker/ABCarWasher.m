@@ -10,12 +10,15 @@
 
 @implementation ABCarWasher
 
-- (void)takeMoneyFromObject:(ABCar *)car {
-    [super takeMoneyFromObject:car];
-}
+#pragma mark
+#pragma mark Private Methods
 
 - (void)processObject:(ABCar *)car {
     [self washCar:car];
+    [self takeMoneyFromObject:car];
+}
+
+- (void)takeMoneyFromObject:(ABCar *)car {
     [super takeMoneyFromObject:car];
 }
 

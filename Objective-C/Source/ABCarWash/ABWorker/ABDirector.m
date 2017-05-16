@@ -10,10 +10,14 @@
 
 @implementation ABDirector
 
+#pragma mark
+#pragma mark Private Methods
+
 - (void)processObject:(ABWorker *)Accountant {
     [super takeMoneyFromObject:Accountant];
     [self gotProfit];
 }
+
 - (void)gotProfit {
     NSLog(@"Director got %lu", self.money);
 }

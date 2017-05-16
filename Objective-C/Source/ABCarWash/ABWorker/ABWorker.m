@@ -34,9 +34,15 @@
     return self;
 }
 
+#pragma mark
+#pragma mark Public Methods
+
 - (void)processObject:(id<ABMoneyFlow>)object {
     [self takeMoneyFromObject:object];
 }
+
+#pragma mark
+#pragma mark Private Methods
 
 - (NSUInteger)giveMoney {
     NSUInteger money = self.money;
