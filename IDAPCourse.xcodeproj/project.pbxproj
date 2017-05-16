@@ -27,6 +27,7 @@
 		6F37AA211EBBAF5C00510458 /* ABCarWash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F37AA201EBBAF5C00510458 /* ABCarWash.m */; };
 		6F3E1D451EAA89F800063775 /* ABArrayStruct.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E1D431EAA89F800063775 /* ABArrayStruct.c */; };
 		6F56D35C1EC8DE70006222BA /* ABCarWashRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F56D35B1EC8DE70006222BA /* ABCarWashRoom.m */; };
+		6F56D35F1ECB2BDE006222BA /* NSObject+ABObjectExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F56D35E1ECB2BDE006222BA /* NSObject+ABObjectExtension.m */; };
 		6F93399F1EB8FB2100AC9F3F /* NSString+ABRandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93399E1EB8FB2100AC9F3F /* NSString+ABRandomString.m */; };
 		6F9339A21EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9339A11EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.m */; };
 		6FAE02131EAD430A00C6504A /* ABObjCSyntax.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE02121EAD430A00C6504A /* ABObjCSyntax.m */; };
@@ -36,7 +37,6 @@
 		6FBC7F9C1EB337E800FD7D6D /* ABCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F951EB337E800FD7D6D /* ABCreature.m */; };
 		6FBC7F9D1EB337E800FD7D6D /* ABCreatureFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F971EB337E800FD7D6D /* ABCreatureFemale.m */; };
 		6FBC7F9E1EB337E800FD7D6D /* ABCreatureMale.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F991EB337E800FD7D6D /* ABCreatureMale.m */; };
-		6FBC7F9F1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */; };
 		6FBCF9DF1EAE230100D69ADE /* ABSyntax.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9DE1EAE230100D69ADE /* ABSyntax.m */; };
 		6FBCF9E21EAE37E500D69ADE /* ABSyntax+ABCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9E11EAE37E500D69ADE /* ABSyntax+ABCategory.m */; };
 		6FBCF9E61EAE50AF00D69ADE /* ABSyntaxSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCF9E51EAE50AF00D69ADE /* ABSyntaxSubclass.m */; };
@@ -107,6 +107,8 @@
 		6F3E1D441EAA89F800063775 /* ABArrayStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABArrayStruct.h; sourceTree = "<group>"; };
 		6F56D35A1EC8DE70006222BA /* ABCarWashRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashRoom.h; sourceTree = "<group>"; };
 		6F56D35B1EC8DE70006222BA /* ABCarWashRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashRoom.m; sourceTree = "<group>"; };
+		6F56D35D1ECB2BDE006222BA /* NSObject+ABObjectExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ABObjectExtension.h"; sourceTree = "<group>"; };
+		6F56D35E1ECB2BDE006222BA /* NSObject+ABObjectExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ABObjectExtension.m"; sourceTree = "<group>"; };
 		6F93399D1EB8FB2100AC9F3F /* NSString+ABRandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ABRandomString.h"; sourceTree = "<group>"; };
 		6F93399E1EB8FB2100AC9F3F /* NSString+ABRandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ABRandomString.m"; sourceTree = "<group>"; };
 		6F9339A01EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+ABRandomNumber.h"; sourceTree = "<group>"; };
@@ -125,8 +127,6 @@
 		6FBC7F971EB337E800FD7D6D /* ABCreatureFemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureFemale.m; sourceTree = "<group>"; };
 		6FBC7F981EB337E800FD7D6D /* ABCreatureMale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreatureMale.h; sourceTree = "<group>"; };
 		6FBC7F991EB337E800FD7D6D /* ABCreatureMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureMale.m; sourceTree = "<group>"; };
-		6FBC7F9A1EB337E800FD7D6D /* NSObject+ABCreatureCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ABCreatureCategory.h"; path = "../ABCreature/NSObject+ABCreatureCategory.h"; sourceTree = "<group>"; };
-		6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ABCreatureCategory.m"; path = "../ABCreature/NSObject+ABCreatureCategory.m"; sourceTree = "<group>"; };
 		6FBCF9DD1EAE230100D69ADE /* ABSyntax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntax.h; sourceTree = "<group>"; };
 		6FBCF9DE1EAE230100D69ADE /* ABSyntax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntax.m; sourceTree = "<group>"; };
 		6FBCF9E01EAE37E500D69ADE /* ABSyntax+ABCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ABSyntax+ABCategory.h"; sourceTree = "<group>"; };
@@ -273,8 +273,8 @@
 		6F93399C1EB8FA7E00AC9F3F /* ABCategory */ = {
 			isa = PBXGroup;
 			children = (
-				6FBC7F9A1EB337E800FD7D6D /* NSObject+ABCreatureCategory.h */,
-				6FBC7F9B1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m */,
+				6F56D35D1ECB2BDE006222BA /* NSObject+ABObjectExtension.h */,
+				6F56D35E1ECB2BDE006222BA /* NSObject+ABObjectExtension.m */,
 				6F93399D1EB8FB2100AC9F3F /* NSString+ABRandomString.h */,
 				6F93399E1EB8FB2100AC9F3F /* NSString+ABRandomString.m */,
 				6F9339A01EB8FFB900AC9F3F /* NSNumber+ABRandomNumber.h */,
@@ -428,11 +428,11 @@
 				6F36C7A81EC6223B00D7B1EF /* NSString+ABExtensions.m in Sources */,
 				6FBCF9E61EAE50AF00D69ADE /* ABSyntaxSubclass.m in Sources */,
 				6F93399F1EB8FB2100AC9F3F /* NSString+ABRandomString.m in Sources */,
-				6FBC7F9F1EB337E800FD7D6D /* NSObject+ABCreatureCategory.m in Sources */,
 				6F36C79E1EC2361E00D7B1EF /* ABAcountant.m in Sources */,
 				6FBC7F921EB337C100FD7D6D /* ABSyntaxTest.m in Sources */,
 				6FBC7F911EB337C100FD7D6D /* ABCreatureTest.m in Sources */,
 				6F302B0E1EA7D17B000D7A95 /* main.m in Sources */,
+				6F56D35F1ECB2BDE006222BA /* NSObject+ABObjectExtension.m in Sources */,
 				6F36C7A11EC2361E00D7B1EF /* ABWorker.m in Sources */,
 				6FAE02131EAD430A00C6504A /* ABObjCSyntax.m in Sources */,
 				6F37AA171EBBAF1900510458 /* ABBuilding.m in Sources */,
