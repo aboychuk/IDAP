@@ -11,5 +11,6 @@
 @interface NSObject (ABObjectExtension)
 
 + (instancetype)object;
++ (NSArray *)arrayOfObjects:(id)object withCount:(NSUInteger)count;
 
 @end

@@ -12,7 +12,7 @@
 @implementation ABCarWashTest
 
 + (void)carWashTest {
-    ABCarWash *carWashCompany = [[[ABCarWash alloc] init] autorelease];
+    ABCarWash *carWashCompany = [ABCarWash object];
     [carWashCompany startWashing];
 }
 

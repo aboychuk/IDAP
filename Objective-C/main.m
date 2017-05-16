@@ -10,7 +10,7 @@
 #import "ABCreatureTest.h"
 #import "ABCreatureMale.h"
 #import "ABCreatureFemale.h"
-#import "NSObject+ABCreatureCategory.h"
+#import "NSObject+ABObjectExtension.h"
 #import "ABCarWashTest.h"
 
 int main(int argc, const char * argv[]) {

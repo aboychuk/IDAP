@@ -54,6 +54,16 @@
     [self.mutableRooms removeObject:room];
 }
 
+- (void)addCarRoom:(ABCarWashRoom *)carRoom {
+    if (carRoom) {
+        [self.mutableRooms addObject:carRoom];
+    }
+}
+
+- (void)removeCarRoom:(ABCarWashRoom *)carRoom {
+    [self.mutableRooms removeObject:carRoom];
+}
+
 - (ABWorker *)objectOfClassWorker:(Class)class {
     for (ABRoom *room in self.rooms) {
         for (ABWorker *worker in room.workers) {
@@ -68,15 +78,15 @@
 
 - (ABCar *)objectOfClassCar:(Class)class {
     for (ABCarWashRoom *room in self.rooms) {
-        for (ABCar *car in room.cars) {
-            if ([car isKindOfClass:class]) {
-                return car;
+        if ([room isKindOfClass:[ABCarWashRoom class]])
+            for (ABCar *car in room.cars) {
+                if ([car isKindOfClass:class]) {
+                    return car;
+                }
             }
-        }
     }
     
     return nil;
 }
-
 
 @end
