@@ -14,7 +14,6 @@
 #pragma mark Private Methods
 
 - (void)processObject:(ABWorker *)washer {
-    [self takeMoneyFromObject:washer];
     [self calculateMoney];
 }
 

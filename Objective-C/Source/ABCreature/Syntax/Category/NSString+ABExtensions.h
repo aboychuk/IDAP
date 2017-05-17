@@ -1,15 +1,14 @@
 //
-//  NSString+ABRandomString.h
+//  NSString+ABExtensions.h
 //  IDAPCourse
 //
-//  Created by Andrew Boychuk on 5/2/17.
+//  Created by Andrew Boychuk on 5/12/17.
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (ABRandomString)
-
+@interface NSString (ABExtensions)
 //english
 + (instancetype)numericAlphabet;
 + (instancetype)alphanumericAlphabet;

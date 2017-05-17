@@ -15,8 +15,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        [ABCarWashTest startTest];
-        //SyntaxTest();
+//        [ABCarWashTest startTest];
+        SyntaxTest();
     }
     
     return 0;

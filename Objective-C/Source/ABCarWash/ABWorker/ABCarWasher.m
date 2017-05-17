@@ -15,13 +15,13 @@
 
 - (void)processObject:(ABCar *)car {
     [self washCar:car];
-    [self takeMoneyFromObject:car];
+   // [self takeMoneyFromObject:car];
 }
-
+/*
 - (void)takeMoneyFromObject:(ABCar *)car {
     [super takeMoneyFromObject:car];
 }
-
+*/
 - (void)washCar:(ABCar *)car {
     NSLog(@"Washer %@ start washing car", self.name);
     car.state = ABCarStateClean;

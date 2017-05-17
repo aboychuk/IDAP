@@ -12,33 +12,36 @@ static const NSUInteger ABNSStringDefaultRandomStringLength = 30;
 
 @implementation NSString (ABExtensions)
 
-+ (id)numericAlphabet {
++ (instancetype)alphanumericAlphabet {
     NSMutableString *result = [NSMutableString stringWithString:[self letterAlphabet]];
     [result appendString:[self numericAlphabet]];
     
     return [self stringWithString:result];
 }
 
-+ (id)alphanumericAlphabet {
-    return [self alphabetWithUnicodeRange:NSMakeRange('0', '1' - '0' + 1)];
++ (instancetype)numericAlphabet {
+    return [self alphabetWithUnicodeRange:NSMakeRange('0',
+                                                      '9' - '0' + 1)];
 }
 
-+ (id)lowercaseLetterAlphabet {
-    return [self alphabetWithUnicodeRange:NSMakeRange('a', 'z' - 'a' + 1)];
++ (instancetype)lowercaseLetterAlphabet {
+    return [self alphabetWithUnicodeRange:NSMakeRange('a',
+                                                      'z' - 'a' + 1)];
 }
 
-+ (id)uppercaseLetterAlphabet {
-    return [self alphabetWithUnicodeRange:NSMakeRange('A', 'Z' - 'A' + 1)];
++ (instancetype)capitalizedLetterAlphabet {
+    return [self alphabetWithUnicodeRange:NSMakeRange('A',
+                                                      'Z' - 'A' + 1)];
 }
 
-+ (id)letterAlphabet {
++ (instancetype)letterAlphabet {
     NSMutableString *result = [NSMutableString stringWithString:[self lowercaseLetterAlphabet]];
-    [result appendString:[self uppercaseLetterAlphabet]];
+    [result appendString:[self capitalizedLetterAlphabet]];
     
     return [self stringWithString:result];
 }
 
-+ (id)alphabetWithUnicodeRange:(NSRange)range {
++ (instancetype)alphabetWithUnicodeRange:(NSRange)range {
     NSMutableString *result = [NSMutableString string];
     for (unichar character = range.location; character < NSMaxRange(range); character++) {
         [result appendFormat:@"%c", character];
@@ -47,15 +50,15 @@ static const NSUInteger ABNSStringDefaultRandomStringLength = 30;
     return [self stringWithString:result];
 }
 
-+ (id)randomString {
++ (instancetype)randomString {
     return [self randomStringWithLength:arc4random_uniform(ABNSStringDefaultRandomStringLength)];
 }
 
-+ (id)randomStringWithLength:(NSUInteger)length {
++ (instancetype)randomStringWithLength:(NSUInteger)length {
     return [self randomStringWithLength:length alphabet:[self alphanumericAlphabet]];
 }
 
-+ (id)randomStringWithLength:(NSUInteger)length alphabet:(NSString *)alphabet {
++ (instancetype)randomStringWithLength:(NSUInteger)length alphabet:(NSString *)alphabet {
     NSMutableString *result = [NSMutableString stringWithCapacity:length];
     NSUInteger alphabetLength = [alphabet length];
     
@@ -65,6 +68,18 @@ static const NSUInteger ABNSStringDefaultRandomStringLength = 30;
     }
     
     return [self stringWithString:result];
+}
+
+- (NSArray *)symbols {
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self length]];
+    NSUInteger length = [self length];
+    
+    for (NSUInteger index = 0; index < length; index++) {
+        unichar resultChar = [self characterAtIndex:index];
+        [result addObject:[NSString stringWithFormat:@"%c", resultChar]];
+    }
+    
+    return [[result copy] autorelease];
 }
 
 @end

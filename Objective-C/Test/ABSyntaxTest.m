@@ -11,8 +11,6 @@
 @implementation ABSyntaxTest
 
 void SyntaxTest() {
-    
-    ABObjCSyntax();
     NSObject *object = [ABSyntax alloc];
     object = [[object init] autorelease];
     
@@ -38,6 +36,8 @@ void SyntaxTest() {
     
     [syntax overloadedPrint];
     [subclass overloadedPrint];
+    
+    ABObjCSyntax();
 }
 
 @end

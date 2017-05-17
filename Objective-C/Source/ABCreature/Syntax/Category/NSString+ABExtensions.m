@@ -1,16 +1,16 @@
 //
-//  NSString+ABRandomString.m
+//  NSString+ABExtensions.m
 //  IDAPCourse
 //
-//  Created by Andrew Boychuk on 5/2/17.
+//  Created by Andrew Boychuk on 5/12/17.
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
-#import "NSString+ABRandomString.h"
+#import "NSString+ABExtensions.h"
 
 static const NSUInteger ABNSStringDefaultRandomStringLength = 30;
 
-@implementation NSString (ABRandomString)
+@implementation NSString (ABExtensions)
 
 + (instancetype)alphanumericAlphabet {
     NSMutableString *result = [NSMutableString stringWithString:[self letterAlphabet]];

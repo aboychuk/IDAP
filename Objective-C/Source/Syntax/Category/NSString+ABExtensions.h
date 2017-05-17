@@ -10,23 +10,25 @@
 
 @interface NSString (ABExtensions)
 //english
-+ (id)numericAlphabet;
-+ (id)alphanumericAlphabet;
-+ (id)lowercaseLetterAlphabet;
-+ (id)uppercaseLetterAlphabet;
-+ (id)letterAlphabet;
-+ (id)alphabetWithUnicodeRange:(NSRange)range;
++ (instancetype)numericAlphabet;
++ (instancetype)alphanumericAlphabet;
++ (instancetype)lowercaseLetterAlphabet;
++ (instancetype)capitalizedLetterAlphabet;
++ (instancetype)letterAlphabet;
++ (instancetype)alphabetWithUnicodeRange:(NSRange)range;
 
 //returns string with english alphanumeric characters of random length
 //of up to 30 with the class of reciever
-+ (id)randomString;
++ (instancetype)randomString;
 
 //returns string with english alphanumeric characters of length
 //with the class of reciever
-+ (id)randomStringWithLength:(NSUInteger)length;
++ (instancetype)randomStringWithLength:(NSUInteger)length;
 
 //returns string with characters from alphabet of length
 //with the class of reciever
-+ (id)randomStringWithLength:(NSUInteger)length alphabet:(NSString *)alphabet;
++ (instancetype)randomStringWithLength:(NSUInteger)length alphabet:(NSString *)alphabet;
+
+- (NSArray *)symbols;
 
 @end
