@@ -16,8 +16,6 @@
 
 - (void)addRoom:(ABRoom *)room;
 - (void)removeRoom:(ABRoom *)room;
-- (void)addCarRoom:(ABCarWashRoom *)carRoom;
-- (void)removeCarRoom:(ABCarWashRoom *)carRoom;
 
 - (ABWorker *)objectOfClassWorker:(Class)class;
 - (ABCar *)objectOfClassCar:(Class)class;

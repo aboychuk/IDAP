@@ -54,16 +54,6 @@
     [self.mutableRooms removeObject:room];
 }
 
-- (void)addCarRoom:(ABCarWashRoom *)carRoom {
-    if (carRoom) {
-        [self.mutableRooms addObject:carRoom];
-    }
-}
-
-- (void)removeCarRoom:(ABCarWashRoom *)carRoom {
-    [self.mutableRooms removeObject:carRoom];
-}
-
 - (ABWorker *)objectOfClassWorker:(Class)class {
     for (ABRoom *room in self.rooms) {
         for (ABWorker *worker in room.workers) {
