@@ -19,6 +19,6 @@
 }
 
 - (void)calculateMoney {
-    NSLog(@"ACCountan calculated money.");
+    NSLog(@"Accountant calculated money.");
 }
 @end

@@ -22,6 +22,6 @@
 - (void)addBuilding:(ABBuilding *)building;
 - (void)removeBuilding:(ABBuilding *)building;
 
-- (void)startWashing;
+- (void)startWashing:(ABCar *)car;
 
 @end

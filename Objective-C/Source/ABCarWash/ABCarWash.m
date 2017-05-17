@@ -29,6 +29,7 @@
 
 - (instancetype)init {
     self = [super init];
+    self.mutableBuildings = [NSMutableArray array];
     [self setCarWashHierarchy];
     
     return self;
@@ -54,11 +55,10 @@
     [self.mutableBuildings removeObject:building];
 }
 
-- (void)startWashing {
+- (void)startWashing:(ABCar *)car {
     ABWorker *washer = [self findWorkerOfClass:[ABCarWasher class]];
     ABWorker *accountant = [self findWorkerOfClass:[ABAcountant class]];
     ABWorker *director = [self findWorkerOfClass:[ABDirector class]];
-    ABCar *car = [self findCarOfClass:[ABCar class]];
     
     [washer processObject:car];
     [accountant processObject:washer];
@@ -99,18 +99,16 @@
     ABCarWasher *washer = [ABCarWasher object];
     ABAcountant *accountant = [ABAcountant object];
     ABDirector *director = [ABDirector object];
-    ABCar *car = [ABCar object];
     
     [self addBuilding:administrativeBuilding];
     [self addBuilding:carWashBuilding];
     
     [administrativeBuilding addRoom:officeRoom];
-    [carWashBuilding addCarRoom:carWashRoom];
+    [carWashBuilding addRoom:carWashRoom];
     
     [officeRoom addWorker:accountant];
     [officeRoom addWorker:director];
     [carWashRoom addWorker:washer];
-    [carWashRoom addCar:car];
 }
 
 @end

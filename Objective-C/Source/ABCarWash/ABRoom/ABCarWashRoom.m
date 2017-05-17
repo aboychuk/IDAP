@@ -9,7 +9,7 @@
 #import "ABCarWashRoom.h"
 
 @interface ABCarWashRoom ()
-@property (nonatomic, assign)   NSMutableArray  *mutableCars;
+@property (nonatomic, retain)   NSMutableArray  *mutableCars;
 
 @end
 

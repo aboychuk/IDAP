@@ -8,12 +8,24 @@
 
 #import "ABCarWashTest.h"
 
+#import "NSObject+ABObjectExtension.h"
+
 
 @implementation ABCarWashTest
 
-+ (void)carWashTest {
-    ABCarWash *carWashCompany = [ABCarWash object];
-    [carWashCompany startWashing];
++ (void)startTest {
+    NSMutableArray *cars = [NSMutableArray array];
+    
+    for (NSUInteger i = 0; i < 9; i++) {
+        ABCar *car = [[ABCar new] autorelease];
+        [cars addObject:car];
+    }
+
+    ABCarWash *carWashCompany = [[[ABCarWash alloc] init] autorelease];
+    
+    for (ABCar *car in cars) {
+        [carWashCompany startWashing:car];
+    }
 }
 
 @end
