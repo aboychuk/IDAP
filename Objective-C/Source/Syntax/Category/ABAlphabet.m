@@ -38,12 +38,6 @@
 #pragma mark
 #pragma mark Initializations and Deallocations
 
-- (instancetype)init {
-    [self doesNotRecognizeSelector:_cmd];
-    
-    return nil;
-}
-
 - (instancetype)initWithAlphabets:(NSArray *)alphabets {
     [self release];
     

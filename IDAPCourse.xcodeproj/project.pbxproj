@@ -9,13 +9,6 @@
 /* Begin PBXBuildFile section */
 		6F2CB8541EBD8EDA00DDC21F /* ABCarWashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2CB8531EBD8EDA00DDC21F /* ABCarWashTest.m */; };
 		6F302B0E1EA7D17B000D7A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B0D1EA7D17B000D7A95 /* main.m */; };
-		6F302B461EA7D288000D7A95 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B351EA7D288000D7A95 /* main.c */; };
-		6F302B481EA7D288000D7A95 /* ABMamaPapa.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B391EA7D288000D7A95 /* ABMamaPapa.c */; };
-		6F302B491EA7D288000D7A95 /* ABPrintBits.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B3B1EA7D288000D7A95 /* ABPrintBits.c */; };
-		6F302B4B1EA7D288000D7A95 /* ABPrintOffset.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B3F1EA7D288000D7A95 /* ABPrintOffset.c */; };
-		6F302B4C1EA7D288000D7A95 /* ABPrintSizeOfStructure.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B411EA7D288000D7A95 /* ABPrintSizeOfStructure.c */; };
-		6F302B4D1EA7D288000D7A95 /* ABPrintSizeOfTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B431EA7D288000D7A95 /* ABPrintSizeOfTypes.c */; };
-		6F3E1D451EAA89F800063775 /* ABArrayStruct.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E1D431EAA89F800063775 /* ABArrayStruct.c */; };
 		6FBC7F901EB337C100FD7D6D /* ABCreatureGenderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F8B1EB337C100FD7D6D /* ABCreatureGenderTest.m */; };
 		6FBC7F911EB337C100FD7D6D /* ABCreatureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F8D1EB337C100FD7D6D /* ABCreatureTest.m */; };
 		6FBC7F921EB337C100FD7D6D /* ABSyntaxTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC7F8F1EB337C100FD7D6D /* ABSyntaxTest.m */; };
@@ -64,38 +57,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		6F302B2B1EA7D268000D7A95 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6F1056171EAA20A6005F748A /* ABMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMacro.h; sourceTree = "<group>"; };
 		6F2CB8521EBD8EDA00DDC21F /* ABCarWashTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashTest.h; sourceTree = "<group>"; };
 		6F2CB8531EBD8EDA00DDC21F /* ABCarWashTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashTest.m; sourceTree = "<group>"; };
 		6F302B0B1EA7D17B000D7A95 /* Objective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F302B0D1EA7D17B000D7A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6F302B2D1EA7D268000D7A95 /* C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F302B351EA7D288000D7A95 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		6F302B391EA7D288000D7A95 /* ABMamaPapa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABMamaPapa.c; sourceTree = "<group>"; };
-		6F302B3A1EA7D288000D7A95 /* ABMamaPapa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMamaPapa.h; sourceTree = "<group>"; };
-		6F302B3B1EA7D288000D7A95 /* ABPrintBits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABPrintBits.c; sourceTree = "<group>"; };
-		6F302B3C1EA7D288000D7A95 /* ABPrintBits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPrintBits.h; sourceTree = "<group>"; };
-		6F302B3F1EA7D288000D7A95 /* ABPrintOffset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABPrintOffset.c; sourceTree = "<group>"; };
-		6F302B401EA7D288000D7A95 /* ABPrintOffset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPrintOffset.h; sourceTree = "<group>"; };
-		6F302B411EA7D288000D7A95 /* ABPrintSizeOfStructure.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABPrintSizeOfStructure.c; sourceTree = "<group>"; };
-		6F302B421EA7D288000D7A95 /* ABPrintSizeOfStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPrintSizeOfStructure.h; sourceTree = "<group>"; };
-		6F302B431EA7D288000D7A95 /* ABPrintSizeOfTypes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABPrintSizeOfTypes.c; sourceTree = "<group>"; };
-		6F302B441EA7D288000D7A95 /* ABPrintSizeOfTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPrintSizeOfTypes.h; sourceTree = "<group>"; };
-		6F302B451EA7D288000D7A95 /* ABStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABStructure.h; sourceTree = "<group>"; };
-		6F3E1D431EAA89F800063775 /* ABArrayStruct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABArrayStruct.c; sourceTree = "<group>"; };
-		6F3E1D441EAA89F800063775 /* ABArrayStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABArrayStruct.h; sourceTree = "<group>"; };
 		6FBC7F8A1EB337C100FD7D6D /* ABCreatureGenderTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreatureGenderTest.h; sourceTree = "<group>"; };
 		6FBC7F8B1EB337C100FD7D6D /* ABCreatureGenderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureGenderTest.m; sourceTree = "<group>"; };
 		6FBC7F8C1EB337C100FD7D6D /* ABCreatureTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreatureTest.h; sourceTree = "<group>"; };
@@ -181,60 +149,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F302B2A1EA7D268000D7A95 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		6F302B0C1EA7D17B000D7A95 /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				6FDE5F391ECC8422000AF3FB /* Source */,
 				6F302B0D1EA7D17B000D7A95 /* main.m */,
+				6FDE5F391ECC8422000AF3FB /* Source */,
 				6FBC7F891EB337C100FD7D6D /* Test */,
 			);
 			path = "Objective-C";
 			sourceTree = "<group>";
 		};
-		6F302B341EA7D288000D7A95 /* C */ = {
-			isa = PBXGroup;
-			children = (
-				6F302B351EA7D288000D7A95 /* main.c */,
-				6F302B361EA7D288000D7A95 /* Source */,
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
-		6F302B361EA7D288000D7A95 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				6F3E1D431EAA89F800063775 /* ABArrayStruct.c */,
-				6F3E1D441EAA89F800063775 /* ABArrayStruct.h */,
-				6F1056171EAA20A6005F748A /* ABMacro.h */,
-				6F302B391EA7D288000D7A95 /* ABMamaPapa.c */,
-				6F302B3A1EA7D288000D7A95 /* ABMamaPapa.h */,
-				6F302B3B1EA7D288000D7A95 /* ABPrintBits.c */,
-				6F302B3C1EA7D288000D7A95 /* ABPrintBits.h */,
-				6F302B3F1EA7D288000D7A95 /* ABPrintOffset.c */,
-				6F302B401EA7D288000D7A95 /* ABPrintOffset.h */,
-				6F302B411EA7D288000D7A95 /* ABPrintSizeOfStructure.c */,
-				6F302B421EA7D288000D7A95 /* ABPrintSizeOfStructure.h */,
-				6F302B431EA7D288000D7A95 /* ABPrintSizeOfTypes.c */,
-				6F302B441EA7D288000D7A95 /* ABPrintSizeOfTypes.h */,
-				6F302B451EA7D288000D7A95 /* ABStructure.h */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
 		6F3A20E91EA61390000D6620 = {
 			isa = PBXGroup;
 			children = (
-				6F302B341EA7D288000D7A95 /* C */,
 				6F302B0C1EA7D17B000D7A95 /* Objective-C */,
 				6F3A20F31EA61390000D6620 /* Products */,
 			);
@@ -244,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				6F302B0B1EA7D17B000D7A95 /* Objective-C */,
-				6F302B2D1EA7D268000D7A95 /* C */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -464,23 +393,6 @@
 			productReference = 6F302B0B1EA7D17B000D7A95 /* Objective-C */;
 			productType = "com.apple.product-type.tool";
 		};
-		6F302B2C1EA7D268000D7A95 /* C */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6F302B311EA7D268000D7A95 /* Build configuration list for PBXNativeTarget "C" */;
-			buildPhases = (
-				6F302B291EA7D268000D7A95 /* Sources */,
-				6F302B2A1EA7D268000D7A95 /* Frameworks */,
-				6F302B2B1EA7D268000D7A95 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = C;
-			productName = C;
-			productReference = 6F302B2D1EA7D268000D7A95 /* C */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -491,10 +403,6 @@
 				ORGANIZATIONNAME = "Andrew Boychuk";
 				TargetAttributes = {
 					6F302B0A1EA7D17B000D7A95 = {
-						CreatedOnToolsVersion = 8.3.1;
-						ProvisioningStyle = Automatic;
-					};
-					6F302B2C1EA7D268000D7A95 = {
 						CreatedOnToolsVersion = 8.3.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -513,7 +421,6 @@
 			projectRoot = "";
 			targets = (
 				6F302B0A1EA7D17B000D7A95 /* Objective-C */,
-				6F302B2C1EA7D268000D7A95 /* C */,
 			);
 		};
 /* End PBXProject section */
@@ -564,20 +471,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F302B291EA7D268000D7A95 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6F302B491EA7D288000D7A95 /* ABPrintBits.c in Sources */,
-				6F302B4D1EA7D288000D7A95 /* ABPrintSizeOfTypes.c in Sources */,
-				6F3E1D451EAA89F800063775 /* ABArrayStruct.c in Sources */,
-				6F302B461EA7D288000D7A95 /* main.c in Sources */,
-				6F302B4C1EA7D288000D7A95 /* ABPrintSizeOfStructure.c in Sources */,
-				6F302B481EA7D288000D7A95 /* ABMamaPapa.c in Sources */,
-				6F302B4B1EA7D288000D7A95 /* ABPrintOffset.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -594,22 +487,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		6F302B321EA7D268000D7A95 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		6F302B331EA7D268000D7A95 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -712,15 +589,6 @@
 			buildConfigurations = (
 				6F302B101EA7D17B000D7A95 /* Debug */,
 				6F302B111EA7D17B000D7A95 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6F302B311EA7D268000D7A95 /* Build configuration list for PBXNativeTarget "C" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6F302B321EA7D268000D7A95 /* Debug */,
-				6F302B331EA7D268000D7A95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
