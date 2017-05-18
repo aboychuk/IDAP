@@ -11,6 +11,8 @@
 #import "ABRoom.h"
 #import "ABCarWashRoom.h"
 
+#import "NSArray+ABExtension.h"
+
 @interface ABBuilding : NSObject
 @property (nonatomic, copy, readonly)   NSArray *rooms;
 

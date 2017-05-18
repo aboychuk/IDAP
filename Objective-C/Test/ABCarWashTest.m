@@ -9,14 +9,14 @@
 #import "ABCarWashTest.h"
 
 #import "NSObject+ABObjectExtension.h"
-
+#import "NSArray+ABExtension.h"
 
 @implementation ABCarWashTest
 
 + (void)startTest {
     NSMutableArray *cars = [NSMutableArray array];
     
-    for (NSUInteger i = 0; i < 9; i++) {
+    for (NSUInteger i = 0; i < 10; i++) {
         ABCar *car = [[ABCar new] autorelease];
         [cars addObject:car];
     }

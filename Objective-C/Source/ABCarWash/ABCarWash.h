@@ -15,6 +15,8 @@
 #import "ABCar.h"
 
 #import "NSObject+ABObjectExtension.h"
+#import "NSArray+ABExtension.h"
+
 
 @interface ABCarWash : NSObject
 @property (nonatomic, copy, readonly)   NSArray *buildings;
