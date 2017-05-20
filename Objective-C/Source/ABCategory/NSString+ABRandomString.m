@@ -8,7 +8,7 @@
 
 #import "NSString+ABRandomString.h"
 
-static const NSUInteger ABNSStringDefaultRandomStringLength = 30;
+static const NSUInteger ABDefaultRandomStringLength = 30;
 
 @implementation NSString (ABRandomString)
 
@@ -51,7 +51,7 @@ static const NSUInteger ABNSStringDefaultRandomStringLength = 30;
 }
 
 + (instancetype)randomString {
-    return [self randomStringWithLength:arc4random_uniform(ABNSStringDefaultRandomStringLength)];
+    return [self randomStringWithLength:arc4random_uniform(ABDefaultRandomStringLength)];
 }
 
 + (instancetype)randomStringWithLength:(NSUInteger)length {

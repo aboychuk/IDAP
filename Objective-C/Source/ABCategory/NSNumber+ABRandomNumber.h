@@ -10,6 +10,7 @@
 
 @interface NSNumber (ABRandomNumber)
 
-+ (NSUInteger)randomNumberBetweenMin:(NSUInteger)min max:(NSUInteger)max;
+BOOL ABRandomBool();
+NSUInteger ABRandomInRange(NSRange range);
 
 @end

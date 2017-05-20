@@ -10,8 +10,12 @@
 
 @implementation NSNumber (ABRandomNumber)
 
-+ (NSUInteger)randomNumberBetweenMin:(NSUInteger)min max:(NSUInteger)max {
-    return (arc4random_uniform(UINT32_MAX) % (max - min + 1)) + min;
+BOOL ABRandomBool() {
+    return arc4random_uniform(2);
+}
+
+NSUInteger ABRandomInRange(NSRange range) {
+    return arc4random_uniform((uint32_t)range.length) + range.location;
 }
 
 @end

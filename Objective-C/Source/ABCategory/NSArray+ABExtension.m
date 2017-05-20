@@ -10,7 +10,7 @@
 
 @implementation NSArray (ABExtension)
 
-- (instancetype)arrayWithObjectsOfClass:(Class)class {
+- (NSArray *)arrayWithObjectsOfClass:(Class)class {
     NSMutableArray *objectsOfClass = [NSMutableArray array];
     for (NSObject *object in self) {
         if ([object isKindOfClass:class]){

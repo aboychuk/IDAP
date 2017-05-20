@@ -10,6 +10,6 @@
 
 @interface NSArray (ABExtension)
 
-- (instancetype)arrayWithObjectsOfClass:(Class)class;
+- (NSArray *)arrayWithObjectsOfClass:(Class)class;
 
 @end

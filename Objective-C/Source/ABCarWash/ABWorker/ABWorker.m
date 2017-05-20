@@ -27,7 +27,6 @@
 
 - (instancetype)init{
     self = [super init];
-    self.name = @"Alex";
     self.salary = 4000;
     self.experience = 5;
     
