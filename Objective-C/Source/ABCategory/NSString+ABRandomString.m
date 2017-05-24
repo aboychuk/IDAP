@@ -21,17 +21,17 @@ static const NSUInteger ABDefaultRandomStringLength = 30;
 
 + (instancetype)numericAlphabet {
     return [self alphabetWithUnicodeRange:NSMakeRange('0',
-                                                      '9' - '0' + 1)];
+                                                      '9' - '0')];
 }
 
 + (instancetype)lowercaseLetterAlphabet {
     return [self alphabetWithUnicodeRange:NSMakeRange('a',
-                                                      'z' - 'a' + 1)];
+                                                      'z' - 'a')];
 }
 
 + (instancetype)capitalizedLetterAlphabet {
     return [self alphabetWithUnicodeRange:NSMakeRange('A',
-                                                      'Z' - 'A' + 1)];
+                                                      'Z' - 'A')];
 }
 
 + (instancetype)letterAlphabet {
@@ -62,7 +62,7 @@ static const NSUInteger ABDefaultRandomStringLength = 30;
     NSMutableString *result = [NSMutableString stringWithCapacity:length];
     NSUInteger alphabetLength = [alphabet length];
     
-    for (NSUInteger index = 0; index < length; index++) {
+    for (NSUInteger index = 0; index <= length; index++) {
         unichar resultChar = [alphabet characterAtIndex:arc4random_uniform((uint32_t)alphabetLength)];
         [result appendFormat:@"%c", resultChar];
     }

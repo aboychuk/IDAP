@@ -32,37 +32,40 @@ describe(@"ABAlphabet", ^{
 //    - (NSString *)stringAtIndex:(NSUInteger)index;
 //    - (NSString *)objectAtIndexedSubscript:(NSUInteger)index;
     
-    context(@"when initialized with + (instancetype)alphabetWithRange:(NSRange)range;", ^{
-        let(variable, ^{ // Occurs before each enclosed "it"
-            return [MyClass instance];
+    afterEach(^{
+        alphabet = nil;
+    });
+    
+    context(@"when initialized with +alphabetWithRange: with range 'A'-'B' ;", ^{
+        beforeAll(^{
+            alphabet = [ABAlphabet alphabetWithRange:NSMakeRange('A', 'B' - 'A')];
+        });
+
+        it(@"should be of class ABAlphabet", ^{
+            [[alphabet should] beKindOfClass:[ABAlphabet class]];
         });
         
-        beforeAll(^{ // Occurs once
+        it(@"should be of count 2", ^{
+//            [[theValue([alphabet count]) should] equal:@(2)];
+            [[alphabet should] haveCountOf:2];
         });
         
-        afterAll(^{ // Occurs once
+        it(@"should contain @\"A\" at index = 0", ^{
+            [[[alphabet stringAtIndex:0] should] equal:@"A"];
         });
         
-        beforeEach(^{ // Occurs before each enclosed "it"
+        it(@"should contain @\"B\" at index = 1", ^{
+            [[[alphabet stringAtIndex:1] should] equal:@"B"];
+        });
+    });
+    
+    context(@"when initialized with +initWithRange: with range 'A'-'B' ;", ^{
+        beforeAll(^{
+            alphabet = [[ABAlphabet alloc] initWithRange:NSMakeRange('A', 'B' - 'A')];
         });
         
-        afterEach(^{ // Occurs after each enclosed "it"
-        });
-        
-        it(@"should do something", ^{
-            [[variable should] meetSomeExpectation];
-        });
-        
-        specify(^{
-            [[variable shouldNot] beNil];
-        });
-        
-        context(@"inner context", ^{
-            it(@"does another thing", ^{
-            });
-            
-            pending(@"something unimplemented", ^{
-            });
+        it(@"should be of class ABAlphabet", ^{
+            [[alphabet should] beKindOfClass:[ABAlphabet class]];
         });
     });
 });

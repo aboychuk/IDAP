@@ -8,11 +8,20 @@
 
 #import "ABAlphabet.h"
 
+#import <math.h>
+
 #import "ABClasterAlphabet.h"
 #import "ABRangeAlphabet.h"
 #import "ABStringsAlphabet.h"
 
 #import "NSString+ABExtensions.h"
+
+NSRange ABAlphabetRange(unichar value1, unichar value2) {
+    unichar minValue = MIN(value1, value2);
+    unichar maxValue = MAX(value1, value2);
+    
+    return NSMakeRange(minValue, maxValue - minValue + 1);
+}
 
 @implementation ABAlphabet
 
@@ -23,7 +32,7 @@
     return [[[ABRangeAlphabet alloc] initWithRange:range] autorelease];
 }
 
-+ (instancetype)alphabetWithStrings:(NSString *)strings {
++ (instancetype)alphabetWithStrings:(NSArray *)strings {
     return [[[ABStringsAlphabet alloc] initWithStrings:strings] autorelease];
 }
 
@@ -31,8 +40,8 @@
     return [[[ABClasterAlphabet alloc] initWithAlphabets:alphabets] autorelease];
 }
 
-+ (instancetype)alphabetWithSymbols:(NSString *)strings {
-    return [self alphabetWithStrings:[strings symbols]];
++ (instancetype)alphabetWithSymbols:(NSString *)string {
+    return [self alphabetWithStrings:[string symbols]];
 }
 
 #pragma mark
@@ -50,14 +59,14 @@
     return [[ABRangeAlphabet alloc] initWithRange:range];
 }
 
-- (instancetype)initWithStrings:(NSString *)strings {
+- (instancetype)initWithStrings:(NSArray *)strings {
     [self release];
     
     return [[ABStringsAlphabet alloc] initWithStrings:strings];
 }
 
-- (instancetype)initWithSymbols:(NSString *)strings {
-    return [self initWithStrings:[strings symbols]];
+- (instancetype)initWithSymbols:(NSString *)string {
+    return [self initWithStrings:[string symbols]];
 }
 
 #pragma mark

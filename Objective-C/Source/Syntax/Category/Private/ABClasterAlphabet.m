@@ -10,4 +10,8 @@
 
 @implementation ABClasterAlphabet
 
+- (instancetype)initWithAlphabets:(NSArray *)alphabets {
+    return nil;
+}
+
 @end

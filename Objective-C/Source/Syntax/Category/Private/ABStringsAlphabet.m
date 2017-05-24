@@ -10,4 +10,8 @@
 
 @implementation ABStringsAlphabet
 
+- (instancetype)initWithStrings:(NSArray *)strings {
+    return nil;
+}
+
 @end

@@ -9,6 +9,7 @@
 #import "ABAlphabet.h"
 
 @interface ABRangeAlphabet : ABAlphabet
+@property (nonatomic, readonly) NSRange range;
 
 - (instancetype)initWithRange:(NSRange)range;
 
