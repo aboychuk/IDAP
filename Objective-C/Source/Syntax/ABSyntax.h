@@ -27,11 +27,11 @@ static NSString * const ABOutputDelimiter = @"\n--------------------------------
 
 }
 
-@property(nonatomic, retain)                                                  id<ABSyntaxProtocol> object;
-@property(atomic, copy)                                                       NSObject             *atomicCopyObject;
-@property(nonatomic, readonly)                                                NSUInteger           integerValue;
-@property(nonatomic, assign, readwrite, getter=isReady, setter=setIsReady:)   BOOL                 ready;
-@property(nonatomic, readonly)                                                NSArray              *array;
+@property (nonatomic, retain)                                                  id<ABSyntaxProtocol> object;
+@property (atomic, copy)                                                       NSObject             *atomicCopyObject;
+@property (nonatomic, readonly)                                                NSUInteger           integerValue;
+@property (nonatomic, assign, readwrite, getter=isReady, setter=setIsReady:)   BOOL                 ready;
+@property (nonatomic, readonly)                                                NSArray              *array;
 
 - (void)setIsReady:(BOOL)ready;
 - (BOOL)isReady;

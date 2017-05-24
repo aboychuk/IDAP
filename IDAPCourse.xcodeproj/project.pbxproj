@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49229EAA1ED5A794002FBFF3 /* ABEqualityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229E941ED5A794002FBFF3 /* ABEqualityObject.m */; };
+		49229EAB1ED5A794002FBFF3 /* ABObjCSyntax.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229E961ED5A794002FBFF3 /* ABObjCSyntax.m */; };
+		49229EAC1ED5A794002FBFF3 /* ABSyntax+ABCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229E981ED5A794002FBFF3 /* ABSyntax+ABCategory.m */; };
+		49229EAD1ED5A794002FBFF3 /* ABSyntax.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229E9A1ED5A794002FBFF3 /* ABSyntax.m */; };
+		49229EAE1ED5A794002FBFF3 /* ABSyntaxSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229E9D1ED5A794002FBFF3 /* ABSyntaxSubclass.m */; };
+		49229EAF1ED5A794002FBFF3 /* ABAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EA01ED5A794002FBFF3 /* ABAlphabet.m */; };
+		49229EB01ED5A794002FBFF3 /* NSString+ABExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EA21ED5A794002FBFF3 /* NSString+ABExtensions.m */; };
+		49229EB11ED5A794002FBFF3 /* ABClasterAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EA51ED5A794002FBFF3 /* ABClasterAlphabet.m */; };
+		49229EB21ED5A794002FBFF3 /* ABRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EA71ED5A794002FBFF3 /* ABRangeAlphabet.m */; };
+		49229EB31ED5A794002FBFF3 /* ABStringsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EA91ED5A794002FBFF3 /* ABStringsAlphabet.m */; };
 		6F2CB8541EBD8EDA00DDC21F /* ABCarWashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2CB8531EBD8EDA00DDC21F /* ABCarWashTest.m */; };
 		6F302B0E1EA7D17B000D7A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F302B0D1EA7D17B000D7A95 /* main.m */; };
 		6F49D6C11ED00D6F00222592 /* NSNumber+ABRandomNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F49D6C01ED00D6F00222592 /* NSNumber+ABRandomNumber.m */; };
@@ -51,6 +61,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		49229E931ED5A794002FBFF3 /* ABEqualityObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABEqualityObject.h; sourceTree = "<group>"; };
+		49229E941ED5A794002FBFF3 /* ABEqualityObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABEqualityObject.m; sourceTree = "<group>"; };
+		49229E951ED5A794002FBFF3 /* ABObjCSyntax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABObjCSyntax.h; sourceTree = "<group>"; };
+		49229E961ED5A794002FBFF3 /* ABObjCSyntax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABObjCSyntax.m; sourceTree = "<group>"; };
+		49229E971ED5A794002FBFF3 /* ABSyntax+ABCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ABSyntax+ABCategory.h"; sourceTree = "<group>"; };
+		49229E981ED5A794002FBFF3 /* ABSyntax+ABCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ABSyntax+ABCategory.m"; sourceTree = "<group>"; };
+		49229E991ED5A794002FBFF3 /* ABSyntax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntax.h; sourceTree = "<group>"; };
+		49229E9A1ED5A794002FBFF3 /* ABSyntax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntax.m; sourceTree = "<group>"; };
+		49229E9B1ED5A794002FBFF3 /* ABSyntaxProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxProtocol.h; sourceTree = "<group>"; };
+		49229E9C1ED5A794002FBFF3 /* ABSyntaxSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxSubclass.h; sourceTree = "<group>"; };
+		49229E9D1ED5A794002FBFF3 /* ABSyntaxSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntaxSubclass.m; sourceTree = "<group>"; };
+		49229E9F1ED5A794002FBFF3 /* ABAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAlphabet.h; sourceTree = "<group>"; };
+		49229EA01ED5A794002FBFF3 /* ABAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAlphabet.m; sourceTree = "<group>"; };
+		49229EA11ED5A794002FBFF3 /* NSString+ABExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ABExtensions.h"; sourceTree = "<group>"; };
+		49229EA21ED5A794002FBFF3 /* NSString+ABExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ABExtensions.m"; sourceTree = "<group>"; };
+		49229EA41ED5A794002FBFF3 /* ABClasterAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABClasterAlphabet.h; sourceTree = "<group>"; };
+		49229EA51ED5A794002FBFF3 /* ABClasterAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABClasterAlphabet.m; sourceTree = "<group>"; };
+		49229EA61ED5A794002FBFF3 /* ABRangeAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRangeAlphabet.h; sourceTree = "<group>"; };
+		49229EA71ED5A794002FBFF3 /* ABRangeAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRangeAlphabet.m; sourceTree = "<group>"; };
+		49229EA81ED5A794002FBFF3 /* ABStringsAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABStringsAlphabet.h; sourceTree = "<group>"; };
+		49229EA91ED5A794002FBFF3 /* ABStringsAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABStringsAlphabet.m; sourceTree = "<group>"; };
 		6F2CB8521EBD8EDA00DDC21F /* ABCarWashTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashTest.h; sourceTree = "<group>"; };
 		6F2CB8531EBD8EDA00DDC21F /* ABCarWashTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashTest.m; sourceTree = "<group>"; };
 		6F302B0B1EA7D17B000D7A95 /* Objective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +155,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49229E921ED5A794002FBFF3 /* Syntax */ = {
+			isa = PBXGroup;
+			children = (
+				49229E931ED5A794002FBFF3 /* ABEqualityObject.h */,
+				49229E941ED5A794002FBFF3 /* ABEqualityObject.m */,
+				49229E951ED5A794002FBFF3 /* ABObjCSyntax.h */,
+				49229E961ED5A794002FBFF3 /* ABObjCSyntax.m */,
+				49229E971ED5A794002FBFF3 /* ABSyntax+ABCategory.h */,
+				49229E981ED5A794002FBFF3 /* ABSyntax+ABCategory.m */,
+				49229E991ED5A794002FBFF3 /* ABSyntax.h */,
+				49229E9A1ED5A794002FBFF3 /* ABSyntax.m */,
+				49229E9B1ED5A794002FBFF3 /* ABSyntaxProtocol.h */,
+				49229E9C1ED5A794002FBFF3 /* ABSyntaxSubclass.h */,
+				49229E9D1ED5A794002FBFF3 /* ABSyntaxSubclass.m */,
+				49229E9E1ED5A794002FBFF3 /* Category */,
+			);
+			path = Syntax;
+			sourceTree = "<group>";
+		};
+		49229E9E1ED5A794002FBFF3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				49229E9F1ED5A794002FBFF3 /* ABAlphabet.h */,
+				49229EA01ED5A794002FBFF3 /* ABAlphabet.m */,
+				49229EA11ED5A794002FBFF3 /* NSString+ABExtensions.h */,
+				49229EA21ED5A794002FBFF3 /* NSString+ABExtensions.m */,
+				49229EA31ED5A794002FBFF3 /* Private */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		49229EA31ED5A794002FBFF3 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				49229EA41ED5A794002FBFF3 /* ABClasterAlphabet.h */,
+				49229EA51ED5A794002FBFF3 /* ABClasterAlphabet.m */,
+				49229EA61ED5A794002FBFF3 /* ABRangeAlphabet.h */,
+				49229EA71ED5A794002FBFF3 /* ABRangeAlphabet.m */,
+				49229EA81ED5A794002FBFF3 /* ABStringsAlphabet.h */,
+				49229EA91ED5A794002FBFF3 /* ABStringsAlphabet.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
 		6F302B0C1EA7D17B000D7A95 /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +246,7 @@
 				6FDE5F3A1ECC8422000AF3FB /* ABCarWash */,
 				6FDE5F521ECC8422000AF3FB /* ABCategory */,
 				6FDE5F591ECC8422000AF3FB /* ABCreature */,
+				49229E921ED5A794002FBFF3 /* Syntax */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -357,8 +433,14 @@
 				6FDE5F971ECC8422000AF3FB /* ABObjCSyntax.m in Sources */,
 				6FDE5F8F1ECC8422000AF3FB /* NSObject+ABObjectExtension.m in Sources */,
 				6FDE5F881ECC8422000AF3FB /* ABCarWashRoom.m in Sources */,
+				49229EAC1ED5A794002FBFF3 /* ABSyntax+ABCategory.m in Sources */,
 				6FDE5F9A1ECC8422000AF3FB /* ABSyntaxSubclass.m in Sources */,
+				49229EAD1ED5A794002FBFF3 /* ABSyntax.m in Sources */,
+				49229EB21ED5A794002FBFF3 /* ABRangeAlphabet.m in Sources */,
+				49229EAE1ED5A794002FBFF3 /* ABSyntaxSubclass.m in Sources */,
 				6FBC7F901EB337C100FD7D6D /* ABCreatureGenderTest.m in Sources */,
+				49229EAF1ED5A794002FBFF3 /* ABAlphabet.m in Sources */,
+				49229EAB1ED5A794002FBFF3 /* ABObjCSyntax.m in Sources */,
 				6FDE5F8C1ECC8422000AF3FB /* ABDirector.m in Sources */,
 				6FDE5F8B1ECC8422000AF3FB /* ABCarWasher.m in Sources */,
 				6FDE5F871ECC8422000AF3FB /* ABCarWash.m in Sources */,
@@ -370,13 +452,17 @@
 				6FBC7F911EB337C100FD7D6D /* ABCreatureTest.m in Sources */,
 				6FDE5F941ECC8422000AF3FB /* NSObject+ABCreatureCategory.m in Sources */,
 				6F302B0E1EA7D17B000D7A95 /* main.m in Sources */,
+				49229EAA1ED5A794002FBFF3 /* ABEqualityObject.m in Sources */,
 				6FDE5F8A1ECC8422000AF3FB /* ABAcountant.m in Sources */,
 				6FDE5F921ECC8422000AF3FB /* ABCreatureFemale.m in Sources */,
 				6FDE5F9B1ECC8422000AF3FB /* NSString+ABExtensions.m in Sources */,
+				49229EB01ED5A794002FBFF3 /* NSString+ABExtensions.m in Sources */,
+				49229EB31ED5A794002FBFF3 /* ABStringsAlphabet.m in Sources */,
 				6F2CB8541EBD8EDA00DDC21F /* ABCarWashTest.m in Sources */,
 				6FDE5F981ECC8422000AF3FB /* ABSyntax+ABCategory.m in Sources */,
 				6FDE5F991ECC8422000AF3FB /* ABSyntax.m in Sources */,
 				6FDE5F8D1ECC8422000AF3FB /* ABWorker.m in Sources */,
+				49229EB11ED5A794002FBFF3 /* ABClasterAlphabet.m in Sources */,
 				6FDE5F891ECC8422000AF3FB /* ABRoom.m in Sources */,
 				6FDE5F911ECC8422000AF3FB /* ABCreature.m in Sources */,
 				6FDE5F951ECC8422000AF3FB /* ABAlphabet.m in Sources */,
