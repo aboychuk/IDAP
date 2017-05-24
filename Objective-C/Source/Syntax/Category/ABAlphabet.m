@@ -2,7 +2,7 @@
 //  ABAlphabet.m
 //  IDAPCourse
 //
-//  Created by Andrew Boychuk on 5/17/17.
+//  Created by Andrew Boychuk on 5/24/17.
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
@@ -23,7 +23,7 @@
     return [[[ABRangeAlphabet alloc] initWithRange:range] autorelease];
 }
 
-+ (instancetype)alphabetWithStrings:(NSArray *)strings {
++ (instancetype)alphabetWithStrings:(NSString *)strings {
     return [[[ABStringsAlphabet alloc] initWithStrings:strings] autorelease];
 }
 
@@ -31,8 +31,8 @@
     return [[[ABClasterAlphabet alloc] initWithAlphabets:alphabets] autorelease];
 }
 
-+ (instancetype)alphabetWithSymbols:(NSString *)string {
-    return [self alphabetWithStrings:[string symbols]];
++ (instancetype)alphabetWithSymbols:(NSString *)strings {
+    return [self alphabetWithStrings:[strings symbols]];
 }
 
 #pragma mark
@@ -50,7 +50,7 @@
     return [[ABRangeAlphabet alloc] initWithRange:range];
 }
 
-- (instancetype)initWithStrings:(NSArray *)strings {
+- (instancetype)initWithStrings:(NSString *)strings {
     [self release];
     
     return [[ABStringsAlphabet alloc] initWithStrings:strings];

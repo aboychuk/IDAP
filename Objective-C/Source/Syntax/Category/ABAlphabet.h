@@ -2,7 +2,7 @@
 //  ABAlphabet.h
 //  IDAPCourse
 //
-//  Created by Andrew Boychuk on 5/17/17.
+//  Created by Andrew Boychuk on 5/24/17.
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
@@ -11,17 +11,17 @@
 @interface ABAlphabet : NSObject <NSFastEnumeration>
 
 + (instancetype)alphabetWithRange:(NSRange)range;
-+ (instancetype)alphabetWithStrings:(NSArray *)strings;
++ (instancetype)alphabetWithStrings:(NSString *)strings;
 + (instancetype)alphabetWithAlphabets:(NSArray *)alphabets;
-+ (instancetype)alphabetWithSymbols:(NSString *)string;
++ (instancetype)alphabetWithSymbols:(NSString *)strings;
 
 - (instancetype)initWithAlphabets:(NSArray *)alphabets;
 - (instancetype)initWithRange:(NSRange)range;
-- (instancetype)initWithStrings:(NSArray *)strings;
+- (instancetype)initWithStrings:(NSString *)strings;
 - (instancetype)initWithSymbols:(NSString *)strings;
 
 - (NSUInteger)count;
-- (NSString *)objectAtIndex:(NSUInteger)index;
+- (NSString *)stringAtIndex:(NSUInteger)index;
 - (NSString *)objectAtIndexedSubscript:(NSUInteger)index;
 
 @end

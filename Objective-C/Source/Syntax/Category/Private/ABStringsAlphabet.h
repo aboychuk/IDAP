@@ -10,6 +10,6 @@
 
 @interface ABStringsAlphabet : ABAlphabet
 
-- (instancetype)initWithStrings:(NSArray *)strings;
+- (instancetype)initWithStrings:(NSString *)strings;
 
 @end
