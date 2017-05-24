@@ -23,8 +23,11 @@ NSRange ABAlphabetRange(unichar value1, unichar value2);
 - (instancetype)initWithStrings:(NSArray *)string;
 - (instancetype)initWithSymbols:(NSString *)strings;
 
+//the method should be overriden
 - (NSUInteger)count;
+//the method should be overriden
 - (NSString *)stringAtIndex:(NSUInteger)index;
 - (NSString *)objectAtIndexedSubscript:(NSUInteger)index;
+- (NSString *)string;
 
 @end

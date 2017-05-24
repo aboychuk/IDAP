@@ -38,7 +38,7 @@ describe(@"ABAlphabet", ^{
     
     context(@"when initialized with +alphabetWithRange: with range 'A'-'B' ;", ^{
         beforeAll(^{
-            alphabet = [ABAlphabet alphabetWithRange:NSMakeRange('A', 'B' - 'A')];
+            alphabet = [ABAlphabet alphabetWithRange:ABAlphabetRange('A', 'B')];
         });
 
         it(@"should be of class ABAlphabet", ^{
@@ -56,6 +56,17 @@ describe(@"ABAlphabet", ^{
         
         it(@"should contain @\"B\" at index = 1", ^{
             [[[alphabet stringAtIndex:1] should] equal:@"B"];
+        });
+        
+        it(@"should raise, when requesting object at index 3", ^{
+            [[theBlock(^{
+                [alphabet stringAtIndex:3];
+                id a = alphabet[3];
+            }) should] raise];
+        });
+        
+        it(@"should return @\"AB\" from -string", ^{
+            [[[alphabet string] should] equal:@"AB"];
         });
     });
     
