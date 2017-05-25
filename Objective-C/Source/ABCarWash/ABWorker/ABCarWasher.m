@@ -14,17 +14,14 @@
 #pragma mark Private Methods
 
 - (void)processObject:(ABCar *)car {
-    [self washCar:car];
+    [self specificClassOperation:car];
     [self takeMoneyFromObject:car];
 }
 
-- (void)takeMoneyFromObject:(ABCar *)car {
-    [super takeMoneyFromObject:car];
-}
-
-- (void)washCar:(ABCar *)car {
+- (void)specificClassOperation:(ABCar *)car {
     NSLog(@"Washer %@ start washing car", self.name);
     car.state = ABCarStateClean;
 }
+
 
 @end

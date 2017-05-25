@@ -15,10 +15,10 @@
 
 - (void)processObject:(ABWorker *)Accountant {
     [self takeMoneyFromObject:Accountant];
-    [self gotProfit];
+    [self specificClassOperation:Accountant];
 }
 
-- (void)gotProfit {
+- (void)specificClassOperation:(id<ABMoneyFlow>)object {
     NSLog(@"Director got %lu", self.money);
 }
 

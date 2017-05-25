@@ -15,10 +15,10 @@
 
 - (void)processObject:(ABWorker *)washer {
     [self takeMoneyFromObject:washer];
-    [self calculateMoney];
+    [self specificClassOperation:washer];
 }
-
-- (void)calculateMoney {
+- (void)specificClassOperation:(id<ABMoneyFlow>)object {
     NSLog(@"Accountant calculated money.");
 }
+
 @end
