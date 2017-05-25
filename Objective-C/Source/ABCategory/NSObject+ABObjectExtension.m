@@ -14,6 +14,4 @@
     return [[[self alloc] init] autorelease];
 }
 
-
-
 @end
