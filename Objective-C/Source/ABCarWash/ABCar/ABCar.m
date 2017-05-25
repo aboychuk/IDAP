@@ -31,11 +31,24 @@ static NSUInteger ABCarMoney = 100;
 #pragma mark
 #pragma mark Public Methods
 
+- (void)takeMoney:(NSUInteger)money {
+    self.money += money;
+}
+
 - (NSUInteger)giveMoney {
     NSUInteger money = self.money;
     self.money = 0;
     
     return money;
+}
+
+- (void)takeMoneyFromObject:(id<ABMoneyFlow>)object {
+    self.money += [object giveMoney];
+    NSLog(@"%@ got %lu USD from the %@",
+          NSStringFromClass([self class]),
+          self.money,
+          NSStringFromClass([object class]));
+    
 }
 
 @end

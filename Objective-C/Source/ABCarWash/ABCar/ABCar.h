@@ -19,6 +19,8 @@ typedef NS_ENUM(NSUInteger, ABCarState) {
 @property (nonatomic, assign)   ABCarState    state;
 
 - (NSUInteger)giveMoney;
+- (void)takeMoney:(NSUInteger)money;
+- (void)takeMoneyFromObject:(id<ABMoneyFlow>)object;
 
 @end
 
