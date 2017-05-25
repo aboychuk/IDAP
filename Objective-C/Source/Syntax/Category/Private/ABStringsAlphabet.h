@@ -9,6 +9,7 @@
 #import "ABAlphabet.h"
 
 @interface ABStringsAlphabet : ABAlphabet
+@property (nonatomic, readonly)   NSArray *strings;
 
 - (instancetype)initWithStrings:(NSArray *)strings;
 

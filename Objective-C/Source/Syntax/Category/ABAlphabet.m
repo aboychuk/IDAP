@@ -97,53 +97,52 @@ NSRange ABAlphabetRange(unichar value1, unichar value2) {
     return [[string copy] autorelease];
 }
 
-- (void) a {
-    for (NSString *symbol in self) {
-        //[string appendString:symbol];
-    }
-    {
-        NSFastEnumerationState state;
-        memset(&state, 0, sizeof(state));
-        
-        NSUInteger bufferCount = 16;
-        id objects[bufferCount];
-        memset(objects, 0, sizeof(objects));
-        
-        NSUInteger count = 0;
-        NSUInteger index = 0;
-        
-        NSString *symbol = nil;
-        
-        BOOL firstRun = YES;
-        unsigned long mutations = 0;
-        
-        while ((count = [self countByEnumeratingWithState:&state
-                                                  objects:objects
-                                                    count:bufferCount]))
-        {
-            if (firstRun) {
-                mutations = *state.mutationsPtr;
-            }
-            
-            NSAssert(mutations != *state.mutationsPtr, NSGenericException);
-            
-            for (index = 0; index < count; index++) {
-                if (state.itemsPtr) {
-                    symbol = state.itemsPtr[index];
-                } else {
-                    symbol = objects[index];
-                }
-            }
-        }
-
-    }
-}
+//- (void) a {
+//    for (NSString *symbol in self) {
+//        //[string appendString:symbol];
+//    }
+//    {
+//        NSFastEnumerationState state;
+//        memset(&state, 0, sizeof(state));
+//        
+//        NSUInteger bufferCount = 16;
+//        id objects[bufferCount];
+//        memset(objects, 0, sizeof(objects));
+//        
+//        NSUInteger count = 0;
+//        NSUInteger index = 0;
+//        
+//        NSString *symbol = nil;
+//        
+//        BOOL firstRun = YES;
+//        unsigned long mutations = 0;
+//        
+//        while ((count = [self countByEnumeratingWithState:&state
+//                                                  objects:objects
+//                                                    count:bufferCount]))
+//        {
+//            if (firstRun) {
+//                mutations = *state.mutationsPtr;
+//            }
+//            
+//            NSAssert(mutations != *state.mutationsPtr, NSGenericException);
+//            
+//            for (index = 0; index < count; index++) {
+//                if (state.itemsPtr) {
+//                    symbol = state.itemsPtr[index];
+//                } else {
+//                    symbol = objects[index];
+//                }
+//            }
+//        }
+//    }
+//}
 
 #pragma mark
 #pragma mark NSFastEnumeration
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
-                                  objects:(id  _Nullable *)stackbuf
+                                  objects:(id [])stackbuf
                                     count:(NSUInteger)resultLength
 {
     state->mutationsPtr = (unsigned long *)self;
@@ -151,9 +150,13 @@ NSRange ABAlphabetRange(unichar value1, unichar value2) {
     NSUInteger length = MAX(state->state + resultLength, [self count]);
     resultLength = length - state->state;
     
-    for (NSUInteger index = state->state; index < length; index++) {
-        stackbuf[index] = self[index];
+    if (0 != resultLength) {
+        for (NSUInteger index = 0; index < length; index++) {
+            stackbuf[index] = self[index + state->state];
+        }
     }
+    
+    state->itemsPtr = stackbuf;
     
     state->state += resultLength;
     

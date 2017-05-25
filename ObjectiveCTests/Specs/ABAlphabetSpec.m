@@ -32,10 +32,6 @@ describe(@"ABAlphabet", ^{
 //    - (NSString *)stringAtIndex:(NSUInteger)index;
 //    - (NSString *)objectAtIndexedSubscript:(NSUInteger)index;
     
-    afterEach(^{
-        alphabet = nil;
-    });
-    
     context(@"when initialized with +alphabetWithRange: with range 'A'-'B' ;", ^{
         beforeAll(^{
             alphabet = [ABAlphabet alphabetWithRange:ABAlphabetRange('A', 'B')];
@@ -61,8 +57,13 @@ describe(@"ABAlphabet", ^{
         it(@"should raise, when requesting object at index 3", ^{
             [[theBlock(^{
                 [alphabet stringAtIndex:3];
-                id a = alphabet[3];
             }) should] raise];
+            
+            [[theBlock(^{
+                id a = alphabet[3];
+                [a description];
+            }) should] raise];
+
         });
         
         it(@"should return @\"AB\" from -string", ^{
@@ -70,13 +71,47 @@ describe(@"ABAlphabet", ^{
         });
     });
     
-    context(@"when initialized with +initWithRange: with range 'A'-'B' ;", ^{
+    context(@"when initialized with -initWithRange: with range 'A'-'B' ;", ^{
         beforeAll(^{
             alphabet = [[ABAlphabet alloc] initWithRange:NSMakeRange('A', 'B' - 'A')];
         });
         
         it(@"should be of class ABAlphabet", ^{
             [[alphabet should] beKindOfClass:[ABAlphabet class]];
+        });
+    });
+    
+    context(@"when initialized with +alphabetWithRange: with range 'A'-'z' when enumerated ;", ^{
+        NSRange range = ABAlphabetRange('A', 'z');
+        
+        beforeEach(^{
+            alphabet = [[ABAlphabet alloc] initWithRange:range];
+        });
+        
+        it(@"should raise", ^{
+            [[theBlock(^{
+                for (id symbol in alphabet) {
+                    [symbol description];
+                }
+            }) shouldNot] raise];
+        });
+        
+        it(@"should return count of symbols equql to 'A'-'z' range", ^{
+            NSUInteger count = 0;
+            for (NSString *symbol in alphabet) {
+                [symbol description];
+                count++;
+            }
+            
+            [[theValue(count) should] equal:@(range.length)];
+        });
+        
+        it(@"should return symbols in range 'A'-'z'", ^{
+            unichar character = 'A';
+            for (NSString *symbol in alphabet) {
+                [[symbol should] equal:[NSString stringWithFormat:@"%c", character]];
+                character++;
+            }
         });
     });
 });
