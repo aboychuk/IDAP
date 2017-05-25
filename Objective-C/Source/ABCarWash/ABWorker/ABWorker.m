@@ -37,6 +37,7 @@
 #pragma mark Public Methods
 
 - (void)processObject:(id<ABMoneyFlow>)object {
+    [self specificClassOperation:object];
     [self takeMoneyFromObject:object];
 }
 

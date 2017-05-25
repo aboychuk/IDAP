@@ -13,12 +13,11 @@
 #pragma mark
 #pragma mark Private Methods
 
-- (void)processObject:(ABWorker *)Accountant {
-    [self takeMoneyFromObject:Accountant];
-    [self specificClassOperation:Accountant];
+- (void)specificClassOperation:(id<ABMoneyFlow>)object {
+    [self takeProfit];
 }
 
-- (void)specificClassOperation:(id<ABMoneyFlow>)object {
+- (void)takeProfit {
     NSLog(@"Director got %lu", self.money);
 }
 
