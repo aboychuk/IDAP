@@ -32,37 +32,86 @@ describe(@"ABAlphabet", ^{
 //    - (NSString *)stringAtIndex:(NSUInteger)index;
 //    - (NSString *)objectAtIndexedSubscript:(NSUInteger)index;
     
-    context(@"when initialized with + (instancetype)alphabetWithRange:(NSRange)range;", ^{
-        let(variable, ^{ // Occurs before each enclosed "it"
-            return [MyClass instance];
+    context(@"when initialized with +alphabetWithRange: with range 'A'-'B' ;", ^{
+        beforeAll(^{
+            alphabet = [ABAlphabet alphabetWithRange:ABAlphabetRange('A', 'B')];
+        });
+
+        it(@"should be of class ABAlphabet", ^{
+            [[alphabet should] beKindOfClass:[ABAlphabet class]];
         });
         
-        beforeAll(^{ // Occurs once
+        it(@"should be of count 2", ^{
+//            [[theValue([alphabet count]) should] equal:@(2)];
+            [[alphabet should] haveCountOf:2];
         });
         
-        afterAll(^{ // Occurs once
+        it(@"should contain @\"A\" at index = 0", ^{
+            [[[alphabet stringAtIndex:0] should] equal:@"A"];
         });
         
-        beforeEach(^{ // Occurs before each enclosed "it"
+        it(@"should contain @\"B\" at index = 1", ^{
+            [[[alphabet stringAtIndex:1] should] equal:@"B"];
         });
         
-        afterEach(^{ // Occurs after each enclosed "it"
-        });
-        
-        it(@"should do something", ^{
-            [[variable should] meetSomeExpectation];
-        });
-        
-        specify(^{
-            [[variable shouldNot] beNil];
-        });
-        
-        context(@"inner context", ^{
-            it(@"does another thing", ^{
-            });
+        it(@"should raise, when requesting object at index 3", ^{
+            [[theBlock(^{
+                [alphabet stringAtIndex:3];
+            }) should] raise];
             
-            pending(@"something unimplemented", ^{
-            });
+            [[theBlock(^{
+                id a = alphabet[3];
+                [a description];
+            }) should] raise];
+
+        });
+        
+        it(@"should return @\"AB\" from -string", ^{
+            [[[alphabet string] should] equal:@"AB"];
+        });
+    });
+    
+    context(@"when initialized with -initWithRange: with range 'A'-'B' ;", ^{
+        beforeAll(^{
+            alphabet = [[ABAlphabet alloc] initWithRange:NSMakeRange('A', 'B' - 'A')];
+        });
+        
+        it(@"should be of class ABAlphabet", ^{
+            [[alphabet should] beKindOfClass:[ABAlphabet class]];
+        });
+    });
+    
+    context(@"when initialized with +alphabetWithRange: with range 'A'-'z' when enumerated ;", ^{
+        NSRange range = ABAlphabetRange('A', 'z');
+        
+        beforeEach(^{
+            alphabet = [[ABAlphabet alloc] initWithRange:range];
+        });
+        
+        it(@"should raise", ^{
+            [[theBlock(^{
+                for (id symbol in alphabet) {
+                    [symbol description];
+                }
+            }) shouldNot] raise];
+        });
+        
+        it(@"should return count of symbols equql to 'A'-'z' range", ^{
+            NSUInteger count = 0;
+            for (NSString *symbol in alphabet) {
+                [symbol description];
+                count++;
+            }
+            
+            [[theValue(count) should] equal:@(range.length)];
+        });
+        
+        it(@"should return symbols in range 'A'-'z'", ^{
+            unichar character = 'A';
+            for (NSString *symbol in alphabet) {
+                [[symbol should] equal:[NSString stringWithFormat:@"%c", character]];
+                character++;
+            }
         });
     });
 });

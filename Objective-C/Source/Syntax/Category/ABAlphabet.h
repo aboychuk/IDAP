@@ -8,20 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
+extern
+NSRange ABAlphabetRange(unichar value1, unichar value2);
+
 @interface ABAlphabet : NSObject <NSFastEnumeration>
 
 + (instancetype)alphabetWithRange:(NSRange)range;
-+ (instancetype)alphabetWithStrings:(NSString *)strings;
++ (instancetype)alphabetWithStrings:(NSArray *)strings;
 + (instancetype)alphabetWithAlphabets:(NSArray *)alphabets;
-+ (instancetype)alphabetWithSymbols:(NSString *)strings;
++ (instancetype)alphabetWithSymbols:(NSString *)string;
 
-- (instancetype)initWithAlphabets:(NSArray *)alphabets;
 - (instancetype)initWithRange:(NSRange)range;
-- (instancetype)initWithStrings:(NSString *)strings;
+- (instancetype)initWithAlphabets:(NSArray *)alphabets;
+- (instancetype)initWithStrings:(NSArray *)string;
 - (instancetype)initWithSymbols:(NSString *)strings;
 
+//the method should be overriden
 - (NSUInteger)count;
+//the method should be overriden
 - (NSString *)stringAtIndex:(NSUInteger)index;
 - (NSString *)objectAtIndexedSubscript:(NSUInteger)index;
+- (NSString *)string;
 
 @end

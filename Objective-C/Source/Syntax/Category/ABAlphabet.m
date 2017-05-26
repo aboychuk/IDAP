@@ -8,11 +8,20 @@
 
 #import "ABAlphabet.h"
 
+#import <math.h>
+
 #import "ABClasterAlphabet.h"
 #import "ABRangeAlphabet.h"
 #import "ABStringsAlphabet.h"
 
 #import "NSString+ABExtensions.h"
+
+NSRange ABAlphabetRange(unichar value1, unichar value2) {
+    unichar minValue = MIN(value1, value2);
+    unichar maxValue = MAX(value1, value2);
+    
+    return NSMakeRange(minValue, maxValue - minValue + 1);
+}
 
 @implementation ABAlphabet
 
@@ -23,7 +32,7 @@
     return [[[ABRangeAlphabet alloc] initWithRange:range] autorelease];
 }
 
-+ (instancetype)alphabetWithStrings:(NSString *)strings {
++ (instancetype)alphabetWithStrings:(NSArray *)strings {
     return [[[ABStringsAlphabet alloc] initWithStrings:strings] autorelease];
 }
 
@@ -31,8 +40,8 @@
     return [[[ABClasterAlphabet alloc] initWithAlphabets:alphabets] autorelease];
 }
 
-+ (instancetype)alphabetWithSymbols:(NSString *)strings {
-    return [self alphabetWithStrings:[strings symbols]];
++ (instancetype)alphabetWithSymbols:(NSString *)string {
+    return [self alphabetWithStrings:[string symbols]];
 }
 
 #pragma mark
@@ -50,14 +59,14 @@
     return [[ABRangeAlphabet alloc] initWithRange:range];
 }
 
-- (instancetype)initWithStrings:(NSString *)strings {
+- (instancetype)initWithStrings:(NSArray *)strings {
     [self release];
     
     return [[ABStringsAlphabet alloc] initWithStrings:strings];
 }
 
-- (instancetype)initWithSymbols:(NSString *)strings {
-    return [self initWithStrings:[strings symbols]];
+- (instancetype)initWithSymbols:(NSString *)string {
+    return [self initWithStrings:[string symbols]];
 }
 
 #pragma mark
@@ -79,13 +88,79 @@
     return [self stringAtIndex:index];
 }
 
+- (NSString *)string {
+    NSMutableString *string = [NSMutableString stringWithCapacity:[self count]];
+    for (NSString *symbol in self) {
+        [string appendString:symbol];
+    }
+    
+    return [[string copy] autorelease];
+}
+
+//- (void) a {
+//    for (NSString *symbol in self) {
+//        //[string appendString:symbol];
+//    }
+//    {
+//        NSFastEnumerationState state;
+//        memset(&state, 0, sizeof(state));
+//        
+//        NSUInteger bufferCount = 16;
+//        id objects[bufferCount];
+//        memset(objects, 0, sizeof(objects));
+//        
+//        NSUInteger count = 0;
+//        NSUInteger index = 0;
+//        
+//        NSString *symbol = nil;
+//        
+//        BOOL firstRun = YES;
+//        unsigned long mutations = 0;
+//        
+//        while ((count = [self countByEnumeratingWithState:&state
+//                                                  objects:objects
+//                                                    count:bufferCount]))
+//        {
+//            if (firstRun) {
+//                mutations = *state.mutationsPtr;
+//            }
+//            
+//            NSAssert(mutations != *state.mutationsPtr, NSGenericException);
+//            
+//            for (index = 0; index < count; index++) {
+//                if (state.itemsPtr) {
+//                    symbol = state.itemsPtr[index];
+//                } else {
+//                    symbol = objects[index];
+//                }
+//            }
+//        }
+//    }
+//}
+
 #pragma mark
 #pragma mark NSFastEnumeration
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
-                                  objects:(id  _Nullable *)buffer
-                                    count:(NSUInteger)len {
-    return 0;
+                                  objects:(id [])stackbuf
+                                    count:(NSUInteger)resultLength
+{
+    state->mutationsPtr = (unsigned long *)self;
+    
+    NSUInteger length = MAX(state->state + resultLength, [self count]);
+    resultLength = length - state->state;
+    
+    if (0 != resultLength) {
+        for (NSUInteger index = 0; index < length; index++) {
+            stackbuf[index] = self[index + state->state];
+        }
+    }
+    
+    state->itemsPtr = stackbuf;
+    
+    state->state += resultLength;
+    
+    return resultLength;
 }
 
 @end
