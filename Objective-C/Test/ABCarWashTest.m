@@ -18,7 +18,7 @@
         return [[ABCar new] autorelease];
     }];
 
-    ABCarWash *carWashCompany = [[[ABCarWash alloc] init] autorelease];
+    ABCarWash *carWashCompany = [ABCarWash object];
     
     for (ABCar *car in cars) {
         [carWashCompany startWashing:car];

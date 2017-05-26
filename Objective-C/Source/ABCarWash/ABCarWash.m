@@ -45,20 +45,10 @@
 #pragma mark
 #pragma mark Public Methods
 
-- (void)addBuilding:(ABBuilding *)building {
-    if (building) {
-    [self.mutableBuildings addObject:building];
-    }
-}
-
-- (void)removeBuilding:(ABBuilding *)building {
-    [self.mutableBuildings removeObject:building];
-}
-
 - (void)startWashing:(ABCar *)car {
-    ABWorker *washer = [self findWorkerOfClass:[ABCarWasher class]];
-    ABWorker *accountant = [self findWorkerOfClass:[ABAcountant class]];
-    ABWorker *director = [self findWorkerOfClass:[ABDirector class]];
+    ABWorker *washer = [self workerWithClass:[ABCarWasher class]];
+    ABWorker *accountant = [self workerWithClass:[ABAcountant class]];
+    ABWorker *director = [self workerWithClass:[ABDirector class]];
     
     [washer processObject:car];
     [accountant processObject:washer];
@@ -68,25 +58,26 @@
 #pragma mark
 #pragma mark Private Methods
 
-- (ABWorker *)findWorkerOfClass:(Class)class {
-    for (ABBuilding *building in self.mutableBuildings) {
-        ABWorker *workerOfClass = [building objectOfClassWorker:class];
-        if (workerOfClass) {
-            return workerOfClass;
-        }
+- (void)addBuilding:(ABBuilding *)building {
+    if (building) {
+        [self.mutableBuildings addObject:building];
     }
-    return nil;
 }
 
-- (ABCar *)findCarOfClass:(Class)class {
-    for (ABBuilding *building in self.mutableBuildings) {
-        ABCar *carOfClass = [building objectOfClassCar:class];
-        if (carOfClass) {
-            return carOfClass;
-        }
+- (void)removeBuilding:(ABBuilding *)building {
+    [self.mutableBuildings removeObject:building];
+}
+
+- (NSArray *)findWorkersOfClassInBuildings:(Class)cls {
+    NSMutableArray *workers = [NSMutableArray array];
+    for (ABBuilding *buildings in self.mutableBuildings) {
+        [workers addObjectsFromArray:[buildings findWorkersOfClassInRooms:cls]];
     }
-    
-    return nil;
+    return [NSArray arrayWithArray:workers];
+}
+
+- (ABWorker *)workerWithClass:(Class)cls {
+    return [[self findWorkersOfClassInBuildings:cls] firstObject];
 }
 
 - (void)setCarWashHierarchy {
