@@ -12,7 +12,7 @@
 
 @implementation NSArray (ABExtension)
 
-+ (NSArray *)objectsWithCount:(NSUInteger)count block:(id(^)())block {
++ (NSArray *)objectsWithCount:(NSUInteger)count factoryBlock:(id(^)())block {
     if (!block) {
         return nil;
     }
@@ -25,17 +25,14 @@
     return [NSArray arrayWithArray:result];
 }
 
-- (NSArray *)objectsWithCount:(NSUInteger)count {
-    return [NSArray objectsWithCount:count block: ^{ return [NSObject object]; }];
-}
-
-- (instancetype)objectsWithClass:(Class)cls {
-    NSPredicate *predicate = [NSPredicate predicateWithBlock: ^BOOL(id obj, NSDictionary *bind) {
-        return [obj isMemberOfClass:cls];
+- (instancetype)filteredObjectsWithClass:(Class)cls {
+    NSPredicate *predicate = [NSPredicate predicateWithBlock: ^BOOL(id object, NSDictionary *bind) {
+        return [object isMemberOfClass:cls];
     }];
     
     return [self filteredArrayUsingPredicate:predicate];
 }
+
 
 
 @end

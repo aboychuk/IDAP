@@ -10,11 +10,11 @@
 
 @implementation NSNumber (ABRandomNumber)
 
-BOOL ABRandomBool() {
+- (BOOL)ABRandomBool {
     return arc4random_uniform(2);
 }
 
-NSUInteger ABRandomInRange(NSRange range) {
+- (NSUInteger)ABRandomInRange:(NSRange)range {
     return arc4random_uniform((uint32_t)range.length) + range.location;
 }
 

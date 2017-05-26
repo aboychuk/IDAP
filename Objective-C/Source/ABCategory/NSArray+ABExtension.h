@@ -10,8 +10,7 @@
 
 @interface NSArray (ABExtension)
 
-+ (NSArray *)objectsWithCount:(NSUInteger)count block:(id(^)())block;
-- (NSArray *)objectsWithCount:(NSUInteger)count;
-- (instancetype)objectsWithClass:(Class)cls;
++ (NSArray *)objectsWithCount:(NSUInteger)count factoryBlock:(id(^)())block;
+- (instancetype)filteredObjectsWithClass:(Class)cls;
 
 @end
