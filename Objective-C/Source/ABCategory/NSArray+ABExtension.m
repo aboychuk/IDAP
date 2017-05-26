@@ -25,17 +25,6 @@
     return [NSArray arrayWithArray:result];
 }
 
-//- (instancetype)filteredObjectsWithClass:(Class)cls {
-//    NSMutableArray *result = [NSMutableArray array];
-//    for (NSObject *object in self) {
-//        if ([object isMemberOfClass:cls]) {
-//            [result addObject:object];
-//        }
-//    }
-//    
-//    return [NSArray arrayWithArray:result];
-//}
-
 - (instancetype)filteredObjectsWithClass:(Class)cls {
     NSPredicate *predicate = [NSPredicate predicateWithBlock: ^BOOL(id object, NSDictionary *bind) {
         return [object isMemberOfClass:cls];
