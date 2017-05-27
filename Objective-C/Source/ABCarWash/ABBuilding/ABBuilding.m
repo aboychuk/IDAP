@@ -54,9 +54,6 @@
     [self.mutableRooms removeObject:room];
 }
 
-#pragma mark
-#pragma mark Private Methods
-
 - (NSArray *)findWorkersOfClassInRooms:(Class)cls {
     NSMutableArray *workers = [NSMutableArray array];
     for (ABRoom *room in self.mutableRooms) {
