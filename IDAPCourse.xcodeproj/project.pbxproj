@@ -32,8 +32,6 @@
 		49229F391ED5C310002FBFF3 /* NSNumber+ABRandomNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EE21ED5C30F002FBFF3 /* NSNumber+ABRandomNumber.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49229F3A1ED5C310002FBFF3 /* NSObject+ABObjectExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EE41ED5C30F002FBFF3 /* NSObject+ABObjectExtension.m */; };
 		49229F3B1ED5C310002FBFF3 /* NSObject+ABObjectExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EE41ED5C30F002FBFF3 /* NSObject+ABObjectExtension.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		49229F3C1ED5C310002FBFF3 /* NSString+ABRandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EE61ED5C30F002FBFF3 /* NSString+ABRandomString.m */; };
-		49229F3D1ED5C310002FBFF3 /* NSString+ABRandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EE61ED5C30F002FBFF3 /* NSString+ABRandomString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49229F3E1ED5C310002FBFF3 /* ABCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EE91ED5C30F002FBFF3 /* ABCreature.m */; };
 		49229F3F1ED5C310002FBFF3 /* ABCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EE91ED5C30F002FBFF3 /* ABCreature.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49229F401ED5C310002FBFF3 /* ABCreatureFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = 49229EEB1ED5C30F002FBFF3 /* ABCreatureFemale.m */; };
@@ -67,6 +65,16 @@
 		49A71B921ED5F6D80023306D /* ABCreatureGenderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A71B8B1ED5F6D80023306D /* ABCreatureGenderTest.m */; };
 		49A71B931ED5F6D80023306D /* ABCreatureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A71B8D1ED5F6D80023306D /* ABCreatureTest.m */; };
 		49A71B941ED5F6D80023306D /* ABSyntaxTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A71B901ED5F6D80023306D /* ABSyntaxTest.m */; };
+		49CEA23F1EDC728000910AFB /* ABAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2351EDC728000910AFB /* ABAlphabet.m */; };
+		49CEA2401EDC728000910AFB /* ABAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2351EDC728000910AFB /* ABAlphabet.m */; };
+		49CEA2411EDC728000910AFB /* NSString+ABExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2371EDC728000910AFB /* NSString+ABExtensions.m */; };
+		49CEA2421EDC728000910AFB /* NSString+ABExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2371EDC728000910AFB /* NSString+ABExtensions.m */; };
+		49CEA2431EDC728000910AFB /* ABClasterAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA23A1EDC728000910AFB /* ABClasterAlphabet.m */; };
+		49CEA2441EDC728000910AFB /* ABClasterAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA23A1EDC728000910AFB /* ABClasterAlphabet.m */; };
+		49CEA2451EDC728000910AFB /* ABRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA23C1EDC728000910AFB /* ABRangeAlphabet.m */; };
+		49CEA2461EDC728000910AFB /* ABRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA23C1EDC728000910AFB /* ABRangeAlphabet.m */; };
+		49CEA2471EDC728000910AFB /* ABStringsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA23E1EDC728000910AFB /* ABStringsAlphabet.m */; };
+		49CEA2481EDC728000910AFB /* ABStringsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA23E1EDC728000910AFB /* ABStringsAlphabet.m */; };
 		53C46E0DCD11103BA67DDF4B /* libPods-ObjectiveCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7745F17141330D74C6D0AD19 /* libPods-ObjectiveCTests.a */; };
 /* End PBXBuildFile section */
 
@@ -112,8 +120,6 @@
 		49229EE21ED5C30F002FBFF3 /* NSNumber+ABRandomNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+ABRandomNumber.m"; sourceTree = "<group>"; };
 		49229EE31ED5C30F002FBFF3 /* NSObject+ABObjectExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ABObjectExtension.h"; sourceTree = "<group>"; };
 		49229EE41ED5C30F002FBFF3 /* NSObject+ABObjectExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ABObjectExtension.m"; sourceTree = "<group>"; };
-		49229EE51ED5C30F002FBFF3 /* NSString+ABRandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ABRandomString.h"; sourceTree = "<group>"; };
-		49229EE61ED5C30F002FBFF3 /* NSString+ABRandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ABRandomString.m"; sourceTree = "<group>"; };
 		49229EE81ED5C30F002FBFF3 /* ABCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreature.h; sourceTree = "<group>"; };
 		49229EE91ED5C30F002FBFF3 /* ABCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreature.m; sourceTree = "<group>"; };
 		49229EEA1ED5C30F002FBFF3 /* ABCreatureFemale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCreatureFemale.h; sourceTree = "<group>"; };
@@ -152,6 +158,16 @@
 		49A71B8D1ED5F6D80023306D /* ABCreatureTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureTest.m; sourceTree = "<group>"; };
 		49A71B8F1ED5F6D80023306D /* ABSyntaxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxTest.h; sourceTree = "<group>"; };
 		49A71B901ED5F6D80023306D /* ABSyntaxTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntaxTest.m; sourceTree = "<group>"; };
+		49CEA2341EDC728000910AFB /* ABAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAlphabet.h; sourceTree = "<group>"; };
+		49CEA2351EDC728000910AFB /* ABAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAlphabet.m; sourceTree = "<group>"; };
+		49CEA2361EDC728000910AFB /* NSString+ABExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ABExtensions.h"; sourceTree = "<group>"; };
+		49CEA2371EDC728000910AFB /* NSString+ABExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ABExtensions.m"; sourceTree = "<group>"; };
+		49CEA2391EDC728000910AFB /* ABClasterAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABClasterAlphabet.h; sourceTree = "<group>"; };
+		49CEA23A1EDC728000910AFB /* ABClasterAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABClasterAlphabet.m; sourceTree = "<group>"; };
+		49CEA23B1EDC728000910AFB /* ABRangeAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRangeAlphabet.h; sourceTree = "<group>"; };
+		49CEA23C1EDC728000910AFB /* ABRangeAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRangeAlphabet.m; sourceTree = "<group>"; };
+		49CEA23D1EDC728000910AFB /* ABStringsAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABStringsAlphabet.h; sourceTree = "<group>"; };
+		49CEA23E1EDC728000910AFB /* ABStringsAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABStringsAlphabet.m; sourceTree = "<group>"; };
 		6F302B0B1EA7D17B000D7A95 /* Objective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7745F17141330D74C6D0AD19 /* libPods-ObjectiveCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjectiveCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB592A6194EFAE8857AA4AC3 /* Pods-ObjectiveCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCTests/Pods-ObjectiveCTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +223,7 @@
 		49229EC51ED5C30F002FBFF3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				49CEA2331EDC728000910AFB /* ABAlphabet */,
 				49229EC61ED5C30F002FBFF3 /* ABCarWash */,
 				49229EDE1ED5C30F002FBFF3 /* ABCategory */,
 				49229EE71ED5C30F002FBFF3 /* ABCreature */,
@@ -282,8 +299,6 @@
 				49229EE21ED5C30F002FBFF3 /* NSNumber+ABRandomNumber.m */,
 				49229EE31ED5C30F002FBFF3 /* NSObject+ABObjectExtension.h */,
 				49229EE41ED5C30F002FBFF3 /* NSObject+ABObjectExtension.m */,
-				49229EE51ED5C30F002FBFF3 /* NSString+ABRandomString.h */,
-				49229EE61ED5C30F002FBFF3 /* NSString+ABRandomString.m */,
 			);
 			path = ABCategory;
 			sourceTree = "<group>";
@@ -392,6 +407,31 @@
 				49A71B901ED5F6D80023306D /* ABSyntaxTest.m */,
 			);
 			path = SyntaxTest;
+			sourceTree = "<group>";
+		};
+		49CEA2331EDC728000910AFB /* ABAlphabet */ = {
+			isa = PBXGroup;
+			children = (
+				49CEA2341EDC728000910AFB /* ABAlphabet.h */,
+				49CEA2351EDC728000910AFB /* ABAlphabet.m */,
+				49CEA2361EDC728000910AFB /* NSString+ABExtensions.h */,
+				49CEA2371EDC728000910AFB /* NSString+ABExtensions.m */,
+				49CEA2381EDC728000910AFB /* Private */,
+			);
+			path = ABAlphabet;
+			sourceTree = "<group>";
+		};
+		49CEA2381EDC728000910AFB /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				49CEA2391EDC728000910AFB /* ABClasterAlphabet.h */,
+				49CEA23A1EDC728000910AFB /* ABClasterAlphabet.m */,
+				49CEA23B1EDC728000910AFB /* ABRangeAlphabet.h */,
+				49CEA23C1EDC728000910AFB /* ABRangeAlphabet.m */,
+				49CEA23D1EDC728000910AFB /* ABStringsAlphabet.h */,
+				49CEA23E1EDC728000910AFB /* ABStringsAlphabet.m */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 		5751FC6B93627A6CF7E0C4C1 /* Frameworks */ = {
@@ -579,16 +619,20 @@
 				49229F331ED5C310002FBFF3 /* ABDirector.m in Sources */,
 				49229F431ED5C310002FBFF3 /* ABCreatureMale.m in Sources */,
 				49229F251ED5C30F002FBFF3 /* ABBuilding.m in Sources */,
-				49229F3D1ED5C310002FBFF3 /* NSString+ABRandomString.m in Sources */,
+				49CEA2441EDC728000910AFB /* ABClasterAlphabet.m in Sources */,
 				49229F651ED5C310002FBFF3 /* ABRangeAlphabet.m in Sources */,
 				49683A0D1ED5C79700C4390B /* ABAlphabetSpec.m in Sources */,
+				49CEA2481EDC728000910AFB /* ABStringsAlphabet.m in Sources */,
 				49229F591ED5C310002FBFF3 /* ABSyntax+ABCategory.m in Sources */,
 				49229F5F1ED5C310002FBFF3 /* ABAlphabet.m in Sources */,
 				49229F351ED5C310002FBFF3 /* ABWorker.m in Sources */,
 				49229F291ED5C310002FBFF3 /* ABCarWash.m in Sources */,
 				49229F5D1ED5C310002FBFF3 /* ABSyntaxSubclass.m in Sources */,
 				49229F3F1ED5C310002FBFF3 /* ABCreature.m in Sources */,
+				49CEA2401EDC728000910AFB /* ABAlphabet.m in Sources */,
 				49229F2F1ED5C310002FBFF3 /* ABAcountant.m in Sources */,
+				49CEA2461EDC728000910AFB /* ABRangeAlphabet.m in Sources */,
+				49CEA2421EDC728000910AFB /* NSString+ABExtensions.m in Sources */,
 				49229F371ED5C310002FBFF3 /* NSArray+ABExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,11 +642,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				49229F621ED5C310002FBFF3 /* ABClasterAlphabet.m in Sources */,
+				49CEA2451EDC728000910AFB /* ABRangeAlphabet.m in Sources */,
 				49229F5A1ED5C310002FBFF3 /* ABSyntax.m in Sources */,
 				49229F3A1ED5C310002FBFF3 /* NSObject+ABObjectExtension.m in Sources */,
 				49229F261ED5C310002FBFF3 /* ABCar.m in Sources */,
 				49229F2C1ED5C310002FBFF3 /* ABRoom.m in Sources */,
 				49229F541ED5C310002FBFF3 /* ABEqualityObject.m in Sources */,
+				49CEA2431EDC728000910AFB /* ABClasterAlphabet.m in Sources */,
 				49229F441ED5C310002FBFF3 /* NSObject+ABCreatureCategory.m in Sources */,
 				49229F601ED5C310002FBFF3 /* NSString+ABExtensions.m in Sources */,
 				49229F561ED5C310002FBFF3 /* ABObjCSyntax.m in Sources */,
@@ -617,18 +663,20 @@
 				49229F421ED5C310002FBFF3 /* ABCreatureMale.m in Sources */,
 				49229F241ED5C30F002FBFF3 /* ABBuilding.m in Sources */,
 				49A71B941ED5F6D80023306D /* ABSyntaxTest.m in Sources */,
-				49229F3C1ED5C310002FBFF3 /* NSString+ABRandomString.m in Sources */,
+				49CEA2471EDC728000910AFB /* ABStringsAlphabet.m in Sources */,
 				49229F641ED5C310002FBFF3 /* ABRangeAlphabet.m in Sources */,
 				49229F581ED5C310002FBFF3 /* ABSyntax+ABCategory.m in Sources */,
 				49229F5E1ED5C310002FBFF3 /* ABAlphabet.m in Sources */,
 				49229F341ED5C310002FBFF3 /* ABWorker.m in Sources */,
 				49229F281ED5C310002FBFF3 /* ABCarWash.m in Sources */,
+				49CEA2411EDC728000910AFB /* NSString+ABExtensions.m in Sources */,
 				49A71B921ED5F6D80023306D /* ABCreatureGenderTest.m in Sources */,
 				49229F5C1ED5C310002FBFF3 /* ABSyntaxSubclass.m in Sources */,
 				49229F3E1ED5C310002FBFF3 /* ABCreature.m in Sources */,
 				49229F221ED5C30F002FBFF3 /* main.m in Sources */,
 				49229F2E1ED5C310002FBFF3 /* ABAcountant.m in Sources */,
 				49229F361ED5C310002FBFF3 /* NSArray+ABExtension.m in Sources */,
+				49CEA23F1EDC728000910AFB /* ABAlphabet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
