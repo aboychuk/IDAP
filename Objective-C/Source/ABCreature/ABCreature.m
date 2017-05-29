@@ -31,7 +31,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.name = [NSString randomStringWithLength:10];
+        self.name = [NSString randomStringWithLength:6];
         self.mutableChildren = [NSMutableArray array];
     }
     return self;

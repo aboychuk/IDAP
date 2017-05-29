@@ -12,8 +12,7 @@
 @property (nonatomic, readonly)   NSUInteger  money;
 
 - (NSUInteger)giveMoney;
-
-@optional
+- (void)takeMoney:(NSUInteger)money;
 - (void)takeMoneyFromObject:(id<ABMoneyFlow>)object;
 
 @end

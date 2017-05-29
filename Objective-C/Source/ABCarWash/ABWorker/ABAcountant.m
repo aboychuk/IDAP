@@ -13,12 +13,12 @@
 #pragma mark
 #pragma mark Private Methods
 
-- (void)processObject:(ABWorker *)washer {
-    [self takeMoneyFromObject:washer];
+- (void)specificClassOperation:(id<ABMoneyFlow>)object {
     [self calculateMoney];
 }
 
 - (void)calculateMoney {
     NSLog(@"Accountant calculated money.");
 }
+
 @end

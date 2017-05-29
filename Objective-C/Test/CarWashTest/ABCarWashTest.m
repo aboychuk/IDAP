@@ -14,14 +14,11 @@
 @implementation ABCarWashTest
 
 + (void)startTest {
-    NSMutableArray *cars = [NSMutableArray array];
-    
-    for (NSUInteger i = 0; i < 10; i++) {
-        ABCar *car = [[ABCar new] autorelease];
-        [cars addObject:car];
-    }
+    NSArray *cars = [NSArray objectsWithCount:10 factoryBlock:^id{
+        return [[ABCar new] autorelease];
+    }];
 
-    ABCarWash *carWashCompany = [[[ABCarWash alloc] init] autorelease];
+    ABCarWash *carWashCompany = [ABCarWash object];
     
     for (ABCar *car in cars) {
         [carWashCompany startWashing:car];

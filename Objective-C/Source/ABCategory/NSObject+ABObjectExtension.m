@@ -7,6 +7,7 @@
 //
 
 #import "NSObject+ABObjectExtension.h"
+#import "NSArray+ABExtension.h"
 
 @implementation NSObject (ABObjectExtension)
 
@@ -14,6 +15,8 @@
     return [[[self alloc] init] autorelease];
 }
 
-
++ (NSArray *)objectsWithCount:(NSUInteger)count {
+    return [NSArray objectsWithCount:count factoryBlock: ^{ return [self object]; }];
+}
 
 @end

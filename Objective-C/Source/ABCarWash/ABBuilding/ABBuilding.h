@@ -19,9 +19,7 @@
 - (void)addRoom:(ABRoom *)room;
 - (void)removeRoom:(ABRoom *)room;
 
-- (ABWorker *)objectOfClassWorker:(Class)class;
-- (ABCar *)objectOfClassCar:(Class)class;
-
+- (NSArray *)findWorkersOfClassInRooms:(Class)cls;
 
 @end
 

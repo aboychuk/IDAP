@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NSString+ABRandomString.h"
+#import "NSString+ABExtensions.h"
 #import "NSNumber+ABRandomNumber.h"
 
 @interface ABCreature : NSObject

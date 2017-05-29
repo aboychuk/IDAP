@@ -54,29 +54,13 @@
     [self.mutableRooms removeObject:room];
 }
 
-- (ABWorker *)objectOfClassWorker:(Class)class {
-    for (ABRoom *room in self.rooms) {
-        for (ABWorker *worker in room.workers) {
-            if ([worker isKindOfClass:class]) {
-                return worker;
-            }
-        }
+- (NSArray *)findWorkersOfClassInRooms:(Class)cls {
+    NSMutableArray *workers = [NSMutableArray array];
+    for (ABRoom *room in self.mutableRooms) {
+        [workers addObjectsFromArray:[room.workers filteredObjectsWithClass:cls]];
     }
     
-    return nil;
-}
-
-- (ABCar *)objectOfClassCar:(Class)class {
-    for (ABCarWashRoom *room in self.rooms) {
-        if ([room isKindOfClass:[ABCarWashRoom class]])
-            for (ABCar *car in room.cars) {
-                if ([car isKindOfClass:class]) {
-                    return car;
-                }
-            }
-    }
-    
-    return nil;
+    return [NSArray arrayWithArray:workers];
 }
 
 @end

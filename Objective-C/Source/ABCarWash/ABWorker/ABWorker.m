@@ -37,11 +37,20 @@
 #pragma mark Public Methods
 
 - (void)processObject:(id<ABMoneyFlow>)object {
+    [self specificClassOperation:object];
     [self takeMoneyFromObject:object];
+}
+
+- (void)specificClassOperation:(id<ABMoneyFlow>)object {
+    
 }
 
 #pragma mark
 #pragma mark Private Methods
+
+- (void)takeMoney:(NSUInteger)money {
+    self.money += money;
+}
 
 - (NSUInteger)giveMoney {
     NSUInteger money = self.money;

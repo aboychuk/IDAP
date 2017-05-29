@@ -21,9 +21,6 @@
 @interface ABCarWash : NSObject
 @property (nonatomic, copy, readonly)   NSArray *buildings;
 
-- (void)addBuilding:(ABBuilding *)building;
-- (void)removeBuilding:(ABBuilding *)building;
-
 - (void)startWashing:(ABCar *)car;
 
 @end
