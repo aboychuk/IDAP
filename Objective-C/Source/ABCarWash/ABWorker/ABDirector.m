@@ -8,12 +8,18 @@
 
 #import "ABDirector.h"
 
+@interface ABDirector ()
+
+- (void)takeProfit;
+
+@end
+
 @implementation ABDirector
 
 #pragma mark
 #pragma mark Private Methods
 
-- (void)specificClassOperation:(id<ABMoneyFlow>)object {
+- (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     [self takeProfit];
 }
 

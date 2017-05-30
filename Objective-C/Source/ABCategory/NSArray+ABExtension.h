@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+typedef id(^ABFactoryBlock)(void);
+typedef BOOL(^ABBoolBlock)(id);
+
 @interface NSArray (ABExtension)
 
-+ (NSArray *)objectsWithCount:(NSUInteger)count factoryBlock:(id(^)())block;
++ (NSArray *)objectsWithCount:(NSUInteger)count factoryBlock:(ABFactoryBlock)factoryBlock;
+
+- (instancetype)objectsWithClass:(Class)cls;
 - (instancetype)filteredObjectsWithClass:(Class)cls;
+- (instancetype)filteredArrayWithBlock:(ABBoolBlock)boolBlock;
+
 
 @end

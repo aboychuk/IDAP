@@ -8,12 +8,18 @@
 
 #import "ABAcountant.h"
 
+@interface ABAcountant ()
+
+- (void)calculateMoney;
+
+@end
+
 @implementation ABAcountant
 
 #pragma mark
 #pragma mark Private Methods
 
-- (void)specificClassOperation:(id<ABMoneyFlow>)object {
+- (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     [self calculateMoney];
 }
 

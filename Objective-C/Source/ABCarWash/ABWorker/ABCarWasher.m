@@ -8,12 +8,18 @@
 
 #import "ABCarWasher.h"
 
+@interface ABCarWasher ()
+
+- (void)wash:(ABCar *)car;
+
+@end
+
 @implementation ABCarWasher
 
 #pragma mark
 #pragma mark Private Methods
 
-- (void)specificClassOperation:(ABCar *)car {
+- (void)processScpecificOperations:(ABCar *)car {
     [self wash:car];
 }
 - (void)wash:(ABCar *)car {

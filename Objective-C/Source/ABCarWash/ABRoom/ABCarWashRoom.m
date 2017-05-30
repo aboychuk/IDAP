@@ -46,7 +46,9 @@
 #pragma mark Public Methods
 
 - (void)addCar:(ABCar *)car {
-    [self.mutableCars addObject:car];
+    if (car) {
+        [self.mutableCars addObject:car];
+    }
 }
 
 - (void)removeCar:(ABCar *)car {

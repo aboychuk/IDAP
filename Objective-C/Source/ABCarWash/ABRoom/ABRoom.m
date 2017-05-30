@@ -45,7 +45,7 @@
 
 - (void)addWorker:(ABWorker *)worker {
     if (worker) {
-    [self.mutableWorkers addObject:worker];
+        [self.mutableWorkers addObject:worker];
     }
 }
 

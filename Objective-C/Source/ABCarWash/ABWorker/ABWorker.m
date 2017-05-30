@@ -19,7 +19,6 @@
 #pragma mark Initializations and Dealocations
 
 - (void)dealloc {
-    [self.name release];
     self.name = nil;
     
     [super dealloc];
@@ -37,11 +36,11 @@
 #pragma mark Public Methods
 
 - (void)processObject:(id<ABMoneyFlow>)object {
-    [self specificClassOperation:object];
+    [self processScpecificOperations:object];
     [self takeMoneyFromObject:object];
 }
 
-- (void)specificClassOperation:(id<ABMoneyFlow>)object {
+- (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     
 }
 

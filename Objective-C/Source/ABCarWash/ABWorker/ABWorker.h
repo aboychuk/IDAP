@@ -17,6 +17,6 @@
 @property (nonatomic, assign)   NSUInteger  experience;
 
 - (void)processObject:(id<ABMoneyFlow>)object;
-- (void)specificClassOperation:(id<ABMoneyFlow>)object;
+- (void)processScpecificOperations:(id<ABMoneyFlow>)object;
 
 @end

@@ -29,7 +29,7 @@ static NSUInteger ABCarMoney = 100;
 }
 
 #pragma mark
-#pragma mark Public Methods
+#pragma mark Protocol Methods
 
 - (void)takeMoney:(NSUInteger)money {
     self.money += money;

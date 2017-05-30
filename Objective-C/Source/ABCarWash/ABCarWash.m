@@ -15,9 +15,6 @@
 
 @implementation ABCarWash
 
-@dynamic buildings;
-
-
 #pragma mark -
 #pragma mark - Initializations and Deallocations
 
