@@ -39,8 +39,8 @@
     return [[self.mutableBuildings copy] autorelease];
 }
 
-#pragma mark
-#pragma mark Public Methods
+#pragma mark -
+#pragma mark - Public Methods
 
 - (void)startWashing:(ABCar *)car {
     ABWorker *washer = [self workerWithClass:[ABCarWasher class]];
@@ -52,8 +52,8 @@
     [director processObject:accountant];
 }
 
-#pragma mark
-#pragma mark Private Methods
+#pragma mark -
+#pragma mark - Private Methods
 
 - (void)addBuilding:(ABBuilding *)building {
     if (building) {
