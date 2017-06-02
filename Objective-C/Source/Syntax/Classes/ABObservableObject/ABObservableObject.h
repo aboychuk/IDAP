@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^ABObservableObjectStateChangeBlock)(void);
+typedef void(^ABStateChangeHandler)(void);
 
 @interface ABObservableObject : NSObject
 @property (nonatomic, assign)   NSUInteger  state;
@@ -18,8 +18,8 @@ typedef void(^ABObservableObjectStateChangeBlock)(void);
 - (void)removeObserver:(id)observer;
 - (BOOL)isObservedByObject:(id)observer;
 
-- (void)addStateChangeBlock:(ABObservableObjectStateChangeBlock)block;
-- (void)removeStateChangeBlock:(ABObservableObjectStateChangeBlock)block;
+- (void)addStateChangeBlock:(ABStateChangeHandler)block;
+- (void)removeStateChangeBlock:(ABStateChangeHandler)block;
 
 //This method is intendent for subclassing. Never call it directly.
 - (SEL)selectorForState:(NSUInteger)state;

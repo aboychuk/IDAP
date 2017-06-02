@@ -13,8 +13,6 @@
 @interface ABObservableObject ()
 @property (nonatomic, retain)   NSMutableSet    *mutableObserverSet;
 
-- (void)notifyOfStateChangeWithSelector:(SEL)selector;
-
 @end
 
 @implementation ABObservableObject
@@ -45,7 +43,7 @@
 - (NSSet *)obsrverSet {
     NSMutableSet *observerSet = self.mutableObserverSet;
     NSMutableSet *result = [NSMutableSet setWithCapacity:[observerSet count]];
-    for (ABReference *reference in  observerSet) {
+    for (ABAssignReference *reference in  observerSet) {
         [result addObject:reference.target];
     }
     
@@ -86,7 +84,7 @@
 
 - (void)notifyOfStateChangeWithSelector:(SEL)selector {
     NSMutableSet *observerSet = self.mutableObserverSet;
-    for (ABReference *reference in observerSet) {
+    for (ABAssignReference *reference in observerSet) {
         if ([reference respondsToSelector:selector]) {
             [reference performSelector:selector withObject:self];
         }
