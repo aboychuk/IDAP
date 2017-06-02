@@ -6,23 +6,32 @@
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
-#import "ABCreature.h"
+#import "ABObservableObject.h"
 #import "ABMoneyFlow.h"
 
 #import "NSString+ABExtensions.h"
 #import "NSObject+ABRandomNumber.h"
+
+@class ABWorker;
 
 typedef NS_ENUM(NSUInteger, ABWorkerState) {
     ABWorkerBusy,
     ABWorkerFree
 };
 
-@interface ABWorker : ABCreature <ABMoneyFlow>
+@protocol ABWorkerObserver <NSObject>
+@optional
+
+- (void)workerDidStartWork:(id <ABMoneyFlow>) worker;
+- (void)workerDidFinishWork:(id <ABMoneyFlow>) worker;
+
+@end
+
+@interface ABWorker :  ABObservableObject <ABMoneyFlow, ABWorkerObserver>
+@property (nonatomic, copy)     NSString        *name;
 @property (nonatomic, assign)   NSUInteger      salary;
 @property (nonatomic, assign)   NSUInteger      experience;
-@property (nonatomic, assign)   ABWorkerState   state;
 
 - (void)processObject:(id<ABMoneyFlow>)object;
-- (void)processScpecificOperations:(id<ABMoneyFlow>)object;
 
 @end

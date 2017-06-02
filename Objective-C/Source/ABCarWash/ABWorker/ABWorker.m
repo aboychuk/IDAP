@@ -8,8 +8,14 @@
 
 #import "ABWorker.h"
 
+static NSUInteger ABWorkerSalary = 2000;
+static NSUInteger maxExpirience = 10;
+static NSUInteger nameLength = 6;
+
 @interface ABWorker ()
 @property (nonatomic, assign)   NSUInteger  money;
+
+- (void)processScpecificOperations:(id<ABMoneyFlow>)object;
 
 @end
 
@@ -26,8 +32,10 @@
 
 - (instancetype)init{
     self = [super init];
-    self.salary = 4000;
-    self.experience = 5;
+    self.name = [NSString randomStringWithLength:nameLength];
+    self.salary = ABWorkerSalary;
+    self.experience = ABRandomWithMaxValue(maxExpirience);
+    self.state = ABWorkerFree;
     
     return self;
 }
@@ -36,8 +44,10 @@
 #pragma mark Public Methods
 
 - (void)processObject:(id<ABMoneyFlow>)object {
+    self.state = ABWorkerBusy;
     [self processScpecificOperations:object];
     [self takeMoneyFromObject:object];
+    self.state = ABWorkerFree;
 }
 
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object {
@@ -45,7 +55,7 @@
 }
 
 #pragma mark
-#pragma mark Private Methods
+#pragma mark ABMoneyFlow Methods
 
 - (void)takeMoney:(NSUInteger)money {
     self.money += money;
@@ -66,5 +76,27 @@
           NSStringFromClass([object class]));
 
 }
+
+#pragma mark
+#pragma mark - ABWorkerObserver Methods
+
+- (void)workerDidFinishWork:(id<ABMoneyFlow>)object {
+    NSLog(@"%@ worker finish work. %@", object, self);
+    return [self processObject:object];
+}
+
+- (SEL)selectorForState:(NSUInteger)state {
+    switch (state) {
+        case ABWorkerBusy:
+            return @selector(workerDidStartWork:);
+            
+        case ABWorkerFree:
+            return @selector (workerDidFinishWork:);
+            
+        default:
+            return [super selectorForState:state];
+    }
+}
+
 
 @end
