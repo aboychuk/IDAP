@@ -61,7 +61,7 @@
 }
 
 #pragma mark
-#pragma mark - Private Methods
+#pragma mark - Public Methods
 
 - (void)addObserver:(id)observer {
     [self.mutableObserverSet addObject:[ABAssignReference referanceWithTarget:observer]];
