@@ -22,8 +22,8 @@ typedef NS_ENUM(NSUInteger, ABWorkerState) {
 @protocol ABWorkerObserver <NSObject>
 @optional
 
-- (void)workerDidStartWork:(id <ABMoneyFlow>) worker;
-- (void)workerDidFinishWork:(id <ABMoneyFlow>) worker;
+- (void)objectDidStartWork:(id <ABMoneyFlow>) object;
+- (void)objectDidFinishWork:(id <ABMoneyFlow>) object;
 
 @end
 

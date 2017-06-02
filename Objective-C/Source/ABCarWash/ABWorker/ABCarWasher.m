@@ -26,4 +26,5 @@
     NSLog(@"Washer %@ start washing car", self.name);
     car.state = ABCarStateClean;
 }
+
 @end

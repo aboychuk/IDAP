@@ -41,16 +41,10 @@
 		49CEA2AD1EDC75B800910AFB /* ABRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2551EDC75B800910AFB /* ABRangeAlphabet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49CEA2AE1EDC75B800910AFB /* ABStringsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2571EDC75B800910AFB /* ABStringsAlphabet.m */; };
 		49CEA2AF1EDC75B800910AFB /* ABStringsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2571EDC75B800910AFB /* ABStringsAlphabet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		49CEA2B01EDC75B800910AFB /* ABBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA25B1EDC75B800910AFB /* ABBuilding.m */; };
-		49CEA2B11EDC75B800910AFB /* ABBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA25B1EDC75B800910AFB /* ABBuilding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49CEA2B21EDC75B800910AFB /* ABCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA25E1EDC75B800910AFB /* ABCar.m */; };
 		49CEA2B31EDC75B800910AFB /* ABCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA25E1EDC75B800910AFB /* ABCar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49CEA2B41EDC75B800910AFB /* ABCarWash.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2601EDC75B800910AFB /* ABCarWash.m */; };
 		49CEA2B51EDC75B800910AFB /* ABCarWash.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2601EDC75B800910AFB /* ABCarWash.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		49CEA2B61EDC75B800910AFB /* ABCarWashRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2641EDC75B800910AFB /* ABCarWashRoom.m */; };
-		49CEA2B71EDC75B800910AFB /* ABCarWashRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2641EDC75B800910AFB /* ABCarWashRoom.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		49CEA2B81EDC75B800910AFB /* ABRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2661EDC75B800910AFB /* ABRoom.m */; };
-		49CEA2B91EDC75B800910AFB /* ABRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2661EDC75B800910AFB /* ABRoom.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49CEA2BA1EDC75B800910AFB /* ABAcountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2691EDC75B800910AFB /* ABAcountant.m */; };
 		49CEA2BB1EDC75B800910AFB /* ABAcountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2691EDC75B800910AFB /* ABAcountant.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49CEA2BC1EDC75B800910AFB /* ABCarWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA26B1EDC75B800910AFB /* ABCarWasher.m */; };
@@ -142,17 +136,11 @@
 		49CEA2551EDC75B800910AFB /* ABRangeAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRangeAlphabet.m; sourceTree = "<group>"; };
 		49CEA2561EDC75B800910AFB /* ABStringsAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABStringsAlphabet.h; sourceTree = "<group>"; };
 		49CEA2571EDC75B800910AFB /* ABStringsAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABStringsAlphabet.m; sourceTree = "<group>"; };
-		49CEA25A1EDC75B800910AFB /* ABBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBuilding.h; sourceTree = "<group>"; };
-		49CEA25B1EDC75B800910AFB /* ABBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABBuilding.m; sourceTree = "<group>"; };
 		49CEA25D1EDC75B800910AFB /* ABCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCar.h; sourceTree = "<group>"; };
 		49CEA25E1EDC75B800910AFB /* ABCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCar.m; sourceTree = "<group>"; };
 		49CEA25F1EDC75B800910AFB /* ABCarWash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWash.h; sourceTree = "<group>"; };
 		49CEA2601EDC75B800910AFB /* ABCarWash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWash.m; sourceTree = "<group>"; };
 		49CEA2611EDC75B800910AFB /* ABMoneyFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMoneyFlow.h; sourceTree = "<group>"; };
-		49CEA2631EDC75B800910AFB /* ABCarWashRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashRoom.h; sourceTree = "<group>"; };
-		49CEA2641EDC75B800910AFB /* ABCarWashRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashRoom.m; sourceTree = "<group>"; };
-		49CEA2651EDC75B800910AFB /* ABRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRoom.h; sourceTree = "<group>"; };
-		49CEA2661EDC75B800910AFB /* ABRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRoom.m; sourceTree = "<group>"; };
 		49CEA2681EDC75B800910AFB /* ABAcountant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAcountant.h; sourceTree = "<group>"; };
 		49CEA2691EDC75B800910AFB /* ABAcountant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAcountant.m; sourceTree = "<group>"; };
 		49CEA26A1EDC75B800910AFB /* ABCarWasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWasher.h; sourceTree = "<group>"; };
@@ -354,21 +342,10 @@
 				49CEA25F1EDC75B800910AFB /* ABCarWash.h */,
 				49CEA2601EDC75B800910AFB /* ABCarWash.m */,
 				49CEA2611EDC75B800910AFB /* ABMoneyFlow.h */,
-				49CEA2591EDC75B800910AFB /* ABBuilding */,
 				49CEA25C1EDC75B800910AFB /* ABCar */,
-				49CEA2621EDC75B800910AFB /* ABRoom */,
 				49CEA2671EDC75B800910AFB /* ABWorker */,
 			);
 			path = ABCarWash;
-			sourceTree = "<group>";
-		};
-		49CEA2591EDC75B800910AFB /* ABBuilding */ = {
-			isa = PBXGroup;
-			children = (
-				49CEA25A1EDC75B800910AFB /* ABBuilding.h */,
-				49CEA25B1EDC75B800910AFB /* ABBuilding.m */,
-			);
-			path = ABBuilding;
 			sourceTree = "<group>";
 		};
 		49CEA25C1EDC75B800910AFB /* ABCar */ = {
@@ -378,17 +355,6 @@
 				49CEA25E1EDC75B800910AFB /* ABCar.m */,
 			);
 			path = ABCar;
-			sourceTree = "<group>";
-		};
-		49CEA2621EDC75B800910AFB /* ABRoom */ = {
-			isa = PBXGroup;
-			children = (
-				49CEA2631EDC75B800910AFB /* ABCarWashRoom.h */,
-				49CEA2641EDC75B800910AFB /* ABCarWashRoom.m */,
-				49CEA2651EDC75B800910AFB /* ABRoom.h */,
-				49CEA2661EDC75B800910AFB /* ABRoom.m */,
-			);
-			path = ABRoom;
 			sourceTree = "<group>";
 		};
 		49CEA2671EDC75B800910AFB /* ABWorker */ = {
@@ -660,7 +626,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49CEA2B11EDC75B800910AFB /* ABBuilding.m in Sources */,
 				491452081EDEED3000F89E38 /* ABRetainReference.m in Sources */,
 				49CEA2C91EDC75B800910AFB /* ABCreature.m in Sources */,
 				49CEA2D71EDC75B800910AFB /* ABSyntax.m in Sources */,
@@ -687,7 +652,6 @@
 				491468E21EDD774C00B74EA1 /* ABDelegate.m in Sources */,
 				49CEA2EB1EDC75B800910AFB /* ABSyntaxTest.m in Sources */,
 				49CEA2CF1EDC75B800910AFB /* NSObject+ABCreatureCategory.m in Sources */,
-				49CEA2B91EDC75B800910AFB /* ABRoom.m in Sources */,
 				49CEA2BB1EDC75B800910AFB /* ABAcountant.m in Sources */,
 				49CEA2C31EDC75B800910AFB /* NSArray+ABExtension.m in Sources */,
 				491451F31EDECD3900F89E38 /* ABPurseObserver.m in Sources */,
@@ -695,7 +659,6 @@
 				49CEA2E71EDC75B800910AFB /* ABCreatureGenderTest.m in Sources */,
 				49CEA2E91EDC75B800910AFB /* ABCreatureTest.m in Sources */,
 				49CEA2B31EDC75B800910AFB /* ABCar.m in Sources */,
-				49CEA2B71EDC75B800910AFB /* ABCarWashRoom.m in Sources */,
 				491468DA1EDD72AE00B74EA1 /* ABDelegatingObjectSpec.m in Sources */,
 				49CEA2CD1EDC75B800910AFB /* ABCreatureMale.m in Sources */,
 				49683A0D1ED5C79700C4390B /* ABAlphabetSpec.m in Sources */,
@@ -717,14 +680,11 @@
 				49CEA2D81EDC75B800910AFB /* ABSyntaxSubclass.m in Sources */,
 				491452031EDEED1900F89E38 /* ABCopyReference.m in Sources */,
 				49CEA2C61EDC75B800910AFB /* NSObject+ABObjectExtension.m in Sources */,
-				49CEA2B81EDC75B800910AFB /* ABRoom.m in Sources */,
 				49CEA2E81EDC75B800910AFB /* ABCreatureTest.m in Sources */,
 				491451EF1EDEB5B400F89E38 /* ABPurseObserver.m in Sources */,
 				49CEA2EA1EDC75B800910AFB /* ABSyntaxTest.m in Sources */,
 				49CEA2E61EDC75B800910AFB /* ABCreatureGenderTest.m in Sources */,
-				49CEA2B61EDC75B800910AFB /* ABCarWashRoom.m in Sources */,
 				49CEA2BC1EDC75B800910AFB /* ABCarWasher.m in Sources */,
-				49CEA2B01EDC75B800910AFB /* ABBuilding.m in Sources */,
 				49CEA2D01EDC75B800910AFB /* ABEqualityObject.m in Sources */,
 				491451FF1EDEED0500F89E38 /* ABAssignReference.m in Sources */,
 				49CEA2BE1EDC75B800910AFB /* ABDirector.m in Sources */,

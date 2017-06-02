@@ -8,8 +8,12 @@
 
 #import "ABCarWash.h"
 
+static NSUInteger ABWashersCountMax = 9;
+
 @interface ABCarWash ()
-@property (nonatomic, retain)   NSMutableArray  *mutableBuildings;
+@property (nonatomic, retain)   ABAcountant     *accountant;
+@property (nonatomic, retain)   ABDirector      *director;
+@property (nonatomic, retain)   NSArray         *washers;
 
 @end
 
@@ -19,84 +23,51 @@
 #pragma mark - Initializations and Deallocations
 
 - (void)dealloc {
-    self.mutableBuildings = nil;
+    self.accountant = nil;
+    self.director = nil;
+    self.washers = nil;
     
     [super dealloc];
 }
 
 - (instancetype)init {
     self = [super init];
-    self.mutableBuildings = [NSMutableArray array];
+    self.washers = [NSArray array];
     [self setCarWashHierarchy];
     
     return self;
 }
 
 #pragma mark -
-#pragma mark - Accessors
-
-- (NSArray *)buildings {
-    return [[self.mutableBuildings copy] autorelease];
-}
-
-#pragma mark -
 #pragma mark - Public Methods
 
 - (void)startWashing:(ABCar *)car {
-    ABWorker *washer = [self workerWithClass:[ABCarWasher class]];
-    ABWorker *accountant = [self workerWithClass:[ABAcountant class]];
-    ABWorker *director = [self workerWithClass:[ABDirector class]];
-    
+    NSUInteger max = [self.washers count];
+    ABCarWasher *washer = self.washers[ABRandomWithMaxValue(max - 1)];
     [washer processObject:car];
-    [accountant processObject:washer];
-    [director processObject:accountant];
+    [self.accountant processObject:washer];
+    [self.director processObject:self.accountant];
 }
 
 #pragma mark -
 #pragma mark - Private Methods
 
-- (void)addBuilding:(ABBuilding *)building {
-    if (building) {
-        [self.mutableBuildings addObject:building];
-    }
-}
-
-- (void)removeBuilding:(ABBuilding *)building {
-    [self.mutableBuildings removeObject:building];
-}
-
-- (NSArray *)findWorkersOfClassInBuildings:(Class)cls {
-    NSMutableArray *workers = [NSMutableArray array];
-    for (ABBuilding *buildings in self.mutableBuildings) {
-        [workers addObjectsFromArray:[buildings findWorkersOfClassInRooms:cls]];
-    }
-    return [NSArray arrayWithArray:workers];
-}
-
-- (ABWorker *)workerWithClass:(Class)cls {
-    return [[self findWorkersOfClassInBuildings:cls] firstObject];
-}
-
 - (void)setCarWashHierarchy {
-    ABBuilding *administrativeBuilding = [ABBuilding object];
-    ABBuilding *carWashBuilding = [ABBuilding object];
-    
-    ABRoom *officeRoom = [ABRoom object];
-    ABCarWashRoom *carWashRoom = [ABCarWashRoom object];
-    
-    ABCarWasher *washer = [ABCarWasher object];
     ABAcountant *accountant = [ABAcountant object];
     ABDirector *director = [ABDirector object];
     
-    [self addBuilding:administrativeBuilding];
-    [self addBuilding:carWashBuilding];
+    self.accountant = accountant;
+    self.director = director;
     
-    [administrativeBuilding addRoom:officeRoom];
-    [carWashBuilding addRoom:carWashRoom];
+    [accountant addObserver:director];
     
-    [officeRoom addWorker:accountant];
-    [officeRoom addWorker:director];
-    [carWashRoom addWorker:washer];
+    NSArray *washers  = [ABCarWasher objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)];
+    for (ABCarWasher *washer in washers) {
+        [washer addObserver:accountant];
+        [washer addObserver:self];
+    }
+    self.washers = washers;
+
 }
 
 @end

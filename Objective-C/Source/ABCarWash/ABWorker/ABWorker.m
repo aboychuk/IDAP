@@ -45,8 +45,8 @@ static NSUInteger nameLength = 6;
 
 - (void)processObject:(id<ABMoneyFlow>)object {
     self.state = ABWorkerBusy;
-    [self processScpecificOperations:object];
     [self takeMoneyFromObject:object];
+    [self processScpecificOperations:object];
     self.state = ABWorkerFree;
 }
 
@@ -71,27 +71,31 @@ static NSUInteger nameLength = 6;
 - (void)takeMoneyFromObject:(id<ABMoneyFlow>)object {
     self.money += [object giveMoney];
     NSLog(@"%@ got %lu USD from the %@",
-          NSStringFromClass([self class]),
+          [self class],
           self.money,
-          NSStringFromClass([object class]));
+          [object class]);
 
 }
 
 #pragma mark
 #pragma mark - ABWorkerObserver Methods
 
-- (void)workerDidFinishWork:(id<ABMoneyFlow>)object {
-    NSLog(@"%@ worker finish work. %@", object, self);
-    return [self processObject:object];
+-(void)objectDidStartWork:(id<ABMoneyFlow>)object {
+    NSLog(@"%@ start working. %@ is notified", [object class], [self class]);
+}
+
+- (void)objectDidFinishWork:(id<ABMoneyFlow>)object {
+    NSLog(@"%@ finished work.", [object class]);
+    [self processObject:object];
 }
 
 - (SEL)selectorForState:(NSUInteger)state {
     switch (state) {
         case ABWorkerBusy:
-            return @selector(workerDidStartWork:);
+            return @selector(objectDidStartWork:);
             
         case ABWorkerFree:
-            return @selector (workerDidFinishWork:);
+            return @selector (objectDidFinishWork:);
             
         default:
             return [super selectorForState:state];
