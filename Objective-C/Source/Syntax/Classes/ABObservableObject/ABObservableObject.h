@@ -18,8 +18,8 @@ typedef void(^ABObservableObjectStateChangeBlock)(void);
 - (void)removeObserver:(id)observer;
 - (BOOL)isObservedByObject:(id)observer;
 
-- (void)addStateChangeBlock:(ABObservableObjectStateChangeBlock)block;
-- (void)removeStateChangeBlock:(ABObservableObjectStateChangeBlock)block;
+//- (void)addStateChangeBlock:(ABObservableObjectStateChangeBlock)block;
+//- (void)removeStateChangeBlock:(ABObservableObjectStateChangeBlock)block;
 
 //This method is intendent for subclassing. Never call it directly.
 - (SEL)selectorForState:(NSUInteger)state;

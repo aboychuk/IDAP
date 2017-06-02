@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 
 #import "NSString+ABExtensions.h"
-#import "NSNumber+ABRandomNumber.h"
+#import "NSObject+ABRandomNumber.h"
 
 @interface ABCreature : NSObject
 @property (nonatomic, copy)     NSString    *name;
