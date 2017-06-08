@@ -10,20 +10,26 @@
 
 #import "ABAssignReference.h"
 
+typedef void(^ABNotificationBlock)(id observer);
+
 @interface ABObservableObject ()
-@property (nonatomic, retain)   NSMutableSet    *mutableObserverSet;
+@property (nonatomic, retain)   NSMutableSet    *mutableObserversSet;
+
+- (void)notifyOfStateChangeWithSelector:(SEL)selector;
+- (void)notifyOfStateChangeWithSelector:(SEL)selector withObject:(id)object;
+- (void)notifyOfStateChangeWithSelector:(SEL)selector notificationHandler:(ABNotificationBlock)handler;
 
 @end
 
 @implementation ABObservableObject
 
-@dynamic obsrverSet;
+@dynamic obsrversSet;
 
 #pragma mark
 #pragma mark - Initializations and Deallocations
 
 - (void)dealloc {
-    self.mutableObserverSet = nil;
+    self.mutableObserversSet = nil;
     
     [super dealloc];
 }
@@ -31,7 +37,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.mutableObserverSet = [NSMutableSet set];
+        self.mutableObserversSet = [NSMutableSet set];
     }
     
     return self;
@@ -40,10 +46,10 @@
 #pragma mark
 #pragma mark - Accesors
 
-- (NSSet *)obsrverSet {
-    NSMutableSet *observerSet = self.mutableObserverSet;
-    NSMutableSet *result = [NSMutableSet setWithCapacity:[observerSet count]];
-    for (ABAssignReference *reference in  observerSet) {
+- (NSSet *)obsrversSet {
+    NSMutableSet *observersSet = self.mutableObserversSet;
+    NSMutableSet *result = [NSMutableSet setWithCapacity:[observersSet count]];
+    for (ABAssignReference *reference in  observersSet) {
         [result addObject:reference.target];
     }
     
@@ -58,19 +64,27 @@
     }
 }
 
+- (void)setState:(NSUInteger)state withObject:(id)object {
+    if (state != _state) {
+        _state = state;
+        
+        [self notifyOfStateChangeWithSelector:[self selectorForState:state]];
+    }
+}
+
 #pragma mark
 #pragma mark - Private Methods
 
 - (void)addObserver:(id)observer {
-    [self.mutableObserverSet addObject:[ABAssignReference referanceWithTarget:observer]];
+    [self.mutableObserversSet addObject:[ABAssignReference referanceWithTarget:observer]];
 }
 
 - (void)removeObserver:(id)observer {
-    [self.mutableObserverSet removeObject:[ABAssignReference referanceWithTarget:observer]];
+    [self.mutableObserversSet removeObject:[ABAssignReference referanceWithTarget:observer]];
 }
 
 - (BOOL)isObservedByObject:(id)observer {
-    return [self.mutableObserverSet containsObject:[ABAssignReference referanceWithTarget:observer]];
+    return [self.mutableObserversSet containsObject:[ABAssignReference referanceWithTarget:observer]];
 }
 
 #pragma mark
@@ -82,13 +96,37 @@
     return NULL;
 }
 
-- (void)notifyOfStateChangeWithSelector:(SEL)selector {
-    NSMutableSet *observerSet = self.mutableObserverSet;
-    for (ABAssignReference *reference in observerSet) {
+- (void)notifyOfStateChangeWithSelector:(SEL)selector
+                    notificationHandler:(ABNotificationBlock)handler {
+    if (!handler) {
+        return;
+    }
+    
+    NSMutableSet *observersSet = self.mutableObserversSet;
+    for (ABAssignReference *reference in observersSet) {
+        id target = reference.target;
         if ([reference respondsToSelector:selector]) {
-            [reference performSelector:selector withObject:self];
+            handler(target);
         }
     }
+}
+
+
+- (void)notifyOfStateChangeWithSelector:(SEL)selector {
+    [self notifyOfStateChangeWithSelector:selector
+                      notificationHandler:^(id observer) {
+                          [observer performSelector:selector
+                                         withObject:self];
+                      }];
+}
+
+- (void)notifyOfStateChangeWithSelector:(SEL)selector withObject:(id)object {
+    [self notifyOfStateChangeWithSelector:selector
+                      notificationHandler:^(id observer) {
+                          [observer performSelector:selector
+                                         withObject:self
+                                         withObject:object];
+                      }];
 }
 
 @end

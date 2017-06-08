@@ -12,14 +12,16 @@ typedef void(^ABStateChangeHandler)(void);
 
 @interface ABObservableObject : NSObject
 @property (nonatomic, assign)   NSUInteger  state;
-@property (nonatomic, readonly) NSSet       *obsrverSet;
+@property (nonatomic, readonly) NSSet       *obsrversSet;
+
+- (void)setState:(NSUInteger)state withObject:(id)object;
 
 - (void)addObserver:(id)observer;
 - (void)removeObserver:(id)observer;
 - (BOOL)isObservedByObject:(id)observer;
 
-- (void)addStateChangeBlock:(ABStateChangeHandler)block;
-- (void)removeStateChangeBlock:(ABStateChangeHandler)block;
+- (void)addStateChangeBlock:(ABStateChangeHandler)handler;
+- (void)removeStateChangeBlock:(ABStateChangeHandler)handler;
 
 //This method is intendent for subclassing. Never call it directly.
 - (SEL)selectorForState:(NSUInteger)state;
