@@ -12,7 +12,7 @@ static NSUInteger ABWorkerSalary = 2000;
 static NSUInteger maxExpirience = 10;
 static NSUInteger nameLength = 6;
 
-@interface ABWorker ()
+@interface ABWorker()
 @property (nonatomic, assign)   NSUInteger  money;
 
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object;
@@ -43,12 +43,13 @@ static NSUInteger nameLength = 6;
 #pragma mark
 #pragma mark Public Methods
 
-- (void)processObject:(id<ABMoneyFlow>)object {
-    self.state = ABWorkerBusy;
-    [self takeMoneyFromObject:object];
-    [self processScpecificOperations:object];
-    self.state = ABWorkerFree;
-}
+//- (void)processObject:(id<ABMoneyFlow>)object {
+//    self.state = ABWorkerBusy;
+//    [self takeMoneyFromObject:object];
+//    self.state = ABWorkerReadyForProcess;
+//    [self processScpecificOperations:object];
+//    self.state = ABWorkerFree;
+//}
 
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     
@@ -70,11 +71,7 @@ static NSUInteger nameLength = 6;
 
 - (void)takeMoneyFromObject:(id<ABMoneyFlow>)object {
     self.money += [object giveMoney];
-    NSLog(@"%@ got %lu USD from the %@",
-          [self class],
-          self.money,
-          [object class]);
-
+    NSLog(@"%@ got %lu USD from the %@", [self class], self.money, [object class]);
 }
 
 #pragma mark
@@ -86,7 +83,10 @@ static NSUInteger nameLength = 6;
 
 - (void)objectDidFinishWork:(id<ABMoneyFlow>)object {
     NSLog(@"%@ finished work.", [object class]);
-    [self processObject:object];
+}
+
+- (void)objectIsProcessed:(id<ABMoneyFlow>)object {
+    NSLog(@"%@ is processed by %@", [object class], [self class]);
 }
 
 - (SEL)selectorForState:(NSUInteger)state {
@@ -97,10 +97,12 @@ static NSUInteger nameLength = 6;
         case ABWorkerFree:
             return @selector (objectDidFinishWork:);
             
+        case ABWorkerReadyForProcess:
+            return @selector(objectIsProcessed:);
+            
         default:
             return [super selectorForState:state];
     }
 }
-
 
 @end

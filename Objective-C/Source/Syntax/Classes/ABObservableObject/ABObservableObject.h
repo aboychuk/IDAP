@@ -12,7 +12,7 @@ typedef void(^ABObservableObjectStateChangeBlock)(void);
 
 @interface ABObservableObject : NSObject
 @property (nonatomic, assign)   NSUInteger  state;
-@property (nonatomic, readonly) NSSet       *obsrverSet;
+@property (nonatomic, readonly) NSSet       *observersSet;
 
 - (void)addObserver:(id)observer;
 - (void)removeObserver:(id)observer;

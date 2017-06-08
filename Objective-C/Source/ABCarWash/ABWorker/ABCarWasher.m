@@ -19,6 +19,13 @@
 #pragma mark
 #pragma mark Private Methods
 
+- (void)processObject:(ABCar *)car  {
+    self.state = ABWorkerBusy;
+    [self processScpecificOperations:(ABCar *)car];
+    [self takeMoneyFromObject:(ABCar *)car];
+    self.state = ABWorkerReadyForProcess;
+}
+
 - (void)processScpecificOperations:(ABCar *)car {
     [self wash:car];
 }

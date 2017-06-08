@@ -14,6 +14,7 @@ static NSUInteger ABWashersCountMax = 9;
 @property (nonatomic, retain)   ABAcountant     *accountant;
 @property (nonatomic, retain)   ABDirector      *director;
 @property (nonatomic, retain)   NSArray         *washers;
+@property (nonatomic, retain)   NSArray         *carsQueue;
 
 @end
 

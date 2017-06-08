@@ -6,7 +6,7 @@
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
-#import "ABObservableObject.h"
+#import "ABCarWashObservableObject.h"
 #import "ABMoneyFlow.h"
 
 #import "NSString+ABExtensions.h"
@@ -16,6 +16,7 @@
 
 typedef NS_ENUM(NSUInteger, ABWorkerState) {
     ABWorkerBusy,
+    ABWorkerReadyForProcess,
     ABWorkerFree
 };
 
@@ -24,10 +25,11 @@ typedef NS_ENUM(NSUInteger, ABWorkerState) {
 
 - (void)objectDidStartWork:(id <ABMoneyFlow>) object;
 - (void)objectDidFinishWork:(id <ABMoneyFlow>) object;
+- (void)objectIsProcessed:(id<ABMoneyFlow>)object;
 
 @end
 
-@interface ABWorker :  ABObservableObject <ABMoneyFlow, ABWorkerObserver>
+@interface ABWorker :  ABCarWashObservableObject <ABMoneyFlow, ABWorkerObserver>
 @property (nonatomic, copy)     NSString        *name;
 @property (nonatomic, assign)   NSUInteger      salary;
 @property (nonatomic, assign)   NSUInteger      experience;

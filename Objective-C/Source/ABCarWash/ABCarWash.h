@@ -12,6 +12,7 @@
 #import "ABAcountant.h"
 #import "ABDirector.h"
 #import "ABCar.h"
+#import "ABQueue.h"
 
 #import "NSObject+ABObjectExtension.h"
 #import "NSArray+ABExtension.h"
