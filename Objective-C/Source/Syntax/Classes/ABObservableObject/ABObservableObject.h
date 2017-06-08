@@ -20,8 +20,15 @@ typedef void(^ABStateChangeHandler)(void);
 - (void)removeObserver:(id)observer;
 - (BOOL)isObservedByObject:(id)observer;
 
-- (void)addStateChangeBlock:(ABStateChangeHandler)handler;
-- (void)removeStateChangeBlock:(ABStateChangeHandler)handler;
+- (void)addObserver:(id)observer
+        withHandler:(ABStateChangeHandler)handler;
+
+- (void)addObserver:(id)observer
+        withHandler:(ABStateChangeHandler)handler
+           forState:(NSUInteger)state;
+
+- (void)removeObserver:(id)observer
+              forState:(NSUInteger)state;
 
 //This method is intendent for subclassing. Never call it directly.
 - (SEL)selectorForState:(NSUInteger)state;

@@ -87,6 +87,22 @@ typedef void(^ABNotificationBlock)(id observer);
     return [self.mutableObserversSet containsObject:[ABAssignReference referanceWithTarget:observer]];
 }
 
+- (void)addObserver:(id)observer
+        withHandler:(ABStateChangeHandler)handler {
+    
+}
+
+- (void)addObserver:(id)observer
+        withHandler:(ABStateChangeHandler)handler
+           forState:(NSUInteger)state {
+    
+}
+
+- (void)removeObserver:(id)observer
+              forState:(NSUInteger)state {
+    
+}
+
 #pragma mark
 #pragma mark - Private Methods
 

@@ -21,6 +21,7 @@
 		4986C5AE1EE9A1D1005E03EE /* ABCopyReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C5A51EE9A1D1005E03EE /* ABCopyReference.m */; };
 		4986C5AF1EE9A1D1005E03EE /* ABReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C5A71EE9A1D1005E03EE /* ABReference.m */; };
 		4986C5B01EE9A1D1005E03EE /* ABRetainReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C5A91EE9A1D1005E03EE /* ABRetainReference.m */; };
+		4986C5B41EE9D8C3005E03EE /* _ABObservationState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C5B31EE9D8C3005E03EE /* _ABObservationState.m */; };
 		49CEA2A41EDC75B800910AFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA24A1EDC75B800910AFB /* main.m */; };
 		49CEA2A51EDC75B800910AFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA24A1EDC75B800910AFB /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49CEA2A61EDC75B800910AFB /* ABAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA24E1EDC75B800910AFB /* ABAlphabet.m */; };
@@ -123,6 +124,8 @@
 		4986C5A71EE9A1D1005E03EE /* ABReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABReference.m; sourceTree = "<group>"; };
 		4986C5A81EE9A1D1005E03EE /* ABRetainReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRetainReference.h; sourceTree = "<group>"; };
 		4986C5A91EE9A1D1005E03EE /* ABRetainReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRetainReference.m; sourceTree = "<group>"; };
+		4986C5B21EE9D8C3005E03EE /* _ABObservationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ABObservationState.h; sourceTree = "<group>"; };
+		4986C5B31EE9D8C3005E03EE /* _ABObservationState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ABObservationState.m; sourceTree = "<group>"; };
 		49CEA24A1EDC75B800910AFB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		49CEA24D1EDC75B800910AFB /* ABAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAlphabet.h; sourceTree = "<group>"; };
 		49CEA24E1EDC75B800910AFB /* ABAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAlphabet.m; sourceTree = "<group>"; };
@@ -269,6 +272,7 @@
 		4986C59A1EE9A1D1005E03EE /* ABObservableObject */ = {
 			isa = PBXGroup;
 			children = (
+				4986C5B11EE9D81D005E03EE /* Private */,
 				4986C59B1EE9A1D1005E03EE /* ABObservableObject.h */,
 				4986C59C1EE9A1D1005E03EE /* ABObservableObject.m */,
 				4986C59D1EE9A1D1005E03EE /* ABPurse.h */,
@@ -293,6 +297,15 @@
 				4986C5A91EE9A1D1005E03EE /* ABRetainReference.m */,
 			);
 			path = ABReferences;
+			sourceTree = "<group>";
+		};
+		4986C5B11EE9D81D005E03EE /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				4986C5B21EE9D8C3005E03EE /* _ABObservationState.h */,
+				4986C5B31EE9D8C3005E03EE /* _ABObservationState.m */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 		49CEA2491EDC75B800910AFB /* Objective-C */ = {
@@ -709,6 +722,7 @@
 				49CEA2C61EDC75B800910AFB /* NSObject+ABObjectExtension.m in Sources */,
 				49CEA2C41EDC75B800910AFB /* NSNumber+ABRandomNumber.m in Sources */,
 				49CEA2B81EDC75B800910AFB /* ABRoom.m in Sources */,
+				4986C5B41EE9D8C3005E03EE /* _ABObservationState.m in Sources */,
 				49CEA2E81EDC75B800910AFB /* ABCreatureTest.m in Sources */,
 				4986C5AC1EE9A1D1005E03EE /* ABPurseObserver.m in Sources */,
 				49CEA2EA1EDC75B800910AFB /* ABSyntaxTest.m in Sources */,
