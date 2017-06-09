@@ -45,16 +45,23 @@
 #pragma mark
 #pragma mark - Public Methods
 
-- (void)enqueue:object {
+- (void)addObject:(id)object {
     if (object) {
         [self.mutableQueue addObject:object];
     }
 }
 
-- (void)dequeue:object {
-    if (object) {
-        [self.mutableQueue removeObject:object];
+- (void)removeObject:(id)object {
+    [self.mutableQueue removeObject:object];
+}
+
+- (id)popObject {
+    id result = [self.mutableQueue firstObject];
+    if (result) {
+        [self.mutableQueue removeObjectAtIndex:0];
     }
+    
+    return [[result retain] autorelease];
 }
 
 - (NSUInteger)objectsCount {

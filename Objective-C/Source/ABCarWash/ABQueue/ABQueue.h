@@ -11,8 +11,9 @@
 @interface ABQueue : NSObject
 @property (nonatomic, copy)     NSArray     *queue;
 
-- (void)enqueue:object;
-- (void)dequeue:object;
+- (void)addObject:(id)object;
+- (void)removeObject:(id)object;
+- (id)popObject;
 - (NSUInteger)objectsCount;
 
 @end
