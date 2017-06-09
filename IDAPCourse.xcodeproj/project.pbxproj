@@ -121,6 +121,7 @@
 		491468E01EDD772100B74EA1 /* ABDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDelegate.m; sourceTree = "<group>"; };
 		49229EBB1ED5C105002FBFF3 /* ObjectiveCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49229EBF1ED5C105002FBFF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		493540991EEB01EE00DA8A8E /* ABObservableObject+ABPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ABObservableObject+ABPrivate.h"; sourceTree = "<group>"; };
 		49683A0C1ED5C79700C4390B /* ABAlphabetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAlphabetSpec.m; sourceTree = "<group>"; };
 		4986C66E1EE9EE3A005E03EE /* ABObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABObservableObject.h; sourceTree = "<group>"; };
 		4986C66F1EE9EE3A005E03EE /* ABObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABObservableObject.m; sourceTree = "<group>"; };
@@ -326,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				4986C6981EE9F648005E03EE /* ABObservationController+ABPrivate.h */,
+				493540991EEB01EE00DA8A8E /* ABObservableObject+ABPrivate.h */,
 			);
 			path = Private;
 			sourceTree = "<group>";

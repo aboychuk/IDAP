@@ -9,6 +9,7 @@
 #import "ABObservationController.h"
 
 #import "ABObservationController+ABPrivate.h"
+#import "ABObservableObject+ABPrivate.h"
 
 static NSString *kABObservationControllerAllocationException = @"ABObservationController should never be instantiated directly.";
 
@@ -20,6 +21,8 @@ static NSString *kABObservationControllerAllocationException = @"ABObservationCo
 
 @implementation ABObservationController
 
+@dynamic valid;
+
 #pragma mark -
 #pragma mark Class Methods
 
@@ -30,10 +33,18 @@ static NSString *kABObservationControllerAllocationException = @"ABObservationCo
                              observableObject:observableObject] autorelease];
 }
 
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    NSAssert([self class] != [ABObservationController class], kABObservationControllerAllocationException);
+    
+    return [super allocWithZone:zone];
+}
+
 #pragma mark -
 #pragma mark Initializations and Deallocations
 
 - (void)dealloc {
+    self.observer = nil;
+    self.observableObject = nil;
     
     [super dealloc];
 }
@@ -41,6 +52,8 @@ static NSString *kABObservationControllerAllocationException = @"ABObservationCo
 - (instancetype)initWithObserver:(id)observer
                 observableObject:(ABObservableObject *)observableObject
 {
+    NSAssert(nil != observer, NSInvalidArgumentException);
+    NSAssert(nil != observableObject, NSInvalidArgumentException);
     self = [self init];
     if (self) {
         self.observer = observer;
@@ -50,14 +63,52 @@ static NSString *kABObservationControllerAllocationException = @"ABObservationCo
     return self;
 }
 
-- (instancetype)init {
-    NSAssert([self class] != [ABObservationController class], kABObservationControllerAllocationException);
+#pragma mark -
+#pragma mark Accesors
+
+- (void)setObservableObject:(ABObservableObject *)observableObject {
+
     
-    self = [super init];
+    if (nil == _observableObject) {
+        [_observableObject invalidateController:self];
+    }
     
-    return self;
-    
+    _observableObject = observableObject;
 }
+
+- (BOOL)isValid {
+    return nil != self.observableObject || nil != self.observer;
+}
+
+#pragma mark -
+#pragma mark Public Methods
+
+- (void)invalidate {
+    self.observableObject = nil;
+    self.observer = nil;
+}
+
+- (NSUInteger)hash {
+    return [[self class] hash] ^ [self.observer hash] ^ [self.observableObject hash];
+}
+
+- (BOOL)isEqual:(ABObservationController *)controller {
+    if (!controller) {
+        return NO;
+    }
+    
+    if (controller == self) {
+        return YES;
+    }
+    
+    if ([self isMemberOfClass:[controller class]]) {
+        return controller.observer == self.observer
+            && controller.observableObject == self.observableObject;
+    }
+    
+    return NO;
+}
+
 #pragma mark -
 #pragma mark Private Methods
 
@@ -67,10 +118,6 @@ static NSString *kABObservationControllerAllocationException = @"ABObservationCo
 
 - (void)notifyWithState:(NSUInteger)state withObject:(id)object {
     [self doesNotRecognizeSelector:_cmd];
-}
-
-- (BOOL)isEqualToObservationState:(ABObservationController *)state {
-    
 }
 
 @end
