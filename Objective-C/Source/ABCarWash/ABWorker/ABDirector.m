@@ -20,14 +20,6 @@
 #pragma mark
 #pragma mark Private Methods
 
-- (void)processObject:(ABAcountant*)accountant {
-    self.state = ABWorkerBusy;
-    [self takeMoneyFromObject:accountant];
-    [self processScpecificOperations:accountant];
-    accountant.state = ABWorkerFree;
-    self.state = ABWorkerFree;
-}
-
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     [self takeProfit];
 }

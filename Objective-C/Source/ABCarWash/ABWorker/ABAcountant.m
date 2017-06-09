@@ -20,14 +20,6 @@
 #pragma mark
 #pragma mark Private Methods
 
-- (void)processObject:(ABCarWasher*)carWasher {
-    self.state = ABWorkerBusy;
-    [self takeMoneyFromObject:carWasher];
-    [self processScpecificOperations:carWasher];
-    self.state = ABWorkerReadyForProcess;
-    carWasher.state = ABWorkerFree;
-}
-
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     [self calculateMoney];
 }

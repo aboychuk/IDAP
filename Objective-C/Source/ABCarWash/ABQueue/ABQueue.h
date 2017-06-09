@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ABQueue : NSObject
+@interface ABQueue : NSArray
 @property (nonatomic, copy)     NSArray     *queue;
 
-- (void)addObject:(id)object;
-- (void)removeObject:(id)object;
-- (id)popObject;
+- (void)addObjectToQueue:(id)object;
+- (void)removeObjectFromQueue:(id)object;
+- (id)popObjectFromQueue;
 - (NSUInteger)objectsCount;
 
 @end

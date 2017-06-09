@@ -8,9 +8,11 @@
 
 #import "ABCarWashObservableObject.h"
 #import "ABMoneyFlow.h"
+#import "ABQueue.h"
 
 #import "NSString+ABExtensions.h"
 #import "NSObject+ABRandomNumber.h"
+#import "NSObject+ABObjectExtension.h"
 
 @class ABWorker;
 
@@ -25,7 +27,7 @@ typedef NS_ENUM(NSUInteger, ABWorkerState) {
 
 - (void)objectDidStartWork:(id <ABMoneyFlow>) object;
 - (void)objectDidFinishWork:(id <ABMoneyFlow>) object;
-- (void)objectIsProcessed:(id<ABMoneyFlow>)object;
+- (void)objectDidBecomeReadyForProcess:(id<ABMoneyFlow>)object;
 
 @end
 
@@ -33,6 +35,7 @@ typedef NS_ENUM(NSUInteger, ABWorkerState) {
 @property (nonatomic, copy)     NSString        *name;
 @property (nonatomic, assign)   NSUInteger      salary;
 @property (nonatomic, assign)   NSUInteger      experience;
+@property (nonatomic, retain)   ABQueue         *queue;
 
 - (void)processObject:(id<ABMoneyFlow>)object;
 

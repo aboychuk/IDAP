@@ -45,17 +45,17 @@
 #pragma mark
 #pragma mark - Public Methods
 
-- (void)addObject:(id)object {
+- (void)addObjectToQueue:(id)object {
     if (object) {
         [self.mutableQueue addObject:object];
     }
 }
 
-- (void)removeObject:(id)object {
+- (void)removeObjectFromQueue:(id)object {
     [self.mutableQueue removeObject:object];
 }
 
-- (id)popObject {
+- (id)popObjectFromQueue {
     id result = [self.mutableQueue firstObject];
     if (result) {
         [self.mutableQueue removeObjectAtIndex:0];
