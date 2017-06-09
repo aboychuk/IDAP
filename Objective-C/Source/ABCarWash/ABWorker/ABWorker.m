@@ -16,6 +16,7 @@ static NSUInteger nameLength = 6;
 @property (nonatomic, assign)   NSUInteger  money;
 
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object;
+- (void)processObjectFromQueue;
 
 @end
 
@@ -36,6 +37,7 @@ static NSUInteger nameLength = 6;
     self.salary = ABWorkerSalary;
     self.experience = ABRandomWithMaxValue(maxExpirience);
     self.state = ABWorkerFree;
+    self.queue = [ABQueue object];
     
     return self;
 }
@@ -43,13 +45,17 @@ static NSUInteger nameLength = 6;
 #pragma mark
 #pragma mark Public Methods
 
-//- (void)processObject:(id<ABMoneyFlow>)object {
-//    self.state = ABWorkerBusy;
-//    [self takeMoneyFromObject:object];
-//    self.state = ABWorkerReadyForProcess;
-//    [self processScpecificOperations:object];
-//    self.state = ABWorkerFree;
-//}
+- (void)processObject:(id<ABMoneyFlow>)object {
+    if (self.state == ABWorkerFree) {
+        self.state = ABWorkerBusy;
+        
+        [self takeMoneyFromObject:object];
+        [self processScpecificOperations:object];
+        
+        self.state = ABWorkerReadyForProcess;
+    }
+}
+
 
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     
@@ -77,28 +83,34 @@ static NSUInteger nameLength = 6;
 #pragma mark
 #pragma mark - ABWorkerObserver Methods
 
--(void)objectDidStartWork:(id<ABMoneyFlow>)object {
-    NSLog(@"%@ start working. %@ is notified", [object class], [self class]);
+- (void)workerDidBecomeFree:(ABWorker*)worker {
+    if (self.queue != 0) {
+        ABWorker* worker = [self.queue popObjectFromQueue];
+        [self processObject:worker];
+    }
 }
 
-- (void)objectDidFinishWork:(id<ABMoneyFlow>)object {
-    NSLog(@"%@ finished work.", [object class]);
+- (void)workerDidBecomeBusy:(ABWorker*)worker {
+    [self.queue addObjectToQueue:worker];
+    NSLog(@"%@ added to the queue of %@", worker, [self class]);
 }
 
-- (void)objectIsProcessed:(id<ABMoneyFlow>)object {
-    NSLog(@"%@ is processed by %@", [object class], [self class]);
+- (void)workerDidBecomeReadyForProcess:(ABWorker*)worker {
+        [self processObject:worker];
+        self.state = ABWorkerFree;
+
 }
 
 - (SEL)selectorForState:(NSUInteger)state {
     switch (state) {
         case ABWorkerBusy:
-            return @selector(objectDidStartWork:);
+            return @selector(workerDidBecomeBusy:);
             
         case ABWorkerFree:
-            return @selector (objectDidFinishWork:);
+            return @selector (workerDidBecomeFree:);
             
         case ABWorkerReadyForProcess:
-            return @selector(objectIsProcessed:);
+            return @selector(workerDidBecomeReadyForProcess:);
             
         default:
             return [super selectorForState:state];

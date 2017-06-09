@@ -20,20 +20,12 @@
 #pragma mark
 #pragma mark Private Methods
 
-- (void)processObject:(ABCarWasher*)carWasher {
-    self.state = ABWorkerBusy;
-    [self takeMoneyFromObject:carWasher];
-    [self processScpecificOperations:carWasher];
-    self.state = ABWorkerReadyForProcess;
-    carWasher.state = ABWorkerFree;
-}
-
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     [self calculateMoney];
 }
 
 - (void)calculateMoney {
-    NSLog(@"Accountant calculated money.");
+    NSLog(@"Accountant got no tax from %lu.", self.money);
 }
 
 @end
