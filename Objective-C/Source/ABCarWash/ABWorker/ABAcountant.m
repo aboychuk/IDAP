@@ -25,7 +25,7 @@
 }
 
 - (void)calculateMoney {
-    NSLog(@"Accountant calculated money.");
+    NSLog(@"Accountant got no tax from %lu.", self.money);
 }
 
 @end

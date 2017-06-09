@@ -25,7 +25,7 @@
 }
 
 - (void)takeProfit {
-    NSLog(@"Director got %lu", self.money);
+    NSLog(@"Director has %lu USD of profit!", self.money);
 }
 
 @end

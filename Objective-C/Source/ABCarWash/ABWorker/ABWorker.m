@@ -48,20 +48,14 @@ static NSUInteger nameLength = 6;
 - (void)processObject:(id<ABMoneyFlow>)object {
     if (self.state == ABWorkerFree) {
         self.state = ABWorkerBusy;
+        
         [self takeMoneyFromObject:object];
         [self processScpecificOperations:object];
+        
         self.state = ABWorkerReadyForProcess;
     }
 }
 
-- (void)processObjectFromQueue {
-    while (self.queue) {
-        id objectFromQueue = [self.queue popObjectFromQueue];
-        [self processScpecificOperations:objectFromQueue];
-        [self takeMoneyFromObject:objectFromQueue];
-        self.state = ABWorkerReadyForProcess;
-    }
-}
 
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     
@@ -89,15 +83,20 @@ static NSUInteger nameLength = 6;
 #pragma mark
 #pragma mark - ABWorkerObserver Methods
 
-- (void)objectDidBecomeFree:(id<ABMoneyFlow>)object {
-    
+- (void)workerDidBecomeFree:(ABWorker*)worker {
+    if (self.queue != 0) {
+        ABWorker* worker = [self.queue popObjectFromQueue];
+        [self processObject:worker];
+    }
 }
 
-- (void)objectDidBecomeBusy:(id<ABMoneyFlow>)object {
+- (void)workerDidBecomeBusy:(ABWorker*)worker {
+    [self.queue addObjectToQueue:worker];
+    NSLog(@"%@ added to the queue of %@", worker, [self class]);
 }
 
-- (void)objectDidBecomeReadyForProcess:(id<ABMoneyFlow>)object {
-        [self processObject:object];
+- (void)workerDidBecomeReadyForProcess:(ABWorker*)worker {
+        [self processObject:worker];
         self.state = ABWorkerFree;
 
 }
@@ -105,13 +104,13 @@ static NSUInteger nameLength = 6;
 - (SEL)selectorForState:(NSUInteger)state {
     switch (state) {
         case ABWorkerBusy:
-            return @selector(objectDidBecomeBusy:);
+            return @selector(workerDidBecomeBusy:);
             
         case ABWorkerFree:
-            return @selector (objectDidBecomeFree:);
+            return @selector (workerDidBecomeFree:);
             
         case ABWorkerReadyForProcess:
-            return @selector(objectDidBecomeReadyForProcess:);
+            return @selector(workerDidBecomeReadyForProcess:);
             
         default:
             return [super selectorForState:state];
