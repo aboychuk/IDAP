@@ -56,10 +56,8 @@ static NSUInteger ABWashersCountMax = 9;
 - (void)setCarWashHierarchy {
     self.accountant = [ABAcountant object];
     self.director = [ABDirector object];
-    
-    NSArray * washers = [ABCarWasher objectsWithCount:10];
 
-    //NSArray * washers = [ABCarWasher objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)];
+    NSArray * washers = [ABCarWasher objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)];
     
     for (ABCarWasher *washer in washers) {
         [self.washers addObjectToQueue:washer];

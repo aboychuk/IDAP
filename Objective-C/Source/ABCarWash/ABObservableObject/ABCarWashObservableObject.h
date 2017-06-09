@@ -10,7 +10,7 @@
 
 @interface ABCarWashObservableObject : NSObject
 @property (nonatomic, assign)   NSUInteger  state;
-@property (nonatomic, copy)     NSSet *observersSet;
+@property (nonatomic, copy)     NSSet       *observersSet;
 
 - (void)addObserver:(id)observer;
 - (void)removeObserver:(id)observer;

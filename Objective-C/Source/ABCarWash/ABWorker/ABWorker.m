@@ -16,7 +16,6 @@ static NSUInteger nameLength = 6;
 @property (nonatomic, assign)   NSUInteger  money;
 
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object;
-- (void)processObjectFromQueue;
 
 @end
 
@@ -27,6 +26,7 @@ static NSUInteger nameLength = 6;
 
 - (void)dealloc {
     self.name = nil;
+    self.queue = nil;
     
     [super dealloc];
 }
@@ -81,7 +81,7 @@ static NSUInteger nameLength = 6;
 }
 
 #pragma mark
-#pragma mark - ABWorkerObserver Methods
+#pragma mark ABWorkerObserver Methods
 
 - (void)workerDidBecomeFree:(ABWorker*)worker {
     if (self.queue != 0) {

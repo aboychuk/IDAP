@@ -23,7 +23,7 @@
     [self wash:car];
 }
 - (void)wash:(ABCar *)car {
-    NSLog(@"Washer %@  washed car", self.name);
+    NSLog(@"Washer %@  washed car", self);
     car.state = ABCarStateClean;
 }
 
