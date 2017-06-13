@@ -18,7 +18,7 @@
 #import "NSArray+ABExtension.h"
 #import "NSObject+ABRandomNumber.h"
 
-@interface ABCarWash : NSObject
+@interface ABCarWash : NSObject <ABWorkerObserver>
 
 - (void)startWashing:(ABCar *)car;
 

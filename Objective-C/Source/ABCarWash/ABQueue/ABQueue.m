@@ -42,6 +42,10 @@
     return [[self.mutableQueue copy] autorelease];
 }
 
+- (BOOL)isEmpty {
+    return self.count == 0;
+}
+
 #pragma mark
 #pragma mark - Public Methods
 
@@ -64,7 +68,7 @@
     return [[result retain] autorelease];
 }
 
-- (NSUInteger)objectsCount {
+- (NSUInteger)count {
     return [self.mutableQueue count];
 }
 

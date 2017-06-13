@@ -76,7 +76,7 @@ static NSUInteger nameLength = 6;
 }
 
 - (void)takeMoneyFromObject:(id<ABMoneyFlow>)object {
-    self.money += [object giveMoney];
+    [self takeMoney:[object giveMoney]];
     NSLog(@"%@ got %lu USD from the %@", [self class], self.money, [object class]);
 }
 
@@ -84,11 +84,11 @@ static NSUInteger nameLength = 6;
 #pragma mark ABWorkerObserver Methods
 
 - (void)workerDidBecomeFree:(ABWorker*)worker {
-    if (self.queue != 0) {
+    if ([self.queue isEmpty] == NO) {
         ABWorker* worker = [self.queue popObjectFromQueue];
         [self processObject:worker];
     }
-}
+} 
 
 - (void)workerDidBecomeBusy:(ABWorker*)worker {
     [self.queue addObjectToQueue:worker];
