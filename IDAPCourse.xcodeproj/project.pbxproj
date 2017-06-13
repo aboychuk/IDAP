@@ -34,6 +34,8 @@
 		4986C6921EE9EFA4005E03EE /* ABProtocolObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6901EE9EFA4005E03EE /* ABProtocolObservationController.m */; };
 		4986C6951EE9EFDF005E03EE /* ABBlockObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6941EE9EFDF005E03EE /* ABBlockObservationController.m */; };
 		4986C6961EE9EFDF005E03EE /* ABBlockObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6941EE9EFDF005E03EE /* ABBlockObservationController.m */; };
+		4988BFE21EEFD1F400B3F823 /* ABThreadUnsafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4988BFE11EEFD1F400B3F823 /* ABThreadUnsafeObject.m */; };
+		4988BFE31EEFD1F400B3F823 /* ABThreadUnsafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4988BFE11EEFD1F400B3F823 /* ABThreadUnsafeObject.m */; };
 		49CEA2A41EDC75B800910AFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA24A1EDC75B800910AFB /* main.m */; };
 		49CEA2A51EDC75B800910AFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA24A1EDC75B800910AFB /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49CEA2A61EDC75B800910AFB /* ABAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA24E1EDC75B800910AFB /* ABAlphabet.m */; };
@@ -144,6 +146,8 @@
 		4986C6931EE9EFDF005E03EE /* ABBlockObservationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBlockObservationController.h; sourceTree = "<group>"; };
 		4986C6941EE9EFDF005E03EE /* ABBlockObservationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABBlockObservationController.m; sourceTree = "<group>"; };
 		4986C6981EE9F648005E03EE /* ABObservationController+ABPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ABObservationController+ABPrivate.h"; sourceTree = "<group>"; };
+		4988BFE01EEFD1F400B3F823 /* ABThreadUnsafeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABThreadUnsafeObject.h; sourceTree = "<group>"; };
+		4988BFE11EEFD1F400B3F823 /* ABThreadUnsafeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABThreadUnsafeObject.m; sourceTree = "<group>"; };
 		49CEA24A1EDC75B800910AFB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		49CEA24D1EDC75B800910AFB /* ABAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAlphabet.h; sourceTree = "<group>"; };
 		49CEA24E1EDC75B800910AFB /* ABAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAlphabet.m; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 		491468D11EDD6B2300B74EA1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4988BFDF1EEFD1B900B3F823 /* ABThreading */,
 				4986C66D1EE9EE3A005E03EE /* ABObservableObject */,
 				491468D41EDD6DE600B74EA1 /* ABDelegatingObject */,
 			);
@@ -330,6 +335,15 @@
 				493540991EEB01EE00DA8A8E /* ABObservableObject+ABPrivate.h */,
 			);
 			path = Private;
+			sourceTree = "<group>";
+		};
+		4988BFDF1EEFD1B900B3F823 /* ABThreading */ = {
+			isa = PBXGroup;
+			children = (
+				4988BFE01EEFD1F400B3F823 /* ABThreadUnsafeObject.h */,
+				4988BFE11EEFD1F400B3F823 /* ABThreadUnsafeObject.m */,
+			);
+			path = ABThreading;
 			sourceTree = "<group>";
 		};
 		49CEA2491EDC75B800910AFB /* Objective-C */ = {
@@ -728,6 +742,7 @@
 				49CEA2E71EDC75B800910AFB /* ABCreatureGenderTest.m in Sources */,
 				49CEA2E91EDC75B800910AFB /* ABCreatureTest.m in Sources */,
 				49CEA2B31EDC75B800910AFB /* ABCar.m in Sources */,
+				4988BFE31EEFD1F400B3F823 /* ABThreadUnsafeObject.m in Sources */,
 				49CEA2B71EDC75B800910AFB /* ABCarWashRoom.m in Sources */,
 				4986C6841EE9EE3A005E03EE /* ABPurse.m in Sources */,
 				491468DA1EDD72AE00B74EA1 /* ABDelegatingObjectSpec.m in Sources */,
@@ -773,6 +788,7 @@
 				49CEA2CE1EDC75B800910AFB /* NSObject+ABCreatureCategory.m in Sources */,
 				49CEA2C21EDC75B800910AFB /* NSArray+ABExtension.m in Sources */,
 				4986C67F1EE9EE3A005E03EE /* ABObservableObject.m in Sources */,
+				4988BFE21EEFD1F400B3F823 /* ABThreadUnsafeObject.m in Sources */,
 				49CEA2AA1EDC75B800910AFB /* ABClasterAlphabet.m in Sources */,
 				4986C68D1EE9EE3A005E03EE /* ABRetainReference.m in Sources */,
 				49CEA2CC1EDC75B800910AFB /* ABCreatureMale.m in Sources */,
