@@ -47,7 +47,7 @@ static NSUInteger nameLength = 6;
 
 - (void)processObject:(id<ABMoneyFlow>)object {
     self.state = ABWorkerBusy;
-        
+    
     [self takeMoneyFromObject:object];
     [self processScpecificOperations:object];
         
@@ -83,8 +83,7 @@ static NSUInteger nameLength = 6;
 
 - (void)workerDidBecomeReadyForProcess:(ABWorker*)worker {
         [self processObject:worker];
-        self.state = ABWorkerFree;
-
+        worker.state = ABWorkerFree;
 }
 
 - (SEL)selectorForState:(NSUInteger)state {

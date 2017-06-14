@@ -28,4 +28,13 @@
     NSLog(@"Director has %lu USD of profit!", self.money);
 }
 
+#pragma mark
+#pragma mark ABWorkerObserver Methods
+
+- (void)workerDidBecomeReadyForProcess:(ABWorker*)worker {
+    [self processObject:worker];
+    worker.state = ABWorkerFree;
+    self.state = ABWorkerFree;
+}
+
 @end

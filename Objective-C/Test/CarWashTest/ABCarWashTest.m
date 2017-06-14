@@ -14,7 +14,7 @@
 @implementation ABCarWashTest
 
 + (void)startTest {
-    NSArray *cars = [NSArray objectsWithCount:10 factoryBlock:^id{
+    NSArray *cars = [NSArray objectsWithCount:20 factoryBlock:^id{
         return [[ABCar new] autorelease];
     }];
 
