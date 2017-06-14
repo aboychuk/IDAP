@@ -46,14 +46,12 @@ static NSUInteger nameLength = 6;
 #pragma mark Public Methods
 
 - (void)processObject:(id<ABMoneyFlow>)object {
-    if (self.state == ABWorkerFree) {
-        self.state = ABWorkerBusy;
+    self.state = ABWorkerBusy;
         
-        [self takeMoneyFromObject:object];
-        [self processScpecificOperations:object];
+    [self takeMoneyFromObject:object];
+    [self processScpecificOperations:object];
         
-        self.state = ABWorkerReadyForProcess;
-    }
+    self.state = ABWorkerReadyForProcess;
 }
 
 
@@ -76,24 +74,12 @@ static NSUInteger nameLength = 6;
 }
 
 - (void)takeMoneyFromObject:(id<ABMoneyFlow>)object {
+    NSLog(@"%@ got %lu USD from the %@", [self class], object.money, [object class]);
     [self takeMoney:[object giveMoney]];
-    NSLog(@"%@ got %lu USD from the %@", [self class], self.money, [object class]);
 }
 
 #pragma mark
 #pragma mark ABWorkerObserver Methods
-
-- (void)workerDidBecomeFree:(ABWorker*)worker {
-    if ([self.queue isEmpty] == NO) {
-        ABWorker* worker = [self.queue popObjectFromQueue];
-        [self processObject:worker];
-    }
-} 
-
-- (void)workerDidBecomeBusy:(ABWorker*)worker {
-    [self.queue addObjectToQueue:worker];
-    NSLog(@"%@ added to the queue of %@", worker, [self class]);
-}
 
 - (void)workerDidBecomeReadyForProcess:(ABWorker*)worker {
         [self processObject:worker];
