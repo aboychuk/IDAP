@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface ABThreadUnsafeObject : NSObject
-@property (nonatomic, assign)   NSUInteger  value;
+@property (nonatomic, retain)   id  value;
 
 @end

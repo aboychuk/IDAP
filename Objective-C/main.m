@@ -12,11 +12,19 @@
 #import "ABCreatureFemale.h"
 #import "NSObject+ABObjectExtension.h"
 #import "ABCarWashTest.h"
+#import "ABThreadUnsafeObject.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        [ABCarWashTest startTest];
-//        SyntaxTest();
+        ABThreadUnsafeObject *object = [[ABThreadUnsafeObject new] autorelease];
+        for (NSUInteger threadCount = 0; threadCount < 100; threadCount++) {
+            [object performSelectorInBackground:@selector(setValue:)
+                                     withObject:[[NSObject new] autorelease]];
+        }
+        
+        while (true) {
+            
+        }
     }
     
     return 0;

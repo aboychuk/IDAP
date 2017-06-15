@@ -14,26 +14,6 @@
 		491468E11EDD772100B74EA1 /* ABDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 491468E01EDD772100B74EA1 /* ABDelegate.m */; };
 		491468E21EDD774C00B74EA1 /* ABDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 491468E01EDD772100B74EA1 /* ABDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49683A0D1ED5C79700C4390B /* ABAlphabetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49683A0C1ED5C79700C4390B /* ABAlphabetSpec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4986C67F1EE9EE3A005E03EE /* ABObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C66F1EE9EE3A005E03EE /* ABObservableObject.m */; };
-		4986C6801EE9EE3A005E03EE /* ABObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C66F1EE9EE3A005E03EE /* ABObservableObject.m */; };
-		4986C6811EE9EE3A005E03EE /* ABObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6711EE9EE3A005E03EE /* ABObservationController.m */; };
-		4986C6821EE9EE3A005E03EE /* ABObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6711EE9EE3A005E03EE /* ABObservationController.m */; };
-		4986C6831EE9EE3A005E03EE /* ABPurse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6731EE9EE3A005E03EE /* ABPurse.m */; };
-		4986C6841EE9EE3A005E03EE /* ABPurse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6731EE9EE3A005E03EE /* ABPurse.m */; };
-		4986C6851EE9EE3A005E03EE /* ABPurseObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6751EE9EE3A005E03EE /* ABPurseObserver.m */; };
-		4986C6861EE9EE3A005E03EE /* ABPurseObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6751EE9EE3A005E03EE /* ABPurseObserver.m */; };
-		4986C6871EE9EE3A005E03EE /* ABAssignReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6781EE9EE3A005E03EE /* ABAssignReference.m */; };
-		4986C6881EE9EE3A005E03EE /* ABAssignReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6781EE9EE3A005E03EE /* ABAssignReference.m */; };
-		4986C6891EE9EE3A005E03EE /* ABCopyReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C67A1EE9EE3A005E03EE /* ABCopyReference.m */; };
-		4986C68A1EE9EE3A005E03EE /* ABCopyReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C67A1EE9EE3A005E03EE /* ABCopyReference.m */; };
-		4986C68B1EE9EE3A005E03EE /* ABReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C67C1EE9EE3A005E03EE /* ABReference.m */; };
-		4986C68C1EE9EE3A005E03EE /* ABReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C67C1EE9EE3A005E03EE /* ABReference.m */; };
-		4986C68D1EE9EE3A005E03EE /* ABRetainReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C67E1EE9EE3A005E03EE /* ABRetainReference.m */; };
-		4986C68E1EE9EE3A005E03EE /* ABRetainReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C67E1EE9EE3A005E03EE /* ABRetainReference.m */; };
-		4986C6911EE9EFA4005E03EE /* ABProtocolObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6901EE9EFA4005E03EE /* ABProtocolObservationController.m */; };
-		4986C6921EE9EFA4005E03EE /* ABProtocolObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6901EE9EFA4005E03EE /* ABProtocolObservationController.m */; };
-		4986C6951EE9EFDF005E03EE /* ABBlockObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6941EE9EFDF005E03EE /* ABBlockObservationController.m */; };
-		4986C6961EE9EFDF005E03EE /* ABBlockObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C6941EE9EFDF005E03EE /* ABBlockObservationController.m */; };
 		4988BFE21EEFD1F400B3F823 /* ABThreadUnsafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4988BFE11EEFD1F400B3F823 /* ABThreadUnsafeObject.m */; };
 		4988BFE31EEFD1F400B3F823 /* ABThreadUnsafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4988BFE11EEFD1F400B3F823 /* ABThreadUnsafeObject.m */; };
 		49CEA2A41EDC75B800910AFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA24A1EDC75B800910AFB /* main.m */; };
@@ -123,29 +103,29 @@
 		491468E01EDD772100B74EA1 /* ABDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDelegate.m; sourceTree = "<group>"; };
 		49229EBB1ED5C105002FBFF3 /* ObjectiveCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49229EBF1ED5C105002FBFF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		493540991EEB01EE00DA8A8E /* ABObservableObject+ABPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ABObservableObject+ABPrivate.h"; sourceTree = "<group>"; };
 		49683A0C1ED5C79700C4390B /* ABAlphabetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAlphabetSpec.m; sourceTree = "<group>"; };
-		4986C66E1EE9EE3A005E03EE /* ABObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABObservableObject.h; sourceTree = "<group>"; };
-		4986C66F1EE9EE3A005E03EE /* ABObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABObservableObject.m; sourceTree = "<group>"; };
-		4986C6701EE9EE3A005E03EE /* ABObservationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABObservationController.h; sourceTree = "<group>"; };
-		4986C6711EE9EE3A005E03EE /* ABObservationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABObservationController.m; sourceTree = "<group>"; };
-		4986C6721EE9EE3A005E03EE /* ABPurse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPurse.h; sourceTree = "<group>"; };
-		4986C6731EE9EE3A005E03EE /* ABPurse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABPurse.m; sourceTree = "<group>"; };
-		4986C6741EE9EE3A005E03EE /* ABPurseObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPurseObserver.h; sourceTree = "<group>"; };
-		4986C6751EE9EE3A005E03EE /* ABPurseObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABPurseObserver.m; sourceTree = "<group>"; };
-		4986C6771EE9EE3A005E03EE /* ABAssignReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAssignReference.h; sourceTree = "<group>"; };
-		4986C6781EE9EE3A005E03EE /* ABAssignReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAssignReference.m; sourceTree = "<group>"; };
-		4986C6791EE9EE3A005E03EE /* ABCopyReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCopyReference.h; sourceTree = "<group>"; };
-		4986C67A1EE9EE3A005E03EE /* ABCopyReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCopyReference.m; sourceTree = "<group>"; };
-		4986C67B1EE9EE3A005E03EE /* ABReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABReference.h; sourceTree = "<group>"; };
-		4986C67C1EE9EE3A005E03EE /* ABReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABReference.m; sourceTree = "<group>"; };
-		4986C67D1EE9EE3A005E03EE /* ABRetainReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRetainReference.h; sourceTree = "<group>"; };
-		4986C67E1EE9EE3A005E03EE /* ABRetainReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRetainReference.m; sourceTree = "<group>"; };
-		4986C68F1EE9EFA4005E03EE /* ABProtocolObservationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABProtocolObservationController.h; sourceTree = "<group>"; };
-		4986C6901EE9EFA4005E03EE /* ABProtocolObservationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABProtocolObservationController.m; sourceTree = "<group>"; };
-		4986C6931EE9EFDF005E03EE /* ABBlockObservationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABBlockObservationController.h; sourceTree = "<group>"; };
-		4986C6941EE9EFDF005E03EE /* ABBlockObservationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABBlockObservationController.m; sourceTree = "<group>"; };
-		4986C6981EE9F648005E03EE /* ABObservationController+ABPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ABObservationController+ABPrivate.h"; sourceTree = "<group>"; };
+		4978A1181EF1751900C43AD3 /* ABBlockObservationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABBlockObservationController.h; sourceTree = "<group>"; };
+		4978A1191EF1751900C43AD3 /* ABBlockObservationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABBlockObservationController.m; sourceTree = "<group>"; };
+		4978A11A1EF1751900C43AD3 /* ABObservableObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABObservableObject.h; sourceTree = "<group>"; };
+		4978A11B1EF1751900C43AD3 /* ABObservableObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABObservableObject.m; sourceTree = "<group>"; };
+		4978A11C1EF1751900C43AD3 /* ABObservationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABObservationController.h; sourceTree = "<group>"; };
+		4978A11D1EF1751900C43AD3 /* ABObservationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABObservationController.m; sourceTree = "<group>"; };
+		4978A11E1EF1751900C43AD3 /* ABProtocolObservationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABProtocolObservationController.h; sourceTree = "<group>"; };
+		4978A11F1EF1751900C43AD3 /* ABProtocolObservationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABProtocolObservationController.m; sourceTree = "<group>"; };
+		4978A1201EF1751900C43AD3 /* ABPurse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABPurse.h; sourceTree = "<group>"; };
+		4978A1211EF1751900C43AD3 /* ABPurse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABPurse.m; sourceTree = "<group>"; };
+		4978A1221EF1751900C43AD3 /* ABPurseObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABPurseObserver.h; sourceTree = "<group>"; };
+		4978A1231EF1751900C43AD3 /* ABPurseObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABPurseObserver.m; sourceTree = "<group>"; };
+		4978A1251EF1751900C43AD3 /* ABAssignReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABAssignReference.h; sourceTree = "<group>"; };
+		4978A1261EF1751900C43AD3 /* ABAssignReference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABAssignReference.m; sourceTree = "<group>"; };
+		4978A1271EF1751900C43AD3 /* ABCopyReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCopyReference.h; sourceTree = "<group>"; };
+		4978A1281EF1751900C43AD3 /* ABCopyReference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCopyReference.m; sourceTree = "<group>"; };
+		4978A1291EF1751900C43AD3 /* ABReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABReference.h; sourceTree = "<group>"; };
+		4978A12A1EF1751900C43AD3 /* ABReference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABReference.m; sourceTree = "<group>"; };
+		4978A12B1EF1751900C43AD3 /* ABRetainReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABRetainReference.h; sourceTree = "<group>"; };
+		4978A12C1EF1751900C43AD3 /* ABRetainReference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABRetainReference.m; sourceTree = "<group>"; };
+		4978A12E1EF1751900C43AD3 /* ABObservableObject+ABPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABObservableObject+ABPrivate.h"; sourceTree = "<group>"; };
+		4978A12F1EF1751900C43AD3 /* ABObservationController+ABPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABObservationController+ABPrivate.h"; sourceTree = "<group>"; };
 		4988BFE01EEFD1F400B3F823 /* ABThreadUnsafeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABThreadUnsafeObject.h; sourceTree = "<group>"; };
 		4988BFE11EEFD1F400B3F823 /* ABThreadUnsafeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABThreadUnsafeObject.m; sourceTree = "<group>"; };
 		49CEA24A1EDC75B800910AFB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -247,8 +227,8 @@
 		491468D11EDD6B2300B74EA1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4978A1171EF1751900C43AD3 /* ABObservableObject */,
 				4988BFDF1EEFD1B900B3F823 /* ABThreading */,
-				4986C66D1EE9EE3A005E03EE /* ABObservableObject */,
 				491468D41EDD6DE600B74EA1 /* ABDelegatingObject */,
 			);
 			path = Classes;
@@ -292,47 +272,47 @@
 			path = Specs;
 			sourceTree = "<group>";
 		};
-		4986C66D1EE9EE3A005E03EE /* ABObservableObject */ = {
+		4978A1171EF1751900C43AD3 /* ABObservableObject */ = {
 			isa = PBXGroup;
 			children = (
-				4986C6971EE9F5DA005E03EE /* Private */,
-				4986C66E1EE9EE3A005E03EE /* ABObservableObject.h */,
-				4986C66F1EE9EE3A005E03EE /* ABObservableObject.m */,
-				4986C6701EE9EE3A005E03EE /* ABObservationController.h */,
-				4986C6711EE9EE3A005E03EE /* ABObservationController.m */,
-				4986C6931EE9EFDF005E03EE /* ABBlockObservationController.h */,
-				4986C6941EE9EFDF005E03EE /* ABBlockObservationController.m */,
-				4986C68F1EE9EFA4005E03EE /* ABProtocolObservationController.h */,
-				4986C6901EE9EFA4005E03EE /* ABProtocolObservationController.m */,
-				4986C6721EE9EE3A005E03EE /* ABPurse.h */,
-				4986C6731EE9EE3A005E03EE /* ABPurse.m */,
-				4986C6741EE9EE3A005E03EE /* ABPurseObserver.h */,
-				4986C6751EE9EE3A005E03EE /* ABPurseObserver.m */,
-				4986C6761EE9EE3A005E03EE /* ABReferences */,
+				4978A1181EF1751900C43AD3 /* ABBlockObservationController.h */,
+				4978A1191EF1751900C43AD3 /* ABBlockObservationController.m */,
+				4978A11A1EF1751900C43AD3 /* ABObservableObject.h */,
+				4978A11B1EF1751900C43AD3 /* ABObservableObject.m */,
+				4978A11C1EF1751900C43AD3 /* ABObservationController.h */,
+				4978A11D1EF1751900C43AD3 /* ABObservationController.m */,
+				4978A11E1EF1751900C43AD3 /* ABProtocolObservationController.h */,
+				4978A11F1EF1751900C43AD3 /* ABProtocolObservationController.m */,
+				4978A1201EF1751900C43AD3 /* ABPurse.h */,
+				4978A1211EF1751900C43AD3 /* ABPurse.m */,
+				4978A1221EF1751900C43AD3 /* ABPurseObserver.h */,
+				4978A1231EF1751900C43AD3 /* ABPurseObserver.m */,
+				4978A1241EF1751900C43AD3 /* ABReferences */,
+				4978A12D1EF1751900C43AD3 /* Private */,
 			);
 			path = ABObservableObject;
 			sourceTree = "<group>";
 		};
-		4986C6761EE9EE3A005E03EE /* ABReferences */ = {
+		4978A1241EF1751900C43AD3 /* ABReferences */ = {
 			isa = PBXGroup;
 			children = (
-				4986C6771EE9EE3A005E03EE /* ABAssignReference.h */,
-				4986C6781EE9EE3A005E03EE /* ABAssignReference.m */,
-				4986C6791EE9EE3A005E03EE /* ABCopyReference.h */,
-				4986C67A1EE9EE3A005E03EE /* ABCopyReference.m */,
-				4986C67B1EE9EE3A005E03EE /* ABReference.h */,
-				4986C67C1EE9EE3A005E03EE /* ABReference.m */,
-				4986C67D1EE9EE3A005E03EE /* ABRetainReference.h */,
-				4986C67E1EE9EE3A005E03EE /* ABRetainReference.m */,
+				4978A1251EF1751900C43AD3 /* ABAssignReference.h */,
+				4978A1261EF1751900C43AD3 /* ABAssignReference.m */,
+				4978A1271EF1751900C43AD3 /* ABCopyReference.h */,
+				4978A1281EF1751900C43AD3 /* ABCopyReference.m */,
+				4978A1291EF1751900C43AD3 /* ABReference.h */,
+				4978A12A1EF1751900C43AD3 /* ABReference.m */,
+				4978A12B1EF1751900C43AD3 /* ABRetainReference.h */,
+				4978A12C1EF1751900C43AD3 /* ABRetainReference.m */,
 			);
 			path = ABReferences;
 			sourceTree = "<group>";
 		};
-		4986C6971EE9F5DA005E03EE /* Private */ = {
+		4978A12D1EF1751900C43AD3 /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				4986C6981EE9F648005E03EE /* ABObservationController+ABPrivate.h */,
-				493540991EEB01EE00DA8A8E /* ABObservableObject+ABPrivate.h */,
+				4978A12E1EF1751900C43AD3 /* ABObservableObject+ABPrivate.h */,
+				4978A12F1EF1751900C43AD3 /* ABObservationController+ABPrivate.h */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -710,14 +690,11 @@
 				49CEA2D71EDC75B800910AFB /* ABSyntax.m in Sources */,
 				49CEA2A91EDC75B800910AFB /* NSString+ABExtensions.m in Sources */,
 				49CEA2D31EDC75B800910AFB /* ABObjCSyntax.m in Sources */,
-				4986C6961EE9EFDF005E03EE /* ABBlockObservationController.m in Sources */,
 				49CEA2C51EDC75B800910AFB /* NSNumber+ABRandomNumber.m in Sources */,
 				49CEA2C71EDC75B800910AFB /* NSObject+ABObjectExtension.m in Sources */,
 				49CEA2C11EDC75B800910AFB /* ABWorker.m in Sources */,
 				49CEA2CB1EDC75B800910AFB /* ABCreatureFemale.m in Sources */,
-				4986C68A1EE9EE3A005E03EE /* ABCopyReference.m in Sources */,
 				49CEA2B51EDC75B800910AFB /* ABCarWash.m in Sources */,
-				4986C6881EE9EE3A005E03EE /* ABAssignReference.m in Sources */,
 				491468D81EDD6DFA00B74EA1 /* ABDelegatingObject.m in Sources */,
 				49CEA2AD1EDC75B800910AFB /* ABRangeAlphabet.m in Sources */,
 				49CEA2AF1EDC75B800910AFB /* ABStringsAlphabet.m in Sources */,
@@ -726,27 +703,20 @@
 				49CEA2BF1EDC75B800910AFB /* ABDirector.m in Sources */,
 				49CEA2D51EDC75B800910AFB /* ABSyntax+ABCategory.m in Sources */,
 				49CEA2D11EDC75B800910AFB /* ABEqualityObject.m in Sources */,
-				4986C68C1EE9EE3A005E03EE /* ABReference.m in Sources */,
 				49CEA2E51EDC75B800910AFB /* ABCarWashTest.m in Sources */,
 				491468E21EDD774C00B74EA1 /* ABDelegate.m in Sources */,
-				4986C6921EE9EFA4005E03EE /* ABProtocolObservationController.m in Sources */,
 				49CEA2EB1EDC75B800910AFB /* ABSyntaxTest.m in Sources */,
 				49CEA2CF1EDC75B800910AFB /* NSObject+ABCreatureCategory.m in Sources */,
-				4986C6861EE9EE3A005E03EE /* ABPurseObserver.m in Sources */,
 				49CEA2B91EDC75B800910AFB /* ABRoom.m in Sources */,
-				4986C6821EE9EE3A005E03EE /* ABObservationController.m in Sources */,
 				49CEA2BB1EDC75B800910AFB /* ABAcountant.m in Sources */,
 				49CEA2C31EDC75B800910AFB /* NSArray+ABExtension.m in Sources */,
 				491451F11EDEC03F00F89E38 /* ABPurseSpec.m in Sources */,
-				4986C68E1EE9EE3A005E03EE /* ABRetainReference.m in Sources */,
 				49CEA2E71EDC75B800910AFB /* ABCreatureGenderTest.m in Sources */,
 				49CEA2E91EDC75B800910AFB /* ABCreatureTest.m in Sources */,
 				49CEA2B31EDC75B800910AFB /* ABCar.m in Sources */,
 				4988BFE31EEFD1F400B3F823 /* ABThreadUnsafeObject.m in Sources */,
 				49CEA2B71EDC75B800910AFB /* ABCarWashRoom.m in Sources */,
-				4986C6841EE9EE3A005E03EE /* ABPurse.m in Sources */,
 				491468DA1EDD72AE00B74EA1 /* ABDelegatingObjectSpec.m in Sources */,
-				4986C6801EE9EE3A005E03EE /* ABObservableObject.m in Sources */,
 				49CEA2CD1EDC75B800910AFB /* ABCreatureMale.m in Sources */,
 				49683A0D1ED5C79700C4390B /* ABAlphabetSpec.m in Sources */,
 				49CEA2A71EDC75B800910AFB /* ABAlphabet.m in Sources */,
@@ -764,22 +734,16 @@
 				49CEA2C01EDC75B800910AFB /* ABWorker.m in Sources */,
 				49CEA2AE1EDC75B800910AFB /* ABStringsAlphabet.m in Sources */,
 				49CEA2D81EDC75B800910AFB /* ABSyntaxSubclass.m in Sources */,
-				4986C6811EE9EE3A005E03EE /* ABObservationController.m in Sources */,
-				4986C6891EE9EE3A005E03EE /* ABCopyReference.m in Sources */,
 				49CEA2C61EDC75B800910AFB /* NSObject+ABObjectExtension.m in Sources */,
 				49CEA2C41EDC75B800910AFB /* NSNumber+ABRandomNumber.m in Sources */,
 				49CEA2B81EDC75B800910AFB /* ABRoom.m in Sources */,
-				4986C68B1EE9EE3A005E03EE /* ABReference.m in Sources */,
-				4986C6911EE9EFA4005E03EE /* ABProtocolObservationController.m in Sources */,
 				49CEA2E81EDC75B800910AFB /* ABCreatureTest.m in Sources */,
 				49CEA2EA1EDC75B800910AFB /* ABSyntaxTest.m in Sources */,
 				49CEA2E61EDC75B800910AFB /* ABCreatureGenderTest.m in Sources */,
 				49CEA2B61EDC75B800910AFB /* ABCarWashRoom.m in Sources */,
 				49CEA2BC1EDC75B800910AFB /* ABCarWasher.m in Sources */,
-				4986C6851EE9EE3A005E03EE /* ABPurseObserver.m in Sources */,
 				49CEA2B01EDC75B800910AFB /* ABBuilding.m in Sources */,
 				49CEA2D01EDC75B800910AFB /* ABEqualityObject.m in Sources */,
-				4986C6871EE9EE3A005E03EE /* ABAssignReference.m in Sources */,
 				49CEA2BE1EDC75B800910AFB /* ABDirector.m in Sources */,
 				49CEA2B41EDC75B800910AFB /* ABCarWash.m in Sources */,
 				49CEA2AC1EDC75B800910AFB /* ABRangeAlphabet.m in Sources */,
@@ -787,21 +751,17 @@
 				49CEA2E41EDC75B800910AFB /* ABCarWashTest.m in Sources */,
 				49CEA2CE1EDC75B800910AFB /* NSObject+ABCreatureCategory.m in Sources */,
 				49CEA2C21EDC75B800910AFB /* NSArray+ABExtension.m in Sources */,
-				4986C67F1EE9EE3A005E03EE /* ABObservableObject.m in Sources */,
 				4988BFE21EEFD1F400B3F823 /* ABThreadUnsafeObject.m in Sources */,
 				49CEA2AA1EDC75B800910AFB /* ABClasterAlphabet.m in Sources */,
-				4986C68D1EE9EE3A005E03EE /* ABRetainReference.m in Sources */,
 				49CEA2CC1EDC75B800910AFB /* ABCreatureMale.m in Sources */,
 				49CEA2A41EDC75B800910AFB /* main.m in Sources */,
 				491468E11EDD772100B74EA1 /* ABDelegate.m in Sources */,
 				49CEA2D41EDC75B800910AFB /* ABSyntax+ABCategory.m in Sources */,
 				49CEA2D61EDC75B800910AFB /* ABSyntax.m in Sources */,
-				4986C6951EE9EFDF005E03EE /* ABBlockObservationController.m in Sources */,
 				49CEA2A81EDC75B800910AFB /* NSString+ABExtensions.m in Sources */,
 				49CEA2CA1EDC75B800910AFB /* ABCreatureFemale.m in Sources */,
 				491468D71EDD6DFA00B74EA1 /* ABDelegatingObject.m in Sources */,
 				49CEA2C81EDC75B800910AFB /* ABCreature.m in Sources */,
-				4986C6831EE9EE3A005E03EE /* ABPurse.m in Sources */,
 				49CEA2A61EDC75B800910AFB /* ABAlphabet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -894,7 +854,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -936,7 +896,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
