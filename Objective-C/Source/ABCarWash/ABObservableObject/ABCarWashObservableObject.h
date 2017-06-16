@@ -17,5 +17,7 @@
 - (BOOL)isObservedByObject:(id)observer;
 
 - (SEL)selectorForState:(NSUInteger)state;
+- (void)notifyOfChangeState:(NSUInteger)state;
+
 
 @end

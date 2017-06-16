@@ -47,7 +47,7 @@
     if (state != _state) {
         _state = state;
         
-        [self notifyOfStateChangeWithSelector:[self selectorForState:state]];
+        [self notifyOfChangeState:state];
     }
 }
 
@@ -82,6 +82,10 @@
             [observer performSelector:selector withObject:self];
         }
     }
+}
+
+- (void)notifyOfChangeState:(NSUInteger)state {
+    [self notifyOfStateChangeWithSelector:[self selectorForState:state]];
 }
 
 @end
