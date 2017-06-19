@@ -15,8 +15,6 @@
 
 @implementation ABQueue
 
-@dynamic queue;
-
 #pragma mark
 #pragma mark - Initializations and Deallocations
 
@@ -38,12 +36,12 @@
 #pragma mark
 #pragma mark - Accesors
 
-- (NSArray *)queue {
-    return [[self.mutableQueue copy] autorelease];
-}
-
 - (BOOL)isEmpty {
     return self.count == 0;
+}
+
+- (NSUInteger)count {
+    return [self.mutableQueue count];
 }
 
 #pragma mark
@@ -55,10 +53,6 @@
     }
 }
 
-- (void)removeObjectFromQueue:(id)object {
-    [self.mutableQueue removeObject:object];
-}
-
 - (id)popObjectFromQueue {
     id result = [self.mutableQueue firstObject];
     if (result) {
@@ -66,10 +60,6 @@
     }
     
     return [[result retain] autorelease];
-}
-
-- (NSUInteger)count {
-    return [self.mutableQueue count];
 }
 
 @end

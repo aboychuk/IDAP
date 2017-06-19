@@ -9,12 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface ABQueue : NSArray
-@property (nonatomic, copy)     NSArray     *queue;
-@property (nonatomic, readonly, getter=isEmpty)   BOOL        empty;
+@property (nonatomic, readonly, getter=isEmpty)     BOOL        empty;
+@property (nonatomic, readonly)                     NSUInteger  count;
 
 - (void)addObjectToQueue:(id)object;
-- (void)removeObjectFromQueue:(id)object;
 - (id)popObjectFromQueue;
-- (NSUInteger)count;
 
 @end
