@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @protocol ABMoneyFlow <NSObject>
-@property (nonatomic, readonly)   NSUInteger  money;
+@property (nonatomic, readonly)   NSUInteger    money;
+@property (nonatomic, assign)     NSUInteger    state;
 
 - (NSUInteger)giveMoney;
+
+@optional
+
 - (void)takeMoney:(NSUInteger)money;
 - (void)takeMoneyFromObject:(id<ABMoneyFlow>)object;
 
