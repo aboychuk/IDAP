@@ -50,13 +50,21 @@ static NSUInteger nameLength = 6;
     
     [self takeMoneyFromObject:object];
     [self processScpecificOperations:object];
-        
-    self.state = ABWorkerReadyForProcess;
+    [self finishProcessingObject:object];
+    [self finishProcess];
 }
 
 
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     
+}
+
+- (void)finishProcessingObject:(id<ABMoneyFlow>)object {
+    object.state = ABWorkerFree;
+}
+
+- (void)finishProcess {
+    self.state = ABWorkerReadyForProcess;
 }
 
 #pragma mark
@@ -83,7 +91,6 @@ static NSUInteger nameLength = 6;
 
 - (void)workerDidBecomeReadyForProcess:(ABWorker*)worker {
         [self processObject:worker];
-        worker.state = ABWorkerFree;
 }
 
 - (SEL)selectorForState:(NSUInteger)state {
