@@ -16,6 +16,10 @@
 
 @implementation ABCarWasher
 
+- (void)finishProcess {
+    self.state = ABWorkerReadyForProcess;
+}
+
 #pragma mark
 #pragma mark Private Methods
 

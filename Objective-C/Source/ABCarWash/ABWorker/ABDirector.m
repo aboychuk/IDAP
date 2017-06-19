@@ -31,9 +31,7 @@
 #pragma mark
 #pragma mark ABWorkerObserver Methods
 
-- (void)workerDidBecomeReadyForProcess:(ABWorker*)worker {
-    [self processObject:worker];
-    worker.state = ABWorkerFree;
+- (void)finishProcessingObject:(id<ABMoneyFlow>)object {
     self.state = ABWorkerFree;
 }
 
