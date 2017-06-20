@@ -15,6 +15,10 @@ static NSUInteger nameLength = 6;
 @interface ABWorker()
 @property (nonatomic, assign)   NSUInteger  money;
 
+//Methodes for override;
+
+- (void)finishProcess;
+- (void)finishProcessingObject:(id<ABMoneyFlow>)object;
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object;
 
 @end
@@ -54,7 +58,7 @@ static NSUInteger nameLength = 6;
     [self finishProcess];
 }
 
-
+//Method created for overriding do not call it dirwctly.
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     
 }

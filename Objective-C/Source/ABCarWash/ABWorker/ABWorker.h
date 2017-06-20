@@ -38,8 +38,5 @@ typedef NS_ENUM(NSUInteger, ABWorkerState) {
 @property (nonatomic, retain)   ABQueue         *queue;
 
 - (void)processObject:(id<ABMoneyFlow>)object;
-//Methodes for override;
-- (void)finishProcessingObject:(id)object;
-- (void)finishProcess;
 
 @end

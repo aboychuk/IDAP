@@ -21,7 +21,7 @@
     ABCarWash *carWashCompany = [ABCarWash object];
     
     for (ABCar *car in cars) {
-        [carWashCompany startWashing:car];
+        [carWashCompany washCar:car];
     }
 }
 

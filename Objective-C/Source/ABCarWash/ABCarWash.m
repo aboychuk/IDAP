@@ -15,6 +15,7 @@ static NSUInteger ABWashersCountMax = 9;
 @property (nonatomic, retain)   ABDirector      *director;
 @property (nonatomic, retain)   ABQueue         *washersQueue;
 @property (nonatomic, retain)   ABQueue         *carsQueue;
+@property (nonatomic, retain)   NSArray         *washers;
 
 @end
 
@@ -24,12 +25,14 @@ static NSUInteger ABWashersCountMax = 9;
 #pragma mark Initializations and Deallocations
 
 - (void)dealloc {
+    [self removeObservers];
+
     self.accountant = nil;
     self.director = nil;
     self.washersQueue = nil;
     self.carsQueue = nil;
+    self.washers = nil;
 
-    [self removeObservers];
     [super dealloc];
 }
 
@@ -44,10 +47,13 @@ static NSUInteger ABWashersCountMax = 9;
 #pragma mark
 #pragma mark Public Methods
 
-- (void)startWashing:(ABCar *)car {
-    ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
-    
-    [washer processObject:car];
+- (void)washCar:(ABCar *)car {
+    if (car) {
+        ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
+        if (washer) {
+            [washer processObject:car];
+        }
+    }
 }
 
 #pragma mark
@@ -57,30 +63,20 @@ static NSUInteger ABWashersCountMax = 9;
     self.accountant = [ABAcountant object];
     self.director = [ABDirector object];
     
-    [NSArray objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)
-                 factoryBlock:^{
-                     ABCarWasher *washer = [ABCarWasher object];
-                     [self.washersQueue addObjectToQueue:washer];
-                     [washer addObserver:self];
-                     return washer;
-                 }];
-
-
-//    NSArray * washers = [ABCarWasher objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)];
-//    
-//    for (ABCarWasher *washer in washers) {
-//        [self.washersQueue addObjectToQueue:washer];
-//        [washer addObserver:self.accountant];
-//        [washer addObserver:self];
-//    }
+    self.washers = [ABCarWasher objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)];
+    
+    for (ABCarWasher *washer in self.washers) {
+        [self.washersQueue addObjectToQueue:washer];
+        [washer addObserver:self.accountant];
+        [washer addObserver:self];
+    }
     
     [self.accountant addObserver:self.director];
 
 }
 
 - (void)removeObservers {
-    for (ABCarWasher *washer in self.washersQueue) {
-        [self.washersQueue addObjectToQueue:washer];
+    for (ABCarWasher *washer in self.washers) {
         [washer removeObserver:self.accountant];
         [washer removeObserver:self];
     }
