@@ -29,6 +29,7 @@
 		4926D80E1EE14C64008CFFB1 /* NSObject+ABRandomNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 4926D80D1EE14C64008CFFB1 /* NSObject+ABRandomNumber.m */; };
 		493055301EE94709005DA22A /* ABQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4930552F1EE94709005DA22A /* ABQueue.m */; };
 		493809D81EFA748400DA8291 /* ABCarWash.m in Sources */ = {isa = PBXBuildFile; fileRef = 493809D71EFA748400DA8291 /* ABCarWash.m */; };
+		493809DC1EFAA0EB00DA8291 /* ABCarWashController.m in Sources */ = {isa = PBXBuildFile; fileRef = 493809DB1EFAA0EB00DA8291 /* ABCarWashController.m */; };
 		4953B54D1EDDBA1000A7D5AA /* ABObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4953B54C1EDDBA1000A7D5AA /* ABObservableObject.m */; };
 		49683A0D1ED5C79700C4390B /* ABAlphabetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49683A0C1ED5C79700C4390B /* ABAlphabetSpec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49BEC20A1EE93CF40014AE62 /* ABCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BEC1F91EE93CF40014AE62 /* ABCar.m */; };
@@ -121,6 +122,8 @@
 		4930552E1EE94709005DA22A /* ABQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABQueue.h; sourceTree = "<group>"; };
 		4930552F1EE94709005DA22A /* ABQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABQueue.m; sourceTree = "<group>"; };
 		493809D71EFA748400DA8291 /* ABCarWash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWash.m; sourceTree = "<group>"; };
+		493809DA1EFAA0EB00DA8291 /* ABCarWashController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashController.h; sourceTree = "<group>"; };
+		493809DB1EFAA0EB00DA8291 /* ABCarWashController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashController.m; sourceTree = "<group>"; };
 		4953B54B1EDDBA1000A7D5AA /* ABObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABObservableObject.h; sourceTree = "<group>"; };
 		4953B54C1EDDBA1000A7D5AA /* ABObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABObservableObject.m; sourceTree = "<group>"; };
 		49683A0C1ED5C79700C4390B /* ABAlphabetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAlphabetSpec.m; sourceTree = "<group>"; };
@@ -288,6 +291,15 @@
 			path = ABQueue;
 			sourceTree = "<group>";
 		};
+		493809D91EFAA0D100DA8291 /* ABCarWashController */ = {
+			isa = PBXGroup;
+			children = (
+				493809DA1EFAA0EB00DA8291 /* ABCarWashController.h */,
+				493809DB1EFAA0EB00DA8291 /* ABCarWashController.m */,
+			);
+			path = ABCarWashController;
+			sourceTree = "<group>";
+		};
 		49683A0B1ED5C52200C4390B /* Specs */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +313,7 @@
 		49BEC1F61EE93CF40014AE62 /* ABCarWash */ = {
 			isa = PBXGroup;
 			children = (
+				493809D91EFAA0D100DA8291 /* ABCarWashController */,
 				4930552D1EE946BC005DA22A /* ABQueue */,
 				49BEC1FA1EE93CF40014AE62 /* ABCarWash.h */,
 				493809D71EFA748400DA8291 /* ABCarWash.m */,
@@ -694,6 +707,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493809DC1EFAA0EB00DA8291 /* ABCarWashController.m in Sources */,
 				49BEC20C1EE93CF40014AE62 /* ABCarWashObservableObject.m in Sources */,
 				491451EC1EDEB56F00F89E38 /* ABPurse.m in Sources */,
 				49CEA2D21EDC75B800910AFB /* ABObjCSyntax.m in Sources */,
