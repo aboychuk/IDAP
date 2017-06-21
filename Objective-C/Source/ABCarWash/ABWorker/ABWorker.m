@@ -79,15 +79,15 @@ static NSUInteger ABRandomSleep = 1000;
 #pragma mark Private Methods
 
 - (void)mainThreadOperationsWithObject:(id<ABMoneyFlow>)object {
+    [self finishProcess];
+    [self finishProcessingObject:object];
+}
+
+- (void)backgroundThreadOperationsWithObject:(id<ABMoneyFlow>)object {
     [self takeMoneyFromObject:object];
     [self processScpecificOperations:object];
     [self sleep];
     [self processObjectOnMainThread:object];
-}
-
-- (void)backgroundThreadOperationsWithObject:(id<ABMoneyFlow>)object {
-    [self finishProcess];
-    [self finishProcessingObject:object];
 }
 
 - (void)sleep {

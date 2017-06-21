@@ -19,10 +19,7 @@
     }];
 
     ABCarWash *carWashCompany = [ABCarWash object];
-    
-    for (ABCar *car in cars) {
-        [carWashCompany washCar:car];
-    }
+    [carWashCompany washCars:cars];
 }
 
 @end

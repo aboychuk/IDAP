@@ -13,8 +13,6 @@ static NSUInteger ABWashersCountMax = 9;
 @interface ABCarWash ()
 @property (nonatomic, retain)   ABAcountant     *accountant;
 @property (nonatomic, retain)   ABDirector      *director;
-@property (nonatomic, retain)   ABQueue         *washersQueue;
-@property (nonatomic, retain)   ABQueue         *carsQueue;
 @property (nonatomic, retain)   NSArray         *washers;
 
 @end
@@ -47,16 +45,7 @@ static NSUInteger ABWashersCountMax = 9;
 #pragma mark
 #pragma mark Public Methods
 
-- (void)washCar:(ABCar *)car {
-    @synchronized (self) {
-        ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
-        if (washer) {
-            [washer processObject:car];
-        } else {
-            [self.carsQueue addObjectToQueue:car];
-        }
-    }
-}
+
 
 #pragma mark
 #pragma mark Private Methods
