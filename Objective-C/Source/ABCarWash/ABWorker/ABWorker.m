@@ -11,12 +11,13 @@
 static NSUInteger ABWorkerSalary = 2000;
 static NSUInteger maxExpirience = 10;
 static NSUInteger nameLength = 6;
+static NSUInteger ABRandomSleep = 1000;
 
 @interface ABWorker()
 @property (nonatomic, assign)   NSUInteger  money;
 
+- (void)sleep;
 //Methodes for override;
-
 - (void)finishProcess;
 - (void)finishProcessingObject:(id<ABMoneyFlow>)object;
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object;
@@ -58,7 +59,19 @@ static NSUInteger nameLength = 6;
     [self finishProcess];
 }
 
-//Method created for overriding do not call it dirwctly.
+- (void)processObjectOnMainThread:(id<ABMoneyFlow>)object {
+    
+}
+
+- (void)processObjectInBackgroundThread:(id<ABMoneyFlow>)object {
+    
+}
+
+- (void)sleep {
+    usleep((uint32_t)ABRandomWithMaxValue(ABRandomSleep));
+}
+
+//Method created for overriding do not call it directly.
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object {
     
 }

@@ -48,11 +48,11 @@ static NSUInteger ABWashersCountMax = 9;
 #pragma mark Public Methods
 
 - (void)washCar:(ABCar *)car {
-    if (car) {
-        ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
-        if (washer) {
-            [washer processObject:car];
-        }
+    ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
+    if (washer) {
+        [washer processObject:car];
+    } else {
+        [self.carsQueue addObjectToQueue:car];
     }
 }
 
@@ -66,9 +66,9 @@ static NSUInteger ABWashersCountMax = 9;
     self.washers = [ABCarWasher objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)];
     
     for (ABCarWasher *washer in self.washers) {
-        [self.washersQueue addObjectToQueue:washer];
         [washer addObserver:self.accountant];
         [washer addObserver:self];
+        [self.washersQueue addObjectToQueue:washer];
     }
     
     [self.accountant addObserver:self.director];
@@ -88,8 +88,12 @@ static NSUInteger ABWashersCountMax = 9;
 #pragma mark ABWorkerObserver Methods
 
 - (void)workerDidBecomeFree:(ABWorker*)worker {
-    NSLog(@"%@ nitified %@ about status", worker, self);
-    [self.washersQueue addObjectToQueue:worker];
+    ABCar *car = [self.carsQueue popObjectFromQueue];
+    if (car) {
+        [worker processObject:car];
+    } else {
+        [self.washersQueue addObjectToQueue:worker];
+    }
 }
 
 @end

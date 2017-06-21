@@ -38,5 +38,7 @@ typedef NS_ENUM(NSUInteger, ABWorkerState) {
 @property (nonatomic, retain)   ABQueue         *queue;
 
 - (void)processObject:(id<ABMoneyFlow>)object;
+- (void)processObjectOnMainThread:(id<ABMoneyFlow>)object;
+- (void)processObjectInBackgroundThread:(id<ABMoneyFlow>)object;
 
 @end
