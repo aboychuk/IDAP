@@ -50,12 +50,15 @@ static NSUInteger nameLength = 6;
 #pragma mark Public Methods
 
 - (void)processObject:(id<ABMoneyFlow>)object {
-    self.state = ABWorkerBusy;
-    
-    [self takeMoneyFromObject:object];
-    [self processScpecificOperations:object];
-    [self finishProcessingObject:object];
-    [self finishProcess];
+    if (self.state == ABWorkerFree) {
+        self.state = ABWorkerBusy;
+        
+        [self takeMoneyFromObject:object];
+        [self processScpecificOperations:object];
+        [self finishProcess];
+        [self finishProcessingObject:object];
+
+    }
 }
 
 //Method created for overriding do not call it dirwctly.

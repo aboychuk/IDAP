@@ -24,7 +24,10 @@
 }
 - (void)wash:(ABCar *)car {
     NSLog(@"Washer %@  washed car", self);
-    car.state = ABCarStateClean;
+}
+
+- (void)finishProcessingObject:(id<ABMoneyFlow>)object {
+    object.state = ABCarStateClean;
 }
 
 @end
