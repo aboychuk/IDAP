@@ -48,18 +48,22 @@
 #pragma mark - Public Methods
 
 - (void)addObjectToQueue:(id)object {
-    if (object) {
-        [self.mutableQueue addObject:object];
+    @synchronized (self) {
+        if (object) {
+            [self.mutableQueue addObject:object];
+        }
     }
 }
 
 - (id)popObjectFromQueue {
-    id result = [self.mutableQueue firstObject];
-    if (result) {
-        [self.mutableQueue removeObjectAtIndex:0];
+    @synchronized (self) {
+        id result = [[[self.mutableQueue firstObject] retain] autorelease];
+        if (result) {
+            [self.mutableQueue removeObjectAtIndex:0];
+        }
+        
+        return result;
     }
-    
-    return [[result retain] autorelease];
 }
 
 @end

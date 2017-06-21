@@ -54,11 +54,13 @@ static NSUInteger ABRandomSleep = 1000;
 #pragma mark Public Methods
 
 - (void)processObject:(id<ABMoneyFlow>)object {
-    if (self.state == ABWorkerFree) {
-        self.state = ABWorkerBusy;
-        [self processObjectInBackgroundThread:object];
-    } else {
-        [self.queue addObjectToQueue:object];
+    @synchronized (self) {
+        if (self.state == ABWorkerFree) {
+            self.state = ABWorkerBusy;
+            [self processObjectInBackgroundThread:object];
+        } else {
+            [self.queue addObjectToQueue:object];
+        }
     }
 }
 
@@ -77,16 +79,15 @@ static NSUInteger ABRandomSleep = 1000;
 #pragma mark Private Methods
 
 - (void)mainThreadOperationsWithObject:(id<ABMoneyFlow>)object {
-    [self sleep];
     [self takeMoneyFromObject:object];
     [self processScpecificOperations:object];
+    [self sleep];
     [self processObjectOnMainThread:object];
 }
 
 - (void)backgroundThreadOperationsWithObject:(id<ABMoneyFlow>)object {
-    [self finishProcessingObject:object];
     [self finishProcess];
-
+    [self finishProcessingObject:object];
 }
 
 - (void)sleep {
@@ -110,19 +111,25 @@ static NSUInteger ABRandomSleep = 1000;
 #pragma mark ABMoneyFlow Methods
 
 - (void)takeMoney:(NSUInteger)money {
-    self.money += money;
+    @synchronized (self) {
+        self.money += money;
+    }
 }
 
 - (NSUInteger)giveMoney {
-    NSUInteger money = self.money;
-    self.money = 0;
-    
-    return money;
+    @synchronized (self) {
+        NSUInteger money = self.money;
+        self.money = 0;
+        
+        return money;
+    }
 }
 
 - (void)takeMoneyFromObject:(id<ABMoneyFlow>)object {
-    NSLog(@"%@ got %lu USD from the %@", [self class], object.money, [object class]);
-    [self takeMoney:[object giveMoney]];
+    @synchronized (self) {
+        NSLog(@"%@ got %lu USD from the %@", [self class], object.money, [object class]);
+        [self takeMoney:[object giveMoney]];
+    }
 }
 
 #pragma mark

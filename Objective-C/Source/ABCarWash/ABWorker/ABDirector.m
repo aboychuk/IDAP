@@ -29,6 +29,7 @@
 }
 
 - (void)finishProcessingObject:(id<ABMoneyFlow>)object {
+    object.state = ABWorkerFree;
     self.state = ABWorkerFree;
 }
 

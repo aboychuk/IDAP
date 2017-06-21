@@ -32,10 +32,12 @@ static NSUInteger ABCarMoney = 100;
 #pragma mark Protocol Methods
 
 - (NSUInteger)giveMoney {
-    NSUInteger money = self.money;
-    self.money = 0;
-    
-    return money;
+    @synchronized (self) {
+        NSUInteger money = self.money;
+        self.money = 0;
+        
+        return money;
+    }
 }
 
 @end

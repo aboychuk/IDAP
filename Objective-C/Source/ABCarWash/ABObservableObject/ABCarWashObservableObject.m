@@ -39,15 +39,19 @@
 #pragma mark - Accesors
 
 - (NSSet *)obsrversSet {
-    NSHashTable *observersHashTable = self.observersHashTable;
-    return [[observersHashTable copy] autorelease];
+    @synchronized (self) {
+        NSHashTable *observersHashTable = self.observersHashTable;
+        return [[observersHashTable copy] autorelease];
+    }
 }
 
 - (void)setState:(NSUInteger)state {
-    if (state != _state) {
-        _state = state;
-        
-        [self notifyOfChangeState:state];
+    @synchronized (self) {
+        if (state != _state) {
+            _state = state;
+            
+            [self notifyOfChangeState:state];
+        }
     }
 }
 
@@ -55,15 +59,21 @@
 #pragma mark - Public Methods
 
 - (void)addObserver:(id)observer {
-    [self.observersHashTable addObject:observer];
+    @synchronized (self) {
+        [self.observersHashTable addObject:observer];
+    }
 }
 
 - (void)removeObserver:(id)observer {
-    [self.observersHashTable removeObject:observer];
+    @synchronized (self) {
+        [self.observersHashTable removeObject:observer];
+    }
 }
 
 - (BOOL)isObservedByObject:(id)observer {
-    return [self.observersHashTable containsObject:observer];
+    @synchronized (self) {
+        return [self.observersHashTable containsObject:observer];
+    }
 }
 
 #pragma mark
@@ -76,10 +86,12 @@
 }
 
 - (void)notifyOfStateChangeWithSelector:(SEL)selector {
-    NSHashTable *observersHashTable = self.observersHashTable;
-    for (id observer in observersHashTable) {
-        if ([observer respondsToSelector:selector]) {
-            [observer performSelector:selector withObject:self];
+    @synchronized (self) {
+        NSHashTable *observersHashTable = self.observersHashTable;
+        for (id observer in observersHashTable) {
+            if ([observer respondsToSelector:selector]) {
+                [observer performSelector:selector withObject:self];
+            }
         }
     }
 }
