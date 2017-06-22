@@ -8,12 +8,17 @@
 
 #import "ABCarWash.h"
 
+#import "ABCarWashController.h"
+
 static NSUInteger ABWashersCountMax = 9;
 
 @interface ABCarWash ()
-@property (nonatomic, retain)   ABAcountant     *accountant;
-@property (nonatomic, retain)   ABDirector      *director;
-@property (nonatomic, retain)   NSArray         *washers;
+@property (nonatomic, retain)   ABAcountant         *accountant;
+@property (nonatomic, retain)   ABDirector          *director;
+@property (nonatomic, retain)   NSArray             *washers;
+@property (nonatomic, retain)   ABCarWashController *controller;
+//@property (nonatomic, retain)   ABQueue           *washersQueue;
+//@property (nonatomic, retain)   ABQueue           *carsQueue;
 
 @end
 
@@ -27,16 +32,15 @@ static NSUInteger ABWashersCountMax = 9;
 
     self.accountant = nil;
     self.director = nil;
-    self.washersQueue = nil;
-    self.carsQueue = nil;
     self.washers = nil;
+    self.controller = nil;
 
     [super dealloc];
 }
 
 - (instancetype)init {
     self = [super init];
-    self.washersQueue = [ABQueue object];
+    self.controller = [ABCarWashController object];
     [self setCarWashHierarchy];
     
     return self;
@@ -45,7 +49,10 @@ static NSUInteger ABWashersCountMax = 9;
 #pragma mark
 #pragma mark Public Methods
 
-
+- (void)washCars:(NSArray *)cars {
+    [self.controller createWashersQueue:self.washers];
+    [self.controller washCars:cars];
+}
 
 #pragma mark
 #pragma mark Private Methods
@@ -54,13 +61,13 @@ static NSUInteger ABWashersCountMax = 9;
     self.accountant = [ABAcountant object];
     self.director = [ABDirector object];
     
-    self.washers = [ABCarWasher objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)];
-    
-    for (ABCarWasher *washer in self.washers) {
-        [washer addObserver:self.accountant];
-        [washer addObserver:self];
-        [self.washersQueue addObjectToQueue:washer];
-    }
+    self.washers = [NSArray objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)
+                                factoryBlock:^id{
+                                    ABCarWasher *washer = [ABCarWasher object];
+                                    [washer addObserver:self.accountant];
+                                    [washer addObserver:self];
+                                    return washer;
+    }];
     
     [self.accountant addObserver:self.director];
 
@@ -73,20 +80,6 @@ static NSUInteger ABWashersCountMax = 9;
     }
     
     [self.accountant removeObserver:self.director];
-}
-
-#pragma mark
-#pragma mark ABWorkerObserver Methods
-
-- (void)workerDidBecomeFree:(ABWorker*)worker {
-    @synchronized (self) {
-        ABCar *car = [self.carsQueue popObjectFromQueue];
-        if (car) {
-            [worker processObject:car];
-        } else {
-            [self.washersQueue addObjectToQueue:worker];
-        }
-    }
 }
 
 @end

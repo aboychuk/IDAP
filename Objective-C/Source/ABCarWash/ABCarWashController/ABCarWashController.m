@@ -55,8 +55,33 @@
     }
 }
 
-- (void)washCars {
-    
+- (void)washCars:(NSArray *)cars {
+    @synchronized (self) {
+        for (ABCar *car in cars) {
+            if (car) {
+                ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
+                if (washer.state == ABWorkerFree) {
+                    [washer processObject:car];
+                } else {
+                    [self.carsQueue addObjectToQueue:car];
+                }
+            }
+        }
+    }
+}
+
+#pragma mark
+#pragma mark ABWorkerObserver Methods
+
+- (void)workerDidBecomeFree:(ABWorker*)worker {
+    @synchronized (self) {
+        ABCar *car = [self.carsQueue popObjectFromQueue];
+        if (car) {
+            [worker processObject:car];
+        } else {
+            [self.washersQueue addObjectToQueue:worker];
+        }
+    }
 }
 
 @end
