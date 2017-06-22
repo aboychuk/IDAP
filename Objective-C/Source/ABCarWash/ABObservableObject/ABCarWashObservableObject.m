@@ -86,12 +86,10 @@
 }
 
 - (void)notifyOfStateChangeWithSelector:(SEL)selector {
-    @synchronized (self) {
-        NSHashTable *observersHashTable = self.observersHashTable;
-        for (id observer in observersHashTable) {
-            if ([observer respondsToSelector:selector]) {
-                [observer performSelector:selector withObject:self];
-            }
+    NSHashTable *observersHashTable = self.observersHashTable;
+    for (id observer in observersHashTable) {
+        if ([observer respondsToSelector:selector]) {
+            [observer performSelector:selector withObject:self];
         }
     }
 }
