@@ -49,12 +49,6 @@
     }
 }
 
-- (void)createCarsQueue:(NSArray*)cars {
-    for (ABCar *car in cars) {
-        [self.carsQueue addObjectToQueue:car];
-    }
-}
-
 - (void)washCars:(NSArray *)cars {
     @synchronized (self) {
         for (ABCar *car in cars) {
