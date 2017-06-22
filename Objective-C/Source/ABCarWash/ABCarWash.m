@@ -39,6 +39,7 @@ static NSUInteger ABWashersCountMax = 9;
 - (instancetype)init {
     self = [super init];
     self.washersQueue = [ABQueue object];
+    self.carsQueue = [ABQueue object];
     [self setCarWashHierarchy];
     
     return self;
@@ -63,11 +64,15 @@ static NSUInteger ABWashersCountMax = 9;
     self.accountant = [ABAcountant object];
     self.director = [ABDirector object];
     
-    self.washers = [ABCarWasher objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)];
+    self.washers = [NSArray objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)
+                                factoryBlock:^id{
+            ABCarWasher *washer = [ABCarWasher object];
+            [washer addObserver:self.accountant];
+            [washer addObserver:self];
+            return washer;
+        }];
     
     for (ABCarWasher *washer in self.washers) {
-        [washer addObserver:self.accountant];
-        [washer addObserver:self];
         [self.washersQueue addObjectToQueue:washer];
     }
     
