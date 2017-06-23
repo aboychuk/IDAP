@@ -30,6 +30,11 @@
 
 - (void)finishProcessingObject:(id<ABMoneyFlow>)object {
     object.state = ABWorkerFree;
+    
+    if (!self.queue.isEmpty) {
+        [self processObjectInBackgroundThread:[self.queue popObjectFromQueue]];
+    }
+    
     self.state = ABWorkerFree;
 }
 

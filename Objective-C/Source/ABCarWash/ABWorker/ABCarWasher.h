@@ -9,6 +9,6 @@
 #import "ABWorker.h"
 #import "ABCar.h"
 
-@interface ABCarWasher : ABWorker
+@interface ABCarWasher : ABWorker 
 
 @end

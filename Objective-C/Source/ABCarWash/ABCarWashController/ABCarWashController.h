@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 #import "ABWorker.h"
+#import "ABCar.h"
 
 @interface ABCarWashController : NSObject <ABWorkerObserver>
 
-- (void)createWashersQueue:(NSArray*)washers;
-- (void)washCars:(NSArray*)cars;
+- (void)createWashersQueue:(NSArray *)washers;
+- (void)createCarsQueue:(ABCar *)car;
+- (void)washCars;
 
 @end

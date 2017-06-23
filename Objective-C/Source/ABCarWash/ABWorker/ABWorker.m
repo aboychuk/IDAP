@@ -8,6 +8,8 @@
 
 #import "ABWorker.h"
 
+#import "ABCarWashController.h"
+
 static NSUInteger ABWorkerSalary = 2000;
 static NSUInteger maxExpirience = 10;
 static NSUInteger nameLength = 6;
@@ -86,7 +88,7 @@ static NSUInteger ABRandomSleep = 1000;
 - (void)backgroundThreadOperationsWithObject:(id<ABMoneyFlow>)object {
     [self takeMoneyFromObject:object];
     [self processScpecificOperations:object];
-//    [self sleep];
+    [self sleep];
     [self processObjectOnMainThread:object];
 }
 
@@ -102,6 +104,9 @@ static NSUInteger ABRandomSleep = 1000;
 
 - (void)finishProcessingObject:(id<ABMoneyFlow>)object {
     object.state = ABWorkerFree;
+    if (!self.queue.isEmpty) {
+        [self processObjectInBackgroundThread:[self.queue popObjectFromQueue]];
+    }
 }
 
 - (void)finishProcess {

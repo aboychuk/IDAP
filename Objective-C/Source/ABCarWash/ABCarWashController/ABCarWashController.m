@@ -49,16 +49,19 @@
     }
 }
 
-- (void)washCars:(NSArray *)cars {
+- (void)createCarsQueue:(ABCar *)car {
+    [self.carsQueue addObjectToQueue:car];
+}
+
+- (void)washCars {
     @synchronized (self) {
-        for (ABCar *car in cars) {
+        ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
+        if (washer) {
+            ABCar *car = [self.carsQueue popObjectFromQueue];
             if (car) {
-                ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
-                if (washer) {
-                    [washer processObject:car];
-                } else {
-                    [self.carsQueue addObjectToQueue:car];
-                }
+                [washer processObject:car];
+            } else {
+                [self.carsQueue addObjectToQueue:car];
             }
         }
     }

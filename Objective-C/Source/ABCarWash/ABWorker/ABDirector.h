@@ -8,6 +8,6 @@
 
 #import "ABWorker.h"
 
-@interface ABDirector : ABWorker
+@interface ABDirector : ABWorker 
 
 @end
