@@ -86,12 +86,13 @@ static NSUInteger ABRandomSleep = 1000;
 - (void)backgroundThreadOperationsWithObject:(id<ABMoneyFlow>)object {
     [self takeMoneyFromObject:object];
     [self processScpecificOperations:object];
-    [self sleep];
+//    [self sleep];
     [self processObjectOnMainThread:object];
 }
 
 - (void)sleep {
     usleep((uint32_t)ABRandomWithMaxValue(ABRandomSleep));
+    NSLog(@"%@ is sleeping", self);
 }
 
 //Method created for overriding do not call it directly.

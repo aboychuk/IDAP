@@ -54,7 +54,7 @@
         for (ABCar *car in cars) {
             if (car) {
                 ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
-                if (washer.state == ABWorkerFree) {
+                if (washer) {
                     [washer processObject:car];
                 } else {
                     [self.carsQueue addObjectToQueue:car];
