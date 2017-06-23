@@ -141,7 +141,7 @@ static NSUInteger ABRandomSleep = 1000;
 #pragma mark
 #pragma mark ABWorkerObserver Methods
 
-- (void)workerDidBecomeReadyForProcess:(ABWorker*)worker {
+- (void)workerDidBecomeReadyForProcess:(ABWorker *)worker {
         [self processObject:worker];
 }
 

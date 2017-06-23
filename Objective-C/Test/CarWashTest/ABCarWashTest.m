@@ -21,9 +21,7 @@ static NSUInteger   countOfCars = 20;
     }];
 
     ABCarWash *carWashCompany = [ABCarWash object];
-    for (ABCar *car in cars) {
-        [carWashCompany washCars:car];
-    }
+    [carWashCompany washCars:cars];
     
     NSRunLoop *runLoop = [NSRunLoop mainRunLoop];
     [runLoop run];

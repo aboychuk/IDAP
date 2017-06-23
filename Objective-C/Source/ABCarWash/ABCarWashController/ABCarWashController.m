@@ -44,24 +44,30 @@
 #pragma mark - Public Methods
 
 - (void)createWashersQueue:(NSArray*)washers {
-    for (ABCarWasher *washer in washers) {
-        [self.washersQueue addObjectToQueue:washer];
+    @synchronized (self) {
+        for (ABCarWasher *washer in washers) {
+            [self.washersQueue addObjectToQueue:washer];
+        }
     }
 }
 
-- (void)createCarsQueue:(ABCar *)car {
-    [self.carsQueue addObjectToQueue:car];
+- (void)createCarsQueue:(NSArray *)cars {
+    @synchronized (self) {
+        for (ABCar *car in cars){
+            [self.carsQueue addObjectToQueue:car];
+        }
+    }
 }
 
 - (void)washCars {
     @synchronized (self) {
-        ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
-        if (washer) {
-            ABCar *car = [self.carsQueue popObjectFromQueue];
-            if (car) {
-                [washer processObject:car];
-            } else {
-                [self.carsQueue addObjectToQueue:car];
+        while (!self.carsQueue.isEmpty) {
+            ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
+            if (washer) {
+                ABCar *car = [self.carsQueue popObjectFromQueue];
+                if (car) {
+                    [washer processObject:car];
+                }
             }
         }
     }
@@ -72,10 +78,7 @@
 
 - (void)workerDidBecomeFree:(ABWorker*)worker {
     @synchronized (self) {
-        ABCar *car = [self.carsQueue popObjectFromQueue];
-        if (car) {
-            [worker processObject:car];
-        } else {
+        if (worker.state == ABWorkerFree) {
             [self.washersQueue addObjectToQueue:worker];
         }
     }
