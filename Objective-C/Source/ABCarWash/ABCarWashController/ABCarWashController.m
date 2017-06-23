@@ -62,12 +62,12 @@
 - (void)washCars {
     @synchronized (self) {
         while (!self.carsQueue.isEmpty) {
-            ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
-            if (washer) {
-                ABCar *car = [self.carsQueue popObjectFromQueue];
-                if (car) {
-                    [washer processObject:car];
-                }
+            ABCar *car = [self.carsQueue popObjectFromQueue];
+            if (car) {
+                ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
+                [washer processObject:car];
+            } else {
+                [self.carsQueue addObjectToQueue:car];
             }
         }
     }
