@@ -102,11 +102,25 @@ static NSUInteger ABRandomSleep = 1000;
     
 }
 
+- (void)setState:(NSUInteger)state {
+    @synchronized (self) {
+        if (state == self.state) {
+            return;
+        }
+        
+        if (state == ABWorkerFree) {
+            id object = [self.queue popObjectFromQueue];
+            if (object) {
+                state = ABWorkerBusy;
+                [self backgroundThreadOperationsWithObject:object];
+            }
+        }
+        [super setState:state];
+    }
+}
+
 - (void)finishProcessingObject:(id<ABMoneyFlow>)object {
     object.state = ABWorkerFree;
-    if (!self.queue.isEmpty) {
-        [self processObjectInBackgroundThread:[self.queue popObjectFromQueue]];
-    }
 }
 
 - (void)finishProcess {

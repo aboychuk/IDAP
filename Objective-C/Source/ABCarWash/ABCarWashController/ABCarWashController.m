@@ -61,24 +61,28 @@
 
 - (void)washCars {
     @synchronized (self) {
-        while (!self.carsQueue.isEmpty) {
-            ABCar *car = [self.carsQueue popObjectFromQueue];
-            if (car) {
-                ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
+        ABCar *car = [self.carsQueue popObjectFromQueue];
+        if (car) {
+            ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
+            if (washer && washer.state == ABWorkerFree) {
                 [washer processObject:car];
-            } else {
-                [self.carsQueue addObjectToQueue:car];
             }
         }
     }
 }
+
+
 
 #pragma mark
 #pragma mark ABWorkerObserver Methods
 
 - (void)workerDidBecomeFree:(ABWorker*)worker {
     @synchronized (self) {
-        if (worker.state == ABWorkerFree) {
+        ABCar *car = [self.carsQueue popObjectFromQueue];
+        if (car) {
+            [worker processObject:car];
+        }
+        else if (worker.state == ABWorkerFree) {
             [self.washersQueue addObjectToQueue:worker];
         }
     }

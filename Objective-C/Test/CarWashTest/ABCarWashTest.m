@@ -11,7 +11,7 @@
 #import "NSObject+ABObjectExtension.h"
 #import "NSArray+ABExtension.h"
 
-static NSUInteger   countOfCars = 20;
+static NSUInteger   countOfCars = 1000;
 
 @implementation ABCarWashTest
 
