@@ -40,6 +40,8 @@ static NSUInteger ABWashersCountMax = 9;
     self = [super init];
     self.washersQueue = [ABQueue object];
     self.carsQueue = [ABQueue object];
+    self.accountant = [ABAcountant object];
+    self.director = [ABDirector object];
     [self setCarWashHierarchy];
     
     return self;
@@ -61,22 +63,19 @@ static NSUInteger ABWashersCountMax = 9;
 #pragma mark Private Methods
 
 - (void)setCarWashHierarchy {
-    self.accountant = [ABAcountant object];
-    self.director = [ABDirector object];
+    ABAcountant *accountant = self.accountant;
     
     self.washers = [NSArray objectsWithCount:ABRandomWithMaxValue(ABWashersCountMax)
                                 factoryBlock:^id{
-            ABCarWasher *washer = [ABCarWasher object];
-            [washer addObserver:self.accountant];
-            [washer addObserver:self];
-            return washer;
-        }];
+                                            ABCarWasher *washer = [ABCarWasher object];
+                                            [washer addObserver:accountant];
+                                            [washer addObserver:self];
+                                            [self.washersQueue addObjectToQueue:washer];
+                                    
+                                            return washer;
+                                        }];
     
-    for (ABCarWasher *washer in self.washers) {
-        [self.washersQueue addObjectToQueue:washer];
-    }
-    
-    [self.accountant addObserver:self.director];
+    [accountant addObserver:self.director];
 
 }
 

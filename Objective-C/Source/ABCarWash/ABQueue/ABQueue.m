@@ -37,7 +37,7 @@
 #pragma mark - Accesors
 
 - (BOOL)isEmpty {
-    return self.count == 0;
+    return !self.count;
 }
 
 - (NSUInteger)count {
