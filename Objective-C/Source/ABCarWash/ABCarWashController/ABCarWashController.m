@@ -76,7 +76,7 @@
 #pragma mark
 #pragma mark ABWorkerObserver Methods
 
-- (void)workerDidBecomeFree:(ABWorker*)worker {
+- (void)workerDidBecomeFree:(ABWorker *)worker {
     @synchronized (self) {
         ABCar *car = [self.carsQueue popObjectFromQueue];
         if (car) {

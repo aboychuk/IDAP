@@ -30,6 +30,7 @@
 		493055301EE94709005DA22A /* ABQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4930552F1EE94709005DA22A /* ABQueue.m */; };
 		493809D81EFA748400DA8291 /* ABCarWash.m in Sources */ = {isa = PBXBuildFile; fileRef = 493809D71EFA748400DA8291 /* ABCarWash.m */; };
 		493809DC1EFAA0EB00DA8291 /* ABCarWashController.m in Sources */ = {isa = PBXBuildFile; fileRef = 493809DB1EFAA0EB00DA8291 /* ABCarWashController.m */; };
+		495354051EFFBF2900533B06 /* ABDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 495354041EFFBF2900533B06 /* ABDispatcher.m */; };
 		4953B54D1EDDBA1000A7D5AA /* ABObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4953B54C1EDDBA1000A7D5AA /* ABObservableObject.m */; };
 		49683A0D1ED5C79700C4390B /* ABAlphabetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49683A0C1ED5C79700C4390B /* ABAlphabetSpec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49BEC20A1EE93CF40014AE62 /* ABCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BEC1F91EE93CF40014AE62 /* ABCar.m */; };
@@ -124,6 +125,8 @@
 		493809D71EFA748400DA8291 /* ABCarWash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWash.m; sourceTree = "<group>"; };
 		493809DA1EFAA0EB00DA8291 /* ABCarWashController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashController.h; sourceTree = "<group>"; };
 		493809DB1EFAA0EB00DA8291 /* ABCarWashController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashController.m; sourceTree = "<group>"; };
+		495354031EFFBF2900533B06 /* ABDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDispatcher.h; sourceTree = "<group>"; };
+		495354041EFFBF2900533B06 /* ABDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDispatcher.m; sourceTree = "<group>"; };
 		4953B54B1EDDBA1000A7D5AA /* ABObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABObservableObject.h; sourceTree = "<group>"; };
 		4953B54C1EDDBA1000A7D5AA /* ABObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABObservableObject.m; sourceTree = "<group>"; };
 		49683A0C1ED5C79700C4390B /* ABAlphabetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAlphabetSpec.m; sourceTree = "<group>"; };
@@ -300,6 +303,16 @@
 			path = ABCarWashController;
 			sourceTree = "<group>";
 		};
+		495354021EFFBF0500533B06 /* ABDispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				495354031EFFBF2900533B06 /* ABDispatcher.h */,
+				495354041EFFBF2900533B06 /* ABDispatcher.m */,
+			);
+			name = ABDispatcher;
+			path = ABCarWashController/ABDispatcher;
+			sourceTree = "<group>";
+		};
 		49683A0B1ED5C52200C4390B /* Specs */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +326,7 @@
 		49BEC1F61EE93CF40014AE62 /* ABCarWash */ = {
 			isa = PBXGroup;
 			children = (
+				495354021EFFBF0500533B06 /* ABDispatcher */,
 				493809D91EFAA0D100DA8291 /* ABCarWashController */,
 				4930552D1EE946BC005DA22A /* ABQueue */,
 				49BEC1FA1EE93CF40014AE62 /* ABCarWash.h */,
@@ -725,6 +739,7 @@
 				491451FF1EDEED0500F89E38 /* ABAssignReference.m in Sources */,
 				49CEA2AC1EDC75B800910AFB /* ABRangeAlphabet.m in Sources */,
 				4926D80E1EE14C64008CFFB1 /* NSObject+ABRandomNumber.m in Sources */,
+				495354051EFFBF2900533B06 /* ABDispatcher.m in Sources */,
 				491451FB1EDEEC8900F89E38 /* ABReference.m in Sources */,
 				49CEA2E41EDC75B800910AFB /* ABCarWashTest.m in Sources */,
 				49CEA2CE1EDC75B800910AFB /* NSObject+ABCreatureCategory.m in Sources */,
