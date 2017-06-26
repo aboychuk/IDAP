@@ -14,5 +14,6 @@
 
 - (void)addObjectToQueue:(id)object;
 - (id)popObjectFromQueue;
+- (void)removeObject:(id)object;
 
 @end

@@ -66,4 +66,10 @@
     }
 }
 
+- (void)removeObject:(id)object {
+    @synchronized (self) {
+        [self.mutableQueue removeObject:object];
+    }
+}
+
 @end
