@@ -73,7 +73,8 @@
 }
 
 - (void)takeObjectForProcessing:(id<ABMoneyFlow>)object {
-    
+    id handler = [self.handlers popObjectFromQueue];
+    [handler processObject:object];
 }
 
 @end
