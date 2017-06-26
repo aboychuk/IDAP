@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ABWorker.h"
+
 @interface ABDispatcher : NSObject
+
+- (void)addHandler:(id)handler;
+- (void)addHandlers:(NSArray *)handlers;
+- (void)removeHandler:(id)handler;
+
+- (void)takeObjectForProcessing:(id<ABMoneyFlow>)object;
 
 @end
