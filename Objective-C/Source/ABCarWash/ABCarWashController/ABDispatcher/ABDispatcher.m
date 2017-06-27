@@ -77,4 +77,32 @@
     [handler processObject:object];
 }
 
+#pragma mark
+#pragma mark Private Methods
+
+
+
+#pragma mark
+#pragma mark ABWorkerObserver Methods
+
+- (void)workerDidBecomeReadyForProcess:(id<ABMoneyFlow>)object {
+    NSMutableSet *handlers = self.mutableHandlers;
+    if (![handlers containsObject:object]) {
+        [self.handlers addObjectToQueue:object];
+    }
+    
+    [self.processedObjects addObjectToQueue:object];
+    [self takeObjectForProcessing:object];
+}
+
+- (void)workerDidBecomeFree:(id<ABMoneyFlow>)object {
+    NSMutableSet *handlers = self.mutableHandlers;
+    if (![handlers containsObject:object]) {
+        [self.handlers addObjectToQueue:object];
+    }
+    
+    [self.processedObjects addObjectToQueue:object];
+    [self takeObjectForProcessing:object];
+}
+
 @end
