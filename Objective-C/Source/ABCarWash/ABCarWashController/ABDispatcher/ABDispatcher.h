@@ -10,7 +10,7 @@
 
 #import "ABWorker.h"
 
-@interface ABDispatcher : NSObject
+@interface ABDispatcher : NSObject <ABWorkerObserver>
 
 - (void)addHandler:(id)handler;
 - (void)addHandlers:(NSArray *)handlers;
