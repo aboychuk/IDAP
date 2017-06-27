@@ -13,7 +13,7 @@
 @interface ABDispatcher ()
 @property (nonatomic, retain)   ABQueue         *processedObjects;
 @property (nonatomic, retain)   ABQueue         *handlers;
-@property (nonatomic, retain)   NSMutableSet    *mutableHandlers;
+@property (nonatomic, retain)   NSMutableArray  *mutableHandlers;
 
 @end
 
@@ -35,7 +35,7 @@
     if (self) {
         self.processedObjects = [ABQueue object];
         self.handlers = [ABQueue object];
-        self.mutableHandlers = [NSMutableSet set];
+        self.mutableHandlers = [NSMutableArray array];
     }
     
     return self;
@@ -46,7 +46,7 @@
 
 - (void)addHandler:(id)handler {
     @synchronized (self) {
-        NSMutableSet *handlers = self.mutableHandlers;
+        NSMutableArray *handlers = self.mutableHandlers;
         if (![handlers containsObject:handler]) {
             [handlers addObject:handler];
             [handler addObserver:self];
@@ -81,7 +81,7 @@
 #pragma mark ABWorkerObserver Methods
 
 - (void)workerDidBecomeReadyForProcess:(id<ABMoneyFlow>)object {
-    NSMutableSet *handlers = self.mutableHandlers;
+    NSMutableArray *handlers = self.mutableHandlers;
     if (![handlers containsObject:object]) {
         [self.handlers addObjectToQueue:object];
     }
@@ -91,7 +91,7 @@
 }
 
 - (void)workerDidBecomeFree:(id<ABMoneyFlow>)object {
-    NSMutableSet *handlers = self.mutableHandlers;
+    NSMutableArray *handlers = self.mutableHandlers;
     if (![handlers containsObject:object]) {
         [self.handlers addObjectToQueue:object];
     }
