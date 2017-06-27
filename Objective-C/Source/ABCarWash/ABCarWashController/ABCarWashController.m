@@ -8,13 +8,15 @@
 
 #import "ABCarWashController.h"
 
+#import "ABDispatcher.h"
 #import "ABQueue.h"
 #import "ABCar.h"
 #import "ABCarWasher.h"
 
 @interface ABCarWashController ()
-@property (nonatomic, retain)   ABQueue         *washersQueue;
-@property (nonatomic, retain)   ABQueue         *carsQueue;
+@property (nonatomic, retain)   ABDispatcher    *washersDispatcher;
+@property (nonatomic, retain)   ABDispatcher    *accountantDispatcher;
+@property (nonatomic, retain)   ABDispatcher    *directorDispatcher;
 
 @end
 
@@ -24,8 +26,9 @@
 #pragma mark - Initializations and Deallocations
 
 - (void)dealloc {
-    self.carsQueue = nil;
-    self.washersQueue = nil;
+    self.washersDispatcher = nil;
+    self.accountantDispatcher = nil;
+    self.directorDispatcher = nil;
     
     [super dealloc];
 }
@@ -33,8 +36,9 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.washersQueue = [ABQueue object];
-        self.carsQueue = [ABQueue object];
+        self.washersDispatcher = [ABDispatcher object];
+        self.accountantDispatcher = [ABDispatcher object];
+        self.directorDispatcher = [ABDispatcher object];
     }
     
     return self;
@@ -42,22 +46,6 @@
 
 #pragma mark
 #pragma mark - Public Methods
-
-- (void)createWashersQueue:(NSArray*)washers {
-    @synchronized (self) {
-        for (ABCarWasher *washer in washers) {
-            [self.washersQueue addObjectToQueue:washer];
-        }
-    }
-}
-
-- (void)createCarsQueue:(NSArray *)cars {
-    @synchronized (self) {
-        for (ABCar *car in cars){
-            [self.carsQueue addObjectToQueue:car];
-        }
-    }
-}
 
 - (void)washCars {
     @synchronized (self) {
@@ -67,23 +55,6 @@
             if (washer && washer.state == ABWorkerFree) {
                 [washer processObject:car];
             }
-        }
-    }
-}
-
-
-
-#pragma mark
-#pragma mark ABWorkerObserver Methods
-
-- (void)workerDidBecomeFree:(ABWorker *)worker {
-    @synchronized (self) {
-        ABCar *car = [self.carsQueue popObjectFromQueue];
-        if (car) {
-            [worker processObject:car];
-        }
-        else if (worker.state == ABWorkerFree) {
-            [self.washersQueue addObjectToQueue:worker];
         }
     }
 }
