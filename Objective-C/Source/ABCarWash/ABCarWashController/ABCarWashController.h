@@ -13,6 +13,6 @@
 
 @interface ABCarWashController : NSObject <ABWorkerObserver>
 
-- (void)washCars;
+- (void)washCars:(NSArray *)cars;
 
 @end

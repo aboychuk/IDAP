@@ -78,11 +78,6 @@
 }
 
 #pragma mark
-#pragma mark Private Methods
-
-
-
-#pragma mark
 #pragma mark ABWorkerObserver Methods
 
 - (void)workerDidBecomeReadyForProcess:(id<ABMoneyFlow>)object {

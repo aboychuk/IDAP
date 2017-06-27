@@ -52,8 +52,7 @@ static NSUInteger ABWashersCountMax = 9;
 #pragma mark Public Methods
 
 - (void)washCars:(NSArray *)cars{
-    [self.controller createCarsQueue:cars];
-    [self.controller washCars];
+    [self.controller washCars:cars];
 }
 
 #pragma mark

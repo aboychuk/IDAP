@@ -47,16 +47,18 @@
 #pragma mark
 #pragma mark - Public Methods
 
-- (void)washCars {
-    @synchronized (self) {
-        ABCar *car = [self.carsQueue popObjectFromQueue];
-        if (car) {
-            ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
-            if (washer && washer.state == ABWorkerFree) {
-                [washer processObject:car];
-            }
-        }
+- (void)washCars:(NSArray *)cars {
+    for (ABCar *car in cars) {
+        [self.washersDispatcher takeObjectForProcessing:car];
     }
 }
+
+#pragma mark
+#pragma mark Private Methods
+
+- (void)setCarWashHierarchy {
+
+}
+
 
 @end
