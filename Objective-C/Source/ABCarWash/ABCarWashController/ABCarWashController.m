@@ -16,8 +16,8 @@
 
 #import "NSArray+ABExtension.h"
 
-static NSUInteger ABWashersCount = 10;
-static NSUInteger ABAccountantCount = 2;
+static NSUInteger ABWashersCount = 5;
+static NSUInteger ABAccountantCount = 4;
 
 @interface ABCarWashController ()
 @property (nonatomic, retain)   ABDispatcher    *washersDispatcher;

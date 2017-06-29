@@ -74,7 +74,7 @@
 - (void)takeObjectForProcessing:(id<ABMoneyFlow>)object {
     [self.processedObjects addObjectToQueue:object];
     [self startWork];
-    }
+}
 
 - (void)startWork {
     id handler = [self.handlers popObjectFromQueue];
@@ -82,6 +82,8 @@
         id object = [self.processedObjects popObjectFromQueue];
         if (object) {
             [handler processObject:object];
+        } else {
+            [self.handlers addObjectToQueue:handler];
         }
     }
 }
@@ -90,17 +92,22 @@
 #pragma mark ABWorkerObserver Methods
 
 - (void)workerDidBecomeReadyForProcess:(id<ABMoneyFlow>)object {
-    NSMutableArray *handlers = self.mutableHandlers;
-    if (![handlers containsObject:object]) {
-        [self takeObjectForProcessing:object];
+    @synchronized (self) {
+        NSMutableArray *handlers = self.mutableHandlers;
+        if (![handlers containsObject:object]) {
+            [self.processedObjects addObjectToQueue:object];
+            [self startWork];
+        }
     }
 }
 
 - (void)workerDidBecomeFree:(id<ABMoneyFlow>)object {
-    NSMutableArray *handlers = self.mutableHandlers;
-    if ([handlers containsObject:object]) {
-        [self.handlers addObjectToQueue:object];
-        [self takeObjectForProcessing:object];
+    @synchronized (self) {
+        NSMutableArray *handlers = self.mutableHandlers;
+        if ([handlers containsObject:object]) {
+            [self.handlers addObjectToQueue:object];
+            [self startWork];
+        }
     }
 }
 
