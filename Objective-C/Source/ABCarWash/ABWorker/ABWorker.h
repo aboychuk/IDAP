@@ -27,7 +27,7 @@ typedef NS_ENUM(NSUInteger, ABWorkerState) {
 
 - (void)workerDidBecomeBusy:(id <ABMoneyFlow>) object;
 - (void)workerDidBecomeFree:(id <ABMoneyFlow>) object;
-- (void)objectDidBecomeReadyForProcess:(id<ABMoneyFlow>)object;
+- (void)workerDidBecomeReadyForProcess:(id<ABMoneyFlow>)object;
 
 @end
 

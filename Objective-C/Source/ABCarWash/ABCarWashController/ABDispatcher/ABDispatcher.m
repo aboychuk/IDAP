@@ -73,8 +73,18 @@
 }
 
 - (void)takeObjectForProcessing:(id<ABMoneyFlow>)object {
+    [self.processedObjects addObjectToQueue:object];
+    [self startProcess];
+    }
+
+- (void)startProcess {
     id handler = [self.handlers popObjectFromQueue];
-    [handler processObject:object];
+    if (handler) {
+        id object = [self.processedObjects popObjectFromQueue];
+        if (object) {
+            [handler processObject:object];
+        }
+    }
 }
 
 #pragma mark
@@ -82,22 +92,19 @@
 
 - (void)workerDidBecomeReadyForProcess:(id<ABMoneyFlow>)object {
     NSMutableArray *handlers = self.mutableHandlers;
-    if (![handlers containsObject:object]) {
+    if ([handlers containsObject:object]) {
         [self.handlers addObjectToQueue:object];
+        [self startProcess];
+
     }
-    
-    [self.processedObjects addObjectToQueue:object];
-    [self takeObjectForProcessing:object];
 }
 
 - (void)workerDidBecomeFree:(id<ABMoneyFlow>)object {
     NSMutableArray *handlers = self.mutableHandlers;
     if (![handlers containsObject:object]) {
         [self.handlers addObjectToQueue:object];
+        [self takeObjectForProcessing:object];
     }
-    
-    [self.processedObjects addObjectToQueue:object];
-    [self takeObjectForProcessing:object];
 }
 
 @end
