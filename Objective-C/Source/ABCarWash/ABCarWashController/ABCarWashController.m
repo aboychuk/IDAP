@@ -16,8 +16,11 @@
 
 #import "NSArray+ABExtension.h"
 
-static NSUInteger ABWashersCount = 5;
-static NSUInteger ABAccountantCount = 4;
+typedef NSArray*(^ABWorkerGenerator)(NSUInteger count, Class cls, id observer);
+
+static NSUInteger ABWashersCount = 10;
+static NSUInteger ABAccountantCount = 6;
+static NSUInteger ABDirectorCount = 1;
 
 @interface ABCarWashController ()
 @property (nonatomic, retain)   ABDispatcher    *washersDispatcher;
@@ -55,7 +58,7 @@ static NSUInteger ABAccountantCount = 4;
 #pragma mark
 #pragma mark - Public Methods
 
-- (void)washCars:(NSArray *)cars {
+- (void)processCars:(NSArray *)cars {
     for (ABCar *car in cars) {
         [self.washersDispatcher takeObjectForProcessing:car];
     }
@@ -69,24 +72,24 @@ static NSUInteger ABAccountantCount = 4;
     ABDispatcher *accountantsDispatcher = self.accountantDispatcher;
     ABDispatcher *directorsDispatcher = self.directorDispatcher;
     
-    [washersDispatcher addHandlers:[NSArray objectsWithCount:ABWashersCount
-                                                factoryBlock:^id{
-                                                    ABCarWasher *washer = [ABCarWasher object];
-                                                    [washer addObserver:accountantsDispatcher];
-                                                    
-                                                    return washer;
-                                                }]];
+    ABWorkerGenerator generator = ^NSArray*(NSUInteger count, Class cls, id observer) {
+        return [NSArray objectsWithCount:count
+                            factoryBlock:^id{
+                                id worker = [cls object];
+                                [worker addObserver:observer];
+                                
+                                return worker;
+                            }];
+    };
     
-    [accountantsDispatcher addHandlers:[NSArray objectsWithCount:ABAccountantCount
-                                                factoryBlock:^id{
-                                                    ABAcountant *accountant = [ABAcountant object];
-                                                    [accountant addObserver:directorsDispatcher];
-                                                    
-                                                    return accountant;
-                                                }]];
-    ABDirector *director = [ABDirector object];
+    NSArray* washers = generator(ABWashersCount,[ABCarWasher class], accountantsDispatcher);
+    NSArray* accountants = generator(ABAccountantCount, [ABAcountant class], directorsDispatcher);
+    NSArray* directors = generator(ABDirectorCount, [ABDirector class], nil);
     
-    [directorsDispatcher addHandler:director];
+    [washersDispatcher addHandlers:washers];
+    [accountantsDispatcher addHandlers:accountants];
+    [directorsDispatcher addHandlers:directors];
+    
 }
 
 
