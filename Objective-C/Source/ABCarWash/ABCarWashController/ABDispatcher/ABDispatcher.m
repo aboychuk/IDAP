@@ -93,8 +93,7 @@
 - (void)workerDidBecomeReadyForProcess:(id<ABMoneyFlow>)object {
     NSMutableArray *handlers = self.mutableHandlers;
     if ([handlers containsObject:object]) {
-        [self.handlers addObjectToQueue:object];
-        [self startProcess];
+        [self takeObjectForProcessing:object];
 
     }
 }
