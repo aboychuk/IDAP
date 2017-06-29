@@ -88,7 +88,7 @@ static NSUInteger ABRandomSleep = 1000;
 - (void)backgroundThreadOperationsWithObject:(id<ABMoneyFlow>)object {
     [self takeMoneyFromObject:object];
     [self processScpecificOperations:object];
-//    [self sleep];
+    [self sleep];
     [self processObjectOnMainThread:object];
 }
 
@@ -154,10 +154,6 @@ static NSUInteger ABRandomSleep = 1000;
 
 #pragma mark
 #pragma mark ABWorkerObserver Methods
-
-//- (void)workerDidBecomeReadyForProcess:(id<ABMoneyFlow>)object {
-//        [self processObject:object];
-//}
 
 - (SEL)selectorForState:(NSUInteger)state {
     switch (state) {
