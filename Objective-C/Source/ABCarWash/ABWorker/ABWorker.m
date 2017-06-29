@@ -19,8 +19,8 @@ static NSUInteger ABRandomSleep = 1000;
 @property (nonatomic, assign)   NSUInteger  money;
 
 - (void)sleep;
-- (void)mainThreadOperationsWithObject:(id<ABMoneyFlow>)object;
-- (void)backgroundThreadOperationsWithObject:(id<ABMoneyFlow>)object;
+- (void)performObjectWorkOnMainThread:(id<ABMoneyFlow>)object;
+- (void)performObjectWorkOnBackgroundThread:(id<ABMoneyFlow>)object;
 
 //Methodes for override;
 - (void)finishProcess;
@@ -67,25 +67,25 @@ static NSUInteger ABRandomSleep = 1000;
 }
 
 - (void)processObjectOnMainThread:(id<ABMoneyFlow>)object {
-    [self performSelectorOnMainThread:@selector(mainThreadOperationsWithObject:)
+    [self performSelectorOnMainThread:@selector(performObjectWorkOnMainThread:)
                            withObject:object
                         waitUntilDone:NO];
 }
 
 - (void)processObjectInBackgroundThread:(id<ABMoneyFlow>)object {
-    [self performSelectorInBackground:@selector(backgroundThreadOperationsWithObject:)
+    [self performSelectorInBackground:@selector(performObjectWorkOnBackgroundThread:)
                            withObject:object];
 }
 
 #pragma mark
 #pragma mark Private Methods
 
-- (void)mainThreadOperationsWithObject:(id<ABMoneyFlow>)object {
+- (void)performObjectWorkOnMainThread:(id<ABMoneyFlow>)object {
     [self finishProcess];
     [self finishProcessingObject:object];
 }
 
-- (void)backgroundThreadOperationsWithObject:(id<ABMoneyFlow>)object {
+- (void)performObjectWorkOnBackgroundThread:(id<ABMoneyFlow>)object {
     [self takeMoneyFromObject:object];
     [self processScpecificOperations:object];
     [self sleep];
@@ -112,7 +112,7 @@ static NSUInteger ABRandomSleep = 1000;
             id object = [self.queue popObjectFromQueue];
             if (object) {
                 state = ABWorkerBusy;
-                [self backgroundThreadOperationsWithObject:object];
+                [self performObjectWorkOnBackgroundThread:object];
             }
         }
         [super setState:state];
