@@ -11,17 +11,13 @@
 #import "NSObject+ABObjectExtension.h"
 #import "NSArray+ABExtension.h"
 
-static NSUInteger   countOfCars = 250;
+//static NSUInteger   countOfCars = 250;
 
 @implementation ABCarWashTest
 
 + (void)startTest {
-    NSArray *cars = [NSArray objectsWithCount:countOfCars factoryBlock:^id{
-        return [[ABCar new] autorelease];
-    }];
-
     ABCarWash *carWashCompany = [ABCarWash object];
-    [carWashCompany washCars:cars];
+//    [carWashCompany washCars];
     
     NSRunLoop *runLoop = [NSRunLoop mainRunLoop];
     [runLoop run];

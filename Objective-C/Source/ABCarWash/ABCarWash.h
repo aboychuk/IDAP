@@ -8,15 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ABCarWasher.h"
-#import "ABAcountant.h"
-#import "ABDirector.h"
-#import "ABCar.h"
-#import "ABQueue.h"
-
-#import "NSObject+ABObjectExtension.h"
-#import "NSArray+ABExtension.h"
-#import "NSObject+ABRandomNumber.h"
+#import "ABWorker.h"
 
 @interface ABCarWash : NSObject <ABWorkerObserver>
 

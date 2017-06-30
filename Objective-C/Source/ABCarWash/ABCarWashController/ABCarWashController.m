@@ -18,9 +18,9 @@
 
 typedef NSArray*(^ABWorkerGenerator)(NSUInteger count, Class cls, id observer);
 
-static NSUInteger ABWashersCount = 10;
-static NSUInteger ABAccountantCount = 6;
-static NSUInteger ABDirectorCount = 1;
+static NSUInteger       ABWashersCount = 10;
+static NSUInteger       ABAccountantCount = 6;
+static NSUInteger       ABDirectorCount = 1;
 
 @interface ABCarWashController ()
 @property (nonatomic, retain)   ABDispatcher    *washersDispatcher;
@@ -89,7 +89,6 @@ static NSUInteger ABDirectorCount = 1;
     [washersDispatcher addHandlers:washers];
     [accountantsDispatcher addHandlers:accountants];
     [directorsDispatcher addHandlers:directors];
-    
 }
 
 @end
