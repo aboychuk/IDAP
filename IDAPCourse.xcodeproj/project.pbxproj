@@ -81,6 +81,8 @@
 		49CEA2E91EDC75B800910AFB /* ABCreatureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2A01EDC75B800910AFB /* ABCreatureTest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49CEA2EA1EDC75B800910AFB /* ABSyntaxTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2A31EDC75B800910AFB /* ABSyntaxTest.m */; };
 		49CEA2EB1EDC75B800910AFB /* ABSyntaxTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CEA2A31EDC75B800910AFB /* ABSyntaxTest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		49E4F5751F067B5600D76BF8 /* NSTimer+ABWeakReferenceTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E4F5741F067B5600D76BF8 /* NSTimer+ABWeakReferenceTimer.m */; };
+		49E4F57A1F0687AC00D76BF8 /* ABTimerWeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E4F5791F0687AC00D76BF8 /* ABTimerWeakReference.m */; };
 		53C46E0DCD11103BA67DDF4B /* libPods-ObjectiveCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7745F17141330D74C6D0AD19 /* libPods-ObjectiveCTests.a */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +188,10 @@
 		49CEA2A01EDC75B800910AFB /* ABCreatureTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCreatureTest.m; sourceTree = "<group>"; };
 		49CEA2A21EDC75B800910AFB /* ABSyntaxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSyntaxTest.h; sourceTree = "<group>"; };
 		49CEA2A31EDC75B800910AFB /* ABSyntaxTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSyntaxTest.m; sourceTree = "<group>"; };
+		49E4F5731F067B5600D76BF8 /* NSTimer+ABWeakReferenceTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+ABWeakReferenceTimer.h"; sourceTree = "<group>"; };
+		49E4F5741F067B5600D76BF8 /* NSTimer+ABWeakReferenceTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+ABWeakReferenceTimer.m"; sourceTree = "<group>"; };
+		49E4F5781F0687AC00D76BF8 /* ABTimerWeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTimerWeakReference.h; sourceTree = "<group>"; };
+		49E4F5791F0687AC00D76BF8 /* ABTimerWeakReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABTimerWeakReference.m; sourceTree = "<group>"; };
 		6F302B0B1EA7D17B000D7A95 /* Objective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7745F17141330D74C6D0AD19 /* libPods-ObjectiveCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjectiveCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB592A6194EFAE8857AA4AC3 /* Pods-ObjectiveCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCTests/Pods-ObjectiveCTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -430,6 +436,10 @@
 		49CEA2701EDC75B800910AFB /* ABCategory */ = {
 			isa = PBXGroup;
 			children = (
+				49E4F5731F067B5600D76BF8 /* NSTimer+ABWeakReferenceTimer.h */,
+				49E4F5741F067B5600D76BF8 /* NSTimer+ABWeakReferenceTimer.m */,
+				49E4F5781F0687AC00D76BF8 /* ABTimerWeakReference.h */,
+				49E4F5791F0687AC00D76BF8 /* ABTimerWeakReference.m */,
 				49CEA2711EDC75B800910AFB /* NSArray+ABExtension.h */,
 				49CEA2721EDC75B800910AFB /* NSArray+ABExtension.m */,
 				49CEA2751EDC75B800910AFB /* NSObject+ABObjectExtension.h */,
@@ -746,12 +756,14 @@
 				49BEC20F1EE93CF40014AE62 /* ABDirector.m in Sources */,
 				49CEA2C21EDC75B800910AFB /* NSArray+ABExtension.m in Sources */,
 				4953B54D1EDDBA1000A7D5AA /* ABObservableObject.m in Sources */,
+				49E4F57A1F0687AC00D76BF8 /* ABTimerWeakReference.m in Sources */,
 				49CEA2AA1EDC75B800910AFB /* ABClasterAlphabet.m in Sources */,
 				49CEA2CC1EDC75B800910AFB /* ABCreatureMale.m in Sources */,
 				49CEA2A41EDC75B800910AFB /* main.m in Sources */,
 				493809D81EFA748400DA8291 /* ABCarWash.m in Sources */,
 				491468E11EDD772100B74EA1 /* ABDelegate.m in Sources */,
 				49CEA2D41EDC75B800910AFB /* ABSyntax+ABCategory.m in Sources */,
+				49E4F5751F067B5600D76BF8 /* NSTimer+ABWeakReferenceTimer.m in Sources */,
 				49BEC20E1EE93CF40014AE62 /* ABCarWasher.m in Sources */,
 				49CEA2D61EDC75B800910AFB /* ABSyntax.m in Sources */,
 				49CEA2A81EDC75B800910AFB /* NSString+ABExtensions.m in Sources */,
