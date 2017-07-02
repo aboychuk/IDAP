@@ -64,7 +64,7 @@
         ABCar *car = [self.carsQueue popObjectFromQueue];
         if (car) {
             ABCarWasher *washer = [self.washersQueue popObjectFromQueue];
-            if (washer && washer.state == ABWorkerFree) {
+            if (washer) {
                 [washer processObject:car];
             }
         }
@@ -81,8 +81,7 @@
         ABCar *car = [self.carsQueue popObjectFromQueue];
         if (car) {
             [worker processObject:car];
-        }
-        else if (worker.state == ABWorkerFree) {
+        } else {
             [self.washersQueue addObjectToQueue:worker];
         }
     }
