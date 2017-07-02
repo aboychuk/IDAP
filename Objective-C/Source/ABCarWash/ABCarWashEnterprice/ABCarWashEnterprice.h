@@ -1,5 +1,5 @@
 //
-//  ABCarWashController.h
+//  ABCarWashEnterprice.h
 //  IDAPCourse
 //
 //  Created by Andrew Boychuk on 7/2/17.
@@ -10,10 +10,8 @@
 
 #import "ABWorker.h"
 
-@interface ABCarWashController : NSObject <ABWorkerObserver>
-@property (nonatomic, assign, getter=isRunning) BOOL    running;
+@interface ABCarWashEnterprice : NSObject
 
-- (void)start;
-- (void)stop;
+- (void)processCars:(NSArray *)cars;
 
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ABCarWash.h"
+#import "ABCarWashController.h"
 
 @interface ABCarWashTest : NSObject
 

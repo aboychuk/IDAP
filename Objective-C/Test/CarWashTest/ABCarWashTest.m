@@ -9,14 +9,15 @@
 #import "ABCarWashTest.h"
 
 #import "NSObject+ABObjectExtension.h"
-#import "NSArray+ABExtension.h"
 
 //static NSUInteger   countOfCars = 250;
 
 @implementation ABCarWashTest
 
 + (void)startTest {
-    ABCarWash *carWashCompany = [ABCarWash object];
+    ABCarWashController *carWashController = [ABCarWashController object];
+    
+    [carWashController start];
     
     NSRunLoop *runLoop = [NSRunLoop mainRunLoop];
     [runLoop run];

@@ -8,7 +8,7 @@
 
 #import "ABWorker.h"
 
-#import "ABCarWashController.h"
+#import "ABCarWashEnterprice.h"
 
 static NSUInteger ABWorkerSalary = 2000;
 static NSUInteger maxExpirience = 10;
