@@ -13,7 +13,7 @@
 
 #import "NSTimer+ABWeakReferenceTimer.h"
 
-static NSUInteger       ABCarsCount = 25;
+static NSUInteger       ABCarsCount = 5;
 static NSTimeInterval   ABTimerCount = 1;
 
 @interface ABCarWash ()
@@ -38,17 +38,30 @@ static NSTimeInterval   ABTimerCount = 1;
     self = [super init];
     if (self) {
         self.controller = [ABCarWashController object];
+        [self start];
         [self prepareTimer];
     }
     
     return self;
 }
 
+#pragma mark
+#pragma mark Accesors
+
 - (void)setTimer:(NSTimer *)timer {
     if (_timer != timer) {
+        [_timer release];
         [_timer invalidate];
-        _timer = timer;
+        _timer = [timer retain];
     }
+}
+
+- (void)start {
+    self.running = YES;
+}
+
+- (void)stop {
+    self.running = NO;
 }
 
 #pragma mark
@@ -59,15 +72,17 @@ static NSTimeInterval   ABTimerCount = 1;
 }
 
 - (void)prepareTimer {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:ABTimerCount
-                                              weakTarget:self
-                                                selector:@selector(fireTimer:)
-                                                userInfo:nil
-                                                 repeats:YES];
+    if (self.running == YES) {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:ABTimerCount
+                                                  weakTarget:self
+                                                    selector:@selector(fireTimer:)
+                                                    userInfo:nil
+                                                     repeats:YES];
+    }
 }
 
 - (void)fireTimer:(NSTimer *)timer {
-    NSArray * cars = [ABCar objectsWithCount:ABCarsCount];
+    NSArray *cars = [ABCar objectsWithCount:ABCarsCount];
     [self performSelectorInBackground:@selector(washCars:)
                            withObject:cars];
 }

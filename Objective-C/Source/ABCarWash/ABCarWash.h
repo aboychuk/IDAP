@@ -11,7 +11,10 @@
 #import "ABWorker.h"
 
 @interface ABCarWash : NSObject <ABWorkerObserver>
+@property (nonatomic, assign, getter=isRunning) BOOL    running;
 
 - (void)washCars:(NSArray *)cars;
+- (void)start;
+- (void)stop;
 
 @end
