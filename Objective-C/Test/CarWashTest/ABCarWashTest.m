@@ -17,7 +17,6 @@
 
 + (void)startTest {
     ABCarWash *carWashCompany = [ABCarWash object];
-//    [carWashCompany washCars];
     
     NSRunLoop *runLoop = [NSRunLoop mainRunLoop];
     [runLoop run];

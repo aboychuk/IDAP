@@ -112,7 +112,7 @@ static NSUInteger ABRandomSleep = 1000;
             id object = [self.queue popObjectFromQueue];
             if (object) {
                 state = ABWorkerBusy;
-                [self backgroundThreadOperationsWithObject:object];
+                [self processObjectInBackgroundThread:object];
             }
         }
         [super setState:state];

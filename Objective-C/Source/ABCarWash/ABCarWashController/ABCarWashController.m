@@ -16,7 +16,7 @@
 
 #import "NSArray+ABExtension.h"
 
-typedef NSArray*(^ABWorkerGenerator)(NSUInteger count, Class cls, id observer);
+typedef NSArray*(^ABWorkerGenerator)(NSUInteger workerCount, Class workerCls, id workerObserver);
 
 static NSUInteger       ABWashersCount = 10;
 static NSUInteger       ABAccountantCount = 6;
@@ -72,11 +72,11 @@ static NSUInteger       ABDirectorCount = 1;
     ABDispatcher *accountantsDispatcher = self.accountantDispatcher;
     ABDispatcher *directorsDispatcher = self.directorDispatcher;
     
-    ABWorkerGenerator generator = ^NSArray*(NSUInteger count, Class cls, id observer) {
-        return [NSArray objectsWithCount:count
+    ABWorkerGenerator generator = ^NSArray*(NSUInteger workerCount, Class workerCls, id workerObserver) {
+        return [NSArray objectsWithCount:workerCount
                             factoryBlock:^id{
-                                id worker = [cls object];
-                                [worker addObserver:observer];
+                                id worker = [workerCls object];
+                                [worker addObserver:workerObserver];
                                 
                                 return worker;
                             }];
