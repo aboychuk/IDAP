@@ -28,8 +28,7 @@
     NSLog(@"Director has %lu USD of profit!", self.money);
 }
 
-- (void)finishProcessingObject:(id<ABMoneyFlow>)object {
-    object.state = ABWorkerFree;
+- (void)finishProcess {
     self.state = ABWorkerFree;
 }
 
