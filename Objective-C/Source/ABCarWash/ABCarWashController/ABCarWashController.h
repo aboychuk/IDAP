@@ -13,7 +13,4 @@
 @interface ABCarWashController : NSObject <ABWorkerObserver>
 @property (nonatomic, assign, getter=isRunning) BOOL    running;
 
-- (void)start;
-- (void)stop;
-
 @end

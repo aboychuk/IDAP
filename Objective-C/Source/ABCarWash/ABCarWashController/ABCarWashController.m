@@ -21,6 +21,9 @@ static NSTimeInterval ABTimerCount  = 1;
 @property (nonatomic, retain)   ABCarWashEnterprice *enterprice;
 @property (nonatomic, retain)   NSTimer             *timer;
 
+- (void)start;
+- (void)stop;
+
 @end
 
 @implementation ABCarWashController
@@ -38,7 +41,7 @@ static NSTimeInterval ABTimerCount  = 1;
     self = [super init];
     if (self) {
         self.enterprice = [ABCarWashEnterprice object];
-        [self prepareTimer];
+        [self start];
     }
     
     return self;
@@ -55,8 +58,15 @@ static NSTimeInterval ABTimerCount  = 1;
     }
 }
 
+- (void)setRunning:(BOOL)running {
+    if (_running != running) {
+        _running = running;
+        [self prepareTimer];
+    }
+}
+
 #pragma mark
-#pragma mark Public Methods
+#pragma mark Private Methods
 
 - (void)start {
     self.running = YES;
@@ -66,23 +76,20 @@ static NSTimeInterval ABTimerCount  = 1;
     self.running = NO;
 }
 
-#pragma mark
-#pragma mark Private Methods
-
 - (void)prepareTimer {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:ABTimerCount
-                                              weakTarget:self
-                                                selector:@selector(fireTimer:)
-                                                userInfo:nil
-                                                 repeats:YES];
+    if ([self isRunning]) {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:ABTimerCount
+                                                  weakTarget:self
+                                                    selector:@selector(fireTimer:)
+                                                    userInfo:nil
+                                                     repeats:YES];
+    }
 }
 
 - (void)fireTimer:(NSTimer *)timer {
-    if ([self isRunning]) {
-        NSArray *cars = [ABCar objectsWithCount:ABCarsCount];
-        [self.enterprice performSelectorInBackground:@selector(processCars:)
-                                          withObject:cars];
-    }
+    NSArray *cars = [ABCar objectsWithCount:ABCarsCount];
+    [self.enterprice performSelectorInBackground:@selector(processCars:)
+                                      withObject:cars];
 }
 
 @end
