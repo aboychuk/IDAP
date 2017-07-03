@@ -7,7 +7,6 @@
 //
 
 #import "ABWorker.h"
-#import "ABCar.h"
 
 @interface ABCarWasher : ABWorker 
 

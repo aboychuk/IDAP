@@ -8,6 +8,8 @@
 
 #import "ABCarWasher.h"
 
+#import "ABCar.h"
+
 @interface ABCarWasher ()
 
 - (void)wash:(ABCar *)car;
