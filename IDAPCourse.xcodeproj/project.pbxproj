@@ -13,6 +13,7 @@
 		491468DA1EDD72AE00B74EA1 /* ABDelegatingObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 491468D91EDD72AE00B74EA1 /* ABDelegatingObjectSpec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		491468E11EDD772100B74EA1 /* ABDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 491468E01EDD772100B74EA1 /* ABDelegate.m */; };
 		491468E21EDD774C00B74EA1 /* ABDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 491468E01EDD772100B74EA1 /* ABDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		493B98DE1F0A420C002685DF /* ABGCDObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 493B98DD1F0A420C002685DF /* ABGCDObject.m */; };
 		49683A0D1ED5C79700C4390B /* ABAlphabetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49683A0C1ED5C79700C4390B /* ABAlphabetSpec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4988BFE21EEFD1F400B3F823 /* ABThreadUnsafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4988BFE11EEFD1F400B3F823 /* ABThreadUnsafeObject.m */; };
 		4988BFE31EEFD1F400B3F823 /* ABThreadUnsafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4988BFE11EEFD1F400B3F823 /* ABThreadUnsafeObject.m */; };
@@ -103,6 +104,8 @@
 		491468E01EDD772100B74EA1 /* ABDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDelegate.m; sourceTree = "<group>"; };
 		49229EBB1ED5C105002FBFF3 /* ObjectiveCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49229EBF1ED5C105002FBFF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		493B98DC1F0A420C002685DF /* ABGCDObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABGCDObject.h; sourceTree = "<group>"; };
+		493B98DD1F0A420C002685DF /* ABGCDObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABGCDObject.m; sourceTree = "<group>"; };
 		49683A0C1ED5C79700C4390B /* ABAlphabetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAlphabetSpec.m; sourceTree = "<group>"; };
 		4978A1181EF1751900C43AD3 /* ABBlockObservationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABBlockObservationController.h; sourceTree = "<group>"; };
 		4978A1191EF1751900C43AD3 /* ABBlockObservationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABBlockObservationController.m; sourceTree = "<group>"; };
@@ -260,6 +263,15 @@
 				49229EBF1ED5C105002FBFF3 /* Info.plist */,
 			);
 			path = ObjectiveCTests;
+			sourceTree = "<group>";
+		};
+		493B98DB1F0A41C4002685DF /* ABThreading */ = {
+			isa = PBXGroup;
+			children = (
+				493B98DC1F0A420C002685DF /* ABGCDObject.h */,
+				493B98DD1F0A420C002685DF /* ABGCDObject.m */,
+			);
+			path = ABThreading;
 			sourceTree = "<group>";
 		};
 		49683A0B1ED5C52200C4390B /* Specs */ = {
@@ -462,6 +474,7 @@
 		49CEA2801EDC75B800910AFB /* Syntax */ = {
 			isa = PBXGroup;
 			children = (
+				493B98DB1F0A41C4002685DF /* ABThreading */,
 				49CEA2811EDC75B800910AFB /* ABEqualityObject.h */,
 				49CEA2821EDC75B800910AFB /* ABEqualityObject.m */,
 				49CEA2831EDC75B800910AFB /* ABObjCSyntax.h */,
@@ -755,6 +768,7 @@
 				49CEA2AA1EDC75B800910AFB /* ABClasterAlphabet.m in Sources */,
 				49CEA2CC1EDC75B800910AFB /* ABCreatureMale.m in Sources */,
 				49CEA2A41EDC75B800910AFB /* main.m in Sources */,
+				493B98DE1F0A420C002685DF /* ABGCDObject.m in Sources */,
 				491468E11EDD772100B74EA1 /* ABDelegate.m in Sources */,
 				49CEA2D41EDC75B800910AFB /* ABSyntax+ABCategory.m in Sources */,
 				49CEA2D61EDC75B800910AFB /* ABSyntax.m in Sources */,

@@ -13,18 +13,24 @@
 #import "NSObject+ABObjectExtension.h"
 #import "ABCarWashTest.h"
 #import "ABThreadUnsafeObject.h"
+#import "ABGCDObject.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        ABThreadUnsafeObject *object = [[ABThreadUnsafeObject new] autorelease];
-        for (NSUInteger threadCount = 0; threadCount < 100; threadCount++) {
-            [object performSelectorInBackground:@selector(setValue:)
-                                     withObject:[[NSObject new] autorelease]];
-        }
+//        ABThreadUnsafeObject *object = [[ABThreadUnsafeObject new] autorelease];
+//        for (NSUInteger threadCount = 0; threadCount < 100; threadCount++) {
+//            [object performSelectorInBackground:@selector(setValue:)
+//                                     withObject:[[NSObject new] autorelease]];
+//        }
+//        
+//        while (true) {
+//            
+//        }
+        ABGCDObject *gcd = [ABGCDObject object];
+        [gcd executeConcurent];
         
-        while (true) {
-            
-        }
+        NSRunLoop *runloop = [NSRunLoop mainRunLoop];
+        [runloop run];
     }
     
     return 0;
