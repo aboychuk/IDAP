@@ -9,6 +9,7 @@
 #import "ABWorker.h"
 
 #import "ABCarWashEnterprice.h"
+#import "ABGCDExtension.h"
 
 static NSUInteger ABWorkerSalary = 2000;
 static NSUInteger maxExpirience = 10;
@@ -16,7 +17,7 @@ static NSUInteger nameLength = 6;
 static NSUInteger ABRandomSleep = 1000;
 
 @interface ABWorker()
-@property (nonatomic, assign)   NSUInteger  money;
+@property (nonatomic, assign)   NSUInteger          money;
 
 - (void)sleep;
 - (void)mainThreadOperationsWithObject:(id<ABMoneyFlow>)object;
@@ -36,7 +37,7 @@ static NSUInteger ABRandomSleep = 1000;
 
 - (void)dealloc {
     self.name = nil;
-    self.queue = nil;
+    self.workerQueue = nil;
     
     [super dealloc];
 }
@@ -47,7 +48,7 @@ static NSUInteger ABRandomSleep = 1000;
     self.salary = ABWorkerSalary;
     self.experience = ABRandomWithMaxValue(maxExpirience);
     self.state = ABWorkerFree;
-    self.queue = [ABQueue object];
+    self.workerQueue = [ABQueue object];
     
     return self;
 }
@@ -59,23 +60,29 @@ static NSUInteger ABRandomSleep = 1000;
     @synchronized (self) {
         if (self.state == ABWorkerFree) {
             self.state = ABWorkerBusy;
-            [self processObjectInBackgroundThread:object];
+            [ABGCDExtension dispatchAsyncInBackgroundThread:self.queue block:^{
+                [self backgroundThreadOperationsWithObject:object];
+                
+                [ABGCDExtension dispatchAsyncOnMainTheradWithBlock:^{
+                    [self mainThreadOperationsWithObject:object];
+                }];
+            }];
         } else {
-            [self.queue addObjectToQueue:object];
+            [self.workerQueue addObjectToQueue:object];
         }
     }
 }
 
-- (void)processObjectOnMainThread:(id<ABMoneyFlow>)object {
-    [self performSelectorOnMainThread:@selector(mainThreadOperationsWithObject:)
-                           withObject:object
-                        waitUntilDone:NO];
-}
-
-- (void)processObjectInBackgroundThread:(id<ABMoneyFlow>)object {
-    [self performSelectorInBackground:@selector(backgroundThreadOperationsWithObject:)
-                           withObject:object];
-}
+//- (void)processObjectOnMainThread:(id<ABMoneyFlow>)object {
+//    [self performSelectorOnMainThread:@selector(mainThreadOperationsWithObject:)
+//                           withObject:object
+//                        waitUntilDone:NO];
+//}
+//
+//- (void)processObjectInBackgroundThread:(id<ABMoneyFlow>)object {
+//    [self performSelectorInBackground:@selector(backgroundThreadOperationsWithObject:)
+//                           withObject:object];
+//}
 
 #pragma mark
 #pragma mark Private Methods
@@ -89,7 +96,7 @@ static NSUInteger ABRandomSleep = 1000;
     [self takeMoneyFromObject:object];
     [self processScpecificOperations:object];
     [self sleep];
-    [self processObjectOnMainThread:object];
+//    [self processObjectOnMainThread:object];
 }
 
 - (void)sleep {
@@ -109,10 +116,10 @@ static NSUInteger ABRandomSleep = 1000;
         }
         
         if (state == ABWorkerFree) {
-            id object = [self.queue popObjectFromQueue];
+            id object = [self.workerQueue popObjectFromQueue];
             if (object) {
                 state = ABWorkerBusy;
-                [self processObjectInBackgroundThread:object];
+//                [self processObjectInBackgroundThread:object];
             }
         }
         [super setState:state];

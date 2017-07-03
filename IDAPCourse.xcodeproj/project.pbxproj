@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		491451F11EDEC03F00F89E38 /* ABPurseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 491451F01EDEC03F00F89E38 /* ABPurseSpec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		491468DA1EDD72AE00B74EA1 /* ABDelegatingObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 491468D91EDD72AE00B74EA1 /* ABDelegatingObjectSpec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		493986DD1F0A757100A8C2DA /* ABGCDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 493986DC1F0A757100A8C2DA /* ABGCDExtension.m */; };
 		49683A0D1ED5C79700C4390B /* ABAlphabetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49683A0C1ED5C79700C4390B /* ABAlphabetSpec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		497043F11F0952CC00232A5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 497043811F0952CC00232A5A /* main.m */; };
 		497043F21F0952CC00232A5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 497043811F0952CC00232A5A /* main.m */; };
@@ -117,6 +118,8 @@
 		491468D91EDD72AE00B74EA1 /* ABDelegatingObjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDelegatingObjectSpec.m; sourceTree = "<group>"; };
 		49229EBB1ED5C105002FBFF3 /* ObjectiveCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49229EBF1ED5C105002FBFF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		493986DB1F0A757100A8C2DA /* ABGCDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABGCDExtension.h; sourceTree = "<group>"; };
+		493986DC1F0A757100A8C2DA /* ABGCDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABGCDExtension.m; sourceTree = "<group>"; };
 		49683A0C1ED5C79700C4390B /* ABAlphabetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAlphabetSpec.m; sourceTree = "<group>"; };
 		497043811F0952CC00232A5A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		497043841F0952CC00232A5A /* ABAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAlphabet.h; sourceTree = "<group>"; };
@@ -426,6 +429,8 @@
 				497043B61F0952CC00232A5A /* NSObject+ABRandomNumber.m */,
 				497043B71F0952CC00232A5A /* NSTimer+ABWeakReferenceTimer.h */,
 				497043B81F0952CC00232A5A /* NSTimer+ABWeakReferenceTimer.m */,
+				493986DB1F0A757100A8C2DA /* ABGCDExtension.h */,
+				493986DC1F0A757100A8C2DA /* ABGCDExtension.m */,
 			);
 			path = ABCategory;
 			sourceTree = "<group>";
@@ -789,6 +794,7 @@
 				4970440F1F0952CC00232A5A /* ABWorker.m in Sources */,
 				4970441D1F0952CC00232A5A /* ABCreatureFemale.m in Sources */,
 				497044231F0952CC00232A5A /* ABEqualityObject.m in Sources */,
+				493986DD1F0A757100A8C2DA /* ABGCDExtension.m in Sources */,
 				497044411F0952CC00232A5A /* ABCreatureGenderTest.m in Sources */,
 				497044451F0952CC00232A5A /* ABSyntaxTest.m in Sources */,
 				497044211F0952CC00232A5A /* NSObject+ABCreatureCategory.m in Sources */,
