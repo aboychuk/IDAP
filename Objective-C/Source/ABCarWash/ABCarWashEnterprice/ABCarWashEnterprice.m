@@ -16,7 +16,7 @@
 
 #import "NSArray+ABExtension.h"
 
-typedef NSArray*(^ABWorkerGenerator)(NSUInteger workerCount, Class workerCls, id workerObserver);
+typedef ABDispatcher*(^ABDispatcherGenerator)(NSUInteger workerCount, Class workerCls, ABDispatcher *workerObserver);
 
 static NSUInteger ABWashersCount    = 10;
 static NSUInteger ABAccountantCount = 6;
@@ -68,27 +68,26 @@ static NSUInteger ABDirectorCount   = 1;
 #pragma mark Private Methods
 
 - (void)setCarWashHierarchy {
-    ABDispatcher *washersDispatcher = self.washersDispatcher;
-    ABDispatcher *accountantsDispatcher = self.accountantDispatcher;
-    ABDispatcher *directorsDispatcher = self.directorDispatcher;
-    
-    ABWorkerGenerator generator = ^NSArray*(NSUInteger workerCount, Class workerCls, id workerObserver) {
-        return [NSArray objectsWithCount:workerCount
+    ABDispatcherGenerator generator = ^ABDispatcher*(NSUInteger workerCount, Class workerCls, ABDispatcher *workerObserver) {
+        ABDispatcher *dispatcher = [ABDispatcher object];
+        
+        NSArray *workers = [NSArray objectsWithCount:workerCount
                             factoryBlock:^id{
                                 id worker = [workerCls object];
                                 [worker addObserver:workerObserver];
                                 
                                 return worker;
                             }];
+        
+        [dispatcher addHandlers:workers];
+        
+        return dispatcher;
     };
     
-    NSArray* washers = generator(ABWashersCount,[ABCarWasher class], accountantsDispatcher);
-    NSArray* accountants = generator(ABAccountantCount, [ABAcountant class], directorsDispatcher);
-    NSArray* directors = generator(ABDirectorCount, [ABDirector class], nil);
-    
-    [washersDispatcher addHandlers:washers];
-    [accountantsDispatcher addHandlers:accountants];
-    [directorsDispatcher addHandlers:directors];
+    self.directorDispatcher = generator(ABDirectorCount, [ABDirector class], nil);
+    self.accountantDispatcher = generator(ABAccountantCount, [ABAcountant class], self.directorDispatcher);
+    self.washersDispatcher = generator(ABWashersCount, [ABCarWasher class], self.accountantDispatcher);
+
 }
 
 
