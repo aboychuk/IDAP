@@ -10,12 +10,16 @@
 
 @implementation ABGCDExtension
 
-id createSerialDispatchQueue(const char *label) {
-    return dispatch_queue_create(label, DISPATCH_QUEUE_SERIAL);
+id createSerialDispatchQueue(NSString *label) {
+    return dispatch_queue_create([label cStringUsingEncoding:NSUTF8StringEncoding], DISPATCH_QUEUE_SERIAL);
 }
 
-id createConcurrentDispatchQueue(const char *label) {
-    return dispatch_queue_create(label, DISPATCH_QUEUE_CONCURRENT);
+id createConcurrentDispatchQueue(NSString *label) {
+    return dispatch_queue_create([label cStringUsingEncoding:NSUTF8StringEncoding], DISPATCH_QUEUE_CONCURRENT);
+}
+
+void releaseDispatchQueue(dispatch_queue_t queue) {
+    dispatch_release(queue);
 }
 
 void dispatchSyncOnMainThreadWithBlock(dispatch_block_t block) {

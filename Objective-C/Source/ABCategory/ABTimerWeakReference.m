@@ -36,8 +36,6 @@
     id target = self.target;
     if (target) {
         [target performSelector:self.selector withObject:timer];
-    } else {
-        [timer invalidate];
     }
 }
 

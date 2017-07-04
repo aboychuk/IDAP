@@ -21,6 +21,9 @@ static NSTimeInterval ABTimerCount  = 1;
 @property (nonatomic, retain)   ABCarWashEnterprice *enterprice;
 @property (nonatomic, retain)   NSTimer             *timer;
 
+- (void)start;
+- (void)stop;
+
 @end
 
 @implementation ABCarWashController
