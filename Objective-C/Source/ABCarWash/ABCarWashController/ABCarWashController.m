@@ -16,7 +16,7 @@
 
 
 static NSUInteger ABCarsCount   = 5;
-static NSUInteger ABTimerCount  = 1;
+static NSUInteger ABTimerCount  = 2;
 static NSString *GCDQueue       = @"ControllerGCDQueue";
 
 @interface ABCarWashController ()
@@ -67,11 +67,12 @@ static NSString *GCDQueue       = @"ControllerGCDQueue";
 - (void)start {
     if ([self isRunning]) {
         dispatchAfterCount(ABTimerCount, self.queue, ^{
-            dispatchAsyncOnMainTheradWithBlock(^{
+            dispatchAsyncInBackgroundThread(self.queue,^{
                 NSArray *cars = [ABCar objectsWithCount:ABCarsCount];
                 [self.enterprise performSelector:@selector(processCars:)
                                       withObject:cars];
             });
+            [self start];
         });
     }
 }
