@@ -1,5 +1,5 @@
 //
-//  ABCarWashEnterprice.h
+//  ABCarWashEnterprise.h
 //  IDAPCourse
 //
 //  Created by Andrew Boychuk on 7/2/17.
@@ -10,7 +10,7 @@
 
 #import "ABWorker.h"
 
-@interface ABCarWashEnterprice : NSObject
+@interface ABCarWashEnterprise : NSObject
 
 - (void)processCars:(NSArray *)cars;
 

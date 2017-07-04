@@ -13,7 +13,7 @@
 id createSerialDispatchQueue(NSString *label);
 id createConcurrentDispatchQueue(NSString *label);
 
-void releaseDispatchQueue(dispatch_queue_t queue);
+void dispatchAfterCount(NSUInteger count, dispatch_queue_t queue, dispatch_block_t block);
 
 void dispatchSyncOnMainThreadWithBlock(dispatch_block_t block);
 void dispatchAsyncOnMainTheradWithBlock(dispatch_block_t block);

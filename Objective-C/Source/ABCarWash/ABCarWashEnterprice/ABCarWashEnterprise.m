@@ -1,12 +1,12 @@
 //
-//  ABCarWashEnterprice.m
+//  ABCarWashEnterprise.m
 //  IDAPCourse
 //
 //  Created by Andrew Boychuk on 7/2/17.
 //  Copyright © 2017 Andrew Boychuk. All rights reserved.
 //
 
-#import "ABCarWashEnterprice.h"
+#import "ABCarWashEnterprise.h"
 
 #import "ABDispatcher.h"
 #import "ABCar.h"
@@ -22,14 +22,14 @@ static NSUInteger ABWashersCount    = 10;
 static NSUInteger ABAccountantCount = 6;
 static NSUInteger ABDirectorCount   = 1;
 
-@interface ABCarWashEnterprice ()
+@interface ABCarWashEnterprise ()
 @property (nonatomic, retain)   ABDispatcher    *washersDispatcher;
 @property (nonatomic, retain)   ABDispatcher    *accountantDispatcher;
 @property (nonatomic, retain)   ABDispatcher    *directorDispatcher;
 
 @end
 
-@implementation ABCarWashEnterprice
+@implementation ABCarWashEnterprise
 
 #pragma mark
 #pragma mark - Initializations and Deallocations

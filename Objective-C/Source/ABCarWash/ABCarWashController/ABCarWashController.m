@@ -9,7 +9,7 @@
 #import "ABCarWashController.h"
 
 #import "ABCar.h"
-#import "ABCarWashEnterprice.h"
+#import "ABCarWashEnterprise.h"
 
 #import "NSTimer+ABWeakReferenceTimer.h"
 
@@ -18,7 +18,7 @@ static NSUInteger ABCarsCount       = 5;
 static NSTimeInterval ABTimerCount  = 1;
 
 @interface ABCarWashController ()
-@property (nonatomic, retain)   ABCarWashEnterprice *enterprice;
+@property (nonatomic, retain)   ABCarWashEnterprise *enterprise;
 @property (nonatomic, retain)   NSTimer             *timer;
 
 - (void)start;
@@ -31,7 +31,7 @@ static NSTimeInterval ABTimerCount  = 1;
 #pragma mark Initializations and Deallocations
 
 - (void)dealloc {
-    self.enterprice = nil;
+    self.enterprise = nil;
     self.timer = nil;
     
     [super dealloc];
@@ -40,7 +40,7 @@ static NSTimeInterval ABTimerCount  = 1;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.enterprice = [ABCarWashEnterprice object];
+        self.enterprise = [ABCarWashEnterprise object];
     }
     
     return self;
@@ -91,7 +91,7 @@ static NSTimeInterval ABTimerCount  = 1;
 - (void)fireTimer:(NSTimer *)timer {
     if ([self isRunning]) {
         NSArray *cars = [ABCar objectsWithCount:ABCarsCount];
-        [self.enterprice performSelectorInBackground:@selector(processCars:)
+        [self.enterprise performSelectorInBackground:@selector(processCars:)
                                           withObject:cars];
     }
 }

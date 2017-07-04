@@ -25,8 +25,8 @@
 		497043FC1F0952CC00232A5A /* ABStringsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4970438E1F0952CC00232A5A /* ABStringsAlphabet.m */; };
 		497043FD1F0952CC00232A5A /* ABCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 497043921F0952CC00232A5A /* ABCar.m */; };
 		497043FE1F0952CC00232A5A /* ABCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 497043921F0952CC00232A5A /* ABCar.m */; };
-		497044011F0952CC00232A5A /* ABCarWashEnterprice.m in Sources */ = {isa = PBXBuildFile; fileRef = 497043981F0952CC00232A5A /* ABCarWashEnterprice.m */; };
-		497044021F0952CC00232A5A /* ABCarWashEnterprice.m in Sources */ = {isa = PBXBuildFile; fileRef = 497043981F0952CC00232A5A /* ABCarWashEnterprice.m */; };
+		497044011F0952CC00232A5A /* ABCarWashEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = 497043981F0952CC00232A5A /* ABCarWashEnterprise.m */; };
+		497044021F0952CC00232A5A /* ABCarWashEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = 497043981F0952CC00232A5A /* ABCarWashEnterprise.m */; };
 		497044031F0952CC00232A5A /* ABDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4970439B1F0952CC00232A5A /* ABDispatcher.m */; };
 		497044041F0952CC00232A5A /* ABDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4970439B1F0952CC00232A5A /* ABDispatcher.m */; };
 		497044051F0952CC00232A5A /* ABCarWashObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4970439E1F0952CC00232A5A /* ABCarWashObservableObject.m */; };
@@ -134,8 +134,8 @@
 		4970438E1F0952CC00232A5A /* ABStringsAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABStringsAlphabet.m; sourceTree = "<group>"; };
 		497043911F0952CC00232A5A /* ABCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCar.h; sourceTree = "<group>"; };
 		497043921F0952CC00232A5A /* ABCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCar.m; sourceTree = "<group>"; };
-		497043971F0952CC00232A5A /* ABCarWashEnterprice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashEnterprice.h; sourceTree = "<group>"; };
-		497043981F0952CC00232A5A /* ABCarWashEnterprice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashEnterprice.m; sourceTree = "<group>"; };
+		497043971F0952CC00232A5A /* ABCarWashEnterprise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashEnterprise.h; sourceTree = "<group>"; };
+		497043981F0952CC00232A5A /* ABCarWashEnterprise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCarWashEnterprise.m; sourceTree = "<group>"; };
 		4970439A1F0952CC00232A5A /* ABDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDispatcher.h; sourceTree = "<group>"; };
 		4970439B1F0952CC00232A5A /* ABDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDispatcher.m; sourceTree = "<group>"; };
 		4970439D1F0952CC00232A5A /* ABCarWashObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCarWashObservableObject.h; sourceTree = "<group>"; };
@@ -352,8 +352,8 @@
 		497043961F0952CC00232A5A /* ABCarWashEnterprice */ = {
 			isa = PBXGroup;
 			children = (
-				497043971F0952CC00232A5A /* ABCarWashEnterprice.h */,
-				497043981F0952CC00232A5A /* ABCarWashEnterprice.m */,
+				497043971F0952CC00232A5A /* ABCarWashEnterprise.h */,
+				497043981F0952CC00232A5A /* ABCarWashEnterprise.m */,
 			);
 			path = ABCarWashEnterprice;
 			sourceTree = "<group>";
@@ -743,7 +743,7 @@
 				497044461F0952CC00232A5A /* ABSyntaxTest.m in Sources */,
 				4970442C1F0952CC00232A5A /* ABSyntaxSubclass.m in Sources */,
 				497043FE1F0952CC00232A5A /* ABCar.m in Sources */,
-				497044021F0952CC00232A5A /* ABCarWashEnterprice.m in Sources */,
+				497044021F0952CC00232A5A /* ABCarWashEnterprise.m in Sources */,
 				4970440A1F0952CC00232A5A /* ABAcountant.m in Sources */,
 				497044261F0952CC00232A5A /* ABObjCSyntax.m in Sources */,
 				497044341F0952CC00232A5A /* ABPurse.m in Sources */,
@@ -815,7 +815,7 @@
 				497044111F0952CC00232A5A /* ABTimerWeakReference.m in Sources */,
 				4970442B1F0952CC00232A5A /* ABSyntaxSubclass.m in Sources */,
 				497044171F0952CC00232A5A /* NSObject+ABRandomNumber.m in Sources */,
-				497044011F0952CC00232A5A /* ABCarWashEnterprice.m in Sources */,
+				497044011F0952CC00232A5A /* ABCarWashEnterprise.m in Sources */,
 				4970442F1F0952CC00232A5A /* ABDelegatingObject.m in Sources */,
 				497044351F0952CC00232A5A /* ABPurseObserver.m in Sources */,
 				4970440B1F0952CC00232A5A /* ABCarWasher.m in Sources */,

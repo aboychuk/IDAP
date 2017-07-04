@@ -8,7 +8,7 @@
 
 #import "ABWorker.h"
 
-#import "ABCarWashEnterprice.h"
+#import "ABCarWashEnterprise.h"
 #import "ABGCDExtension.h"
 
 static NSUInteger ABWorkerSalary    = 2000;
@@ -23,8 +23,6 @@ static NSString *GCDQueue           = @"GCDQueue";
 
 
 - (void)sleep;
-- (void)mainThreadOperationsWithObject:(id<ABMoneyFlow>)object;
-- (void)backgroundThreadOperationsWithObject:(id<ABMoneyFlow>)object;
 
 //Methodes for override;
 - (void)finishProcess;
@@ -41,7 +39,7 @@ static NSString *GCDQueue           = @"GCDQueue";
 - (void)dealloc {
     self.name = nil;
     self.workerQueue = nil;
-    releaseDispatchQueue(self.queue);
+    dispatch_release(self.queue);
     
     [super dealloc];
 }
@@ -66,10 +64,13 @@ static NSString *GCDQueue           = @"GCDQueue";
         if (self.state == ABWorkerFree) {
             self.state = ABWorkerBusy;
             dispatchAsyncInBackgroundThread(self.queue, ^{
-                [self backgroundThreadOperationsWithObject:object];
+                [self takeMoneyFromObject:object];
+                [self processScpecificOperations:object];
+                [self sleep];
                 
                 dispatchAsyncOnMainTheradWithBlock(^{
-                    [self mainThreadOperationsWithObject:object];
+                    [self finishProcess];
+                    [self finishProcessingObject:object];
                 });
             });
         } else {
@@ -80,17 +81,6 @@ static NSString *GCDQueue           = @"GCDQueue";
 
 #pragma mark
 #pragma mark Private Methods
-
-- (void)mainThreadOperationsWithObject:(id<ABMoneyFlow>)object {
-    [self finishProcess];
-    [self finishProcessingObject:object];
-}
-
-- (void)backgroundThreadOperationsWithObject:(id<ABMoneyFlow>)object {
-    [self takeMoneyFromObject:object];
-    [self processScpecificOperations:object];
-    [self sleep];
-}
 
 - (void)sleep {
     usleep((uint32_t)ABRandomWithMaxValue(ABRandomSleep));

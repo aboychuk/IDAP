@@ -18,8 +18,8 @@ id createConcurrentDispatchQueue(NSString *label) {
     return dispatch_queue_create([label cStringUsingEncoding:NSUTF8StringEncoding], DISPATCH_QUEUE_CONCURRENT);
 }
 
-void releaseDispatchQueue(dispatch_queue_t queue) {
-    dispatch_release(queue);
+void dispatchAfterCount(NSUInteger count, dispatch_queue_t queue, dispatch_block_t block) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(count * NSEC_PER_SEC)), queue, block);
 }
 
 void dispatchSyncOnMainThreadWithBlock(dispatch_block_t block) {
