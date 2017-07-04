@@ -36,8 +36,6 @@ typedef NS_ENUM(NSUInteger, ABWorkerState) {
 @property (nonatomic, assign)   NSUInteger          salary;
 @property (nonatomic, assign)   NSUInteger          experience;
 @property (nonatomic, retain)   ABQueue             *workerQueue;
-@property (nonatomic, retain)   dispatch_queue_t    queue;
-
 
 - (void)processObject:(id<ABMoneyFlow>)object;
 //- (void)processObjectOnMainThread:(id<ABMoneyFlow>)object;

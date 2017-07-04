@@ -18,6 +18,8 @@ static NSUInteger ABRandomSleep = 1000;
 
 @interface ABWorker()
 @property (nonatomic, assign)   NSUInteger          money;
+@property (nonatomic, retain)   dispatch_queue_t    queue;
+
 
 - (void)sleep;
 - (void)mainThreadOperationsWithObject:(id<ABMoneyFlow>)object;
@@ -49,6 +51,7 @@ static NSUInteger ABRandomSleep = 1000;
     self.experience = ABRandomWithMaxValue(maxExpirience);
     self.state = ABWorkerFree;
     self.workerQueue = [ABQueue object];
+    self.queue = dispatch
     
     return self;
 }
@@ -60,9 +63,16 @@ static NSUInteger ABRandomSleep = 1000;
     @synchronized (self) {
         if (self.state == ABWorkerFree) {
             self.state = ABWorkerBusy;
-            [ABGCDExtension dispatchAsyncInBackgroundThread:self.queue block:^{
+            dispatchAsyncInBackgroundThread(self.queue, ^{
+                self backgroundThreadOperationsWithObject:object;
+            });
+            
+            
+            [dispatch_async(self.queue, ^{
+            block:^{
                 [self backgroundThreadOperationsWithObject:object];
-                
+            })]
+            
                 [ABGCDExtension dispatchAsyncOnMainTheradWithBlock:^{
                     [self mainThreadOperationsWithObject:object];
                 }];
@@ -119,6 +129,7 @@ static NSUInteger ABRandomSleep = 1000;
             id object = [self.workerQueue popObjectFromQueue];
             if (object) {
                 state = ABWorkerBusy;
+                [self processObject:object];
 //                [self processObjectInBackgroundThread:object];
             }
         }

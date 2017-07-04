@@ -283,7 +283,6 @@
 			children = (
 				497043831F0952CC00232A5A /* ABAlphabet */,
 				4970438F1F0952CC00232A5A /* ABCarWash */,
-				497043AD1F0952CC00232A5A /* ABCarWashController */,
 				497043AE1F0952CC00232A5A /* ABCategory */,
 				497043B91F0952CC00232A5A /* ABCreature */,
 				497043C21F0952CC00232A5A /* ABQueue */,
@@ -407,13 +406,6 @@
 				497043AC1F0952CC00232A5A /* ABWorker.m */,
 			);
 			path = ABWorker;
-			sourceTree = "<group>";
-		};
-		497043AD1F0952CC00232A5A /* ABCarWashController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ABCarWashController;
 			sourceTree = "<group>";
 		};
 		497043AE1F0952CC00232A5A /* ABCategory */ = {

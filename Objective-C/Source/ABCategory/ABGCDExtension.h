@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^ABVoidBlock)(void);
-
 @interface ABGCDExtension : NSObject
 
-+ (void)dispatchSyncOnMainThreadWithBlock:(ABVoidBlock)block;
-+ (void)dispatchAsyncOnMainTheradWithBlock:(ABVoidBlock)block;
+id createSerialDispatchQueue(const char *label);
+id createConcurrentDispatchQueue(const char *label);
 
-+ (void)dispatchSyncInBackgroundThread:(dispatch_queue_t)queue block:(ABVoidBlock)block;
-+ (void)dispatchAsyncInBackgroundThread:(dispatch_queue_t)queue block:(ABVoidBlock)block;
+void dispatchSyncOnMainThreadWithBlock(dispatch_block_t block);
+void dispatchAsyncOnMainTheradWithBlock(dispatch_block_t block);
+void dispatchSyncInBackgroundThread(dispatch_queue_t queue, dispatch_block_t block);
+void dispatchAsyncInBackgroundThread(dispatch_queue_t queue, dispatch_block_t block);
 
 @end
