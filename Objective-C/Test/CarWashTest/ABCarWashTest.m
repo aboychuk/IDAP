@@ -16,6 +16,7 @@
 
 + (void)startTest {
     ABCarWashController *carWashController = [ABCarWashController object];
+    carWashController.running = YES;
     
     NSRunLoop *runLoop = [NSRunLoop mainRunLoop];
     [runLoop run];

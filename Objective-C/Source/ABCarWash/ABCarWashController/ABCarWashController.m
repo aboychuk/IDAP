@@ -41,7 +41,6 @@ static NSTimeInterval ABTimerCount  = 1;
     self = [super init];
     if (self) {
         self.enterprice = [ABCarWashEnterprice object];
-        [self start];
     }
     
     return self;
@@ -52,8 +51,8 @@ static NSTimeInterval ABTimerCount  = 1;
 
 - (void)setTimer:(NSTimer *)timer {
     if (_timer != timer) {
-        [_timer release];
         [_timer invalidate];
+        [_timer release];
         _timer = [timer retain];
     }
 }
@@ -61,28 +60,29 @@ static NSTimeInterval ABTimerCount  = 1;
 - (void)setRunning:(BOOL)running {
     if (_running != running) {
         _running = running;
-        [self prepareTimer];
     }
+    
+    running ? [self start] : [self stop];
 }
 
 #pragma mark
 #pragma mark Private Methods
 
 - (void)start {
-    self.running = YES;
-}
-
-- (void)stop {
-    self.running = NO;
-}
-
-- (void)prepareTimer {
     if ([self isRunning]) {
         self.timer = [NSTimer scheduledTimerWithTimeInterval:ABTimerCount
                                                   weakTarget:self
                                                     selector:@selector(fireTimer:)
                                                     userInfo:nil
                                                      repeats:YES];
+    }
+}
+
+- (void)stop {
+    if (![self isRunning]) {
+        [self.timer invalidate];
+
+        self.timer = nil;
     }
 }
 
