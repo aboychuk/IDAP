@@ -10,16 +10,19 @@
 
 #import "ABCar.h"
 #import "ABCarWashEnterprise.h"
+#import "ABGCDExtension.h"
 
 #import "NSTimer+ABWeakReferenceTimer.h"
 
 
-static NSUInteger ABCarsCount       = 5;
-static NSTimeInterval ABTimerCount  = 1;
+static NSUInteger ABCarsCount   = 5;
+static NSUInteger ABTimerCount  = 1;
+static NSString *GCDQueue       = @"ControllerGCDQueue";
 
 @interface ABCarWashController ()
 @property (nonatomic, retain)   ABCarWashEnterprise *enterprise;
 @property (nonatomic, retain)   NSTimer             *timer;
+@property (nonatomic, retain)   dispatch_queue_t    queue;
 
 - (void)start;
 - (void)stop;
@@ -32,7 +35,7 @@ static NSTimeInterval ABTimerCount  = 1;
 
 - (void)dealloc {
     self.enterprise = nil;
-    self.timer = nil;
+    dispatch_release(self.queue);
     
     [super dealloc];
 }
@@ -41,6 +44,7 @@ static NSTimeInterval ABTimerCount  = 1;
     self = [super init];
     if (self) {
         self.enterprise = [ABCarWashEnterprise object];
+        self.queue = createConcurrentDispatchQueue(GCDQueue);
     }
     
     return self;
@@ -48,14 +52,6 @@ static NSTimeInterval ABTimerCount  = 1;
 
 #pragma mark
 #pragma mark Accesors
-
-- (void)setTimer:(NSTimer *)timer {
-    if (_timer != timer) {
-        [_timer invalidate];
-        [_timer release];
-        _timer = [timer retain];
-    }
-}
 
 - (void)setRunning:(BOOL)running {
     if (_running != running) {
@@ -66,34 +62,22 @@ static NSTimeInterval ABTimerCount  = 1;
 }
 
 #pragma mark
-#pragma mark Public Methods
+#pragma mark Private Methods
 
 - (void)start {
     if ([self isRunning]) {
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:ABTimerCount
-                                                  weakTarget:self
-                                                    selector:@selector(fireTimer:)
-                                                    userInfo:nil
-                                                     repeats:YES];
+        dispatchAfterCount(ABTimerCount, self.queue, ^{
+            dispatchAsyncOnMainTheradWithBlock(^{
+                NSArray *cars = [ABCar objectsWithCount:ABCarsCount];
+                [self.enterprise performSelector:@selector(processCars:)
+                                      withObject:cars];
+            });
+        });
     }
 }
 
 - (void)stop {
-    if (![self isRunning]) {
-        self.timer = nil;
-    }
-}
-
-#pragma mark
-#pragma mark Private Methods
-
-
-- (void)fireTimer:(NSTimer *)timer {
-    if ([self isRunning]) {
-        NSArray *cars = [ABCar objectsWithCount:ABCarsCount];
-        [self.enterprise performSelectorInBackground:@selector(processCars:)
-                                          withObject:cars];
-    }
+    
 }
 
 @end
