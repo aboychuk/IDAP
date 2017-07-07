@@ -81,8 +81,6 @@ static NSTimeInterval ABTimerCount  = 1;
 - (void)stop {
     if (![self isRunning]) {
         [self.timer invalidate];
-
-        self.timer = nil;
     }
 }
 
