@@ -15,6 +15,7 @@
 - (void)addHandler:(id)handler;
 - (void)addHandlers:(NSArray *)handlers;
 - (void)removeHandler:(id)handler;
+- (void)removeHandler;
 
 - (void)takeObjectForProcessing:(id<ABMoneyFlow>)object;
 

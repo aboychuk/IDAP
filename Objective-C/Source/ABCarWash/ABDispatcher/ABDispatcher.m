@@ -71,6 +71,13 @@
     }
 }
 
+- (void)removeHandlers {
+    NSMutableArray *handlers = self.mutableHandlers;
+    for (id handler in handlers) {
+        [self removeHandler:handler];
+    }
+}
+
 - (void)takeObjectForProcessing:(id<ABMoneyFlow>)object {
     [self.processedObjects addObjectToQueue:object];
     [self startWork];

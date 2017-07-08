@@ -35,7 +35,9 @@
 - (void)fireTimer:(NSTimer *)timer {
     id target = self.target;
     if (target) {
-        [target performSelector:self.selector withObject:timer];
+        if ([target respondsToSelector:self.selector]) {
+            [target performSelector:self.selector withObject:timer];
+        }
     }
 }
 
