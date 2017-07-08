@@ -10,8 +10,8 @@
 
 @interface ABGCDExtension : NSObject
 
-id createSerialDispatchQueue(NSString *label);
-id createConcurrentDispatchQueue(NSString *label);
+dispatch_queue_t createSerialDispatchQueue(NSString *label);
+dispatch_queue_t createConcurrentDispatchQueue(NSString *label);
 
 void dispatchAfterCount(NSUInteger count, dispatch_queue_t queue, dispatch_block_t block);
 

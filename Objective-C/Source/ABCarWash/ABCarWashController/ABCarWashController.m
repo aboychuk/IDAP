@@ -21,7 +21,6 @@ static NSString *GCDQueue       = @"ControllerGCDQueue";
 
 @interface ABCarWashController ()
 @property (nonatomic, retain)   ABCarWashEnterprise *enterprise;
-@property (nonatomic, retain)   NSTimer             *timer;
 @property (nonatomic, retain)   dispatch_queue_t    queue;
 
 - (void)start;
