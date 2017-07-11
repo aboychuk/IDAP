@@ -8,16 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
+typedef BOOL(^ABConditionBlock)(void);
+
 @interface ABGCDExtension : NSObject
 
-dispatch_queue_t createSerialDispatchQueue();
-dispatch_queue_t createConcurrentDispatchQueue();
+dispatch_queue_t ABCreateSerialDispatchQueue();
+dispatch_queue_t ABCreateConcurrentDispatchQueue();
 
-void dispatchAfterDelay(NSUInteger delay, dispatch_queue_t queue, dispatch_block_t block);
+dispatch_queue_t ABDispatchQueueWithQOSClass (long cls);
+dispatch_queue_t ABDispatchBackgroundQueue();
+dispatch_queue_t ABDispatchMainQueue();
 
-void dispatchSyncOnMainThreadWithBlock(dispatch_block_t block);
-void dispatchAsyncOnMainTheradWithBlock(dispatch_block_t block);
-void dispatchSyncInBackgroundThread(dispatch_queue_t queue, dispatch_block_t block);
-void dispatchAsyncInBackgroundThread(dispatch_queue_t queue, dispatch_block_t block);
+void ABDispatchSyncOnMainThread(dispatch_block_t block);
+void ABDispatchAsyncOnMainTherad(dispatch_block_t block);
+void ABDispatchSyncInBackgroundThread(dispatch_block_t block);
+void ABDispatchAsyncInBackgroundThread(dispatch_block_t block);
+
+void ABDispatchAfterDelay(NSUInteger delay, dispatch_block_t block);
+void ABDispatchAfterDelayWithCondition(NSUInteger delay, dispatch_block_t block, ABConditionBlock conditionBlock);
 
 @end
