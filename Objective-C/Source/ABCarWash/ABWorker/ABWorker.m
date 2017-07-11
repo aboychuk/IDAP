@@ -19,8 +19,6 @@ static NSString *GCDQueue           = @"GCDQueue";
 
 @interface ABWorker()
 @property (nonatomic, assign)   NSUInteger          money;
-@property (nonatomic, retain)   dispatch_queue_t    queue;
-
 
 - (void)sleep;
 
@@ -39,7 +37,6 @@ static NSString *GCDQueue           = @"GCDQueue";
 - (void)dealloc {
     self.name = nil;
     self.workerQueue = nil;
-    dispatch_release(self.queue);
     
     [super dealloc];
 }
@@ -51,7 +48,6 @@ static NSString *GCDQueue           = @"GCDQueue";
     self.experience = ABRandomWithMaxValue(maxExpirience);
     self.state = ABWorkerFree;
     self.workerQueue = [ABQueue object];
-    self.queue = createConcurrentDispatchQueue(GCDQueue);
     
     return self;
 }
@@ -63,7 +59,7 @@ static NSString *GCDQueue           = @"GCDQueue";
     @synchronized (self) {
         if (self.state == ABWorkerFree) {
             self.state = ABWorkerBusy;
-            dispatchAsyncInBackgroundThread(self.queue, ^{
+            dispatchAsyncInBackgroundThread(createConcurrentDispatchQueue(), ^{
                 [self takeMoneyFromObject:object];
                 [self processScpecificOperations:object];
                 [self sleep];

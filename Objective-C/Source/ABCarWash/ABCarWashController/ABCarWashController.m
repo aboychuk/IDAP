@@ -17,14 +17,11 @@
 
 static NSUInteger ABCarsCount   = 5;
 static NSUInteger ABTimerCount  = 2;
-static NSString *GCDQueue       = @"ControllerGCDQueue";
 
 @interface ABCarWashController ()
 @property (nonatomic, retain)   ABCarWashEnterprise *enterprise;
-@property (nonatomic, retain)   dispatch_queue_t    queue;
 
 - (void)start;
-- (void)stop;
 
 @end
 
@@ -34,7 +31,6 @@ static NSString *GCDQueue       = @"ControllerGCDQueue";
 
 - (void)dealloc {
     self.enterprise = nil;
-    dispatch_release(self.queue);
     
     [super dealloc];
 }
@@ -43,7 +39,6 @@ static NSString *GCDQueue       = @"ControllerGCDQueue";
     self = [super init];
     if (self) {
         self.enterprise = [ABCarWashEnterprise object];
-        self.queue = createConcurrentDispatchQueue(GCDQueue);
     }
     
     return self;
@@ -57,7 +52,7 @@ static NSString *GCDQueue       = @"ControllerGCDQueue";
         _running = running;
     }
     
-    running ? [self start] : [self stop];
+    running ? [self start] : 0;
 }
 
 #pragma mark
@@ -65,8 +60,8 @@ static NSString *GCDQueue       = @"ControllerGCDQueue";
 
 - (void)start {
     if ([self isRunning]) {
-        dispatchAfterCount(ABTimerCount, self.queue, ^{
-            dispatchAsyncInBackgroundThread(self.queue,^{
+        dispatchAfterDelay(ABTimerCount, createConcurrentDispatchQueue(), ^{
+            dispatchAsyncInBackgroundThread(createConcurrentDispatchQueue(),^{
                 NSArray *cars = [ABCar objectsWithCount:ABCarsCount];
                 [self.enterprise performSelector:@selector(processCars:)
                                       withObject:cars];
@@ -74,10 +69,6 @@ static NSString *GCDQueue       = @"ControllerGCDQueue";
             [self start];
         });
     }
-}
-
-- (void)stop {
-    
 }
 
 @end
