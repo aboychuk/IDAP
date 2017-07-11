@@ -12,15 +12,15 @@ typedef BOOL(^ABConditionBlock)(void);
 
 @interface ABGCDExtension : NSObject
 
-dispatch_queue_t ABCreateSerialDispatchQueue();
-dispatch_queue_t ABCreateConcurrentDispatchQueue();
+dispatch_queue_t ABQueueSerial();
+dispatch_queue_t ABQueueConcurrent();
 
-dispatch_queue_t ABDispatchQueueWithQOSClass (long cls);
-dispatch_queue_t ABDispatchBackgroundQueue();
-dispatch_queue_t ABDispatchMainQueue();
+dispatch_queue_t ABQueueWithQOSClass (long cls);
+dispatch_queue_t ABQueueInBackgroundThread();
+dispatch_queue_t ABQueueOnMainThread();
 
 void ABDispatchSyncOnMainThread(dispatch_block_t block);
-void ABDispatchAsyncOnMainTherad(dispatch_block_t block);
+void ABDispatchAsyncOnMainThread(dispatch_block_t block);
 void ABDispatchSyncInBackgroundThread(dispatch_block_t block);
 void ABDispatchAsyncInBackgroundThread(dispatch_block_t block);
 
