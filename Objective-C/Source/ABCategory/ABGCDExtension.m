@@ -8,19 +8,22 @@
 
 #import "ABGCDExtension.h"
 
+static NSString *serialGCDQueue   = @"GCDSerialQueue";
+static NSString *concurrentGCDQueue   = @"GCDConcurrentQueue";
+
 @implementation ABGCDExtension
 
-dispatch_queue_t createSerialDispatchQueue(NSString *label) {
-    return dispatch_queue_create([label cStringUsingEncoding:NSUTF8StringEncoding], DISPATCH_QUEUE_SERIAL);
+dispatch_queue_t createSerialDispatchQueue() {
+    return dispatch_queue_create([serialGCDQueue cStringUsingEncoding:NSUTF8StringEncoding], DISPATCH_QUEUE_SERIAL);
 }
 
-dispatch_queue_t createConcurrentDispatchQueue(NSString *label) {
-    return dispatch_queue_create([label cStringUsingEncoding:NSUTF8StringEncoding], DISPATCH_QUEUE_CONCURRENT);
+dispatch_queue_t createConcurrentDispatchQueue() {
+    return dispatch_queue_create([concurrentGCDQueue cStringUsingEncoding:NSUTF8StringEncoding], DISPATCH_QUEUE_CONCURRENT);
 }
 
-void dispatchAfterCount(NSUInteger count, dispatch_queue_t queue, dispatch_block_t block) {
+void dispatchAfterDelay(NSUInteger delay, dispatch_queue_t queue, dispatch_block_t block) {
     if (block) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(count * NSEC_PER_SEC)), queue, block);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), queue, block);
     }
 }
 
@@ -38,6 +41,7 @@ void dispatchAsyncOnMainTheradWithBlock(dispatch_block_t block) {
 
 void dispatchSyncInBackgroundThread(dispatch_queue_t queue, dispatch_block_t block) {
     if (block) {
+        if ()
         dispatch_sync(queue, block);
     }
 }
