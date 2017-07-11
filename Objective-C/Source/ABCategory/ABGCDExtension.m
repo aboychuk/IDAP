@@ -29,7 +29,11 @@ void dispatchAfterDelay(NSUInteger delay, dispatch_queue_t queue, dispatch_block
 
 void dispatchSyncOnMainThreadWithBlock(dispatch_block_t block) {
     if (block) {
-        dispatch_sync(dispatch_get_main_queue(), block);
+        if ([[NSThread currentThread] isMainThread]) {
+            block();
+        } else {
+            dispatch_sync(dispatch_get_main_queue(), block);
+        }
     }
 }
 
@@ -41,7 +45,6 @@ void dispatchAsyncOnMainTheradWithBlock(dispatch_block_t block) {
 
 void dispatchSyncInBackgroundThread(dispatch_queue_t queue, dispatch_block_t block) {
     if (block) {
-        if ()
         dispatch_sync(queue, block);
     }
 }
