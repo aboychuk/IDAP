@@ -59,16 +59,15 @@ static NSUInteger ABTimerCount  = 2;
 #pragma mark Private Methods
 
 - (void)start {
-    if ([self isRunning]) {
-        dispatchAfterDelay(ABTimerCount, createConcurrentDispatchQueue(), ^{
-            dispatchAsyncInBackgroundThread(createConcurrentDispatchQueue(),^{
-                NSArray *cars = [ABCar objectsWithCount:ABCarsCount];
-                [self.enterprise performSelector:@selector(processCars:)
-                                      withObject:cars];
-            });
-            [self start];
-        });
-    }
+    ABDispatchAfterDelayWithCondition(ABTimerCount, ^{
+        NSArray *cars = [ABCar objectsWithCount:ABCarsCount];
+                        [self.enterprise performSelector:@selector(processCars:)
+                                              withObject:cars];
+
+    },
+                                      ^BOOL{
+                                          return [self isRunning];
+    });
 }
 
 @end

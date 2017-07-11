@@ -15,12 +15,13 @@ static NSUInteger ABWorkerSalary    = 2000;
 static NSUInteger maxExpirience     = 10;
 static NSUInteger nameLength        = 6;
 static NSUInteger ABRandomSleep     = 1000;
-static NSString *GCDQueue           = @"GCDQueue";
 
 @interface ABWorker()
 @property (nonatomic, assign)   NSUInteger          money;
 
 - (void)sleep;
+- (void)performOperationsOnMainThread:(id<ABMoneyFlow>)object;
+- (void)performOperationsInBackgroundThread:(id<ABMoneyFlow>)object;
 
 //Methodes for override;
 - (void)finishProcess;
@@ -59,24 +60,29 @@ static NSString *GCDQueue           = @"GCDQueue";
     @synchronized (self) {
         if (self.state == ABWorkerFree) {
             self.state = ABWorkerBusy;
-            dispatchAsyncInBackgroundThread(createConcurrentDispatchQueue(), ^{
-                [self takeMoneyFromObject:object];
-                [self processScpecificOperations:object];
-                [self sleep];
-                
-                dispatchAsyncOnMainTheradWithBlock(^{
-                    [self finishProcess];
-                    [self finishProcessingObject:object];
+            ABDispatchAsyncInBackgroundThread(^{
+                [self performOperationsInBackgroundThread:object];
+                ABDispatchAsyncOnMainThread(^{
+                    [self performOperationsOnMainThread:object];
                 });
             });
-        } else {
-            [self.workerQueue addObjectToQueue:object];
         }
     }
 }
 
 #pragma mark
 #pragma mark Private Methods
+
+- (void)performOperationsOnMainThread:(id<ABMoneyFlow>)object {
+    [self finishProcess];
+    [self finishProcessingObject:object];
+}
+
+- (void)performOperationsInBackgroundThread:(id<ABMoneyFlow>)object {
+    [self takeMoneyFromObject:object];
+    [self processScpecificOperations:object];
+    [self sleep];
+}
 
 - (void)sleep {
     usleep((uint32_t)ABRandomWithMaxValue(ABRandomSleep));
