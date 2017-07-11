@@ -60,14 +60,24 @@ static NSUInteger ABRandomSleep     = 1000;
     @synchronized (self) {
         if (self.state == ABWorkerFree) {
             self.state = ABWorkerBusy;
-            ABDispatchAsyncInBackgroundThread(^{
-                [self performOperationsInBackgroundThread:object];
-                ABDispatchAsyncOnMainThread(^{
-                    [self performOperationsOnMainThread:object];
-                });
-            });
+            [self processObjectInBackgroundThread:object];
         }
     }
+}
+
+#pragma mark
+#pragma mark Private Methods
+- (void)processObjectOnMainThread:(id<ABMoneyFlow>)object {
+    ABDispatchAsyncOnMainThread(^{
+        [self performOperationsOnMainThread:object];
+    });
+}
+
+- (void)processObjectInBackgroundThread:(id<ABMoneyFlow>)object {
+    ABDispatchAsyncInBackgroundThread(^{
+        [self performOperationsInBackgroundThread:object];
+        [self processObjectOnMainThread:object];
+    });
 }
 
 #pragma mark
