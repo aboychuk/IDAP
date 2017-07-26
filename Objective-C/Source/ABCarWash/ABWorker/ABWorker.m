@@ -28,6 +28,7 @@ static NSUInteger ABRandomSleep     = 1000;
 - (void)finishProcessingObject:(id<ABMoneyFlow>)object;
 - (void)processScpecificOperations:(id<ABMoneyFlow>)object;
 
+
 @end
 
 @implementation ABWorker
@@ -74,7 +75,7 @@ static NSUInteger ABRandomSleep     = 1000;
 }
 
 - (void)processObjectInBackgroundThread:(id<ABMoneyFlow>)object {
-    ABDispatchAsyncInBackgroundThread(^{
+    ABDispatchAsyncInBackgroundThread(YES, ^{
         [self performOperationsInBackgroundThread:object];
         [self processObjectOnMainThread:object];
     });
