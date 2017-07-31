@@ -75,7 +75,7 @@ static NSUInteger ABRandomSleep     = 1000;
 }
 
 - (void)processObjectInBackgroundThread:(id<ABMoneyFlow>)object {
-    ABDispatchAsyncInBackgroundThread(YES, ^{
+    ABDispatchAsyncInBackgroundThread(^{
         [self performOperationsInBackgroundThread:object];
         [self processObjectOnMainThread:object];
     });

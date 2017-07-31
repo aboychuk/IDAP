@@ -16,12 +16,14 @@ dispatch_queue_t ABQueueSerial();
 dispatch_queue_t ABQueueConcurrent();
 
 dispatch_queue_t ABQueueWithQOSClass (long cls);
-dispatch_queue_t ABBackgroundThreadQueue();
-dispatch_queue_t ABMainThreadQueue();
+dispatch_queue_t ABBackgroundQueue();
+dispatch_queue_t ABMainQueue();
 
 void ABDispatchSyncOnMainThread(dispatch_block_t block);
 void ABDispatchAsyncOnMainThread(dispatch_block_t block);
-void ABDispatchAsyncInBackgroundThread(BOOL async, dispatch_block_t block);
+void ABDispatchAsyncInBackgroundThread(dispatch_block_t block);
+void ABDispatchSyncInBackgroundThread(dispatch_block_t block);
+void ABDispatchInBackgroundThreadAsynchronous(BOOL async, dispatch_block_t block);
 
 void ABDispatchAfterDelay(NSUInteger delay, dispatch_block_t block);
 void ABDispatchAfterDelayWithCondition(NSUInteger delay, dispatch_block_t block, ABConditionBlock conditionBlock);
